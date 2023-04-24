@@ -1,0 +1,65 @@
+{
+	x: -6.0d,
+	y: -10.0d,
+	dependencies: [
+		"1d39b87d",
+		"e1af6105"
+	],
+	tasks: [{
+		uid: "3e875809",
+		type: "item",
+		items: [{
+			item: "thermalfoundation:material 1 288"
+		}]
+	},
+	{
+		uid: "6ad8ca98",
+		type: "item",
+		items: [{
+			id: "thermalexpansion:machine",
+			tag: {
+				RSControl: 0b,
+				Facing: 3b,
+				Energy: 0,
+				SideCache: [B;
+					3b,
+					1b,
+					2b,
+					2b,
+					2b,
+					2b
+				],
+				Level: 0b
+			},
+			Damage: 3s
+		}]
+	},
+	{
+		uid: "92db12d7",
+		type: "item",
+		items: [{
+			item: "immersiveengineering:mold 1 1"
+		}],
+		ignore_nbt: 1b
+	}],
+	rewards: [{
+		uid: "f2eb7621",
+		type: "item",
+		item: "minecraft:record_far"
+	},
+	{
+		uid: "89f3b012",
+		type: "choice",
+		table: 0
+	},
+	{
+		uid: "2c1a6fd6",
+		type: "choice",
+		table: 0
+	},
+	{
+		uid: "2166d2ae",
+		type: "xp_levels",
+		xp_levels: 30
+	}]
+}

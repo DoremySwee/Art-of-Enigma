@@ -1,0 +1,31 @@
+{
+	x: -6.0d,
+	y: -3.0d,
+	dependencies: [
+		"7ffa3d4f"
+	],
+	tasks: [{
+		uid: "f8ec93fe",
+		type: "item",
+		items: [{
+			id: "minecraft:spawn_egg",
+			tag: {
+				EntityTag: {
+					id: "minecraft:creeper"
+				}
+			}
+		}]
+	},
+	{
+		uid: "b83b4318",
+		type: "item",
+		items: [{
+			id: "minecraft:spawn_egg",
+			tag: {
+				EntityTag: {
+					id: "minecraft:skeleton"
+				}
+			}
+		}]
+	}]
+}

@@ -1,0 +1,70 @@
+chapters.ch1.title=Sky of beginning
+chapters.ch1.subtitle=A high starting point, or a low starting point?
+chapters.ch2.title=Coloured alloy
+chapters.ch2.subtitle=Reasonable recipes
+chapters.ch3.title=ch3
+chapters.ch3.subtitle=unreached
+
+
+quests.DifficultySelection.title= Select a Difficulty For This Chapter
+quests.DifficultySelection.desDifference= The difficulty ONLY influeces the clues given to you. Higher difficulty brings more puzzles, but requires deeper game mechanism understanding, while lower difficulty solve the puzzle for you.
+quests.DifficultySelection.desCanVaryForEachChapter= If you find the difficulty not suitable for you, when entering the next chapter, you can select a different difficulty.
+quests.DifficultySelection.titMaster= Master Mode
+quests.DifficultySelection.desMaster= Simply list out essential information and your aims. Require very deep understanding about the game mechanism. Suitable for experienced players who are interensted in challenging themselves.
+quests.DifficultySelection.titExpert= Expert Mode
+quests.DifficultySelection.desExpert= Give out the basic approach to the your aims. Tests done on this difficulty shows that the clues are just sufficient. Suitable for experienced players.
+quests.DifficultySelection.titCasual= Casual Mode
+quests.DifficultySelection.desCasual= Very detailed procedures. Suitable for relatively unexperienced players, new to expert modpacks. Currently not in our plan.
+
+
+quests.ch1.dup0.title=Duplication
+quests.ch1.dup0.des=Some items can be duplicated by crafting.
+quests.ch1.sparkCheck.title=What can Sparks craft?
+quests.ch1.sparkCheck.des=It can duplicate itself, burn as furnace fuel, duplicate some items, or craft spark upgrades.
+quests.ch1.peace.title=Peace Mode?
+quests.ch1.peace.des=Mobs don't spawn, and the game is not in peace mode. Mobs can be summoned by players and devices.
+quests.ch1.crateHelp.title=How to use the botania crate?
+quests.ch1.crateHelp.des=1. Make sure that below it lies the air, so that it can drop the resulting items down.\n2. Supply Mana to it with mana beams.\n3. Correctly form recipes inside it, and then click it with your wand.
+quests.ch1.waterAgg.title=Liquids in Agglomeration
+quests.ch1.waterAgg.subtitle=Water and Lava
+quests.ch1.waterAgg.des1=1. Agglomeration Recipe cannot include air as the base, either the input blocks or the outputs.
+quests.ch1.waterAgg.des2=2. Liquid cannot be correctly shown in JEI Agglomeration Recipe.
+quests.ch1.waterAgg.des3=3. Thus if you find any "air" in the JEI Agglomeration Recipe, it is a liquid.
+quests.ch1.waterAgg.des4=4. Identify the liquids by checking the tooltips of inputs&outputs.
+quests.ch1.waterAgg.des5=5. Additionally, water comes from agglomeration of tall_grass*8, while lava comes from those involving the magma blocks.
+
+quests.ch1.pureDaisy.LiquidAgg= Liquid Blocks in terra agglomeration must be the source.
+quests.ch1.mana.title=Where is my Mana?
+quests.ch1.mana.des=Terraplate accepts mana beams, which come from... Find it out by yourself.
+quests.ch1.sapl.title=Saplings
+quests.ch1.sapl.des=Try push the leaves with pistons. Better if you've got an auto-clicker.
+quests.ch1.boneMeal.des=Can burn two items as furnace fuel.
+quests.ch1.importantItems.title=Important Itmes
+quests.ch1.importantItems.des=Do not easily abandon any items. Additionally, if you are having multi-player games, the initial terrablade can be duplicated.
+
+quests.ch1.beforeEverything.title=Before Everything...
+quests.ch1.beforeEverything.des0=This modpack is suitable for players fammiliar with Magic&Tech Mods, especially Botania and AE2. 
+quests.ch1.beforeEverything.des1=The beginning parts of the modpack includes some puzzles, while the rest parts were intended to include lots of automations.
+quests.ch1.beforeEverything.des2=Carefully Read the Quest Descriptions and ToolTips !!!!!!
+
+description.crt.aggWithLava=Do agglomeration with lava block, in the place of air as jei shows. Lava returns as product.
+description.crt.tooltip.flower.waterCraft=Agglomerate with water in the place of air in JEI. Water Block consumes.
+description.crt.tooltip.flower.endoRestrict=Only 8 enfoflames per chunk is allowed.
+description.crt.tooltip.flower.autoPlace=Automatic placement of flowers is not permitted, probably end up in disappearance of the flower.
+
+description.crt.tooltip.flower.dup0=Can be duplicated simply through crafting.
+description.crt.tooltip.flower.dupSpark=Can be duplicated by crafting with sparks.
+
+description.crt.tooltip.SmeltryF= Can be used as Fuel for Smeltry.
+description.crt.tooltip.dupMana= Can be duplicated through ManaInfusion.
+
+info.crt.endoFlameRes.exceed=number of endoflame has exceeded maximum(8) in this chunk.
+
+quests.ch2.portalCancel.title= About Nether Portal
+quests.ch2.portalCancel.des= The portal is banned.
+quests.ch2.cacoon.des=There are recipes for pumkins, you don't need to plant them. Seeds can be obtained from grass.
+quests.ch2.netherrock.des=Use the AE2 Inscriber.
+quests.ch2.glowstoneDust.title= Glow stone Production
+quests.ch2.glowstoneDust.des= You can turn this item back into glow stone.
+
+description.crt.tooltip.haste=Eat for Haste II

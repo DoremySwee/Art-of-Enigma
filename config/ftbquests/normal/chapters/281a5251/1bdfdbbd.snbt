@@ -1,0 +1,19 @@
+{
+	title: "{quests.ch2.glowstoneDust.title}",
+	x: -0.7d,
+	y: -1.4d,
+	text: [
+		"{quests.ch2.glowstoneDust.des}"
+	],
+	dependencies: [
+		"28aa708c"
+	],
+	size: 0.7d,
+	tasks: [{
+		uid: "75aae024",
+		type: "item",
+		items: [{
+			item: "enderio:block_holier_fog"
+		}]
+	}]
+}

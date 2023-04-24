@@ -1,0 +1,70 @@
+chapters.ch1.title=万物伊始
+chapters.ch1.subtitle=“山人自有妙计”
+chapters.ch2.title=七彩合金
+chapters.ch2.subtitle=“怕你做少了悟不出来怎么做自动化”
+chapters.ch3.title=???
+chapters.ch3.subtitle=“还没做”
+
+
+quests.DifficultySelection.title= 難易度選択
+quests.DifficultySelection.desDifference= 任务的难度决定了线索的数量。高难度有更多谜题，但需要更高的游戏理解，而低难度会直接给你更多的线索。
+quests.DifficultySelection.desCanVaryForEachChapter= 如果你发觉难度不适，在新的一章中可以选择更低的难度。
+quests.DifficultySelection.titMaster= 大师难度
+quests.DifficultySelection.desMaster= 列出基本的几个目标和必要信息。需要非常深刻的游戏理解。适合挑战自我的高玩。
+quests.DifficultySelection.titExpert= 专家难度
+quests.DifficultySelection.desExpert= 给出基础的任务线。经测试，适合有经验的玩家。
+quests.DifficultySelection.titCasual= 普通难度
+quests.DifficultySelection.desCasual= 暂无此计划：非常详细的任务线，适合刚接触专家包的玩家。
+
+
+quests.ch1.dup0.title=复制
+quests.ch1.dup0.des=岛屿上很多物品可以通过合成复制
+quests.ch1.sparkCheck.title=查看火花的用途
+quests.ch1.sparkCheck.des=可以自我复制、可以用作燃料、可以复制一些其它物品、可以制作火花升级。
+quests.ch1.peace.title=和平模式？
+quests.ch1.peace.des=空岛不刷怪，但并非和平模式，怪物仍然能够召唤。
+quests.ch1.crateHelp.title=如何使用机巧箱？
+quests.ch1.crateHelp.des=悬空置之，正确放入物品。给予魔力，并以森林法杖右键。
+quests.ch1.waterAgg.title=泰拉凝聚板下的流体聚合
+quests.ch1.waterAgg.subtitle=水和岩浆
+quests.ch1.waterAgg.des1=聚合配方的基座方块中并不可能有空气。而jei会把流体方块显示为空气。故此，如果你看到了JEI中的泰拉凝聚配方有空气作为输入，要么是水，要么是岩浆，查看成品的工具提示以知晓。此外，水由草聚合而成，岩浆由含岩浆块的几个配方获取。
+quests.ch1.waterAgg.des2=
+quests.ch1.waterAgg.des3=
+quests.ch1.waterAgg.des4=
+quests.ch1.waterAgg.des5=
+
+quests.ch1.pureDaisy.LiquidAgg=聚合配方中的流体方块必须是流体源头。
+quests.ch1.mana.title=魔力？
+quests.ch1.mana.des=泰拉凝聚板不止吃火花来的魔力，还吃魔力脉冲。至于魔力脉冲怎么来……你想想吧。
+quests.ch1.sapl.title=树苗
+quests.ch1.sapl.des=不要使劲撸树叶了。试试用活塞推动树苗，最好配个连点器点拉杆。
+quests.ch1.boneMeal.des=可以作为燃料烧制两个物品。
+quests.ch1.importantItems.title=重要的物品
+quests.ch1.importantItems.des=请勿随意丢弃初始物品。此外，如果你在进行多人游戏，不毁泰拉刃也是可以复制的。
+
+quests.ch1.beforeEverything.title=在开始之前……
+quests.ch1.beforeEverything.des0=本整合包适合对于科技魔法有较高熟悉度的玩家，尤其是植物魔法、AE2。前期涉及一定量解谜，中后期则涉及大量自动化设计（暂无）。
+quests.ch1.beforeEverything.des1=一定要仔细阅读任务！！！一定要仔细阅读任务！！！一定要仔细阅读任务！！！
+quests.ch1.beforeEverything.des2=一定要仔细阅读工具提示！！！一定要仔细阅读工具提示！！！一定要仔细阅读工具提示！！！
+
+description.crt.aggWithLava=由于botTweak的缺陷，凝聚板合成材料和成品中的岩浆方块显示成了空气。
+description.crt.tooltip.flower.waterCraft=由于botTweak的缺陷，凝聚板合成材料中的水方块显示成了空气。水会消耗。
+description.crt.tooltip.flower.endoRestrict=一个区块最多放置8个火红莲
+description.crt.tooltip.flower.autoPlace=请勿使用自动化装置放置花朵，花朵会消失。
+
+description.crt.tooltip.dup0=可以通过合成复制。
+description.crt.tooltip.dupSpark=与火花合成以复制。
+
+description.crt.tooltip.SmeltryF= 可以用作冶炼炉燃料。
+description.crt.tooltip.dupMana= 可以在魔力池复制。
+
+info.crt.endoFlameRes.exceed=火红莲数量超过区块上限(8)。
+
+quests.ch2.portalCancel.title= 关于下界传送门
+quests.ch2.portalCancel.des= 下界传送门无法正常建造。
+quests.ch2.cacoon.des=南瓜可合成，你无需种植。
+quests.ch2.netherrock.des=用AE2压印器以复制。
+quests.ch2.glowstoneDust.title= 萤石生产
+quests.ch2.glowstoneDust.des= 你可以把这个物品转换回萤石粉。
+
+description.crt.tooltip.haste= 急迫II

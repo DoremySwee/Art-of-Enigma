@@ -1,0 +1,46 @@
+铁
+随想之茧
+冶炼炉（随想）
+	凝矿兰（冶炼&铁）
+		fumo
+钢（随想&铁）
+	合金窑（钢）
+	金属冲压（合金窑）
+	齿轮
+		漏斗
+	电网（齿轮+fumo）
+	粉碎机（电网+漏斗）
+	强化高炉（漏斗）
+	打火石(fumo+钢)
+	*important:	invar=dust+dust
+
+鸡蛋*114514
+	万物卵生理论
+	唱片*114
+	羊毛*514
+	唱片*16  ->染色透镜  ->染色羊毛  ->Chapter3
+
+fumo+粉碎机
+	热力感应炉：	invar	disc	invar
+			fur	转换	fur
+			fumo	pool	fumo
+	可以合成琥珀金！
+			
+	发酵机&挤压机（输液管）
+	炼油厂（混合液体）
+		流体转置机（热力感应炉）：	
+			elect	桶装?油 	elect
+			invar	感应炉	invar
+			fumo	pool	fumo
+
+	延迟至Chapter3：热力粉碎机、硬化升级
+
+	
+
+
+基岩粉+fumo--流体转置机-->？
+
+
+
+Liquid XP: End of Chapter2: 来自经验方尖碑
+	

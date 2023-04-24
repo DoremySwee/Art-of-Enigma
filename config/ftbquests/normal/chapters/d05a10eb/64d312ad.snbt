@@ -1,0 +1,24 @@
+{
+	x: 5.0d,
+	y: -3.5d,
+	text: [
+		"{quests.ch1.sparkCheck.des}"
+	],
+	dependencies: [
+		"3635e1e2"
+	],
+	tasks: [{
+		uid: "3ad4d0b6",
+		type: "item",
+		items: [{
+			item: "botania:spark"
+		}],
+		count: 64L
+	}],
+	rewards: [{
+		uid: "d3dbbfac",
+		type: "item",
+		item: "minecraft:cobblestone",
+		count: 64
+	}]
+}

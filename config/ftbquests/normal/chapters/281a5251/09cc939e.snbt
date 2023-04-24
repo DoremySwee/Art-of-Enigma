@@ -1,0 +1,16 @@
+{
+	x: -8.049999999999999d,
+	y: -8.4d,
+	dependencies: [
+		"92e06615"
+	],
+	size: 0.7d,
+	tasks: [{
+		uid: "74895f3a",
+		type: "item",
+		items: [{
+			item: "botania:craftpattern"
+		}],
+		ignore_nbt: 1b
+	}]
+}

@@ -1,0 +1,27 @@
+{
+	x: -4.0d,
+	y: -1.5d,
+	dependencies: [
+		"d5032288"
+	],
+	tasks: [{
+		uid: "9d7f4554",
+		type: "item",
+		items: [{
+			id: "botania:lens",
+			tag: {},
+			Damage: 14s
+		}],
+		ignore_nbt: 1b
+	}],
+	rewards: [{
+		uid: "3067a22d",
+		type: "item",
+		item: {
+			id: "botania:lens",
+			tag: {},
+			Damage: 14s
+		},
+		count: 12
+	}]
+}

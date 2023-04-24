@@ -1,0 +1,19 @@
+{
+	x: -5.0d,
+	y: -10.0d,
+	dependencies: [
+		"6cbd0617"
+	],
+	tasks: [{
+		uid: "e03ab0ba",
+		type: "item",
+		items: [{
+			item: "enderio:block_vat"
+		}]
+	}],
+	rewards: [{
+		uid: "b07d7a4b",
+		type: "item",
+		item: "enderio:item_basic_capacitor"
+	}]
+}

@@ -1,0 +1,35 @@
+{
+	x: -4.5d,
+	y: -6.5d,
+	dependencies: [
+		"64041a02"
+	],
+	size: 0.7d,
+	tasks: [{
+		uid: "d56d0453",
+		type: "item",
+		items: [{
+			id: "botania:specialflower",
+			tag: {
+				type: "hopperhock"
+			}
+		}]
+	},
+	{
+		uid: "9597e303",
+		type: "item",
+		items: [{
+			id: "botania:specialflower",
+			tag: {
+				type: "solegnolia"
+			}
+		}]
+	},
+	{
+		uid: "a9c2495f",
+		type: "item",
+		items: [{
+			item: "extrautils2:redstonelantern"
+		}]
+	}]
+}

@@ -1,0 +1,23 @@
+{
+	title: "{quests.ch1.sapl.title}",
+	icon: "minecraft:leaves",
+	x: 0.0d,
+	y: 0.0d,
+	text: [
+		"{quests.ch1.sapl.des}"
+	],
+	hide_dependency_lines: true,
+	dependencies: [
+		"751bc6f5"
+	],
+	hide: true,
+	tasks: [{
+		uid: "4e456d4d",
+		type: "checkmark"
+	}],
+	rewards: [{
+		uid: "cbf3703e",
+		type: "item",
+		item: "minecraft:sapling"
+	}]
+}

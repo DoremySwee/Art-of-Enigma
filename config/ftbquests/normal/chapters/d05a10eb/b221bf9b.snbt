@@ -1,0 +1,79 @@
+{
+	title: "{quests.ch1.sparkCheck.title}",
+	icon: "botania:sparkupgrade 1 2",
+	x: 15.0d,
+	y: 5.0d,
+	text: [
+		"{quests.ch1.sparkCheck.des}"
+	],
+	dependencies: [
+		"69952f82"
+	],
+	tasks: [{
+		uid: "199d6f0d",
+		type: "item",
+		items: [{
+			item: "botania:spark"
+		}],
+		count: 64L
+	},
+	{
+		uid: "0bf36147",
+		type: "item",
+		items: [{
+			item: "appliedenergistics2:part 1 260"
+		}],
+		count: 32L
+	},
+	{
+		uid: "500fbd55",
+		type: "item",
+		items: [{
+			item: "appliedenergistics2:part 1 240"
+		}],
+		count: 32L
+	},
+	{
+		uid: "049ede67",
+		type: "item",
+		items: [{
+			item: "appliedenergistics2:part 1 220"
+		}],
+		count: 32L
+	},
+	{
+		uid: "0505e670",
+		type: "item",
+		items: [{
+			item: "appliedenergistics2:part 1 31"
+		}],
+		count: 32L
+	},
+	{
+		uid: "b9fc5137",
+		type: "item",
+		items: [{
+			id: "botania:specialflower",
+			tag: {
+				type: "endoflame"
+			}
+		}],
+		count: 4L
+	},
+	{
+		uid: "c517b9d3",
+		type: "item",
+		items: [{
+			item: "botania:pool 1 2"
+		}],
+		count: 32L
+	},
+	{
+		uid: "052bfb21",
+		type: "item",
+		items: [{
+			item: "botania:spreader"
+		}],
+		count: 32L
+	}]
+}

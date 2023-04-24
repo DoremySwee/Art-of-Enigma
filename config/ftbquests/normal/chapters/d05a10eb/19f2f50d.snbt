@@ -1,0 +1,18 @@
+{
+	title: "{quests.ch1.waterAgg.title}",
+	x: 3.15d,
+	y: -2.8d,
+	description: "{quests.ch1.waterAgg.subtitle}",
+	text: [
+		"{quests.ch1.pureDaisy.LiquidAgg}"
+	],
+	dependencies: [
+		"3635e1e2"
+	],
+	hide: true,
+	size: 0.7d,
+	tasks: [{
+		uid: "c69cd13e",
+		type: "checkmark"
+	}]
+}

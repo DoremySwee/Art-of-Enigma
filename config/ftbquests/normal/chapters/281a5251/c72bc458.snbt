@@ -1,0 +1,47 @@
+{
+	x: -8.0d,
+	y: -11.0d,
+	text: [
+		"{quests.ch2.portalCancel.des}"
+	],
+	dependencies: [
+		"2e692f1a"
+	],
+	tasks: [{
+		uid: "5a512c7a",
+		type: "item",
+		items: [{
+			id: "botania:specialflower",
+			tag: {
+				type: "exoflame"
+			}
+		}]
+	},
+	{
+		uid: "d4207e1b",
+		type: "item",
+		items: [{
+			item: "botania:craftpattern"
+		}],
+		ignore_nbt: 1b
+	},
+	{
+		uid: "c1465f6e",
+		type: "item",
+		items: [{
+			item: "minecraft:crafting_table"
+		}]
+	},
+	{
+		uid: "17ed8826",
+		type: "item",
+		items: [{
+			item: "appliedenergistics2:part 1 241"
+		}]
+	}],
+	rewards: [{
+		uid: "c28d00dd",
+		type: "xp_levels",
+		xp_levels: 10
+	}]
+}

@@ -1,0 +1,18 @@
+{
+	x: 7.5d,
+	y: 5.0d,
+	text: [
+		"{quests.ch1.boneMeal.des}"
+	],
+	dependencies: [
+		"de507e58"
+	],
+	optional: true,
+	tasks: [{
+		uid: "5b797fd0",
+		type: "item",
+		items: [{
+			item: "minecraft:dye 1 15"
+		}]
+	}]
+}

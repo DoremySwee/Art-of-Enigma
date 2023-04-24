@@ -1,0 +1,17 @@
+{
+	title: "Expert2",
+	x: -13.0d,
+	y: -6.0d,
+	text: [
+		""
+	],
+	hide_text_until_complete: true,
+	tasks: [{
+		uid: "f221ab3d",
+		type: "item",
+		items: [{
+			item: "minecraft:repeating_command_block"
+		}],
+		consume_items: true
+	}]
+}

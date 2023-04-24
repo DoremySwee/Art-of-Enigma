@@ -1,0 +1,27 @@
+{
+	x: -9.0d,
+	y: -11.0d,
+	hide_dependency_lines: true,
+	dependencies: [
+		"04b2d4c4"
+	],
+	hide: true,
+	tasks: [{
+		uid: "4cef2e46",
+		type: "item",
+		items: [{
+			item: "immersiveengineering:material 1 4"
+		}]
+	}],
+	rewards: [{
+		uid: "3cdf9ea2",
+		type: "item",
+		item: "minecraft:log",
+		count: 64
+	},
+	{
+		uid: "0a11160f",
+		type: "item",
+		item: "minecraft:observer"
+	}]
+}

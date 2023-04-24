@@ -1,0 +1,17 @@
+{
+	x: -8.0d,
+	y: -0.5d,
+	shape: "pentagon",
+	dependencies: [
+		"1b18792b"
+	],
+	tasks: [{
+		uid: "3a502c4f",
+		type: "item",
+		items: [{
+			item: "minecraft:mushroom_stew"
+		}],
+		ignore_damage: true,
+		ignore_nbt: 1b
+	}]
+}

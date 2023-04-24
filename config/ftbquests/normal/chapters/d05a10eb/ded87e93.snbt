@@ -1,0 +1,26 @@
+{
+	x: 7.5d,
+	y: 0.0d,
+	dependencies: [
+		"2d2a7280"
+	],
+	hide: true,
+	tasks: [{
+		uid: "bfb9cd51",
+		type: "item",
+		items: [{
+			id: "botania:twigwand",
+			tag: {
+				color1: 0,
+				color2: 0
+			}
+		}],
+		ignore_nbt: 1b
+	}],
+	rewards: [{
+		uid: "83fc97be",
+		type: "item",
+		item: "botania:pool",
+		count: 2
+	}]
+}

@@ -1,0 +1,38 @@
+{
+	x: 2.5d,
+	y: -3.5d,
+	dependencies: [
+		"b8633638"
+	],
+	tasks: [{
+		uid: "84a550ab",
+		type: "item",
+		items: [{
+			item: "botania:opencrate 1 1"
+		}]
+	},
+	{
+		uid: "2dffa8a9",
+		type: "item",
+		items: [{
+			id: "botania:twigwand",
+			tag: {
+				color1: 0,
+				color2: 0
+			}
+		}],
+		ignore_nbt: 1b
+	}],
+	rewards: [{
+		uid: "fde7b73d",
+		type: "item",
+		item: "botania:blacklotus 1 1",
+		count: 2
+	},
+	{
+		uid: "16151f81",
+		type: "item",
+		item: "botania:pool",
+		count: 2
+	}]
+}

@@ -1,0 +1,22 @@
+{
+	x: 4.0d,
+	y: -3.0d,
+	dependencies: [
+		"4976067f",
+		"846777fc"
+	],
+	hide: true,
+	tasks: [{
+		uid: "1f8f3fb0",
+		type: "item",
+		items: [{
+			id: "forge:bucketfilled",
+			tag: {
+				FluidName: "pyrotheum",
+				Amount: 1000
+			}
+		}],
+		ignore_damage: true,
+		ignore_nbt: 2b
+	}]
+}

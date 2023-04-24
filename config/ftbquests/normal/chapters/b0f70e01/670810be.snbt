@@ -1,0 +1,54 @@
+{
+	x: -32.0d,
+	y: -12.0d,
+	hide_dependency_lines: true,
+	dependencies: [
+		"3dc53c67"
+	],
+	hide: true,
+	size: 2.0d,
+	tasks: [{
+		uid: "c2e0ffe5",
+		type: "item",
+		items: [{
+			item: "appliedenergistics2:controller"
+		}]
+	},
+	{
+		uid: "37e1939d",
+		type: "item",
+		items: [{
+			id: "appliedenergistics2:wireless_terminal",
+			tag: {
+				internalMaxPower: 1600000.0d,
+				internalCurrentPower: 1600000.0d
+			}
+		}],
+		ignore_damage: true,
+		ignore_nbt: 1b
+	},
+	{
+		uid: "1b501e4c",
+		type: "item",
+		items: [{
+			id: "appliedenergistics2:storage_cell_64k",
+			tag: {}
+		}],
+		ignore_damage: true,
+		ignore_nbt: 1b
+	},
+	{
+		uid: "d631be5c",
+		type: "item",
+		items: [{
+			item: "appliedenergistics2:cell_workbench"
+		}]
+	},
+	{
+		uid: "45451188",
+		type: "item",
+		items: [{
+			item: "appliedenergistics2:material 1 52"
+		}]
+	}]
+}

@@ -1,0 +1,23 @@
+{
+	x: -9.0d,
+	y: -9.0d,
+	hide_dependency_lines: true,
+	dependencies: [
+		"c5aea2e5"
+	],
+	hide: true,
+	tasks: [{
+		uid: "4219067e",
+		type: "item",
+		items: [{
+			item: "minecraft:string"
+		}]
+	},
+	{
+		uid: "62f90f8a",
+		type: "item",
+		items: [{
+			item: "minecraft:redstone"
+		}]
+	}]
+}

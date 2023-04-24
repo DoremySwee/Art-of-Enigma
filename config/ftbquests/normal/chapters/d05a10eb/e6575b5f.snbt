@@ -1,0 +1,27 @@
+{
+	title: "{quests.DifficultySelection.titMaster}",
+	x: -5.5d,
+	y: -3.5d,
+	text: [
+		"{quests.DifficultySelection.desMaster}"
+	],
+	dependencies: [
+		"1ac33ae6",
+		"3eb5f017"
+	],
+	hide: true,
+	size: 2.0d,
+	optional: true,
+	tasks: [{
+		uid: "8e5ebce9",
+		type: "checkmark",
+		icon: "botania:pylon 1 2"
+	}],
+	rewards: [{
+		uid: "fdf966cf",
+		type: "command",
+		team_reward: true,
+		auto: "invisible",
+		command: "/ftbquests change_progress reset singleplayer 6a9d3990"
+	}]
+}

@@ -1,0 +1,16 @@
+{
+	title: "1Expert",
+	x: -15.0d,
+	y: -6.0d,
+	text: [
+		""
+	],
+	tasks: [{
+		uid: "2aa259ae",
+		type: "item",
+		items: [{
+			item: "minecraft:repeating_command_block"
+		}],
+		consume_items: true
+	}]
+}

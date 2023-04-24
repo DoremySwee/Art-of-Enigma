@@ -1,0 +1,33 @@
+{
+	x: -7.0d,
+	y: -7.0d,
+	dependencies: [
+		"cd1eae54"
+	],
+	hide: true,
+	tasks: [{
+		uid: "74684c1c",
+		type: "item",
+		items: [{
+			item: "tconstruct:smeltery_controller"
+		}]
+	}],
+	rewards: [{
+		uid: "04ff702e",
+		type: "item",
+		item: "tconstruct:seared 1 3",
+		count: 64
+	},
+	{
+		uid: "4bee2c1e",
+		type: "item",
+		item: "tconstruct:materials",
+		count: 192
+	},
+	{
+		uid: "88617c3e",
+		type: "item",
+		item: "tconstruct:smeltery_io",
+		count: 10
+	}]
+}

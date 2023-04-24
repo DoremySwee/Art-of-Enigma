@@ -1,0 +1,23 @@
+{
+	title: "{quests.ch2.glowstoneDust.title}",
+	x: -5.0d,
+	y: -11.0d,
+	text: [
+		"{quests.ch2.glowstoneDust.des}"
+	],
+	dependencies: [
+		"6cbd0617"
+	],
+	tasks: [{
+		uid: "cfb5dccb",
+		type: "item",
+		items: [{
+			item: "enderio:block_holier_fog"
+		}]
+	}],
+	rewards: [{
+		uid: "0a726faa",
+		type: "xp_levels",
+		xp_levels: 10
+	}]
+}

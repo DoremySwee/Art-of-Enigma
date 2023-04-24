@@ -1,0 +1,32 @@
+{
+	x: -2.5d,
+	y: -3.5d,
+	dependencies: [
+		"e6575b5f"
+	],
+	hide: true,
+	tasks: [{
+		uid: "79e193c6",
+		type: "item",
+		items: [{
+			id: "botania:terrasword",
+			tag: {
+				Unbreakable: 1
+			}
+		}],
+		ignore_damage: true,
+		ignore_nbt: 1b
+	}],
+	rewards: [{
+		uid: "a3ee0e05",
+		type: "item",
+		item: "minecraft:sapling",
+		count: 4
+	},
+	{
+		uid: "7e2ebf46",
+		type: "item",
+		item: "minecraft:cobblestone",
+		count: 2
+	}]
+}

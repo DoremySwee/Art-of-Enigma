@@ -1,0 +1,41 @@
+{
+	x: -6.0d,
+	y: -11.0d,
+	dependencies: [
+		"1d39b87d"
+	],
+	tasks: [{
+		uid: "8b4b4410",
+		type: "item",
+		items: [{
+			id: "botania:specialflower",
+			tag: {
+				type: "hopperhock"
+			}
+		}]
+	},
+	{
+		uid: "25adaa0e",
+		type: "item",
+		items: [{
+			id: "botania:specialflower",
+			tag: {
+				type: "solegnolia"
+			}
+		}]
+	},
+	{
+		uid: "a6a71497",
+		type: "item",
+		items: [{
+			item: "extrautils2:redstonelantern"
+		}]
+	},
+	{
+		uid: "d5a6f025",
+		type: "item",
+		items: [{
+			item: "botanicbonsai:botanic_bonsai_pot"
+		}]
+	}]
+}

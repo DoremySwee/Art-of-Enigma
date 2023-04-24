@@ -1,0 +1,21 @@
+{
+	x: 12.5d,
+	y: 2.5d,
+	shape: "pentagon",
+	text: [
+		"{quests.ch1.pureDaisy.LiquidAgg}"
+	],
+	dependencies: [
+		"9fc6bb50"
+	],
+	tasks: [{
+		uid: "6d1338f4",
+		type: "item",
+		items: [{
+			id: "botania:specialflower",
+			tag: {
+				type: "puredaisy"
+			}
+		}]
+	}]
+}

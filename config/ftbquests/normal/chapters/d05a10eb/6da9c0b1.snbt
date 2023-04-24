@@ -1,0 +1,26 @@
+{
+	x: 17.5d,
+	y: 5.0d,
+	shape: "hexagon",
+	dependencies: [
+		"69952f82"
+	],
+	tasks: [{
+		uid: "4bcc2bb4",
+		type: "item",
+		items: [{
+			item: "botania:terraplate"
+		}],
+		count: 2L
+	}],
+	rewards: [{
+		uid: "d8a75ade",
+		type: "item",
+		item: {
+			id: "botania:floatingspecialflower",
+			tag: {
+				type: "clayconia"
+			}
+		}
+	}]
+}

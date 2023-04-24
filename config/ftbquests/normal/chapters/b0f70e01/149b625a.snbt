@@ -1,0 +1,32 @@
+{
+	title: "{quests.DifficultySelection.title}",
+	icon: "thermalfoundation:storage 1 8",
+	x: -29.0d,
+	y: -12.0d,
+	shape: "gear",
+	text: [
+		"{quests.DifficultySelection.desDifference}",
+		"{quests.DifficultySelection.desCanVaryForEachChapter}"
+	],
+	dependencies: [
+		"410786df",
+		"cdec4ce3"
+	],
+	hide: true,
+	dependency_requirement: "one_completed",
+	size: 2.0d,
+	min_width: 500,
+	rewards: [{
+		uid: "a396e72b",
+		type: "command",
+		team_reward: true,
+		auto: "invisible",
+		command: "/ftbquests change_progress complete singleplayer 7fcca310"
+	},
+	{
+		uid: "80679f67",
+		type: "command",
+		auto: "invisible",
+		command: "/ftbquests change_progress complete singleplayer f307df3d"
+	}]
+}

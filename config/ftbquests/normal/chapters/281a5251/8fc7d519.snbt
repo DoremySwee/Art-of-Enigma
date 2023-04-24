@@ -1,0 +1,27 @@
+{
+	x: -6.0d,
+	y: -8.0d,
+	shape: "pentagon",
+	dependencies: [
+		"0eb2c3fb"
+	],
+	hide: true,
+	tasks: [{
+		uid: "f89f1981",
+		type: "item",
+		items: [{
+			item: "minecraft:iron_ingot"
+		}]
+	}],
+	rewards: [{
+		uid: "289e2ca0",
+		type: "item",
+		item: "extrautils2:compressedcobblestone 1 2",
+		count: 3
+	},
+	{
+		uid: "ec456087",
+		type: "item",
+		item: "extrautils2:compresseddirt 1 1"
+	}]
+}

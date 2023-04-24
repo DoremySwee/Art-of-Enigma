@@ -1,0 +1,28 @@
+{
+	icon: {
+		id: "minecraft:potion",
+		tag: {
+			Potion: "extrautils2:xu2.greek.fire"
+		}
+	},
+	x: 3.0d,
+	y: -6.0d,
+	dependencies: [
+		"ba753067"
+	],
+	tasks: [{
+		uid: "f1db59cf",
+		type: "item",
+		items: [{
+			id: "forge:bucketfilled",
+			tag: {
+				FluidName: "potion",
+				Amount: 1000,
+				Tag: {
+					Potion: "extrautils2:xu2.greek.fire"
+				}
+			}
+		}],
+		ignore_damage: true
+	}]
+}

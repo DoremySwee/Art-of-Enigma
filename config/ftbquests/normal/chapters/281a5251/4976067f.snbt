@@ -1,0 +1,21 @@
+{
+	x: 3.0d,
+	y: -2.0d,
+	shape: "pentagon",
+	dependencies: [
+		"7d2c01bd"
+	],
+	hide: true,
+	tasks: [{
+		uid: "713e17fc",
+		type: "item",
+		items: [{
+			id: "forge:bucketfilled",
+			tag: {
+				FluidName: "xpjuice",
+				Amount: 1000
+			}
+		}],
+		ignore_damage: true
+	}]
+}

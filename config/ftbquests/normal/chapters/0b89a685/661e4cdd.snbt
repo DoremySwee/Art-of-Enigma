@@ -1,0 +1,17 @@
+{
+	title: "Master2",
+	x: -13.0d,
+	y: -8.5d,
+	text: [
+		""
+	],
+	hide_text_until_complete: true,
+	tasks: [{
+		uid: "a7df122d",
+		type: "item",
+		items: [{
+			item: "minecraft:repeating_command_block"
+		}],
+		consume_items: true
+	}]
+}

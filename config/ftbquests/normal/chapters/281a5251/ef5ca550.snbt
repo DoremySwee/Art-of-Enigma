@@ -1,0 +1,16 @@
+{
+	x: 1.75d,
+	y: -8.75d,
+	text: [
+		""
+	],
+	dependencies: [
+		"c8439f93"
+	],
+	size: 0.7d,
+	tasks: [{
+		uid: "57f42230",
+		type: "checkmark",
+		icon: "immersiveengineering:wirecoil 1 2"
+	}]
+}

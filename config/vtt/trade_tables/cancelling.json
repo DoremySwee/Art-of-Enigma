@@ -1,0 +1,11 @@
+{ 
+	Profession: "minecraft:priest", 
+	Career:"cleric",
+
+	Offers:{
+		Recipes:[
+			{action:"clear"}
+		]
+	}
+
+}

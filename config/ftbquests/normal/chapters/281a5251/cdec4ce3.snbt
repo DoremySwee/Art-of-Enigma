@@ -1,0 +1,25 @@
+{
+	x: 1.0d,
+	y: 1.0d,
+	shape: "hexagon",
+	dependencies: [
+		"7e88b009",
+		"c166f2e3",
+		"da4c2cf1",
+		"9448ae27",
+		"35d75998"
+	],
+	hide: true,
+	tasks: [{
+		uid: "0581cb40",
+		type: "item",
+		items: [{
+			id: "forge:bucketfilled",
+			tag: {
+				FluidName: "mana",
+				Amount: 1000
+			}
+		}],
+		ignore_damage: true
+	}]
+}

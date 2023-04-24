@@ -1,0 +1,17 @@
+{
+	title: "{quests.DifficultySelection.title}",
+	icon: "botania:pool 1 1",
+	x: -10.0d,
+	y: -0.5d,
+	shape: "gear",
+	text: [
+		"{quests.DifficultySelection.desDifference}",
+		"{quests.DifficultySelection.desCanVaryForEachChapter}"
+	],
+	hide_dependency_lines: true,
+	dependencies: [
+		"27477fdc"
+	],
+	size: 2.0d,
+	min_width: 500
+}

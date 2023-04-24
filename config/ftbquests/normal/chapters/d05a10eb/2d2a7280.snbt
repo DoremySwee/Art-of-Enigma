@@ -1,0 +1,32 @@
+{
+	x: 7.5d,
+	y: 2.5d,
+	dependencies: [
+		"de507e58"
+	],
+	tasks: [{
+		uid: "9ce46518",
+		type: "item",
+		items: [{
+			item: "botania:pool"
+		}]
+	}],
+	rewards: [{
+		uid: "49448bc4",
+		type: "item",
+		item: "botania:blacklotus 1 1",
+		only_one: true
+	},
+	{
+		uid: "efdb2d9c",
+		type: "item",
+		item: "minecraft:stone_slab",
+		count: 31
+	},
+	{
+		uid: "94c0e852",
+		type: "item",
+		item: "minecraft:sapling",
+		count: 32
+	}]
+}

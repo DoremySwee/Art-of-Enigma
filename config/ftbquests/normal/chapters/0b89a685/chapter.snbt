@@ -1,0 +1,6 @@
+{
+	title: "controller",
+	always_invisible: true,
+	group: 0,
+	default_quest_shape: ""
+}

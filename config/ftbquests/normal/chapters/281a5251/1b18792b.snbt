@@ -1,0 +1,52 @@
+{
+	x: -8.0d,
+	y: -3.0d,
+	shape: "pentagon",
+	text: [
+		"{quests.ch2.cacoon.des}"
+	],
+	dependencies: [
+		"34e8864a"
+	],
+	hide: true,
+	tasks: [{
+		uid: "5227e1a1",
+		type: "item",
+		items: [{
+			item: "botania:cocoon"
+		}],
+		count: 4L
+	}],
+	rewards: [{
+		uid: "b7d3d4a0",
+		type: "item",
+		item: {
+			id: "minecraft:enchanted_book",
+			tag: {
+				StoredEnchantments: [{
+					lvl: 3s,
+					id: 62s
+				}]
+			}
+		}
+	},
+	{
+		uid: "c6198638",
+		type: "item",
+		item: {
+			id: "minecraft:enchanted_book",
+			tag: {
+				StoredEnchantments: [{
+					lvl: 3s,
+					id: 61s
+				}]
+			}
+		}
+	},
+	{
+		uid: "d8870ab2",
+		type: "item",
+		item: "botania:cocoon",
+		count: 4
+	}]
+}

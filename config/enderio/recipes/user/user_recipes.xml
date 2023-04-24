@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<enderio:recipes xmlns:enderio="http://enderio.com/recipes" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://enderio.com/recipes recipes.xsd ">
+    <recipe name="BioToHootch" required="true">
+        <fermenting energy="10000">
+        <inputgroup>
+            <input name="minecraft:glowstone_dust" multiplier="0.87"/>
+        </inputgroup>
+        <inputgroup>
+            <input name="botania:manaresource:23" multiplier="0.72"/>
+        </inputgroup>
+        <inputfluid name="biocrude" multiplier="0.13"/>
+        <outputfluid name="hootch"/>
+        </fermenting>
+    </recipe>
+    <recipe name="Hootch" required="true"><disabled/></recipe>
+    <recipe name="Rocket Fuel" required="true"><disabled/></recipe>
+    <recipe name="Alloy: Dark Steel With Tar" required="true">
+        <alloying energy="20000" exp="0.5">
+            <input name="immersiveengineering:metal:8"/>
+            <input name="thermalfoundation:material:833"/>
+            <input name="minecraft:obsidian"/>
+            <output name="enderio:item_alloy_ingot:6"/>
+        </alloying>
+    </recipe>
+    <recipe name="syrup" required="true">
+        <fermenting energy="10000">
+        <inputgroup>
+            <input name="minecraft:apple" multiplier="0.53"/>
+            <input name="minecraft:carrot" multiplier="0.23"/>
+            <input name="minecraft:reeds" multiplier="0.73"/>
+            <input name="minecraft:sugar" multiplier="0.73"/>
+            <input name="minecraft:pumpkin_pie" multiplier="1.35"/>
+        </inputgroup>
+        <inputgroup>
+            <input name="minecraft:apple" multiplier="0.53"/>
+            <input name="minecraft:carrot" multiplier="0.23"/>
+            <input name="minecraft:reeds" multiplier="0.73"/>
+            <input name="minecraft:sugar" multiplier="0.73"/>
+            <input name="minecraft:pumpkin_pie" multiplier="1.35"/>
+        </inputgroup>
+        <inputfluid name="milk" multiplier="0.37"/>
+        <outputfluid name="syrup"/>
+        </fermenting>
+    </recipe>
+    <recipe name="Alloy: Dark Steel" required="true"><disabled/></recipe>
+    <recipe name="Alloy: Dark Steel, Variant" required="false"><disabled/></recipe>
+    <recipe name="Alloy: Electrical Steel" required="true"><disabled/></recipe>
+    <recipe name="Alloy: Electrical Steel, Variant" required="false"><disabled/></recipe>
+    <recipe name="Alloy: Vibrant Alloy" required="true"><disabled/></recipe>
+    <recipe name="Alloy: Redstone Alloy" required="true"><disabled/></recipe>
+    <recipe name="Alloy: Conductive Iron" required="true"><disabled/></recipe>
+    <recipe name="Alloy: Pulsating Iron" required="true"><disabled/></recipe>
+    <recipe name="Alloy: End Steel" required="true"><disabled/></recipe>
+    <recipe name="Alloy: Construction Alloy" required="false"><disabled/></recipe>
+    <recipe name="Alloy: Green Dye" required="true"><disabled/></recipe>
+    <recipe name="Alloy: Green Dye, Variant" required="true"><disabled/></recipe>
+    <recipe name="Alloy: Green Dye, Oredict" required="true"><disabled/></recipe>
+    <recipe name="Alloy: Green Dye, Oredict Variant" required="true"><disabled/></recipe>
+    <recipe name="Alloy: Brown Dye" required="true"><disabled/></recipe>
+    <recipe name="Alloy: Brown Dye, Variant" required="true"><disabled/></recipe>
+    <recipe name="Alloy: Brown Dye, Oredict" required="true"><disabled/></recipe>
+    <recipe name="Alloy: Brown Dye, Oredict Variant" required="true"><disabled/></recipe>
+    <recipe name="Alloy: Black Dye" required="true"><disabled/></recipe>
+    <recipe name="Alloy: Black Dye, Variant" required="true"><disabled/></recipe>
+    <recipe name="Alloy: Black Dye, Oredict" required="true"><disabled/></recipe>
+    <recipe name="Alloy: Black Dye, Oredict Variant" required="true"><disabled/></recipe>
+    <recipe name="Alloy: Red Dye" required="true"><disabled/></recipe>
+    <recipe name="Alloy: Dead Tree" required="true"><disabled/></recipe>
+    <recipe name="Infinity Goop" required="true"><disabled/></recipe>
+    <recipe name="Infinity Goop, Charcoal" required="false"><disabled/></recipe>
+    <recipe name="Chassis"><disabled/></recipe>
+    <recipe name="Enhanced Chassis"><disabled/></recipe>
+    <recipe name="Soul Chassis"><disabled/></recipe>
+    <recipe name="Alloy: Industrial Insulation" required="true"><disabled/></recipe>
+    <recipe name="Alloy: Nethercotta" required="true"><disabled/></recipe>
+
+    <recipe name="Alloy: Manyullyn" required="false"><disabled/></recipe>
+    <recipe name="Alloy: Steel" required="false"><disabled/></recipe>
+    <recipe name="Alloy: Electrum Ingot (Thermal Expansion)" required="false"><disabled/></recipe>
+    <recipe name="Alloy: Invar Ingot (Thermal Expansion)" required="false"><disabled/></recipe>
+    <recipe name="Alloy: Bronze (Thermal Expansion)" required="false"><disabled/></recipe>
+    <recipe name="Alloy: Constantan (Thermal Expansion)" required="false"><disabled/></recipe>
+    <recipe name="Alloy: Signalum (Thermal Expansion)" required="false"><disabled/></recipe>
+    <recipe name="Alloy: Lumium from dust (Thermal Expansion)" required="false"><disabled/></recipe>
+    <recipe name="Alloy: Lumium (Thermal Expansion)" required="false"><disabled/></recipe>
+    <recipe name="Alloy: Enderium Base (Thermal Expansion)" required="false"><disabled/></recipe>
+    <recipe name="Alloy: Enderium (Thermal Expansion)" required="false"><disabled/></recipe>
+    <recipe name="Alloy: Steel (Oredict)" required="false"><disabled/></recipe>
+
+    <recipe name="Alloy: Enderium Blend" required="false"><disabled/></recipe>
+    <recipe name="Alloy: Signalum Blend" required="false"><disabled/></recipe>
+    <recipe name="Alloy: Lumium Blend" required="false"><disabled/></recipe>
+    <recipe name="Alloy: Invar Blend" required="false"><disabled/></recipe>
+
+    <recipe name="Gear, Wood" disabled="true" />
+    <recipe name="Gear, ae2 messes things up" disabled="true" />
+    <recipe name="Gear, just to be sure" disabled="true" />
+    <recipe name="Gear, better save than sorry" disabled="true" />
+    <recipe name="Gear, Stone" disabled="true" />
+    <recipe name="Gear, Stone, Upgrade" disabled="true" />
+    <recipe name="Tweak: Wood Hopper" disabled="true" />
+</enderio:recipes>

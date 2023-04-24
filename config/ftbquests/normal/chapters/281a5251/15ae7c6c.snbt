@@ -1,0 +1,27 @@
+{
+	x: -3.5d,
+	y: -7.5d,
+	dependencies: [
+		"0eb2c3fb"
+	],
+	hide: true,
+	tasks: [{
+		uid: "9f0c9c6d",
+		type: "item",
+		items: [{
+			item: "immersiveengineering:stone_decoration 1 1"
+		}],
+		count: 27L
+	}],
+	rewards: [{
+		uid: "04ce9cd7",
+		type: "item",
+		item: "immersiveengineering:stone_decoration 1 1",
+		count: 108
+	},
+	{
+		uid: "8f4443d7",
+		type: "item",
+		item: "immersiveengineering:tool 1 3"
+	}]
+}

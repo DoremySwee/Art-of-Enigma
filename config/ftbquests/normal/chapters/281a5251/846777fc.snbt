@@ -1,0 +1,21 @@
+{
+	x: 3.0d,
+	y: -3.0d,
+	dependencies: [
+		"81e58e71",
+		"1aba72ad"
+	],
+	hide: true,
+	tasks: [{
+		uid: "53ee7682",
+		type: "item",
+		items: [{
+			id: "forge:bucketfilled",
+			tag: {
+				FluidName: "rocket_fuel",
+				Amount: 1000
+			}
+		}],
+		ignore_damage: true
+	}]
+}

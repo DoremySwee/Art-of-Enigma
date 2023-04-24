@@ -1,0 +1,31 @@
+{
+	x: 0.0d,
+	y: 2.5d,
+	shape: "square",
+	dependencies: [
+		"751bc6f5"
+	],
+	hide: true,
+	tasks: [{
+		uid: "fe6daa7e",
+		type: "item",
+		items: [{
+			item: "botania:terrasword"
+		}],
+		ignore_damage: true,
+		ignore_nbt: 1b
+	}],
+	rewards: [{
+		uid: "19507671",
+		type: "item",
+		team_reward: false,
+		item: {
+			id: "botania:lexicon",
+			tag: {
+				knowledge.minecraft: 1b,
+				knowledge.alfheim: 1b,
+				knowledge.relic: 1b
+			}
+		}
+	}]
+}

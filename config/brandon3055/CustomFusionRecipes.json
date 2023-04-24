@@ -1,0 +1,38 @@
+[
+    {
+        "mode": "ADD",
+        "result": "tconstruct:seared_furnace_controller",
+        "catalyst": "minecraft:slime_ball",
+        "energy": 1000,
+        "tier": 0,
+        "ingredients": [
+            "tconstruct:seared,1,3",
+            "tconstruct:seared,1,3",
+            "tconstruct:seared,1,3",
+            "tconstruct:seared,1,3",
+            "tconstruct:seared,1,3",
+            "tconstruct:seared,1,3"
+        ]
+    },
+    {
+        "mode": "ADD",
+        "result": "botania:lens,4,14",
+        "catalyst": "botania:lens",
+        "energy": 10000,
+        "tier": 0,
+        "ingredients": [
+            "minecraft:record_13",
+            "minecraft:record_cat",
+            "minecraft:record_blocks",
+            "minecraft:record_chirp",
+            "minecraft:record_far",
+            "minecraft:record_mall",
+            "minecraft:record_mellohi",
+            "minecraft:record_stal",
+            "minecraft:record_strad",
+            "minecraft:record_ward",
+            "minecraft:record_11",
+            "minecraft:record_wait"
+        ]
+    }
+]

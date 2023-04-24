@@ -1,0 +1,16 @@
+{
+	x: -9.0d,
+	y: -3.0d,
+	hide_dependency_lines: true,
+	dependencies: [
+		"c5aea2e5"
+	],
+	hide: true,
+	tasks: [{
+		uid: "bdc7384d",
+		type: "item",
+		items: [{
+			item: "immersiveengineering:material 1 4"
+		}]
+	}]
+}

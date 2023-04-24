@@ -1,0 +1,22 @@
+{
+	x: -26.5d,
+	y: -10.5d,
+	dependencies: [
+		"7fcca310",
+		"149b625a"
+	],
+	hide: true,
+	size: 2.0d,
+	tasks: [{
+		uid: "a6d0f761",
+		type: "checkmark",
+		icon: "botania:pylon 1 1"
+	}],
+	rewards: [{
+		uid: "79dda2c8",
+		type: "command",
+		team_reward: true,
+		auto: "invisible",
+		command: "/ftbquests change_progress reset singleplayer f307df3d"
+	}]
+}

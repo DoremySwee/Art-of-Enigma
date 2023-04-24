@@ -1,0 +1,16 @@
+{
+	title: "{quests.ch2.portalCancel.title}",
+	x: -4.2d,
+	y: -7.35d,
+	text: [
+		"{quests.ch2.portalCancel.des}"
+	],
+	dependencies: [
+		"0eb2c3fb"
+	],
+	size: 0.7d,
+	tasks: [{
+		uid: "58f5a042",
+		type: "checkmark"
+	}]
+}

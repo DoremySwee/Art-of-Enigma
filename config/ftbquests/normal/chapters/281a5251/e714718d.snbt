@@ -1,0 +1,21 @@
+{
+	x: -9.0d,
+	y: -7.0d,
+	hide_dependency_lines: true,
+	dependencies: [
+		"c5aea2e5"
+	],
+	hide: true,
+	tasks: [{
+		uid: "0c5ddaa5",
+		type: "item",
+		items: [{
+			item: "minecraft:clay_ball"
+		}]
+	}],
+	rewards: [{
+		uid: "3ff41278",
+		type: "item",
+		item: "minecraft:observer"
+	}]
+}

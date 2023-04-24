@@ -1,0 +1,22 @@
+{
+	x: -8.0d,
+	y: -7.0d,
+	dependencies: [
+		"e714718d",
+		"1b18792b"
+	],
+	hide: true,
+	tasks: [{
+		uid: "672a3933",
+		type: "item",
+		items: [{
+			item: "tconstruct:casting"
+		}]
+	}],
+	rewards: [{
+		uid: "e6f59065",
+		type: "item",
+		item: "minecraft:log",
+		count: 64
+	}]
+}

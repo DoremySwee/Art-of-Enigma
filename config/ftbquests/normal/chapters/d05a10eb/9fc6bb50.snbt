@@ -1,0 +1,27 @@
+{
+	x: 10.0d,
+	y: 2.5d,
+	dependencies: [
+		"2d2a7280"
+	],
+	hide: true,
+	tasks: [{
+		uid: "74caefd6",
+		type: "item",
+		items: [{
+			item: "botania:opencrate 1 1"
+		}]
+	}],
+	rewards: [{
+		uid: "43c1c5e4",
+		type: "item",
+		item: "botania:pool",
+		count: 2
+	},
+	{
+		uid: "b2466f63",
+		type: "item",
+		item: "minecraft:sapling",
+		count: 32
+	}]
+}

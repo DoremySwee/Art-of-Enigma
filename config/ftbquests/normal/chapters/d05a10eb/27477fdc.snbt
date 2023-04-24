@@ -1,0 +1,35 @@
+{
+	title: "{quests.ch1.beforeEverything.title}",
+	icon: {
+		id: "botania:lexicon",
+		tag: {}
+	},
+	x: -10.0d,
+	y: 6.0d,
+	text: [
+		"{quests.ch1.beforeEverything.des0}",
+		"{quests.ch1.beforeEverything.des1}",
+		"{quests.ch1.beforeEverything.des2}"
+	],
+	hide: true,
+	size: 2.0d,
+	min_width: 500,
+	tasks: [{
+		uid: "985b8078",
+		type: "checkmark"
+	}],
+	rewards: [{
+		uid: "aeedaa5f",
+		type: "command",
+		team_reward: true,
+		auto: "invisible",
+		command: "/ftbquests change_progress complete singleplayer 1ac33ae6"
+	},
+	{
+		uid: "afa0ea01",
+		type: "command",
+		team_reward: true,
+		auto: "invisible",
+		command: "/ftbquests change_progress complete singleplayer 6a9d3990"
+	}]
+}

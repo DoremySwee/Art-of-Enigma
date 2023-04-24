@@ -1,0 +1,16 @@
+{
+	x: 5.0d,
+	y: 5.0d,
+	dependencies: [
+		"91fdb549",
+		"33cbe34f"
+	],
+	tasks: [{
+		uid: "1a6936a8",
+		type: "item",
+		items: [{
+			item: "botania:quartztypemana"
+		}],
+		count: 64L
+	}]
+}

@@ -1,0 +1,34 @@
+{
+	x: 0.0d,
+	y: -3.5d,
+	dependencies: [
+		"1ac0be8d"
+	],
+	tasks: [{
+		uid: "b561bf10",
+		type: "item",
+		items: [{
+			item: "minecraft:stone_pickaxe"
+		}],
+		ignore_damage: true,
+		ignore_nbt: 1b
+	}],
+	rewards: [{
+		uid: "d512f97d",
+		type: "item",
+		item: "minecraft:sapling",
+		count: 64
+	},
+	{
+		uid: "c013699d",
+		type: "item",
+		item: "minecraft:cobblestone",
+		count: 64
+	},
+	{
+		uid: "bf5c9029",
+		type: "item",
+		item: "minecraft:stone_slab",
+		count: 31
+	}]
+}

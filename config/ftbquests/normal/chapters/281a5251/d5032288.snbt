@@ -1,0 +1,43 @@
+{
+	x: -4.0d,
+	y: -3.0d,
+	dependencies: [
+		"dde09bc4"
+	],
+	hide: true,
+	tasks: [{
+		uid: "8811e089",
+		type: "item",
+		items: [{
+			ForgeCaps: {
+				Parent: {
+					data: "record",
+					id: "ore"
+				}
+			},
+			id: "itemfilters:filter",
+			tag: {
+				display: {
+					Name: "Any record"
+				}
+			}
+		}],
+		ignore_damage: true,
+		ignore_nbt: 1b
+	}],
+	rewards: [{
+		uid: "e4d2d042",
+		type: "choice",
+		table: 0
+	},
+	{
+		uid: "2583a0cc",
+		type: "choice",
+		table: 0
+	},
+	{
+		uid: "214f4890",
+		type: "item",
+		item: "minecraft:record_far"
+	}]
+}

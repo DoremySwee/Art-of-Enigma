@@ -1,0 +1,19 @@
+{
+	x: -4.8999999999999995d,
+	y: -7.35d,
+	text: [
+		"{quests.ch2.netherrock.des}"
+	],
+	dependencies: [
+		"0eb2c3fb"
+	],
+	size: 0.7d,
+	tasks: [{
+		uid: "3d526507",
+		type: "item",
+		items: [{
+			item: "minecraft:netherrack"
+		}],
+		count: 30L
+	}]
+}

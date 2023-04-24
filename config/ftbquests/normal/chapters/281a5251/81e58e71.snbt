@@ -1,0 +1,27 @@
+{
+	x: 2.0d,
+	y: -3.0d,
+	dependencies: [
+		"c02ba933",
+		"23840f90"
+	],
+	hide: true,
+	tasks: [{
+		uid: "5e7fb4ee",
+		type: "item",
+		items: [{
+			ForgeCaps: {
+				Parent: {
+					data: "itemBioblendRich",
+					id: "ore"
+				}
+			},
+			id: "itemfilters:filter",
+			tag: {
+				display: {
+					Name: "Any itemBioblendRich"
+				}
+			}
+		}]
+	}]
+}

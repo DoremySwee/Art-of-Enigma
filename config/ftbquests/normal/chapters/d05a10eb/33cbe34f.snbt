@@ -1,0 +1,23 @@
+{
+	x: 2.5d,
+	y: 2.5d,
+	dependencies: [
+		"db11d933"
+	],
+	dependency_requirement: "one_started",
+	tasks: [{
+		uid: "d64ac54b",
+		type: "item",
+		items: [{
+			item: "minecraft:stone_pickaxe"
+		}],
+		ignore_damage: true,
+		ignore_nbt: 1b
+	}],
+	rewards: [{
+		uid: "335c5c2a",
+		type: "item",
+		item: "minecraft:sapling",
+		count: 16
+	}]
+}

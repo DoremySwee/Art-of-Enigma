@@ -1,0 +1,24 @@
+{
+	x: -2.0d,
+	y: -5.0d,
+	shape: "pentagon",
+	dependencies: [
+		"f73bd9a3",
+		"3aa41f25"
+	],
+	hide: true,
+	tasks: [{
+		uid: "9f60c431",
+		type: "item",
+		items: [{
+			item: "thermalfoundation:material 1 288"
+		}],
+		count: 2L
+	}],
+	rewards: [{
+		uid: "ec954ba4",
+		type: "item",
+		item: "immersiveengineering:metal 1 8",
+		count: 8
+	}]
+}

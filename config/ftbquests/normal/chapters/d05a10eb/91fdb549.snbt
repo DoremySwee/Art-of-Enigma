@@ -1,0 +1,43 @@
+{
+	x: 2.5d,
+	y: 5.0d,
+	text: [
+		""
+	],
+	dependencies: [
+		"635dfd0c"
+	],
+	dependency_requirement: "all_started",
+	tasks: [{
+		uid: "b1ea9c5d",
+		type: "item",
+		items: [{
+			item: "minecraft:piston"
+		}],
+		count: 8L
+	},
+	{
+		uid: "7af81fd6",
+		type: "item",
+		items: [{
+			item: "minecraft:sticky_piston"
+		}],
+		count: 8L
+	},
+	{
+		uid: "5fada767",
+		type: "item",
+		items: [{
+			item: "minecraft:lever"
+		}],
+		count: 8L
+	},
+	{
+		uid: "6f9f1030",
+		type: "item",
+		items: [{
+			item: "appliedenergistics2:creative_energy_cell"
+		}],
+		count: 8L
+	}]
+}

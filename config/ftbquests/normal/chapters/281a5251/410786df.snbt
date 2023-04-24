@@ -1,0 +1,19 @@
+{
+	x: -3.0d,
+	y: -10.0d,
+	dependencies: [
+		"38163924"
+	],
+	tasks: [{
+		uid: "1ec10aeb",
+		type: "item",
+		items: [{
+			id: "forge:bucketfilled",
+			tag: {
+				FluidName: "mana",
+				Amount: 1000
+			}
+		}],
+		ignore_damage: true
+	}]
+}

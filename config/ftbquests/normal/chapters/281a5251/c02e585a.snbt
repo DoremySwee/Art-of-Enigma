@@ -1,0 +1,29 @@
+{
+	x: -9.0d,
+	y: -12.0d,
+	hide_dependency_lines: true,
+	dependencies: [
+		"2e692f1a"
+	],
+	hide: true,
+	hide_text_until_complete: true,
+	tasks: [{
+		uid: "be6adf18",
+		type: "item",
+		items: [{
+			item: "immersiveengineering:stone_decoration 1 1"
+		}],
+		count: 27L
+	}],
+	rewards: [{
+		uid: "f4e70212",
+		type: "item",
+		item: "immersiveengineering:stone_decoration 1 1",
+		count: 108
+	},
+	{
+		uid: "a9b5d5a6",
+		type: "item",
+		item: "immersiveengineering:tool 1 3"
+	}]
+}

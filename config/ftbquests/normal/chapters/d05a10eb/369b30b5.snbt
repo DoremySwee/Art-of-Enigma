@@ -1,0 +1,29 @@
+{
+	x: 0.7d,
+	y: -2.8d,
+	dependencies: [
+		"b8633638"
+	],
+	size: 0.7d,
+	tasks: [{
+		uid: "7e726977",
+		type: "item",
+		items: [{
+			item: "minecraft:iron_pickaxe"
+		}],
+		ignore_damage: true,
+		ignore_nbt: 1b
+	}],
+	rewards: [{
+		uid: "3e1cab61",
+		type: "item",
+		item: "minecraft:sapling",
+		count: 64
+	},
+	{
+		uid: "8b91909e",
+		type: "item",
+		item: "minecraft:cobblestone",
+		count: 64
+	}]
+}

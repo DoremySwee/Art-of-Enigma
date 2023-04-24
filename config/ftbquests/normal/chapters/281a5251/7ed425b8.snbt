@@ -1,0 +1,16 @@
+{
+	x: -2.5d,
+	y: -4.4d,
+	dependencies: [
+		"ebfe06b1"
+	],
+	size: 0.7d,
+	tasks: [{
+		uid: "68b7e75c",
+		type: "item",
+		items: [{
+			item: "immersiveengineering:mold 1 1"
+		}],
+		ignore_nbt: 1b
+	}]
+}

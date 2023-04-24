@@ -1,0 +1,26 @@
+{
+	x: -7.0d,
+	y: -12.0d,
+	dependencies: [
+		"78729411"
+	],
+	tasks: [{
+		uid: "6552cc3b",
+		type: "checkmark"
+	}],
+	rewards: [{
+		uid: "389e6d75",
+		type: "choice",
+		table: 0
+	},
+	{
+		uid: "23a74d39",
+		type: "choice",
+		table: 0
+	},
+	{
+		uid: "39d5acdd",
+		type: "choice",
+		table: 0
+	}]
+}

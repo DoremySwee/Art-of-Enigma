@@ -1,0 +1,23 @@
+{
+	icon: {
+		id: "minecraft:spawn_egg",
+		tag: {
+			EntityTag: {
+				id: "minecraft:creeper"
+			}
+		}
+	},
+	x: -2.5d,
+	y: -1.5d,
+	text: [
+		"1. {quests.ch1.peace.des}",
+		"2. {quests.ch1.sapl.des}"
+	],
+	dependencies: [
+		"1ac0be8d"
+	],
+	tasks: [{
+		uid: "46adad37",
+		type: "checkmark"
+	}]
+}

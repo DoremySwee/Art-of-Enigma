@@ -1,0 +1,24 @@
+{
+	x: 2.5d,
+	y: -1.5d,
+	dependencies: [
+		"3635e1e2"
+	],
+	optional: true,
+	tasks: [{
+		uid: "9f278ecf",
+		type: "item",
+		items: [{
+			item: "betterbuilderswands:wandstone"
+		}],
+		ignore_damage: true,
+		ignore_nbt: 1b
+	},
+	{
+		uid: "8b9d80fd",
+		type: "item",
+		items: [{
+			item: "botania:manaresource 1 11"
+		}]
+	}]
+}

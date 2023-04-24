@@ -1,0 +1,16 @@
+mods/
+.mixin.out/
+assets/
+astralsorcery/
+crash-reports/
+journeymap/
+libraries/
+local/
+logs/
+native/
+resourcepacks/
+saves/
+screenshots/
+shaderpacks/
+tmp/
+versions/

@@ -1,0 +1,24 @@
+{
+	title: "{quests.ch1.mana.title}",
+	icon: "botania:manabottle",
+	x: 2.5d,
+	y: 0.0d,
+	shape: "circle",
+	text: [
+		"{quests.ch1.mana.des}"
+	],
+	dependencies: [
+		"db11d933"
+	],
+	optional: true,
+	tasks: [{
+		uid: "56899759",
+		type: "checkmark"
+	}],
+	rewards: [{
+		uid: "2246d451",
+		type: "item",
+		item: "minecraft:cobblestone",
+		only_one: true
+	}]
+}

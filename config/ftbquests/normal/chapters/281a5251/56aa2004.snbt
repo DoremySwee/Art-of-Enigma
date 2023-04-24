@@ -1,0 +1,20 @@
+{
+	x: 1.5d,
+	y: -1.5d,
+	dependencies: [
+		"7d2c01bd"
+	],
+	size: 0.7d,
+	tasks: [{
+		uid: "de2884f4",
+		type: "item",
+		items: [{
+			item: "enderio:block_experience_obelisk"
+		}]
+	}],
+	rewards: [{
+		uid: "3d4386d0",
+		type: "xp_levels",
+		xp_levels: 30
+	}]
+}

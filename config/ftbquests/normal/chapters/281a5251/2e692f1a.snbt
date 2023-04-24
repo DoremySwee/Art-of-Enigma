@@ -1,0 +1,71 @@
+{
+	x: -9.0d,
+	y: -10.0d,
+	text: [
+		"{quests.ch2.portalCancel.des}"
+	],
+	hide_dependency_lines: true,
+	dependencies: [
+		"04b2d4c4"
+	],
+	hide: true,
+	tasks: [{
+		uid: "74a7c3dd",
+		type: "item",
+		items: [{
+			item: "botania:cocoon"
+		}],
+		count: 4L
+	},
+	{
+		uid: "57de7bc3",
+		type: "item",
+		items: [{
+			item: "minecraft:netherrack"
+		}],
+		count: 30L
+	}],
+	rewards: [{
+		uid: "127c0adf",
+		type: "item",
+		item: "botania:cocoon",
+		count: 4
+	},
+	{
+		uid: "4e52c28c",
+		type: "item",
+		item: {
+			id: "minecraft:enchanted_book",
+			tag: {
+				StoredEnchantments: [{
+					lvl: 3s,
+					id: 62s
+				}]
+			}
+		}
+	},
+	{
+		uid: "78ccc015",
+		type: "item",
+		item: {
+			id: "minecraft:enchanted_book",
+			tag: {
+				StoredEnchantments: [{
+					lvl: 3s,
+					id: 61s
+				}]
+			}
+		}
+	},
+	{
+		uid: "57635bf8",
+		type: "xp",
+		xp: 1000
+	},
+	{
+		uid: "25d11118",
+		type: "item",
+		item: "extrautils2:compressedcobblestone 1 2",
+		count: 2
+	}]
+}

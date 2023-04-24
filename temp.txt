@@ -1,0 +1,1 @@
+cd "D:/MC/1.12.2s/Art of Enigma/.minecraft"

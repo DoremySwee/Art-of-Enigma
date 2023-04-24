@@ -1,0 +1,24 @@
+{
+	title: "{quests.ch1.dup0.title}",
+	icon: "appliedenergistics2:creative_energy_cell",
+	x: 0.0d,
+	y: 5.0d,
+	text: [
+		"{quests.ch1.dup0.des}"
+	],
+	hide_dependency_lines: true,
+	dependencies: [
+		"751bc6f5"
+	],
+	hide: true,
+	tasks: [{
+		uid: "e029eb9c",
+		type: "checkmark"
+	}],
+	rewards: [{
+		uid: "3b78f0e2",
+		type: "item",
+		item: "minecraft:cobblestone",
+		only_one: true
+	}]
+}

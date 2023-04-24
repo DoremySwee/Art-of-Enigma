@@ -1,0 +1,34 @@
+{
+	x: -6.6499999999999995d,
+	y: -6.3d,
+	dependencies: [
+		"ec39066a"
+	],
+	size: 0.7d,
+	tasks: [{
+		uid: "2264e48d",
+		type: "item",
+		items: [{
+			item: "tconstruct:seared_tank 1 1"
+		}],
+		count: 10L
+	}],
+	rewards: [{
+		uid: "b742b898",
+		type: "item",
+		item: "tconstruct:seared_tank",
+		count: 64
+	},
+	{
+		uid: "5b334998",
+		type: "item",
+		item: "tconstruct:seared_tank 1 1",
+		count: 54
+	},
+	{
+		uid: "2925f420",
+		type: "item",
+		item: "tconstruct:seared_tank 1 2",
+		count: 64
+	}]
+}

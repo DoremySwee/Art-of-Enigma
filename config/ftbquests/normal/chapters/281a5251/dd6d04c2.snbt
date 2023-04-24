@@ -1,0 +1,19 @@
+{
+	x: -5.25d,
+	y: -6.3d,
+	dependencies: [
+		"64041a02"
+	],
+	hide: true,
+	size: 0.7d,
+	tasks: [{
+		uid: "0dd51135",
+		type: "item",
+		items: [{
+			id: "botania:lens",
+			tag: {},
+			Damage: 7s
+		}],
+		ignore_nbt: 1b
+	}]
+}

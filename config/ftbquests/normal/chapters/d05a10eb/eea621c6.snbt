@@ -1,0 +1,31 @@
+{
+	title: "{quests.ch1.peace.title}",
+	icon: {
+		id: "minecraft:spawn_egg",
+		tag: {
+			EntityTag: {
+				id: "minecraft:creeper"
+			}
+		}
+	},
+	x: -2.5d,
+	y: 0.0d,
+	text: [
+		"{quests.ch1.peace.des}"
+	],
+	hide_dependency_lines: true,
+	dependencies: [
+		"751bc6f5"
+	],
+	hide: true,
+	dependency_requirement: "one_completed",
+	tasks: [{
+		uid: "14a4e020",
+		type: "checkmark"
+	}],
+	rewards: [{
+		uid: "aabcd393",
+		type: "item",
+		item: "minecraft:cobblestone"
+	}]
+}

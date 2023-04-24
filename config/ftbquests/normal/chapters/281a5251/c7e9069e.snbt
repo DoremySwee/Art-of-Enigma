@@ -1,0 +1,16 @@
+{
+	x: -1.0d,
+	y: -3.0d,
+	dependencies: [
+		"03403890",
+		"ebfe06b1"
+	],
+	hide: true,
+	tasks: [{
+		uid: "a3c47566",
+		type: "item",
+		items: [{
+			item: "enderio:block_simple_sag_mill"
+		}]
+	}]
+}

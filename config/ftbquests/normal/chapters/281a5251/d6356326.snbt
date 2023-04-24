@@ -1,0 +1,18 @@
+{
+	x: -8.75d,
+	y: -8.049999999999999d,
+	dependencies: [
+		"92e06615"
+	],
+	size: 0.7d,
+	tasks: [{
+		uid: "222780a2",
+		type: "item",
+		items: [{
+			id: "botania:specialflower",
+			tag: {
+				type: "exoflame"
+			}
+		}]
+	}]
+}

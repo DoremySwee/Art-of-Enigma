@@ -1,0 +1,33 @@
+{
+	title: "{quests.DifficultySelection.title}",
+	icon: "botania:terraplate",
+	x: -15.0d,
+	y: -7.0d,
+	shape: "gear",
+	text: [
+		"{quests.DifficultySelection.desDifference}",
+		"{quests.DifficultySelection.desCanVaryForEachChapter}"
+	],
+	dependencies: [
+		"353ab882",
+		"6da9c0b1"
+	],
+	hide: true,
+	dependency_requirement: "one_completed",
+	size: 2.0d,
+	min_width: 500,
+	rewards: [{
+		uid: "5b36e5dd",
+		type: "command",
+		team_reward: true,
+		auto: "invisible",
+		command: "/ftbquests change_progress complete singleplayer 661e4cdd"
+	},
+	{
+		uid: "7aee7e71",
+		type: "command",
+		team_reward: true,
+		auto: "invisible",
+		command: "/ftbquests change_progress complete singleplayer f2084455"
+	}]
+}

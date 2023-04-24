@@ -1,0 +1,28 @@
+{
+	x: -7.0d,
+	y: -10.0d,
+	dependencies: [
+		"ef04cf0a"
+	],
+	tasks: [{
+		uid: "7052701b",
+		type: "item",
+		items: [{
+			id: "botania:specialflower",
+			tag: {
+				type: "orechid"
+			}
+		}]
+	}],
+	rewards: [{
+		uid: "1f00711d",
+		type: "item",
+		item: "extrautils2:compressedcobblestone 1 2",
+		count: 10
+	},
+	{
+		uid: "664b8933",
+		type: "xp_levels",
+		xp_levels: 10
+	}]
+}

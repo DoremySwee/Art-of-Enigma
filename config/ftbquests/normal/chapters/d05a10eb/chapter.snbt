@@ -1,0 +1,9 @@
+{
+	title: "{chapters.ch1.title}",
+	description: [
+		"{chapters.ch1.subtitle}"
+	],
+	always_invisible: false,
+	group: 0,
+	default_quest_shape: "circle"
+}
