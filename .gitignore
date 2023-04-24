@@ -14,3 +14,8 @@ screenshots/
 shaderpacks/
 tmp/
 versions/
+*.log
+launcher_profiles.json
+options.txt
+BotaniaVars.dat
+config/AppliedEnergistics2/VersionChecker.cfg
