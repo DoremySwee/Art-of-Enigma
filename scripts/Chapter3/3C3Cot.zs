@@ -1,20 +1,16 @@
-import mods.contenttweaker.VanillaFactory as VF;
-import mods.contenttweaker.Fluid;
-if(true){
-    var x=VF.createFluid("molten_essence", 0x55338811);
-    x.density=1;
-    x.luminosity=15;
-    x.temperature=0;
-    x.viscosity=2000;
-    x.register();
-}
-if(true){
-    var x=VF.createFluid("bot_mana", 0x775555FF);
-    x.density=1;
-    x.luminosity=15;
-    x.temperature=0;
-    x.viscosity=2000;
-    x.stillLocation="astralsorcery:fluid/starlight_still";
-    x.flowingLocation="astralsorcery:fluid/starlight_flow";
-    x.register();
-}
+#loader contenttweaker
+import scripts.CotLib;
+val lightStill="astralsorcery:blocks/fluid/starlight_still";
+val lightFlow="astralsorcery:blocks/fluid/starlight_flow";
+val moltStill="base:fluids/molten";
+val moltFlow="base:fluids/molten_flowing";
+CotLib.createFluid("molten_essence","AA99FF55",{
+    density:1,luminosity:15,
+    stillLocation:moltStill,
+    flowingLocation:moltFlow
+});
+CotLib.createFluid("bot_mana","7799AAFF",{
+    density:1,luminosity:15,
+    stillLocation:lightStill,
+    flowingLocation:lightFlow
+});
