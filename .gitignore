@@ -25,3 +25,7 @@ config/worldedit/worldwdit.propertiesc
 usercache.json
 usernamecache.json
 temp.txt
+*.disabled
+backups/
+.vscode/
+Code/

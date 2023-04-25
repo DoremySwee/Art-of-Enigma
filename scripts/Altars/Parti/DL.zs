@@ -1,5 +1,4 @@
 //Danmuku Lib
-#loader crafttweaker
 #loader crafttweaker reloadableevents
 #priority 100
 //#suppress errors
@@ -300,10 +299,10 @@ events.onPlayerInteractBlock(function(event as crafttweaker.event.PlayerInteract
 });/**/
 
 //Example on Server Side
-static example_pipi1 as FXS=FXS(pipi,{}as IData).scale(0.1,true).rot(V(0,1,0),0.000).shift(V(-1,1.4,0)).regiS2C();
-static example_pipi2 as FXS=FXS(pipi,{}as IData).scale(0.1,true).rot(V(0,1,0),90.00).shift(V(-1,1.4,0)).regiS2C();
-static example_pipi3 as FXS=FXS(pipi,{}as IData).scale(0.1,true).rot(V(0,1,0),180.0).shift(V(-1,1.4,0)).regiS2C();
-static example_pipi4 as FXS=FXS(pipi,{}as IData).scale(0.1,true).rot(V(0,1,0),270.0).shift(V(-1,1.4,0)).regiS2C();
+static example_pipi1 as FXS=FXS(pipi,{}as IData).scale(3,true).rot(V(0,1,0),0.000).shift(V(-1,10.4,0)).regiS2C();
+static example_pipi2 as FXS=FXS(pipi,{}as IData).scale(3,true).rot(V(0,1,0),90.00).shift(V(-1,10.4,0)).regiS2C();
+static example_pipi3 as FXS=FXS(pipi,{}as IData).scale(3,true).rot(V(0,1,0),180.0).shift(V(-1,10.4,0)).regiS2C();
+static example_pipi4 as FXS=FXS(pipi,{}as IData).scale(3,true).rot(V(0,1,0),270.0).shift(V(-1,10.4,0)).regiS2C();
 events.onCommand(function(event as crafttweaker.event.CommandEvent){
     if(event.command.name=="say")return;
     if(event.command.name=="tellraw")return;

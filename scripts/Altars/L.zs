@@ -1,4 +1,3 @@
-#loader crafttweaker
 #loader crafttweaker reloadableevents
 #priority 1000
 import crafttweaker.server.IServer;

@@ -1,5 +1,3 @@
-import crafttweaker.world.IWorld;
-import mods.randomtweaker.botania.ICocoon;
 addRegexLogFilter("^.*cocoon.*");
 addRegexLogFilter("^WARNING.*");
 addRegexLogFilter("^[RandomTweaker].*");

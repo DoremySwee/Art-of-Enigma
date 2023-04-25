@@ -1,4 +1,3 @@
-#loader crafttweaker
 #loader crafttweaker reloadableevents
 #priority 101
 import crafttweaker.world.IVector3d;
