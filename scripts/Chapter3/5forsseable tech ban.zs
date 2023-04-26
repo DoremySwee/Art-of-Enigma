@@ -12,6 +12,10 @@ for i in MA.items{
     if(i.definition.id.contains("storage"))recipes.remove(i);
     if(i.definition.id.contains("tinkering"))recipes.remove(i);
 	if(i.definition.id.contains("crafting"))recipes.remove(i);
-	if(i.definition.id.contains("crafting"))recipes.remove(i);	
 	if(i.definition.id.contains("seeds"))recipes.remove(i);	
+    if(i.definition.id.contains("apple"))recipes.remove(i);	
+    if(i.definition.id.contains("coal"))recipes.remove(i);	
+    if(i.definition.id.contains("can"))recipes.remove(i);	
+    if(i.definition.id.contains("infusion"))recipes.remove(i);	
+    if(i.definition.id.contains("gear"))recipes.remove(i);	
 }

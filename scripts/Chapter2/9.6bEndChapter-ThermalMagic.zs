@@ -40,7 +40,7 @@ mods.tconstruct.Melting.addRecipe(<liquid:redstone>*144,<minecraft:redstone>,
     (<liquid:lava>.temperature+<liquid:pyrotheum>.temperature)/2);
 mods.tconstruct.Alloy.addRecipe(<liquid:redstone_alloy>*144,[<liquid:iron>*81,<liquid:redstone>*514,<liquid:energetic_alloy>*114]);
 mods.thermalexpansion.InductionSmelter.removeRecipe(<thermalfoundation:material>,<minecraft:redstone>);
-mods.tconstruct.Alloy.addRecipe(<liquid:redstone_alloy>*1440,[<liquid:iron>*810,<liquid:redstone>*5140,<liquid:energetic_alloy>*1140]);
+//mods.tconstruct.Alloy.addRecipe(<liquid:redstone_alloy>*1440,[<liquid:iron>*810,<liquid:redstone>*5140,<liquid:energetic_alloy>*1140]);
 mods.thermalexpansion.InductionSmelter.removeRecipe(<thermalfoundation:material>,<minecraft:redstone>);
 mods.tconstruct.Alloy.addRecipe(<liquid:conductive_iron>*1000,[<liquid:iron>*1000,<liquid:redstone>*144]);
 
