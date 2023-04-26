@@ -99,4 +99,13 @@
     <recipe name="Gear, Stone" disabled="true" />
     <recipe name="Gear, Stone, Upgrade" disabled="true" />
     <recipe name="Tweak: Wood Hopper" disabled="true" />
+    <recipe name="Controller Skull" disabled="true" />
+    
+    <recipe name="Controller Skull AoE">
+        <slicing energy="20000">
+            <input name="mysticalagriculture:crafting:33"/><input name="minecraft:skull:2"/><input name="ingotSoularium"/>
+            <input name="enderio:item_basic_capacitor"/><input name="thermalfoundation:material:161"/><input name="bloodmagic:monster_soul"/>
+        <output name="skullZombieController"/>
+        </slicing>
+    </recipe>
 </enderio:recipes>

@@ -1,3 +1,4 @@
+import mods.botaniatweaks.Agglomeration as Agg;
 import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
 import mods.tconstruct.Casting;
@@ -6,7 +7,6 @@ import mods.embers.Stamper;
 import mods.embers.Melter;
 import mods.embers.Mixer;
 import scripts.Lib;
-import mods.botaniatweaks.Agglomeration as Agg;
 
 furnace.remove(<embers:brick_caminite>);
 recipes.removeShaped(<embers:dawnstone_anvil>);
@@ -61,12 +61,12 @@ var SteelBlock=<immersiveengineering:storage:8>;
 var CaminiteSlab=<embers:block_caminite_brick_slab>;
 recipes.addShaped(<mysticalagriculture:tinkering_table>,[
     [<tconstruct:seared_furnace_controller>,<tconstruct:seared_furnace_controller>,<tconstruct:seared_furnace_controller>],
-    [<mysticalagriculture:ingot_storage:2>,
+    [<mysticalagriculture:ingot_storage:1>,
         <tconstruct:toolforge>.withTag({
             textureBlock: {id: "thermalfoundation:storage_alloy",
             Count: 1 as byte, Damage: 0 as short}}),
-        <mysticalagriculture:ingot_storage:2>],
-    [<mysticalagriculture:ingot_storage:2>,null,<mysticalagriculture:ingot_storage:2>]
+        <mysticalagriculture:ingot_storage:1>],
+    [<mysticalagriculture:ingot_storage:1>,null,<mysticalagriculture:ingot_storage:1>]
 ]);
 recipes.addShaped(<embers:block_furnace>,[
     [<embers:stairs_caminite_brick>,<extrautils2:drum:2>,<embers:stairs_caminite_brick>],
@@ -96,14 +96,13 @@ recipes.addShaped(<embers:ember_activator>,[
 ]);
 
 //Fluid Processing
-Mixer.add(<liquid:alubrass>*4,[<liquid:aluminum>*3,<liquid:copper>]);
-Mixer.add(<liquid:constantan>*2,[<liquid:nickel>,<liquid:copper>]);
+Mixer.add(<liquid:alubrass>*64,[<liquid:aluminum>*48,<liquid:copper>*16]);
+Mixer.add(<liquid:constantan>*32,[<liquid:nickel>*16,<liquid:copper>*16]);
+Mixer.add(<liquid:invar>*48,[<liquid:nickel>*16,<liquid:iron>*32]);
 Stamper.remove(<embers:aspectus_iron>);
 Stamper.remove(<embers:aspectus_copper>);
 Stamper.remove(<embers:aspectus_lead>);
 Stamper.remove(<embers:aspectus_silver>);
 Stamper.remove(<embers:aspectus_dawnstone>);
 
-
-//Processing
-recipes.remove(<enderio:item_basic_capacitor:2>);
+Mixer.add(<liquid:electrical_steel>*144,[<liquid:dark_steel>*144,<liquid:alchemical_redstone>*576]);
