@@ -9,7 +9,10 @@
 		uid: "3a502c4f",
 		type: "item",
 		items: [{
-			item: "minecraft:mushroom_stew"
+			ForgeCaps: {
+				"astralsorcery:cap_item_amulet_holder": {}
+			},
+			id: "minecraft:mushroom_stew"
 		}],
 		ignore_damage: true,
 		ignore_nbt: 1b

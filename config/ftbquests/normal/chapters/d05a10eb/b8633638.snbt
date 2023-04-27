@@ -8,7 +8,10 @@
 		uid: "b561bf10",
 		type: "item",
 		items: [{
-			item: "minecraft:stone_pickaxe"
+			ForgeCaps: {
+				"astralsorcery:cap_item_amulet_holder": {}
+			},
+			id: "minecraft:stone_pickaxe"
 		}],
 		ignore_damage: true,
 		ignore_nbt: 1b

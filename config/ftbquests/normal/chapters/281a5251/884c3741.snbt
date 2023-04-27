@@ -8,6 +8,9 @@
 		uid: "02ac86dd",
 		type: "item",
 		items: [{
+			ForgeCaps: {
+				"astralsorcery:cap_item_amulet_holder": {}
+			},
 			id: "forge:bucketfilled",
 			tag: {
 				FluidName: "biodiesel",

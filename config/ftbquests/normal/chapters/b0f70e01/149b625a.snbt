@@ -28,5 +28,11 @@
 		type: "command",
 		auto: "invisible",
 		command: "/ftbquests change_progress complete singleplayer f307df3d"
+	},
+	{
+		uid: "52d55494",
+		type: "command",
+		auto: "enabled",
+		command: "/ftbquests change_progress complete singleplayer bd51487c"
 	}]
 }

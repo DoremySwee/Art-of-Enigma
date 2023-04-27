@@ -1,0 +1,11 @@
+{
+	x: -11.0d,
+	y: -3.5d,
+	tasks: [{
+		uid: "d364f4d8",
+		type: "item",
+		items: [{
+			item: "minecraft:repeating_command_block"
+		}]
+	}]
+}

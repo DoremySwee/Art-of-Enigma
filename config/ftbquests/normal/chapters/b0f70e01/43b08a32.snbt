@@ -1,0 +1,29 @@
+{
+	x: -17.5d,
+	y: -15.0d,
+	dependencies: [
+		"ac8c5c8a"
+	],
+	tasks: [{
+		uid: "cf528d52",
+		type: "item",
+		items: [{
+			item: "avaritia:extreme_crafting_table"
+		}]
+	},
+	{
+		uid: "84015229",
+		type: "item",
+		items: [{
+			item: "minecraft:mob_spawner"
+		}]
+	},
+	{
+		uid: "9a51021e",
+		type: "item",
+		items: [{
+			id: "botania:spawnerclaw",
+			tag: {}
+		}]
+	}]
+}

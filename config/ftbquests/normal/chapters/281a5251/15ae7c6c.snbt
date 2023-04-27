@@ -22,6 +22,12 @@
 	{
 		uid: "8f4443d7",
 		type: "item",
-		item: "immersiveengineering:tool 1 3"
+		item: {
+			ForgeCaps: {
+				"astralsorcery:cap_item_amulet_holder": {}
+			},
+			id: "immersiveengineering:tool",
+			Damage: 3s
+		}
 	}]
 }

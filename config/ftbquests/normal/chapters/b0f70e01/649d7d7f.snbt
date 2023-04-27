@@ -1,0 +1,49 @@
+{
+	x: -23.5d,
+	y: -15.0d,
+	dependencies: [
+		"7987961c"
+	],
+	tasks: [{
+		uid: "b222d1d1",
+		type: "item",
+		items: [{
+			item: "embers:block_furnace"
+		}]
+	},
+	{
+		uid: "352bac64",
+		type: "item",
+		items: [{
+			item: "embers:mixer"
+		}]
+	},
+	{
+		uid: "735f6cf9",
+		type: "item",
+		items: [{
+			item: "embers:stamper"
+		}]
+	},
+	{
+		uid: "1e2c4639",
+		type: "item",
+		items: [{
+			item: "embers:stamper_base"
+		}]
+	},
+	{
+		uid: "d8cc41da",
+		type: "item",
+		items: [{
+			item: "embers:geo_separator"
+		}]
+	},
+	{
+		uid: "6506c70f",
+		type: "item",
+		items: [{
+			item: "embers:ember_activator"
+		}]
+	}]
+}

@@ -1,6 +1,10 @@
 {
-	x: -26.5d,
-	y: -10.5d,
+	title: "{quests.DifficultySelection.titExpert}",
+	x: -26.0d,
+	y: -15.0d,
+	text: [
+		"{quests.DifficultySelection.desExpert}"
+	],
 	dependencies: [
 		"7fcca310",
 		"149b625a"
@@ -18,5 +22,11 @@
 		team_reward: true,
 		auto: "invisible",
 		command: "/ftbquests change_progress reset singleplayer f307df3d"
+	},
+	{
+		uid: "e0c506c2",
+		type: "command",
+		auto: "enabled",
+		command: "/ftbquests change_progress reset singleplayer bd51487c"
 	}]
 }

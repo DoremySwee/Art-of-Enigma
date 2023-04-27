@@ -38,14 +38,23 @@
 		uid: "92db12d7",
 		type: "item",
 		items: [{
-			item: "immersiveengineering:mold 1 1"
+			ForgeCaps: {
+				"astralsorcery:cap_item_amulet_holder": {}
+			},
+			id: "immersiveengineering:mold",
+			Damage: 1s
 		}],
 		ignore_nbt: 1b
 	}],
 	rewards: [{
 		uid: "f2eb7621",
 		type: "item",
-		item: "minecraft:record_far"
+		item: {
+			ForgeCaps: {
+				"astralsorcery:cap_item_amulet_holder": {}
+			},
+			id: "minecraft:record_far"
+		}
 	},
 	{
 		uid: "89f3b012",

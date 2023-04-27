@@ -1,0 +1,22 @@
+{
+	x: -17.5d,
+	y: -6.0d,
+	text: [
+		"{quests.ch3.lifeessence.help}"
+	],
+	dependencies: [
+		"be472f50"
+	],
+	tasks: [{
+		uid: "343b274f",
+		type: "item",
+		items: [{
+			ForgeCaps: {
+				"astralsorcery:cap_item_amulet_holder": {}
+			},
+			id: "bloodmagic:sacrificial_dagger",
+			tag: {}
+		}],
+		ignore_nbt: 1b
+	}]
+}

@@ -21,7 +21,10 @@
 		uid: "d4207e1b",
 		type: "item",
 		items: [{
-			item: "botania:craftpattern"
+			ForgeCaps: {
+				"astralsorcery:cap_item_amulet_holder": {}
+			},
+			id: "botania:craftpattern"
 		}],
 		ignore_nbt: 1b
 	},

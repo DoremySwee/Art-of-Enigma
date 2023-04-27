@@ -8,6 +8,9 @@
 		uid: "27fd552d",
 		type: "item",
 		items: [{
+			ForgeCaps: {
+				"astralsorcery:cap_item_amulet_holder": {}
+			},
 			id: "forge:bucketfilled",
 			tag: {
 				FluidName: "redstone",

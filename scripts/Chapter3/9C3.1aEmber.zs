@@ -106,3 +106,15 @@ Stamper.remove(<embers:aspectus_silver>);
 Stamper.remove(<embers:aspectus_dawnstone>);
 
 Mixer.add(<liquid:electrical_steel>*144,[<liquid:dark_steel>*144,<liquid:alchemical_redstone>*576]);
+mods.thermalexpansion.InductionSmelter.removeRecipe(<thermalfoundation:material:160>, <appliedenergistics2:material:5>);
+recipes.remove(<embers:shard_ember>);
+recipes.remove(<embers:ember_receiver>);
+recipes.addShaped(<embers:ember_receiver>,Lib.Mapper({
+    "A":<embers:brick_caminite>,"B":<immersiveengineering:connector:4>,"C":<immersiveengineering:connector:5>,
+    "D":<botania:specialflower>.withTag({type: "spectrolus"})
+},"ABA;CDC;ABA;"));
+recipes.remove(<embers:ember_emitter>);
+recipes.addShaped(<embers:ember_emitter>,Lib.Mapper({
+    "A":<embers:brick_caminite>,"B":<botania:spreader:1>,"C":<embers:crystal_ember>,
+    "D":<botania:specialflower>.withTag({type: "spectrolus"})
+},"ACA;CBC;ADA;"));

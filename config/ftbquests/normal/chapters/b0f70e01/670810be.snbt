@@ -18,6 +18,9 @@
 		uid: "37e1939d",
 		type: "item",
 		items: [{
+			ForgeCaps: {
+				"astralsorcery:cap_item_amulet_holder": {}
+			},
 			id: "appliedenergistics2:wireless_terminal",
 			tag: {
 				internalMaxPower: 1600000.0d,
@@ -31,6 +34,9 @@
 		uid: "1b501e4c",
 		type: "item",
 		items: [{
+			ForgeCaps: {
+				"astralsorcery:cap_item_amulet_holder": {}
+			},
 			id: "appliedenergistics2:storage_cell_64k",
 			tag: {}
 		}],

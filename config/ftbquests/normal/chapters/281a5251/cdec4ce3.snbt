@@ -14,6 +14,9 @@
 		uid: "0581cb40",
 		type: "item",
 		items: [{
+			ForgeCaps: {
+				"astralsorcery:cap_item_amulet_holder": {}
+			},
 			id: "forge:bucketfilled",
 			tag: {
 				FluidName: "mana",

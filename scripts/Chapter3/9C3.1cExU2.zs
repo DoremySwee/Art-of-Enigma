@@ -13,7 +13,7 @@ recipes.remove(<minecraft:nether_brick>);
 var MithI=<thermalfoundation:material:136>;
 var MithGl=<thermalfoundation:glass:8>;
 var MithG=<thermalfoundation:material:264>;
-var EmberC=<embers:crystal_ember>;
+var EmberC=<embers:shard_ember>;
 var map as IIngredient[string]={
     "I":MithI,"G":MithGl,"@":MithG,"C":EmberC
 };
@@ -30,7 +30,7 @@ recipes.addShaped(<thermalexpansion:machine:5>,Lib.Mapper(Lib.Merge(map,{
 recipes.addShaped(<thermalexpansion:device:4>,Lib.Mapper(Lib.Merge(map,{
     "T":<thermalfoundation:tool.fishing_rod_platinum>}),"IGI;CTC;I@I;"));
 
-var Cap=<enderio:item_basic_capacitor:2>;
+var Cap=<enderio:item_basic_capacitor>;
 recipes.remove(Cap);
 Casting.addTableRecipe(Cap,<appliedenergistics2:material:5>,<liquid:electrical_steel>,576,true,300);
 recipes.addShaped(<thermalfoundation:upgrade>,Lib.Mapper({
@@ -59,3 +59,20 @@ recipes.addShaped(<enderio:block_slice_and_splice>,Lib.Mapper({
 },"BaB;BfB;FsF;"));
 recipes.addShapeless(<enderio:item_material>*4,[<enderio:item_material:1>]);
 Casting.addTableRecipe(<enderio:item_material:73>,MithG,<liquid:dark_steel>,576,true,600);
+
+//9x9
+var dw=<botania:dreamwood>;
+var rst=<botania:manaresource:12>;//red string
+recipes.remove(<extrautils2:decorativesolidwood:1>);
+mods.botania.PureDaisy.addRecipe(<extrautils2:decorativesolidwood:1>,dw,50);
+recipes.addShaped(<avaritia:extreme_crafting_table>,Lib.Mapper({"A":dw},"AA;AA;"));
+recipes.remove(<botania:manatablet>);
+recipes.addShaped(<botania:manatablet>.withTag({}),Lib.Mapper(
+    {"A":dw,"B":<botania:livingrock>},"BBB;BAB;BBB;"));
+recipes.remove(rst);
+mods.botania.RuneAltar.addRecipe(<botania_tweaks:dire_crafty_crate>,Lib.Mapper({
+        "A":<botania:manaresource:12>,"C":<minecraft:concrete:14>,"D":<minecraft:red_glazed_terracotta>,
+        "B":<tconstruct:toolforge>.withTag({textureBlock: {id: "minecraft:redstone_block", Count: 1 as byte, Damage: 0 as short}}),
+        "0":<botania:opencrate:1>,"E":<avaritia:extreme_crafting_table>
+    },"A0B0C0D0E0;")[0],2857142);
+//TODO: red string

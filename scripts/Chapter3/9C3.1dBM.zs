@@ -1,5 +1,6 @@
 import mods.botaniatweaks.Agglomeration as Agg;
 import mods.bloodmagic.TartaricForge as TF;
+import mods.bloodmagic.BloodAltar as BA;
 import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
 import mods.tconstruct.Casting;
@@ -11,7 +12,7 @@ import scripts.Lib;
 Casting.addBasinRecipe(<bloodmagic:soul_forge>,<embers:block_furnace>,<liquid:blood>,10000,true,10000);
 recipes.remove(<bloodmagic:soul_snare>);
 recipes.addShaped(<bloodmagic:soul_snare>,Lib.Mapper({
-    "S":<botania:manaresource>,"I":<mysticalagriculture:crafting:33>,"C":<enderio:item_basic_capacitor>
+    "S":<botania:manaresource:16>,"I":<mysticalagriculture:crafting:33>,"C":<enderio:item_basic_capacitor>
 },"SIS;ICI;SIS;"));
 
 //Tech Ban
@@ -61,9 +62,47 @@ if(true){
     TF.removeRecipe([<bloodmagic:soul_gem:2>,<bloodmagic:slate:3>,<bloodmagic:blood_shard>,<bloodmagic:item_demon_crystal>]);
     TF.removeRecipe([<bloodmagic:soul_gem:3>,<minecraft:nether_star>]);
 
-    TF.removeRecipe([<minecraft:bow>,gem,st,st]);
+    TF.removeRecipe([<minecraft:bow>,<bloodmagic:soul_gem:1>,st,st]);
     TF.removeRecipe([gem,<minecraft:iron_pickaxe>]);
     TF.removeRecipe([gem,<minecraft:iron_sword>]);
     TF.removeRecipe([gem,<minecraft:iron_shovel>]);
     TF.removeRecipe([gem,<minecraft:iron_axe>]);
 }
+recipes.addShaped(<bloodmagic:altar>,Lib.Mapper({
+    "A":<tconstruct:slime:3>,"B":<tconstruct:seared:6>,"C":<enderio:item_material:1>,
+    "a":<enderio:item_material:41>,"b":<bloodmagic:soul_forge>,"c":<botania:runealtar>
+},"AaA;BbB;CcC;"));
+Agg.addRecipe(<minecraft:spawn_egg>.withTag({EntityTag: {id: "minecraft:blaze"}}),
+    [<minecraft:egg>],3000000,0xFFFF77,0xFFFF00,
+    <liquid:mana>,<botania:blazeblock>,<liquid:pyrotheum>,
+    <liquid:mana>,<minecraft:obsidian>,<liquid:lava>);
+Melting.addEntityMelting(<entity:minecraft:blaze>,<liquid:pyrotheum>);
+//Altar Clean Up
+if(true){
+    BA.removeRecipe(<minecraft:stone>);
+    for i in 0 to 3{BA.removeRecipe(<bloodmagic:slate>.definition.makeStack(i));}
+    BA.removeRecipe(<minecraft:diamond>);
+    BA.removeRecipe(<minecraft:redstone_block>);
+    BA.removeRecipe(<minecraft:gold_block>);
+    BA.removeRecipe(<bloodmagic:blood_shard>);
+    BA.removeRecipe(<minecraft:nether_star>);
+
+    BA.removeRecipe(<minecraft:magma_cream>);
+    BA.removeRecipe(<minecraft:ghast_tear>);
+    BA.removeRecipe(<minecraft:obsidian>);
+    BA.removeRecipe(<minecraft:lapis_block>);
+    BA.removeRecipe(<minecraft:coal_block>);
+
+    BA.removeRecipe(<minecraft:bucket>);
+    BA.removeRecipe(<minecraft:ender_pearl>);
+    BA.removeRecipe(<minecraft:iron_sword>);
+}
+mods.thermalexpansion.Refinery.addRecipe(<liquid:lifeessence>, null , <liquid:blood>*666, 400);
+recipes.remove(<bloodmagic:sacrificial_dagger>);
+BA.addRecipe(<bloodmagic:sacrificial_dagger>,<botania:manasteelsword>,0,144,1,0);
+recipes.addShaped(<enderio:item_broken_spawner>,Lib.Mapper({"A":<enderio:block_dark_iron_bars>,"_":null},"AAA;A_A;AAA;"));
+Casting.addBasinRecipe(<minecraft:mob_spawner>,<enderio:item_broken_spawner>,<liquid:lifeessence>,10000,true,3000);
+Casting.addTableRecipe(<botania:spawnermover>,
+    <tconstruct:large_plate>.withTag({Material: "xu_enchanted_metal"}),<liquid:lifeessence>,3000,true,3000);
+BA.addRecipe(<botania:spawnerclaw>.withTag({}),<botania:spawnermover>,0,10086,1,1);
+recipes.remove(<botania:spawnerclaw>);

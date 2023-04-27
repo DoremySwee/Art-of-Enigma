@@ -1,0 +1,22 @@
+{
+	x: -16.0d,
+	y: -5.0d,
+	dependencies: [
+		"d0196a37"
+	],
+	tasks: [{
+		uid: "d649d50d",
+		type: "item",
+		items: [{
+			item: "minecraft:mob_spawner"
+		}]
+	},
+	{
+		uid: "e14b657f",
+		type: "item",
+		items: [{
+			id: "botania:spawnerclaw",
+			tag: {}
+		}]
+	}]
+}

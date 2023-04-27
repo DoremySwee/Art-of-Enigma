@@ -10,6 +10,9 @@
 		uid: "713e17fc",
 		type: "item",
 		items: [{
+			ForgeCaps: {
+				"astralsorcery:cap_item_amulet_holder": {}
+			},
 			id: "forge:bucketfilled",
 			tag: {
 				FluidName: "xpjuice",

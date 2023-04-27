@@ -1,0 +1,60 @@
+{
+	x: -22.0d,
+	y: -7.0d,
+	text: [
+		"{quests.ch3.mana.help}"
+	],
+	dependencies: [
+		"b039bca5",
+		"3406af25"
+	],
+	tasks: [{
+		uid: "cf180bfa",
+		type: "item",
+		items: [{
+			item: "embers:block_furnace"
+		}]
+	},
+	{
+		uid: "691ffd20",
+		type: "item",
+		items: [{
+			item: "embers:stamper"
+		}]
+	},
+	{
+		uid: "b747b8ff",
+		type: "item",
+		items: [{
+			item: "embers:stamper_base"
+		}]
+	},
+	{
+		uid: "a60dd8c8",
+		type: "item",
+		items: [{
+			item: "embers:mixer"
+		}]
+	},
+	{
+		uid: "f16e2473",
+		type: "item",
+		items: [{
+			item: "embers:ember_activator"
+		}]
+	},
+	{
+		uid: "949feaa5",
+		type: "item",
+		items: [{
+			item: "embers:ember_emitter"
+		}]
+	},
+	{
+		uid: "a7d5a2bb",
+		type: "item",
+		items: [{
+			item: "embers:ember_receiver"
+		}]
+	}]
+}

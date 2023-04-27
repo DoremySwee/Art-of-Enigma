@@ -9,7 +9,10 @@
 		uid: "033bc1d4",
 		type: "item",
 		items: [{
-			item: "enderio:item_xp_transfer"
+			ForgeCaps: {
+				"astralsorcery:cap_item_amulet_holder": {}
+			},
+			id: "enderio:item_xp_transfer"
 		}],
 		ignore_nbt: 1b
 	}],

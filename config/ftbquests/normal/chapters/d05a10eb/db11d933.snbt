@@ -10,7 +10,10 @@
 		uid: "fe6daa7e",
 		type: "item",
 		items: [{
-			item: "botania:terrasword"
+			ForgeCaps: {
+				"astralsorcery:cap_item_amulet_holder": {}
+			},
+			id: "botania:terrasword"
 		}],
 		ignore_damage: true,
 		ignore_nbt: 1b
@@ -20,6 +23,9 @@
 		type: "item",
 		team_reward: false,
 		item: {
+			ForgeCaps: {
+				"astralsorcery:cap_item_amulet_holder": {}
+			},
 			id: "botania:lexicon",
 			tag: {
 				knowledge.minecraft: 1b,

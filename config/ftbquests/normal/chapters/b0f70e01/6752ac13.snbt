@@ -1,0 +1,17 @@
+{
+	x: -17.5d,
+	y: -8.0d,
+	dependencies: [
+		"0b1ffae7"
+	],
+	tasks: [{
+		uid: "e69bc12d",
+		type: "item",
+		items: [{
+			id: "extrautils2:machine",
+			tag: {
+				Type: "extrautils2:enchanter"
+			}
+		}]
+	}]
+}

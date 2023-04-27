@@ -2,39 +2,99 @@
 	title: "唱片",
 	loot_size: 1,
 	rewards: [{
-		item: "minecraft:record_13"
+		item: {
+			ForgeCaps: {
+				"astralsorcery:cap_item_amulet_holder": {}
+			},
+			id: "minecraft:record_13"
+		}
 	},
 	{
-		item: "minecraft:record_cat"
+		item: {
+			ForgeCaps: {
+				"astralsorcery:cap_item_amulet_holder": {}
+			},
+			id: "minecraft:record_cat"
+		}
 	},
 	{
-		item: "minecraft:record_blocks"
+		item: {
+			ForgeCaps: {
+				"astralsorcery:cap_item_amulet_holder": {}
+			},
+			id: "minecraft:record_blocks"
+		}
 	},
 	{
-		item: "minecraft:record_chirp"
+		item: {
+			ForgeCaps: {
+				"astralsorcery:cap_item_amulet_holder": {}
+			},
+			id: "minecraft:record_chirp"
+		}
 	},
 	{
-		item: "minecraft:record_far"
+		item: {
+			ForgeCaps: {
+				"astralsorcery:cap_item_amulet_holder": {}
+			},
+			id: "minecraft:record_far"
+		}
 	},
 	{
-		item: "minecraft:record_mall"
+		item: {
+			ForgeCaps: {
+				"astralsorcery:cap_item_amulet_holder": {}
+			},
+			id: "minecraft:record_mall"
+		}
 	},
 	{
-		item: "minecraft:record_mellohi"
+		item: {
+			ForgeCaps: {
+				"astralsorcery:cap_item_amulet_holder": {}
+			},
+			id: "minecraft:record_mellohi"
+		}
 	},
 	{
-		item: "minecraft:record_stal"
+		item: {
+			ForgeCaps: {
+				"astralsorcery:cap_item_amulet_holder": {}
+			},
+			id: "minecraft:record_stal"
+		}
 	},
 	{
-		item: "minecraft:record_strad"
+		item: {
+			ForgeCaps: {
+				"astralsorcery:cap_item_amulet_holder": {}
+			},
+			id: "minecraft:record_strad"
+		}
 	},
 	{
-		item: "minecraft:record_ward"
+		item: {
+			ForgeCaps: {
+				"astralsorcery:cap_item_amulet_holder": {}
+			},
+			id: "minecraft:record_ward"
+		}
 	},
 	{
-		item: "minecraft:record_11"
+		item: {
+			ForgeCaps: {
+				"astralsorcery:cap_item_amulet_holder": {}
+			},
+			id: "minecraft:record_11"
+		}
 	},
 	{
-		item: "minecraft:record_wait"
+		item: {
+			ForgeCaps: {
+				"astralsorcery:cap_item_amulet_holder": {}
+			},
+			id: "minecraft:record_wait"
+		}
 	}]
 }

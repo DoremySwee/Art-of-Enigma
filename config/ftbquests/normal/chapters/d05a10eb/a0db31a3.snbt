@@ -1,6 +1,11 @@
 {
 	title: "{quests.ch1.mana.title}",
-	icon: "botania:manabottle",
+	icon: {
+		ForgeCaps: {
+			"astralsorcery:cap_item_amulet_holder": {}
+		},
+		id: "botania:manabottle"
+	},
 	x: 2.5d,
 	y: 0.0d,
 	shape: "circle",

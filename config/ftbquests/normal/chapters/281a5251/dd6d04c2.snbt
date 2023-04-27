@@ -10,6 +10,9 @@
 		uid: "0dd51135",
 		type: "item",
 		items: [{
+			ForgeCaps: {
+				"astralsorcery:cap_item_amulet_holder": {}
+			},
 			id: "botania:lens",
 			tag: {},
 			Damage: 7s

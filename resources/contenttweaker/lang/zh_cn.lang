@@ -14,7 +14,7 @@ quests.DifficultySelection.desMaster= 列出基本的几个目标和必要信息
 quests.DifficultySelection.titExpert= 专家难度
 quests.DifficultySelection.desExpert= 给出基础的任务线。经测试，适合有经验的玩家。
 quests.DifficultySelection.titCasual= 普通难度
-quests.DifficultySelection.desCasual= 暂无此计划：非常详细的任务线，适合刚接触专家包的玩家。
+quests.DifficultySelection.desCasual= 非常详细的任务线，适合刚接触专家包的玩家。
 
 
 quests.ch1.dup0.title=复制
@@ -72,3 +72,7 @@ description.crt.tooltip.haste= 急迫II
 fluid.molten_essence=熔融精华
 fluid.bot_mana=魔力
 description.crt.tooltip.mithril.trymelting=试着融化它！
+
+quests.ch3.lifeessence.help=从流体精练机获取你的第一批生命源质，导入祭坛~
+quests.ch3.geosep.help=融化注魔秘银锭可以获取元始魔力。
+quests.ch3.mana.help= 元始魔力可以转换出注魔秘银、青金石块等物品。详情请百科。
