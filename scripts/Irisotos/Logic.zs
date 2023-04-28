@@ -1,13 +1,12 @@
 #loader crafttweaker reloadable
 
-
 import crafttweaker.event.BlockNeighborNotifyEvent;
-import crafttweaker.event.BlockPlaceEvent;
 import crafttweaker.event.WorldTickEvent;
 import scripts.LibReloadable as L;
 import crafttweaker.data.IData;
 import crafttweaker.world.IWorld;
 import crafttweaker.world.IBlockPos;
+import crafttweaker.block.IBlock;
 import mods.ctutils.utils.Math;
 
 static generatingFlowers as string[] = [
@@ -36,12 +35,27 @@ function getSpecialFlower(w as IWorld, p as IBlockPos) as string{
     }
 }
 
+function checkWorkForInstantGenerate(tileData as IData, customData as IData) as IData {
+    var toUpdate as IData = IData.createEmptyMutableDataMap();
+    var lastMana as int = customData has "lastMana" ? customData.lastMana.asInt() : 0;
+    var mana as int = tileData has "mana" ? tileData.mana.asInt() : 0;
+    var workTime as int = customData has "workTime" ? customData.workTime.asInt() : 0;
+    if (mana > lastMana) {
+        var increment as double = (mana - lastMana) as double;
+        workTime = Math.ceil(increment / 160.0) as int;
+    } else if (workTime > 0) {
+        workTime = workTime - 1;
+    } else if (mana == 0) {
+        workTime = 0;
+    }
+    toUpdate.memberSet("lastMana", mana);
+    toUpdate.memberSet("workTime", workTime);
+    return toUpdate;
+}
+
 events.onBlockNeighborNotify(function(event as BlockNeighborNotifyEvent) {
     val name as string = getSpecialFlower(event.world, event.position);
     val world as IWorld = event.world;
-    if (false) {
-        world.updateCustomWorldData({generatingFlowers : {}});
-    }
     if (generatingFlowers has name) {
         val recordMap as IData[string] = world.getCustomWorldData().generatingFlowers.asMap();
         val posData as IData = {x: event.x, y: event.y, z: event.z, working: false} as IData;
@@ -72,9 +86,10 @@ events.onWorldTick(function(event as WorldTickEvent) {
     for key, data in world.getCustomWorldData().generatingFlowers.asMap() {
         var newData as IData = [];
         for flowerData in data.asList() {
+            var newFlowerData as IData = flowerData;
             var pos as IBlockPos = IBlockPos.create(flowerData.x.asInt(), flowerData.y.asInt(), flowerData.z.asInt());
             if (getSpecialFlower(world, pos) == key) {
-                var work as bool = true;
+                var work as bool = false;
                 var tileData as IData = world.getBlock(pos).data;
                 if (key == "hydroangeas" || key == "thermalily") {
                     work = tileData.burnTime.asInt() != 0 || tileData.cooldown.asInt() != 0;
@@ -83,21 +98,30 @@ events.onWorldTick(function(event as WorldTickEvent) {
                 } else if (key == "munchdew") {
                     work = tileData.ateOnce.asBool();
                 } else if (key == "arcanerose") {
-                    // TODO
-                } else if (key == "kekimurus") {
-                    // TODO
-                } else if (key == "entropinnyum") {
-                    // TODO
-                } else if (key == "spectrolus") {
-                    // TODO
-                } else if (key == "dandelifeon") {
-                    // TODO
-                } else if (key == "rafflowsia") {
-                    // TODO
-                } else if (key == "shulk_me_not") {
-                    // TODO
+                    var lastMana as int = newFlowerData has "lastMana" ? newFlowerData.lastMana.asInt() : 0;
+                    val mana as int = tileData has "mana" ? tileData.mana.asInt() : 0;
+                    newFlowerData = newFlowerData.update({lastMana: mana});
+                    if (mana > lastMana) {
+                        work = true;
+                    } else {
+                        if (tileData has "collectorX" && mana > 0) {
+                            val collector as IBlock = world.getBlock(IBlockPos.create(tileData.collectorX.asInt(), tileData.collectorY.asInt(), tileData.collectorZ.asInt()));
+                            val collectorData as IData = collector.data;
+                            if (!isNull(collectorData) && collectorData has "mana" && collector.definition.id == "botania:spreader") {
+                                val collectorMana as int = collectorData.mana.asInt();
+                                val collectorCap as int = collector.meta == 3 ? 6400 : 1000;
+                                if (collectorMana < collectorCap) {
+                                    work = true;
+                                }
+                            }
+                        }
+                    }
+                } else  {
+                    val result as IData = checkWorkForInstantGenerate(tileData, newData);
+                    work = (result.workTime.asInt() != 0);
+                    newFlowerData = newFlowerData.update(result);
                 }
-                newData = newData.update([flowerData.update({working: work})]);
+                newData = newData.update([newFlowerData.update({working: work})]);
             }
         }
         toUpdate.memberSet(key, newData);
