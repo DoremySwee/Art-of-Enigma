@@ -72,10 +72,8 @@ events.onBlockNeighborNotify(function(event as BlockNeighborNotifyEvent){
         w0.catenation().run(function(w,c){
             var dt=w.getBlock(p).data;
             if(!isNull(dt)) if(dt has "subTileName") if(dt.subTileName=="endoflame"){
-
                 var dd as IData=w.getCustomChunkData(p);
                 if(!(dd has "EndoResV3")){
-                    w.setCustomChunkData({"EndoResV3":{"num":1,"x":[p.x]as int[],"y":[p.y]as int[],"z":[p.z]as int[]}},p);
                     w.updateCustomChunkData({"EndoResV3":{"num":1,"x":[p.x]as int[],"y":[p.y]as int[],"z":[p.z]as int[]}},p);
                     return;
                 }
@@ -133,7 +131,7 @@ events.onBlockPlace(function(event as BlockPlaceEvent){
         }
         else{
             num=1;
-            w0.setCustomWorldData({"cocoonDat":[{"uuid":uuid,"num":num}]});
+            w0.updateCustomWorldData({"cocoonDat":[{"uuid":uuid,"num":num}]});
         }
         if(num%100==0){
             w0.catenation().sleep(2398).run(function(w,c){
