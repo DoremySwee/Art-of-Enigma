@@ -72,6 +72,9 @@ description.crt.tooltip.haste=Eat for Haste II
 fluid.molten_essence=Molten Essence
 fluid.bot_mana=Mana
 description.crt.tooltip.mithril.trymelting=Try melting it!
+description.crt.slime.spawnerworkingcondition1=Spawners containing Slimes can only work in slime chunks, y<40.
+description.crt.slime.spawnerworkingcondition2=While Powered Spawner (EIO) works everywhere.
+description.crt.slime.spawnerworkingcondition3=Narslimmus accepts slimes from spawners.
 
 quests.ch3.lifeessence.help= Obtain your very first life essence from the thermal refiner, and transport them into the altar.
 quests.ch3.geosep.help= Try Melting Mithril Ingot.

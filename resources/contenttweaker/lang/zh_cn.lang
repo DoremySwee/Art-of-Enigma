@@ -72,6 +72,9 @@ description.crt.tooltip.haste= 急迫II
 fluid.molten_essence=熔融精华
 fluid.bot_mana=魔力
 description.crt.tooltip.mithril.trymelting=试着融化它！
+description.crt.slime.spawnerworkingcondition1=史莱姆刷怪箱只能在史莱姆区块的y<40处工作。
+description.crt.slime.spawnerworkingcondition2=但是电动刷怪笼无此限制。
+description.crt.slime.spawnerworkingcondition3=粘球草接收刷怪笼产出的史莱姆。
 
 quests.ch3.lifeessence.help=从流体精练机获取你的第一批生命源质，导入祭坛~
 quests.ch3.geosep.help=融化注魔秘银锭可以获取元始魔力。
