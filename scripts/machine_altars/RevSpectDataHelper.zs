@@ -1,4 +1,5 @@
 #loader crafttweaker reloadableevents
+#norun
 import crafttweaker.event.BlockNeighborNotifyEvent;
 import crafttweaker.command.ICommandManager;
 import mods.zenutils.ICatenationBuilder;
@@ -18,8 +19,8 @@ function isSpecilaFlower(w as IWorld, p as IBlockPos)as bool{
 //Record All Bot Special Flower
 events.onBlockNeighborNotify(function(event as BlockNeighborNotifyEvent){
     var w0 as IWorld=event.world;
-    var p as IBlockPos=event.position;
-    L.say("y"~p.y);
+    val p as IBlockPos=event.position;
+    L.say(p.y);
     var d0 as IData=w0.getBlock(p).data;
     //if(isNull(w0))L.say("TTT");
     //if(w0.remote)L.say("THITU");
@@ -27,7 +28,7 @@ events.onBlockNeighborNotify(function(event as BlockNeighborNotifyEvent){
     //L.say("PPPP");
     //L.say(w0.getBlock(p).definition.id);
     if(!isNull(d0) && d0 has "subTileName"){
-        server.commandManager.executeCommandSilent(server,"say AAAA");
+        L.say("AAAA");
     }
         /*
     if(isSpecilaFlower(w0,p))w0.catenation().run(function(w,c){

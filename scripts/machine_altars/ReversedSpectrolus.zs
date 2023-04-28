@@ -1,4 +1,5 @@
 #loader contenttweaker
+#norun
 import crafttweaker.command.ICommandManager;
 import crafttweaker.player.IPlayer;
 import crafttweaker.item.IItemStack;
