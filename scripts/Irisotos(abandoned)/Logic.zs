@@ -1,5 +1,5 @@
 #loader crafttweaker reloadable
-
+#norun
 import crafttweaker.event.BlockNeighborNotifyEvent;
 import crafttweaker.event.WorldTickEvent;
 import scripts.LibReloadable as L;

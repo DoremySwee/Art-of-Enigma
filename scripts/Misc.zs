@@ -68,7 +68,7 @@ events.onBlockNeighborNotify(function(event as BlockNeighborNotifyEvent){
     var d0 as IData=w0.getBlock(p).data;
     if(w0.isRemote())return;
     if(!isNull(d0)) if(d0 has "subTileName"){
-        server.commandManager.executeCommandSilent(server,"say BBBB");
+        //server.commandManager.executeCommandSilent(server,"say BBBB");
         w0.catenation().run(function(w,c){
             var dt=w.getBlock(p).data;
             if(!isNull(dt)) if(dt has "subTileName") if(dt.subTileName=="endoflame"){
