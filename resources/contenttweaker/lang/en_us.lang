@@ -80,3 +80,11 @@ tile.botania:flower.irisotos.name=Irisotos
 quests.ch3.lifeessence.help= Obtain your very first life essence from the thermal refiner, and transport them into the altar.
 quests.ch3.geosep.help= Try Melting Mithril Ingot.
 quests.ch3.mana.help= LapisBlock and Mithril stuffs can be obtained from Primal Charm. Check wiki for more information.
+
+description.crt.manatab.has=Has
+description.crt.manatab.inf= Infinite
+description.crt.itemcell.has=Includes following items:
+description.crt.shift.formoreinfo=Press§e§o shift §rfor more information
+description.crt.itemcell.empty=This cell is empty
+description.crt.reuse=Will not be consumed!
+description.crt.consume=Will be consumed!

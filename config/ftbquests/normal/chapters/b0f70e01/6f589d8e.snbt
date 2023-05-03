@@ -10,5 +10,12 @@
 		items: [{
 			item: "thermalfoundation:upgrade"
 		}]
+	},
+	{
+		uid: "e02b7fcc",
+		type: "item",
+		items: [{
+			item: "immersiveengineering:metal_device1 1 13"
+		}]
 	}]
 }

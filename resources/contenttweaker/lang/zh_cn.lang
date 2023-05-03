@@ -80,3 +80,10 @@ tile.botania:flower.irisotos.name=彩虹莲
 quests.ch3.lifeessence.help=从流体精练机获取你的第一批生命源质，导入祭坛~
 quests.ch3.geosep.help=融化注魔秘银锭可以获取元始魔力。
 quests.ch3.mana.help= 元始魔力可以转换出注魔秘银、青金石块等物品。详情请百科。
+
+description.crt.manatab.has=含：
+description.crt.manatab.inf=∞
+description.crt.itemcell.has=含以下物品：
+description.crt.shift.formoreinfo=按下§e§oshift§r获取更多信息
+description.crt.itemcell.empty=该元件为空
+description.crt.reuse=该材料不消耗！

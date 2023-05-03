@@ -26,5 +26,12 @@
 			id: "botania:spawnerclaw",
 			tag: {}
 		}]
+	},
+	{
+		uid: "4715770f",
+		type: "item",
+		items: [{
+			item: "immersiveengineering:metal_device1 1 13"
+		}]
 	}]
 }

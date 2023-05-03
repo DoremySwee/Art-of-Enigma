@@ -1,6 +1,7 @@
 #priority 1919810
-import crafttweaker.item.IItemStack;
 import crafttweaker.item.IIngredient;
+import crafttweaker.item.IItemStack;
+import crafttweaker.data.IData;
 static AvaRecipeCount as int[]=[0];
 function Shaped9x9(output as IItemStack,inputs as IIngredient[][]){
     mods.avaritia.ExtremeCrafting.addShaped("Art_of_Enigma_AvaRecipe_"~AvaRecipeCount[0],output,inputs);
@@ -10,13 +11,21 @@ function Mapper(map as IIngredient[string],inputs as string)as IIngredient[][]{
     var t=[] as IIngredient[];
     var r=[] as IIngredient[][];
     for i in 0 to inputs.length{
-        if(inputs[i]==" "||inputs[i]=="\n"||inputs[i]=="\t")continue;
+        if(inputs[i]==" "||inputs[i]=="\n"||inputs[i]=="\t"||inputs[i]=="
+")continue;
         if(inputs[i]==";"){
             r=r+t;
             t=[] as IIngredient[];
         }
         else{
-            if(isNull(map[inputs[i]]))t=t+(null as IIngredient);
+            if(isNull(map[inputs[i]])){
+                if(inputs[i]=="_")t=t+(null as IIngredient);
+                else{
+                    //t=t+(null as IIngredient);
+                    print("INVALID INPUTS!!!");// Comprehense as null.");
+                    print("\""~inputs[i]~"\"");
+                }
+            }
             else t=t+map[inputs[i]];
         }
     }
@@ -32,3 +41,46 @@ function Merge(m1 as IIngredient[string], m2 as IIngredient[string])as IIngredie
     }
     return m;
 }
+function MergeData(dat1 as IData,dat2 as IData)as IData{
+    if(isNull(dat1))return dat2;
+    if(isNull(dat2))return dat1;
+    if(!isNull(dat1.asList())){
+        return dat1+dat2;
+    }
+    else if(!isNull(dat1.asMap())){
+        var dat as IData=IData.createEmptyMutableDataMap();
+        for key,value in dat1.asMap(){
+            dat.memberSet(key,dat1.memberGet(key));
+        }
+        for key,value in dat2.asMap(){
+            if(dat has key)dat.memberSet(key,MergeData(dat.memberGet(key),dat2.memberGet(key)));
+            else dat.memberSet(key,dat2.memberGet(key));
+        }
+        return dat;
+    }
+    else{
+        return dat2;
+    }
+}
+function TemporaryLore(ins as IIngredient, lore as string)as IIngredient{
+    var result as IIngredient=ins.items[0];
+    for iii in 0 to 10{
+        for i in ins.items{
+            var tag as IData={display:{Lore:[lore]}}as IData;
+            if(i.hasTag){
+                tag=MergeData(i.tag,tag);
+            }
+            result=result|(i.withTag(tag));
+        }
+    }
+    for i in ins.items{
+        result=result|i;
+    }
+    return result;
+}
+function Reuse(ins as IIngredient)as IIngredient{
+    return TemporaryLore(ins,"§a§o"~game.localize("description.crt.reuse")~"§r").reuse();
+}
+function Consume(ins as IIngredient)as IIngredient{
+    return TemporaryLore(ins,"§a§o"~game.localize("description.crt.consume")~"§r");
+}/**/

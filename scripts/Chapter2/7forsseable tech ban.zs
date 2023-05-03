@@ -122,3 +122,9 @@ for i in d {
 for i in e {
     mods.avaritia.ExtremeCrafting.remove(i);
 }
+recipes.remove(<immersiveengineering:blueprint>.withTag({blueprint: "components"}));
+recipes.remove(<immersiveengineering:blueprint>.withTag({blueprint: "molds"}));
+recipes.remove(<immersiveengineering:blueprint>.withTag({blueprint: "bullet"}));
+recipes.remove(<immersiveengineering:blueprint>.withTag({blueprint: "specialBullet"}));
+recipes.remove(<immersiveengineering:blueprint>.withTag({blueprint: "electrode"}));
+recipes.remove(<immersiveengineering:metal_device1:13>);

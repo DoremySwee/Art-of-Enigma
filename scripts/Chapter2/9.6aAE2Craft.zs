@@ -22,6 +22,8 @@ for i in ae2.items{
         continue;}
     if(i.definition.id.indexOf("grindstone")>-1){
         continue;}
+    if(i.definition.id.indexOf("inscriber")>-1){
+        continue;}
     if(i.ores.length<1){
         c+=1;
         recipes.remove(i);
