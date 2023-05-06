@@ -19,3 +19,6 @@ for i in MA.items{
     if(i.definition.id.contains("infusion"))recipes.remove(i);	
     if(i.definition.id.contains("gear"))recipes.remove(i);	
 }
+for i in 0 to 9{
+    recipes.remove(<extrautils2:passivegenerator>.definition.makeStack(i));
+}

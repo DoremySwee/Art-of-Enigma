@@ -1,0 +1,21 @@
+{
+	x: -13.0d,
+	y: -9.0d,
+	dependencies: [
+		"25fc2fd5"
+	],
+	tasks: [{
+		uid: "681a16ec",
+		type: "item",
+		items: [{
+			item: "botania:grassseeds 1 1"
+		}]
+	},
+	{
+		uid: "42c0eba6",
+		type: "item",
+		items: [{
+			item: "mysticalagriculture:dirt_seeds"
+		}]
+	}]
+}
