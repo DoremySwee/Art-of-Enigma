@@ -1,0 +1,14 @@
+{
+	x: -14.5d,
+	y: 0.5d,
+	dependencies: [
+		"5da4da03"
+	],
+	tasks: [{
+		uid: "9e768393",
+		type: "item",
+		items: [{
+			item: "extrautils2:rainbowgenerator"
+		}]
+	}]
+}

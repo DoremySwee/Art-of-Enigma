@@ -1,0 +1,14 @@
+{
+	x: -13.5d,
+	y: -5.0d,
+	dependencies: [
+		"5da4da03"
+	],
+	tasks: [{
+		uid: "8c5374cc",
+		type: "item",
+		items: [{
+			item: "extrautils2:ingredients 1 6"
+		}]
+	}]
+}

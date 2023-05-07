@@ -87,3 +87,4 @@ description.crt.itemcell.has=含以下物品：
 description.crt.shift.formoreinfo=按下§e§oshift§r获取更多信息
 description.crt.itemcell.empty=该元件为空
 description.crt.reuse=该材料不消耗！
+description.crt.consume=该材料会被消耗！
