@@ -77,10 +77,12 @@ Agg.addRecipe(<minecraft:spawn_egg>.withTag({EntityTag: {id: "minecraft:blaze"}}
     <liquid:mana>,<botania:blazeblock>,<liquid:pyrotheum>,
     <liquid:mana>,<minecraft:obsidian>,<liquid:lava>);
 Melting.addEntityMelting(<entity:minecraft:blaze>,<liquid:pyrotheum>);
+recipes.remove(<bloodmagic:alchemy_table>);
 //Altar Clean Up
 if(true){
     BA.removeRecipe(<minecraft:stone>);
-    for i in 0 to 3{BA.removeRecipe(<bloodmagic:slate>.definition.makeStack(i));}
+    for i in 0 to 5{BA.removeRecipe(<bloodmagic:slate>.definition.makeStack(i));}
+    for i in 0 to 11{recipes.remove(<bloodmagic:blood_rune>.definition.makeStack(i));}
     BA.removeRecipe(<minecraft:diamond>);
     BA.removeRecipe(<minecraft:redstone_block>);
     BA.removeRecipe(<minecraft:gold_block>);

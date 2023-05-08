@@ -1,6 +1,7 @@
 {
 	x: -14.5d,
 	y: 0.5d,
+	hide_dependency_lines: true,
 	dependencies: [
 		"5da4da03"
 	],

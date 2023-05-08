@@ -74,7 +74,8 @@ function getReducedIIngredientArray(ins as string[],sidelength as int)as string{
             if(r1!="{")r1=r1~",";
             r1=r1~"\n\t\t\""~map[k]~"\":"~k;
         }
-        r1=r1~"\n\t} as crafttweaker.item.IIngredient[string],";
+        //r1=r1~"\n\t} as crafttweaker.item.IIngredient[string],";
+        r1=r1~"\n\t},";
         var index=1;
         var r2 as string="\"";
         var temp as string="";

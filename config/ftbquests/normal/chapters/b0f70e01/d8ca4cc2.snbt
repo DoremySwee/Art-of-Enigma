@@ -1,0 +1,26 @@
+{
+	x: -12.5d,
+	y: -7.0d,
+	dependencies: [
+		"4186ea0e",
+		"6ee1689b",
+		"c67fbe7a",
+		"f88637f9",
+		"5da4da03"
+	],
+	hide: true,
+	tasks: [{
+		uid: "27c87013",
+		type: "item",
+		items: [{
+			ForgeCaps: {
+				"astralsorcery:cap_item_amulet_holder": {}
+			},
+			id: "bloodmagic:blood_orb",
+			tag: {
+				orb: "bloodmagic:apprentice"
+			}
+		}],
+		ignore_nbt: 1b
+	}]
+}

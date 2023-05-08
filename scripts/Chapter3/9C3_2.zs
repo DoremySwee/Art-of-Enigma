@@ -32,9 +32,9 @@ Lib.Shaped9x9(<bloodmagic:blood_orb>.withTag({orb: "bloodmagic:weak"}),Lib.Mappe
 		"@":<tconstruct:slime:3>,"&":<tconstruct:edible:33>,"$":<extrautils2:suncrystal:0>,
 		"*":<botania:manatablet:0> .withTag({mana: 250000}),"_":null,
 		"%":<minecraft:potion>.withTag({Potion: "minecraft:strong_healing"}),
-		"#":<tconstruct:seared_tank:1> .withTag({FluidName: "lifeessence", Amount: 666}),
+		"#":<tconstruct:seared_tank:1> .withTag({FluidName: "lifeessence", Amount: 3000}),
 		"~":<botania:specialflower:0> .withTag({type: "thermalily"})
-	} as IIngredient[string],"
+	},"
 		__@@#@@__;
 		_@$%&%$@_;
 		@$&***&$@;
@@ -83,7 +83,7 @@ recipes.remove(<extrautils2:suncrystal:250>);
 Lib.Shaped9x9(<extrautils2:suncrystal:250>,Lib.Mapper({
 		"_":null,"$":<botania:manaresource:2>,"#":<botania:pylon:0>,"@":<thermalfoundation:storage_alloy:1>,
 		"*":<thermalfoundation:glass:8>,"&":<thermalfoundation:glass_alloy:2>,"%":<thermalfoundation:glass_alloy:1>
-	} as crafttweaker.item.IIngredient[string],"
+	},"
 		____@____;
 		__#_$_#__;
 		_#@%&%@#_;
@@ -94,6 +94,7 @@ Lib.Shaped9x9(<extrautils2:suncrystal:250>,Lib.Mapper({
 		__#_$_#__;
 		____@____;"
 ));
+BA.addRecipe(<bloodmagic:slate>,<botania:manatablet>.withTag({mana: 375000}),0,576,1,0);
 Lib.Shaped9x9(<mysticalagriculture:stone_seeds>*4,Lib.Mapper({
 		"$":<chisel:cobblestone:6>,"@":<chisel:stonebrick:0>,"!":<chisel:cobblestone:8>,
 		"&":<chisel:stonebrick:2>,"3":<chisel:cobblestone1:8>,"`":<chisel:cobblestone2:7>,
@@ -107,15 +108,15 @@ Lib.Shaped9x9(<mysticalagriculture:stone_seeds>*4,Lib.Mapper({
 		"0":<chisel:cobblestone2:4>,"^":<chisel:cobblestone1:5>,"2":<chisel:cobblestone1:7>,
 		"e":<chisel:cobblestone2:6>,"7":<chisel:cobblestone2:0>,"c":<chisel:cobblestone:9>,
 		"m":<chisel:cobblestone1:1>,"h":<chisel:cobblestone1:3>,"j":<chisel:cobblestone2:2>,
-		"4":<mysticalagriculture:crafting:17>,"6":<botania:grassseeds:0>,"_":null,
+		"4":<mysticalagriculture:crafting:17>,"6":<botania:grassseeds:0>,"_":null,"A":<bloodmagic:slate>,
 		"l":<chisel:cobblestone:11>,"#":<mysticalagriculture:crafting:0>,"q":<chisel:cobblestone:13>
-	} as IIngredient[string],"
+	},"
 		@##___##$;
 		##%&*~1##;
 		#2345678#;
-		_960_`4!_;
-		_^*a_b*c_;
-		_d4e_f6g_;
+		_960A`4!_;
+		_^*aAb*c_;
+		_d4eAf6g_;
 		#hi6j4kl#;
 		##mnopq##;
 		r##___##s;"
@@ -136,7 +137,7 @@ Lib.Shaped9x9(<mysticalagriculture:nature_seeds>*4,Lib.Mapper({
 		"&":<forge:bucketfilled:0> .withTag({FluidName: "biocrude", Amount: 1000}),
 		"*":<mysticalagriculture:crafting:6>,"~":<mysticalagriculture:crafting:17>,
 		"#":<botania:specialflower:0> .withTag({type: "puredaisy"})
-	} as IIngredient[string],"
+	},"
 		_________;
 		__@#$#%__;
 		_&$*~*$1_;
@@ -158,7 +159,7 @@ Lib.Shaped9x9(<mysticalagriculture:wood_seeds>*4,Lib.Mapper({
 		"~":<forge:bucketfilled:0> .withTag({FluidName: "resin", Amount: 1000}),
 		"$":<forge:bucketfilled:0> .withTag({FluidName: "sap", Amount: 1000}),
 		"@":<forge:bucketfilled:0> .withTag({FluidName: "tree_oil", Amount: 1000})
-	} as IIngredient[string],"
+	},"
 		_________;
 		_________;
 		__@#$%#__;
@@ -184,7 +185,7 @@ Lib.Shaped9x9(<mysticalagriculture:water_seeds>*4,Lib.Mapper({
 		"k":<chisel:waterstone1:6>,"e":<chisel:waterstone1:11>,"*":<chisel:waterstone:12>,"r":<chisel:waterstone1:8>,
 		"o":<chisel:waterstone1:15>,"0":<mysticalagriculture:crafting:17>,"_":null,"^":<chisel:waterstone1:10>,
 		"g":<chisel:waterstone:5>,"2":<chisel:waterstone:3>,"9":<chisel:waterstone:9>,"m":<chisel:waterstone:7>
-	} as IIngredient[string],"
+	},"
 		@#_$%&_#A;
 		~1_234_15;
 		36#718#63;
@@ -210,7 +211,7 @@ Lib.Shaped9x9(<mysticalagriculture:ice_seeds>,Lib.Mapper({
 		"0":<chisel:ice1:3>,"4":<chisel:ice:4>,"3":<chisel:ice1:5>,"a":<chisel:icepillar:5>,"_":null,
 		"6":<chisel:ice1:7>,"%":<thermalfoundation:material:2048>,"e":<chisel:ice:0>,
 		"$":<chisel:ice1:9>,"j":<chisel:icepillar:3>,"*":<chisel:ice2:0>,"b":<chisel:ice1:1>
-	} as IIngredient[string],"
+	},"
 		@#$%&%A#@;
 		#@~123~@#;
 		4~56789~0;
@@ -232,7 +233,7 @@ RuneAltar.addRecipe(<mysticalagriculture:inferium_apple>,Lib.Mapper({
 		"%":<mysticalagriculture:wood_essence:0>,
         "A":<forge:bucketfilled>.withTag({FluidName: "molten_essence", Amount: 1000}),
         "B":<mysticalagriculture:crafting>
-	}as IIngredient[string],"A@B#A$B%A&B*A~B;")[0],1000000);
+	},"A@B#A$B%A&B*A~B;")[0],1000000);
 RuneAltar.addRecipe(<mysticalagriculture:crafting:6>,[
     <minecraft:melon:0>,<minecraft:sapling:0>,<minecraft:tallgrass:1>,
     <minecraft:dye:15>,<minecraft:red_flower:0>,<minecraft:carrot:0>,
@@ -256,7 +257,7 @@ Lib.Shaped9x9(<extrautils2:resonator>,Lib.Mapper({
 		"%":<enderio:block_alloy:0>,"_":null,"2":Lib.Consume(<bloodmagic:blood_orb:0> .withTag({orb: "bloodmagic:weak"})),
 		"&":<thermalfoundation:storage_alloy:2>,"$":<thermalfoundation:storage_alloy:3>,"*":<thermalfoundation:storage_alloy:4>,
 		"1":<thermalfoundation:storage_alloy:1>,"@":<minecraft:redstone_block:0>,"#":<minecraft:obsidian:0>,"~":<extrautils2:suncrystal:0>
-	} as IIngredient[string],"
+	},"
 		@#@@#@@#@;
 		#$%@&@%*#;
 		@$~1&1~*@;
@@ -293,12 +294,12 @@ RuneAltar.addRecipe(<extrautils2:ingredients:8>,[
 	<appliedenergistics2:certus_quartz_pickaxe:0>,<minecraft:bucket:0>,<thermalfoundation:tool.pickaxe_bronze:0>
 ],300000);
 Resonator.add(<extrautils2:decorativeglass:5>,<thermalfoundation:glass_alloy:1>,1500);
-Lib.Shaped9x9(<extrautils2:ingredients:6>,Lib.Mapper({
+Lib.Shaped9x9(<extrautils2:ingredients:6>*4,Lib.Mapper({
 		"~":<minecraft:gold_ingot:0>,"%":<thermalexpansion:augment:128>,"_":null,
 		"*":<thermalfoundation:storage_alloy:1>,"@":<minecraft:redstone_block:0>,
 		"1":<minecraft:enchanted_book:0> .withTag({StoredEnchantments: [{lvl: 2 as short, id: 32 as short}]}),
 		"#":<extrautils2:decorativeglass:5>,"&":<thermalfoundation:glass_alloy:1>,"$":<extrautils2:ingredients:9>
-	} as IIngredient[string],"
+	},"
 		_________;
 		_@##$##@_;
 		_#%&*&%#_;
@@ -309,3 +310,37 @@ Lib.Shaped9x9(<extrautils2:ingredients:6>,Lib.Mapper({
 		_@##$##@_;
 		_________;"
 ));
+Lib.Shaped9x9(<bloodmagic:blood_orb>.withTag({orb: "bloodmagic:apprentice"}),Lib.Mapper({
+		"3":<tconstruct:seared_tank:1> .withTag({FluidName: "emerald", Amount: 4000}),
+		"%":<tconstruct:seared_tank:1> .withTag({FluidName: "emerald", Amount: 3333}),
+		"@":<minecraft:potion:0> .withTag({Potion: "minecraft:strong_leaping"}),
+		"&":<minecraft:potion:0> .withTag({Potion: "minecraft:strong_poison"}),
+		"6":<bloodmagic:blood_orb:0> .withTag({orb: "bloodmagic:weak"}),
+		"#":<minecraft:potion:0> .withTag({Potion: "cofhcore:luck2"}),
+		"~":<botania:manatablet:0> .withTag({mana: 375000}),
+		"*":<botania:manatablet:0> .withTag({mana: 126000}),
+		"2":<botania:pylon:0>,"$":<chisel:emerald:10>,
+		"8":<mysticalagriculture:nature_essence:0>,
+		"7":<mysticalagriculture:ingot_storage:1>,
+		"4":<mysticalagriculture:stone_essence:0>,
+		"5":<mysticalagriculture:wood_essence:0>,
+		"9":<mysticalagriculture:dirt_essence:0>,
+		"1":<mysticalagriculture:nature_seeds:0>,
+	},"
+		@#$$%$$&@;
+		&$$**~$$#;
+		$$12341$$;
+		$~56162*$;
+		%*31713*%;
+		$*26168~$;
+		$$19321$$;
+		#$$~**$$&;
+		@&$$%$$#@;"
+));
+recipes.addShaped(<thaumcraft:arcane_workbench>,Lib.Mapper({
+	"A":<minecraft:crafting_table>,
+	"B":<avaritia:extreme_crafting_table>,
+	"O":Lib.Reuse(orb(2))
+},"BAB;AOA;BAB;"));
+<ore:blockEmerald>.remove(<chisel:emerald:10>);
+Resonator.add(<chisel:emerald:10>,<minecraft:emerald_block>,2100);
