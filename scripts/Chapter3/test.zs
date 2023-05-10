@@ -1,3 +1,6 @@
+#loader crafttweaker reloadableevents
+#norun
+import scripts.LibReloadable as L;
 import mods.thaumcraft.ArcaneWorkbench as AWB;
 import thaumcraft.aspect.CTAspectStack;
 import crafttweaker.item.IItemStack;
@@ -7,34 +10,18 @@ import mods.thaumicwands.WandRods;
 import crafttweaker.world.IWorld;
 import crafttweaker.data.IData;
 import mods.ctutils.utils.Math;
-import scripts.Lib;
 
-
-recipes.remove(<thaumicwands:item_wand_cap>);
-for i in [1,2,3,5,7]as int[]{
-    AWB.removeRecipe(<thaumicwands:item_wand_cap>.definition.makeStack(i));
-    mods.jei.JEI.removeAndHide(<thaumicwands:item_wand_cap>.definition.makeStack(i));
-}
-for i in [0,1,2,4,6,8]as int[]{
-    WandCaps.remove(<thaumicwands:item_wand_cap>.definition.makeStack(i));
-    mods.jei.JEI.removeAndHide(<thaumicwands:item_wand_cap>.definition.makeStack(i));
-}
-for i in 0 to 8{
-    WandRods.remove(<thaumicwands:item_wand_rod>.definition.makeStack(i));
-    AWB.removeRecipe(<thaumicwands:item_wand_rod>.definition.makeStack(i));
-    mods.jei.JEI.removeAndHide(<thaumicwands:item_wand_rod>.definition.makeStack(i));
-}
-WandRods.remove(<minecraft:stick>);
-/*
-String name, String research, float discount,@Optional AspectArray crystalDiscount, ItemStack item, int craftcost
-WandCaps.register("diamond","FIRSTSTEPS", 2, [<aspect:aer>*2], <minecraft:diamond>,7);
-
-String name, String research, int capacity, ItemStack item, int craftCost
-WandRods.register("beet", "FIRSTSTEPS", 10, <minecraft:beetroot>, 5);
-
-Naming: item.wand. [name] .cap/rod
-*/
 static RodCapacities as [int[string]]=[{}as int[string]];
+function aspect6(aer as int, terra as int, ignis as int, aqua as int, ordo as int, perditio as int)as CTAspectStack[]{
+    var stacks as CTAspectStack[]=[];
+    if(aer>0)stacks+=<aspect:aer>*aer;
+    if(terra>0)stacks+=<aspect:terra>*terra;
+    if(ignis>0)stacks+=<aspect:ignis>*ignis;
+    if(aqua>0)stacks+=<aspect:aqua>*aqua;
+    if(ordo>0)stacks+=<aspect:ordo>*ordo;
+    if(perditio>0)stacks+=<aspect:perditio>*perditio;
+    return stacks;
+}
 function getVis(data as IData)as double{
     var vis=0.0;
     if(data has "tc.charge")vis+=data.memberGet("tc.charge")as int;
@@ -115,8 +102,19 @@ zenClass craftData{
         }
         return craftData(newA,vis+b.vis,item);
     }
+    function aspect6(aer as int, terra as int, ignis as int, aqua as int, ordo as int, perditio as int)as CTAspectStack[]{
+        var stacks as CTAspectStack[]=[];
+        if(aer>0)stacks+=<aspect:aer>*aer;
+        if(terra>0)stacks+=<aspect:terra>*terra;
+        if(ignis>0)stacks+=<aspect:ignis>*ignis;
+        if(aqua>0)stacks+=<aspect:aqua>*aqua;
+        if(ordo>0)stacks+=<aspect:ordo>*ordo;
+        if(perditio>0)stacks+=<aspect:perditio>*perditio;
+        return stacks;
+    }
     function getAspects()as CTAspectStack[]{
-        return Lib.aspect6(
+        L.say((Math.tanh(aspects[0])*64.5)as int);
+        return aspect6(
             ((Math.tanh(aspects[0])*64.5)as int),
             ((Math.tanh(aspects[1])*64.5)as int),
             ((Math.tanh(aspects[2])*64.5)as int),
@@ -146,11 +144,7 @@ function endUp(){
         for capName,capCC in capCraftCost[0]{
             n=n+1;
             var CC as craftData=rodCC.combine(capCC);
-            AWB.registerShapedRecipe("Art_of_Enigma_WandCraft"~n,FS,
-                CC.getVis(),CC.getAspects(),
-                <thaumicwands:item_wand>.withTag({"cap": capName, "rod": rodName}),
-                [[null,null,capCC.getItem()],[null,rodCC.getItem(),null],[capCC.getItem(),null,null]]
-            );
+            CC.getAspects();
         }
     }
 }
@@ -159,8 +153,7 @@ AWB.registerShapedRecipe("Art_of_Enigma_WandCrafteeeeeee",FS,0,[],<minecraft:sti
 RegRod("wood",10,craftData([],0,<minecraft:stick>));
 RegRod("livingwood",15,craftData([],1,<contenttweaker:wand_rod_livingwood>));
 RegRod("dreamwood",50,craftData([],10,<contenttweaker:wand_rod_dreamwood>));
-RegCap("iron",2.0,Lib.aspect6(1,1,1,1,1,1),craftData([],0,<contenttweaker:wand_cap_iron>));
-RegCap("manasteel",2.0,Lib.aspect6(1,1,1,1,1,1),craftData([],1,<contenttweaker:wand_cap_manasteel>));
-RegCap("elementium",2.0,Lib.aspect6(1,1,1,1,1,1),craftData([],10,<contenttweaker:wand_cap_elementium>));
+RegCap("iron",2.0,aspect6(1,1,1,1,1,1),craftData([],0,<contenttweaker:wand_cap_iron>));
+RegCap("manasteel",2.0,aspect6(1,1,1,1,1,1),craftData([],1,<contenttweaker:wand_cap_manasteel>));
+RegCap("elementium",2.0,aspect6(1,1,1,1,1,1),craftData([],10,<contenttweaker:wand_cap_elementium>));
 endUp();
-/**/

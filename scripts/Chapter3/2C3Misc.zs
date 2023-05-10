@@ -85,3 +85,4 @@ events.onPlayerItemPickup(function(event as crafttweaker.event.PlayerItemPickupE
     function(item){return shortCellDisplay(item);}
 );
 <botania:manatablet>.addAdvancedTooltip(function(item){return getManaInTablet(item);});
+mods.botania.ManaInfusion.addInfusion(<thaumicwands:item_wand>,<thaumicwands:item_wand>,1);

@@ -1,5 +1,6 @@
 #loader contenttweaker
 #priority 1919810
+import  mods.contenttweaker.CreativeTab;
 import mods.contenttweaker.VanillaFactory;
 import mods.contenttweaker.Fluid;
 import mods.contenttweaker.Color;
@@ -20,4 +21,21 @@ function createFluid(id as string, c as string, attributes as IData={}){
     print(fluid.flowingLocation);
     print(c)*/
     fluid.register();
+}
+function createItem(id as string,attributes as IData={},creativeTab as CreativeTab=<creativetab:misc>,register as bool=true)as mods.contenttweaker.Item{
+    var item as mods.contenttweaker.Item=VanillaFactory.createItem(id);
+    if(attributes has "beaconPayment")item.beaconPayment=attributes.beaconPayment as bool;
+    if(attributes has "glowing")item.glowing=attributes.glowing as bool;
+    if(attributes has "maxDamage")item.maxDamage=attributes.maxDamage as int;
+    if(attributes has "toolLevel")item.toolLevel=attributes.toolLevel as int;
+    if(attributes has "maxStackSize")item.maxStackSize=attributes.maxStackSize as int;
+    //if(attributes has "smeltingExprerience")item.smeltingExprerience=attributes.smeltingExprerience as float;
+    if(attributes has "toolClass")item.toolClass=attributes.toolClass as string;
+    if(attributes has "resourceLocation")
+        item.textureLocation=mods.contenttweaker.ResourceLocation.create(attributes.resourceLocation);
+    if(attributes has "textureLocation")
+        item.textureLocation=mods.contenttweaker.ResourceLocation.create(attributes.textureLocation);
+    item.creativeTab=creativeTab;
+    if(register)item.register();
+    return item;
 }

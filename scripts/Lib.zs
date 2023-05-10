@@ -1,4 +1,5 @@
 #priority 1919810
+import thaumcraft.aspect.CTAspectStack;
 import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
 import crafttweaker.data.IData;
@@ -93,4 +94,14 @@ function Reuse(ins as IIngredient)as IIngredient{
 }
 function Consume(ins as IIngredient)as IIngredient{
     return TemporaryLore(ins,"§a§o"~game.localize("description.crt.consume")~"§r");
+}
+function aspect6(aer as int, terra as int, ignis as int, aqua as int, ordo as int, perditio as int)as CTAspectStack[]{
+    var stacks as CTAspectStack[]=[];
+    if(aer>0)stacks+=<aspect:aer>*aer;
+    if(terra>0)stacks+=<aspect:terra>*terra;
+    if(ignis>0)stacks+=<aspect:ignis>*ignis;
+    if(aqua>0)stacks+=<aspect:aqua>*aqua;
+    if(ordo>0)stacks+=<aspect:ordo>*ordo;
+    if(perditio>0)stacks+=<aspect:perditio>*perditio;
+    return stacks;
 }
