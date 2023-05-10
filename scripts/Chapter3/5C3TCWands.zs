@@ -209,7 +209,13 @@ function endUp(){
         "§r§o§f-"~dis.getAspectAmount(4)~"  "~
         "§r§o§7-"~dis.getAspectAmount(5);
 });
-
+for rodName,cap2 in manaRods{
+    for capName,aaaa in manaRates{
+        <thaumicwands:item_wand>.withTag({"rod":rodName,"cap":capName}).addAdvancedTooltip(function(item as IItemStack){
+            return "§r"~game.localize("descrption.crt.wand.manarod")~"§d "~cap2~" vis§r !";
+        });
+    }
+}
 
 
 

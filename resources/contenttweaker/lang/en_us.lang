@@ -88,3 +88,20 @@ description.crt.shift.formoreinfo=Press§e§o shift §rfor more information
 description.crt.itemcell.empty=This cell is empty
 description.crt.reuse=Will not be consumed!
 description.crt.consume=Will be consumed!
+
+descrption.crt.wand.manarod=When charged in manapool, capacity increases to 
+
+item.wand.wood.rod=Wooden
+item.wand.livingwood.rod=Living
+item.wand.dreamwood.rod=Dreamy
+item.wand.iron.cap=Iron Cap
+item.wand.manasteel.cap=Manasteel Cap
+item.wand.elementium.cap=Elementium Cap
+
+item.contenttweaker.wand_cap_iron.name=Iron Cap
+item.contenttweaker.wand_cap_manasteel.name=Manasteel Cap
+item.contenttweaker.wand_cap_elementium.name=Elementium Cap
+item.contenttweaker.wand_cap_elementium_inert.name=Inert Elementium Cap
+item.contenttweaker.wand_rod_livingwood.name=Livingwood Rod
+item.contenttweaker.wand_rod_dreamwood.name=Dreamwood Rod
+item.contenttweaker.wand_rod_dreamwood_inert.name=Silent Dreamwood Rod

@@ -46,7 +46,6 @@ function copyRod(name as string){
     rod(name,"thaumicwands:items/wand_rod_"~name);
 }
 copyCap("iron");
-copyRod("wood");
 cap("manasteel");
 capInert("elementium");
 rod("livingwood");
