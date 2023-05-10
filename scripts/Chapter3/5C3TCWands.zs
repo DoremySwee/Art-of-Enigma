@@ -34,7 +34,7 @@ WandRods.register("beet", "FIRSTSTEPS", 10, <minecraft:beetroot>, 5);
 
 Naming: item.wand. [name] .cap/rod
 */
-static RodCapacities as [int[string]]=[{}as int[string]];
+static RodCapacities as int[string]={};
 function getVis(data as IData)as double{
     var vis=0.0;
     if(data has "tc.charge")vis+=data.memberGet("tc.charge")as int;
@@ -78,8 +78,8 @@ events.onPoolTrade(function(event as mods.randomtweaker.botania.PoolTradeEvent){
         if(manaRods has rodName){
             capacity=manaRods[rodName]as double;
         }
-        else if(RodCapacities[0] has rodName){
-            capacity=RodCapacities[0][rodName]as double;
+        else if(RodCapacities has rodName){
+            capacity=RodCapacities[rodName]as double;
         }
         if(getVis(wand.tag)<capacity && event.currentMana>0){
             var maxMana as double=event.currentMana as double;
@@ -131,13 +131,36 @@ zenClass craftData{
 static FS as string="FIRSTSTEPS";
 static rodCraftCost as [craftData[string]]=[{}as craftData[string]];
 static capCraftCost as [craftData[string]]=[{}as craftData[string]];
+zenClass capData{
+    var aspects as CTAspectStack[]=[];
+    var vis as float;
+    zenConstructor(aspectIn as CTAspectStack[],visIn as float){
+        if(aspectIn.length>0){
+            for a in aspectIn{
+                aspects+=a;
+            }
+        }
+        vis=visIn;
+    }
+    function getVis()as float{return vis;}
+    function getAspects()as CTAspectStack[]{return aspects;}
+    function getAspectAmount(n as int)as int{
+        var name as string[]=["aer","terra","ignis","aqua","ordo","perditio"];
+        for a in aspects{
+            if(a.internal.name==name[n])return a.amount;
+        }
+        return 0;
+    }
+}
+static capDiscounts as capData[string]={}; 
 function RegRod(name as string, capacity as int,cd as craftData){
     WandRods.register(name,FS,capacity,<minecraft:stick>.withTag({"registeringTag":name}),0);
-    RodCapacities[0][name]=capacity;
+    RodCapacities[name]=capacity;
     rodCraftCost[0][name]=cd;
 }
 function RegCap(name as string, discount as float, aspect as CTAspectStack[],cd as craftData){
     WandCaps.register(name,FS,discount,aspect,<thaumicwands:item_wand_cap>.withTag({"registeringTag":name}),0);
+    capDiscounts[name]=capData(aspect,discount);
     capCraftCost[0][name]=cd;
 }
 function endUp(){
@@ -154,8 +177,42 @@ function endUp(){
         }
     }
 }
-AWB.registerShapedRecipe("Art_of_Enigma_WandCrafteeeee3","",0,[],<minecraft:stick>,[[null,null,<minecraft:stick>],[null,<contenttweaker:wand_cap_iron>,null],[<minecraft:stick>,null,null]]);
-AWB.registerShapedRecipe("Art_of_Enigma_WandCrafteeeeeee",FS,0,[],<minecraft:stick>,[[null,null,<minecraft:stick>],[null,<contenttweaker:wand_rod_livingwood>,null],[<minecraft:stick>,null,null]]);
+<thaumicwands:item_wand>.clearTooltip(true);
+//Show the vis inside
+<thaumicwands:item_wand>.addAdvancedTooltip(function(item as IItemStack){
+    if(!item.hasTag)return "";
+    if(!(item.tag has "rod"))return "";
+    var vis as double=(0.0+(0+getVis(item.tag)*100))/100;
+    var rodName as string=item.tag.rod as string;
+    var cap as int=(RodCapacities has rodName)?(RodCapacities[rodName]as int):10;
+    var p as string="";
+    if(0+vis>cap)p="§r§o§d";
+    else if(vis>0.75*cap)p="§r§o§9";
+    else if(vis>0.50*cap)p="§r§o§b";
+    else if(vis>0.30*cap)p="§r§o§a";
+    else if(vis>0.15*cap)p="§r§o§e";
+    else if(vis>0.99)p="§r§o§c";
+    else p="§r§o§4";
+    return p~vis~"/"~cap~".00";
+});
+//Show discounts
+<thaumicwands:item_wand>.addAdvancedTooltip(function(item as IItemStack){
+    if(!item.hasTag)return "";
+    if(!(item.tag has "cap"))return "";
+    var cap as string=item.tag.cap as string;
+    var dis as capData=(capDiscounts has cap)?(capDiscounts[cap]):(capData([],0.0f));
+    return "§r§d§k**§r§d * "~(100*dis.getVis())~"%"~"       "~
+        "§r§o§e-"~dis.getAspectAmount(0)~"  "~
+        "§r§o§2-"~dis.getAspectAmount(1)~"  "~
+        "§r§o§c-"~dis.getAspectAmount(2)~"  "~
+        "§r§o§b-"~dis.getAspectAmount(3)~"  "~
+        "§r§o§f-"~dis.getAspectAmount(4)~"  "~
+        "§r§o§7-"~dis.getAspectAmount(5);
+});
+
+
+
+
 RegRod("wood",10,craftData([],0,<minecraft:stick>));
 RegRod("livingwood",15,craftData([],1,<contenttweaker:wand_rod_livingwood>));
 RegRod("dreamwood",50,craftData([],10,<contenttweaker:wand_rod_dreamwood>));
