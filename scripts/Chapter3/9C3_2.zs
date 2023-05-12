@@ -318,7 +318,7 @@ Lib.Shaped9x9(<bloodmagic:blood_orb>.withTag({orb: "bloodmagic:apprentice"}),Lib
 		"6":<bloodmagic:blood_orb:0> .withTag({orb: "bloodmagic:weak"}),
 		"#":<minecraft:potion:0> .withTag({Potion: "cofhcore:luck2"}),
 		"~":<botania:manatablet:0> .withTag({mana: 375000}),
-		"*":<botania:manatablet:0> .withTag({mana: 126000}),
+		"*":<botania:manatablet:0> .withTag({mana: 125000}),
 		"2":<botania:pylon:0>,"$":<chisel:emerald:10>,
 		"8":<mysticalagriculture:nature_essence:0>,
 		"7":<mysticalagriculture:ingot_storage:1>,

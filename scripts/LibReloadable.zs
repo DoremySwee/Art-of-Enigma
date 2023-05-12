@@ -25,6 +25,27 @@ function NBTToString(dat as IData)as string{
     }
     else return "null";
 }
+function MergeData(dat1 as IData,dat2 as IData)as IData{
+    if(isNull(dat1))return dat2;
+    if(isNull(dat2))return dat1;
+    if(!isNull(dat1.asList())){
+        return dat1+dat2;
+    }
+    else if(!isNull(dat1.asMap())){
+        var dat as IData=IData.createEmptyMutableDataMap();
+        for key,value in dat1.asMap(){
+            dat.memberSet(key,dat1.memberGet(key));
+        }
+        for key,value in dat2.asMap(){
+            if(dat has key)dat.memberSet(key,MergeData(dat.memberGet(key),dat2.memberGet(key)));
+            else dat.memberSet(key,dat2.memberGet(key));
+        }
+        return dat;
+    }
+    else{
+        return dat2;
+    }
+}
 static CHARS as string[]=["@","#","$","%","&","*","~",
 "1","2","3","4","5","6","7","8","9","0","`","!","^",
 "a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z",

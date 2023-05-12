@@ -26,7 +26,7 @@
 	{
 		uid: "e0c506c2",
 		type: "command",
-		auto: "enabled",
+		auto: "invisible",
 		command: "/ftbquests change_progress reset singleplayer bd51487c"
 	}]
 }

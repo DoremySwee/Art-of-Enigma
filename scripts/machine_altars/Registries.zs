@@ -5,3 +5,4 @@ val flower as ISubTileEntityGenerating = VanillaFactory.createSubTileGenerating(
 flower.range = 1;
 flower.maxMana = 10000000;
 flower.register();
+CotLib.createItem("divisionsigil",{"maxDamage":256});

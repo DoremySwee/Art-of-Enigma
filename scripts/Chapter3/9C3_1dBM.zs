@@ -81,7 +81,8 @@ recipes.remove(<bloodmagic:alchemy_table>);
 //Altar Clean Up
 if(true){
     BA.removeRecipe(<minecraft:stone>);
-    for i in 0 to 5{BA.removeRecipe(<bloodmagic:slate>.definition.makeStack(i));}
+    //for i in 0 to 5{BA.removeRecipe(<bloodmagic:slate>.definition.makeStack(i));}
+    BA.removeRecipe(<bloodmagic:slate>);
     for i in 0 to 11{recipes.remove(<bloodmagic:blood_rune>.definition.makeStack(i));}
     BA.removeRecipe(<minecraft:diamond>);
     BA.removeRecipe(<minecraft:redstone_block>);

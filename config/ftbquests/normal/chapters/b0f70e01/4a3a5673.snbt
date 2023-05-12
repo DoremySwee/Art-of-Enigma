@@ -18,13 +18,13 @@
 	rewards: [{
 		uid: "ee51fd57",
 		type: "command",
-		auto: "enabled",
+		auto: "invisible",
 		command: "/ftbquests change_progress reset singleplayer 7fcca310"
 	},
 	{
 		uid: "e6e791d4",
 		type: "command",
-		auto: "enabled",
+		auto: "invisible",
 		command: "/ftbquests change_progress reset singleplayer f307df3d"
 	}]
 }

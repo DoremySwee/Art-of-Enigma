@@ -105,3 +105,9 @@ function aspect6(aer as int, terra as int, ignis as int, aqua as int, ordo as in
     if(perditio>0)stacks+=<aspect:perditio>*perditio;
     return stacks;
 }
+static numberOfWABRecipes as int[]=[0];
+function Arcane(output as IItemStack,inputs as IIngredient[][],vis as int, aspects as CTAspectStack[]=[], research as string="FIRSTSTEPS"){
+    mods.thaumcraft.ArcaneWorkbench.registerShapedRecipe("Art_of_Enigma_Arcane_Workbench_recipe_no_"~numberOfWABRecipes[0],
+        research,vis,aspects,output,inputs);
+    numberOfWABRecipes[0]+=1;
+}

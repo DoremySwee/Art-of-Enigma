@@ -1,0 +1,23 @@
+{
+	x: -13.5d,
+	y: 0.5d,
+	hide_dependency_lines: true,
+	dependencies: [
+		"5da4da03"
+	],
+	tasks: [{
+		uid: "676454e4",
+		type: "item",
+		items: [{
+			ForgeCaps: {
+				"astralsorcery:cap_item_amulet_holder": {
+					AS_Amulet_HolderLeast: -8850683834540104786L,
+					AS_Amulet_HolderMost: 4843654198180591858L
+				}
+			},
+			id: "extrautils2:snowglobe",
+			Damage: 1s
+		}],
+		ignore_nbt: 1b
+	}]
+}
