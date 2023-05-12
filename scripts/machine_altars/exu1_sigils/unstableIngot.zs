@@ -1,5 +1,5 @@
-//#loader crafttweaker reloadableevents
-#priority 114514
+#loader crafttweaker reloadableevents
+//#priority 114514
 import crafttweaker.item.IItemStack;
 import crafttweaker.player.IPlayer;
 import scripts.LibReloadable as L;
@@ -47,8 +47,13 @@ events.onPlayerOpenContainer(function(event as crafttweaker.event.PlayerOpenCont
 recipes.remove(<extrautils2:unstableingots>);
 recipes.addShaped("unstable_ingot_unstable",<extrautils2:unstableingots>,[
     [null,<minecraft:diamond>,null],
-    [null,<tconstruct:large_plate>.withTag({Material: "xu_enchanted_metal"}),null],
+    [null,<contenttweaker:divisionsigil>.anyDamage().transformDamage(),null],
     [null,<minecraft:iron_ingot>,null]],
-    function (out,ins,info){
-        return getUnstableIngot(info.player,info.player.world);
-    },null);
+    function(out,ins,info){
+        if(isNull(info.player))return null;
+        //return getUnstableIngot(info.player,info.player.world);
+        return out;
+    },function(out,cInfo,player){
+        if(isNull(player))out.mutable().shrink(1);
+        out.mutable().withTag(getUnstableIngot(player,player.world).tag);
+    });
