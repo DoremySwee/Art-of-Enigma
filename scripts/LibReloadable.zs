@@ -5,6 +5,8 @@ import crafttweaker.player.IPlayer;
 import crafttweaker.item.IItemStack;
 import crafttweaker.data.IData;
 import crafttweaker.item.IIngredient;
+import crafttweaker.world.IWorld;
+import crafttweaker.world.IBlockPos;
 function executeCommand(s as string){
     server.commandManager.executeCommandSilent(server,s);
 }
@@ -122,4 +124,17 @@ function getReducedIIngredientArray(ins as string[],sidelength as int)as string{
         return "\nLib.Mapper("~r1~r2~"\"\n)";
     }/*/
     return "null";/**/
+}
+function isBlock(world as IWorld, pos as IBlockPos, id as string)as bool{
+    if(isNull(world.getBlock(pos)))return false;
+    return world.getBlock(pos).definition.id==id;
+}
+function formStackFromNBT(data as IData)as IItemStack{
+    if(data has "id"){
+        var stack as IItemStack=itemUtils.getItem(data.id as string);
+        if(data has "Damage")stack=stack.definition.makeStack(data.Damage as int);
+        if(data has "tag")stack=stack.withTag(data.tag);
+        return stack;
+    }
+    return null;
 }

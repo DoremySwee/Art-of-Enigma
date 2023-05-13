@@ -1,0 +1,1 @@
+recipes.remove(<extrautils2:unstableingots>);

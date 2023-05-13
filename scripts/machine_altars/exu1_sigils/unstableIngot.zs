@@ -1,7 +1,7 @@
+#loader crafttweaker reloadableevents
 #priority 114514
 import crafttweaker.item.IItemStack;
 import crafttweaker.player.IPlayer;
-import scripts.LibReloadable as L;
 import crafttweaker.world.IWorld;
 import mods.zenutils.PlayerStat;
 import crafttweaker.data.IData;
@@ -17,11 +17,9 @@ function getPlayerContainerCounter(player as IPlayer)as int{
 }
 events.onPlayerLoggedIn(function(event as crafttweaker.event.PlayerLoggedInEvent){
     setPlayerContainerCounter(0,event.player);
-    L.say("Player Logged In!");
 });
 events.onPlayerRespawn(function(event as crafttweaker.event.PlayerRespawnEvent){
     setPlayerContainerCounter(0,event.player);
-    L.say("Player Resapwned!");
 });
 function getUnstableIngot(p as IPlayer,w as IWorld)as IItemStack{
     return <extrautils2:unstableingots>.withTag({
@@ -40,13 +38,12 @@ events.onPlayerOpenContainer(function(event as crafttweaker.event.PlayerOpenCont
     var w as IWorld=p.world;
     if(w.remote)return;
     setPlayerContainerCounter(1+getPlayerContainerCounter(p),p);
-    //L.say(getPlayerContainerCounter(p));
     //p.give(getUnstableIngot(p,w));
 });
-recipes.remove(<extrautils2:unstableingots>);
+//recipes.remove(<extrautils2:unstableingots>);
 recipes.addShaped("unstable_ingot_unstable",<extrautils2:unstableingots>,[
     [null,<minecraft:diamond>,null],
-    [null,<contenttweaker:divisionsigil>.anyDamage().transformDamage(),null],
+    [null,<contenttweaker:divisionsigilactivated>.anyDamage().transformDamage(),null],
     [null,<minecraft:iron_ingot>,null]],
     function(out,ins,info){
         if(isNull(info.player))return null;
@@ -55,4 +52,6 @@ recipes.addShaped("unstable_ingot_unstable",<extrautils2:unstableingots>,[
     },function(out,cInfo,player){
         if(isNull(player))out.mutable().shrink(1);
         out.mutable().withTag(getUnstableIngot(player,player.world).tag);
+        print(out.commandString);
     });
+/**/

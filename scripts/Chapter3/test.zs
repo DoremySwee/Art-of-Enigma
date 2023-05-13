@@ -1,4 +1,5 @@
 #loader crafttweaker reloadableevents
+#norun
 import scripts.LibReloadable as L;
 import mods.thaumcraft.ArcaneWorkbench as AWB;
 import thaumcraft.aspect.CTAspectStack;
