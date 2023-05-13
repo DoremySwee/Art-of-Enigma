@@ -1,5 +1,4 @@
-#loader crafttweaker reloadableevents
-//#priority 114514
+#priority 114514
 import crafttweaker.item.IItemStack;
 import crafttweaker.player.IPlayer;
 import scripts.LibReloadable as L;
