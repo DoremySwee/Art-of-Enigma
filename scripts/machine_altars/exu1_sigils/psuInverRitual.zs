@@ -267,11 +267,17 @@ events.onEntityLivingDeath(function(event as crafttweaker.event.EntityLivingDeat
                             if(check[check.length- 1]==game.localize("crt.chat.exu1sigil2.sacrifice")){
                                 L.say(game.localize("crt.chat.exu1sigil2.start"));
                                 setKill(player,0);
-                                world.createExplosion(null, pos.x, pos.y, pos.z, 5, true, true);
-                                world.createExplosion(null, pos.x+5, pos.y, pos.z, 2, true, true);
-                                world.createExplosion(null, pos.x- 5, pos.y, pos.z, 2, true, true);
-                                world.createExplosion(null, pos.x, pos.y, pos.z+5, 2, true, true);
-                                world.createExplosion(null, pos.x, pos.y, pos.z- 5, 2, true, true);
+                                world.performExplosion(null, pos.x, pos.y, pos.z, 5, true, true);
+                                world.performExplosion(null, pos.x+5, pos.y, pos.z, 2, true, true);
+                                world.performExplosion(null, pos.x- 5, pos.y, pos.z, 2, true, true);
+                                world.performExplosion(null, pos.x, pos.y, pos.z+5, 2, true, true);
+                                world.performExplosion(null, pos.x, pos.y, pos.z- 5, 2, true, true);
+                                world.catenation().run(function(w,c){
+                                    w.performExplosion(null, pos.x+5, pos.y, pos.z, 2, true, true);
+                                    w.performExplosion(null, pos.x- 5, pos.y, pos.z, 2, true, true);
+                                    w.performExplosion(null, pos.x, pos.y, pos.z+5, 2, true, true);
+                                    w.performExplosion(null, pos.x, pos.y, pos.z- 5, 2, true, true);
+                                }).start();
                             }
                             else{
                                 for i in check{
