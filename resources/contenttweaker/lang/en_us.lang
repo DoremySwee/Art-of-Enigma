@@ -106,4 +106,49 @@ item.contenttweaker.wand_rod_livingwood.name=Livingwood Rod
 item.contenttweaker.wand_rod_dreamwood.name=Dreamwood Rod
 item.contenttweaker.wand_rod_dreamwood_inert.name=Silent Dreamwood Rod
 
+
+
+item.contenttweaker.divisionsigil.name=Division Sigil
+item.contenttweaker.divisionsigilactivated.name=Division Sigil (Activated)
+item.contenttweaker.psuinversigil.name=Pseudo-Inversion Sigil
+
+chat.crt.exu1sigil.prepared=§dEverything is prepared.§r
+chat.crt.exu1sigil.sacrifice=§dSacrifice an animal on the Enchantment Table.§r
+chat.crt.exu1sigil.bright=It's too bright for the ritual.
+chat.crt.exu1sigil.dirt=There aren't sufficient dirt blocks.
+chat.crt.exu1sigil.wire=The redstone wire is imcomplete.
+chat.crt.exu1sigil.time=Wait till the midnight, and sacrifice an animal.
+
+
+chat.crt.exu1sigil2.wrongdimension=§4The Pseudo-Inversion Ritual has to take place in The End§r
+chat.crt.exu1sigil2.completewire=§aThe wires are complete.§r
+chat.crt.exu1sigil2.imcompletewire=§4The wires are imcomplete.§r
+chat.crt.exu1sigil2.complete=§dEverything is prepared.§r
+chat.crt.exu1sigil2.imcomplete=§4The Ritual is imcomplete§r
+chat.crt.exu1sigil2.sacrifice=§dSacrifice one who would sacrifice himself§r
+chat.crt.exu1sigil2.start=§dThe Siege has begun in 'The End'§r
+chat.crt.exu1sigil2.end=§9Your Sigil has stabilized.\n The Siege has ended in 'The End'§r
+
+chat.crt.exu1sigil2.missing.east=The Eastern chest is missing, it should be at:
+chat.crt.exu1sigil2.missing.south=The Southern chest is missing, it should be at:
+chat.crt.exu1sigil2.missing.west=The Western chest is missing, it should be at:
+chat.crt.exu1sigil2.missing.north=The Northern chest is missing, it should be at:
+
+chat.crt.exu1sigil2.facing.east=The Eastern chest is not facing to the altar.
+chat.crt.exu1sigil2.facing.south=The Southern chest is not facing to the altar.
+chat.crt.exu1sigil2.facing.west=The Western chest is not facing to the altar.
+chat.crt.exu1sigil2.facing.north=The Northern chest is not facing to the altar.
+
+chat.crt.exu1sigil2.req.east=To the east, following items are required:
+chat.crt.exu1sigil2.req.south=To the south, following items are required:
+chat.crt.exu1sigil2.req.west=To the west, following items are required:
+chat.crt.exu1sigil2.req.north=To the north, following items are required:
+
+chat.crt.exu1sigil2.prepared.east=To the east, Descendants of Water are all ready.
+chat.crt.exu1sigil2.prepared.south=To the south, Gifts of Earth are all ready.
+chat.crt.exu1sigil2.prepared.west=To the west, Spices of Air are all ready.
+chat.crt.exu1sigil2.prepared.north=To the north, Children of Fire are all ready.
+
+
+
 name.crt.stone.rune= Enchanted Stone

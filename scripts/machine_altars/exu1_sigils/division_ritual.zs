@@ -47,18 +47,19 @@ events.onPlayerInteractBlock(function(event as crafttweaker.event.PlayerInteract
     if(world.remote)return;
     if(!isNull(event.block) && !isNull(event.item)){
         var pos as IBlockPos=event.position;
+        var player as IPlayer=event.player;
         if(event.block.definition.id=="minecraft:enchanting_table"
             &&event.item.definition.id=="contenttweaker:divisionsigil"){
             var check as int=checkRitual(world,pos);
             if(check<1){
-                L.say(game.localize("crt.chat.exu1sigil.prepared"));
-                L.say(game.localize("crt.chat.exu1sigil.sacrifice"));
+                player.sendChat(game.localize("chat.crt.exu1sigil.prepared"));
+                player.sendChat(game.localize("chat.crt.exu1sigil.sacrifice"));
             }
             else{
-                if((check&2)>0)L.say(game.localize("crt.chat.exu1sigil.bright"));
-                if((check&4)>0)L.say(game.localize("crt.chat.exu1sigil.dirt"));
-                if((check&8)>0)L.say(game.localize("crt.chat.exu1sigil.wire"));
-                if((check&16)>0)L.say(game.localize("crt.chat.exu1sigil.time"));
+                if((check&2)>0)player.sendChat(game.localize("chat.crt.exu1sigil.bright"));
+                if((check&4)>0)player.sendChat(game.localize("chat.crt.exu1sigil.dirt"));
+                if((check&8)>0)player.sendChat(game.localize("chat.crt.exu1sigil.wire"));
+                if((check&16)>0)player.sendChat(game.localize("chat.crt.exu1sigil.time"));
             }
         }
     }
@@ -83,7 +84,7 @@ events.onEntityLivingDeath(function(event as crafttweaker.event.EntityLivingDeat
                             }
                         }
                         if(flag){
-                            L.say("Suceess!");
+                            //L.say("Suceess!");
                             world.addWeatherEffect(world.createLightningBolt(0.5+pos.x,0.5+pos.y,0.5+pos.z,true));
                             for i in -2 as int to 3{
                                 for j in -2 as int to 3{
@@ -94,10 +95,10 @@ events.onEntityLivingDeath(function(event as crafttweaker.event.EntityLivingDeat
                         }
                     }
                     else if(check%2==0){
-                        if((check&2)>0)L.say(game.localize("crt.chat.exu1sigil.bright"));
-                        if((check&4)>0)L.say(game.localize("crt.chat.exu1sigil.dirt"));
-                        if((check&8)>0)L.say(game.localize("crt.chat.exu1sigil.wire"));
-                        if((check&16)>0)L.say(game.localize("crt.chat.exu1sigil.time"));
+                        if((check&2)>0)player.sendChat(game.localize("chat.crt.exu1sigil.bright"));
+                        if((check&4)>0)player.sendChat(game.localize("chat.crt.exu1sigil.dirt"));
+                        if((check&8)>0)player.sendChat(game.localize("chat.crt.exu1sigil.wire"));
+                        if((check&16)>0)player.sendChat(game.localize("chat.crt.exu1sigil.time"));
                     }
                 }
             }

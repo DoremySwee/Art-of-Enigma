@@ -165,7 +165,7 @@ function checkRitual(world as IWorld, pos as IBlockPos)as string[]{
     var flag=true;
     if(world.getDimension()!=1 as int){
         //L.say(world.getDimension());
-        return [game.localize("crt.chat.exu1sigil2.wrongdimension")];
+        return [game.localize("chat.crt.exu1sigil2.wrongdimension")];
     }
     if(!L.isBlock(world,pos,"minecraft:beacon")){
         result+="ERROR: The Block is not beacon. This should be a bug in the code. Report this to the author of the modpack";
@@ -176,49 +176,53 @@ function checkRitual(world as IWorld, pos as IBlockPos)as string[]{
     var zs as int[]=[0,5,0,-5 as int];
     var facingMeta as int[]=[4,2,5,3];
     var direction as string[]=["east","south","west","north"];
+    var color1 as string[]=["§b","§a","§e","§c"];
+    var color2 as string[]=["§1","§2","§6","§4"];
+    var reset as string="§r";
     for i in 0 to 4{
         var pos2 as IBlockPos=shift(pos,xs[i],zs[i]);
-        var missing as string=game.localize(("crt.chat.exu1sigil2.missing."~direction[i])as string);
-        var facing as string=game.localize(("crt.chat.exu1sigil2.facing."~direction[i])as string);
-        var req as string=game.localize(("crt.chat.exu1sigil2.req."~direction[i])as string);
-        var prepared as string=game.localize(("crt.chat.exu1sigil2.prepared."~direction[i])as string);
+        var missing as string=game.localize(("chat.crt.exu1sigil2.missing."~direction[i])as string);
+        var facing as string=game.localize(("chat.crt.exu1sigil2.facing."~direction[i])as string);
+        var req0 as string=game.localize(("chat.crt.exu1sigil2.req."~direction[i])as string);
+        var prepared as string=game.localize(("chat.crt.exu1sigil2.prepared."~direction[i])as string);
         if(!L.isBlock(world,pos2,"minecraft:chest")){
-            result+=(missing~" ("~pos2.x~", "~pos2.y~", "~pos2.z~")")as string;
+            result+=(color2[i]~missing~" ("~pos2.x~", "~pos2.y~", "~pos2.z~")§r")as string;
             flag=false;
         }
         else if(facingMeta[i]!=world.getBlock(pos2).meta){
-            result+=facing;
+            result+=(color2[i]~facing~reset)as string;
             flag=false;
         }
         else{
             if(!stacksMatch(getItemsInChest(world.getBlock(pos2)),CHESTS[direction[i]])){
+                var req as string=(color1[i]~req0)as string;
                 for item in CHESTS[direction[i]]{
                     //var display as string=(item.hasTag&&(item.tag!={}))?item.commandString:item.displayName;
-                    req=req~"\n      "~item.displayName~" ( "~item.commandString~" )";
+                    req=req~"\n      "~color1[i]~item.displayName~" §o( "~item.commandString~" )§r";
                 }
                 flag=false;
                 result+=req;
             }
             else{
-                result+=prepared;
+                result+=(color1[i]~prepared~reset)as string;
             }
         }
     }
     //Check Wires
     if(countWire(world,pos)){
-        result+=game.localize("crt.chat.exu1sigil2.completewire");
+        result+=game.localize("chat.crt.exu1sigil2.completewire");
     }
     else{
-        result+=game.localize("crt.chat.exu1sigil2.imcompletewire");
+        result+=game.localize("chat.crt.exu1sigil2.imcompletewire");
         flag=false;
     }
     //EndUp
     if(flag){
-        result+=game.localize("crt.chat.exu1sigil2.complete");
-        result+=game.localize("crt.chat.exu1sigil2.sacrifice");
+        result+=game.localize("chat.crt.exu1sigil2.complete");
+        result+=game.localize("chat.crt.exu1sigil2.sacrifice");
     }
     else{
-        result+=game.localize("crt.chat.exu1sigil2.imcomplete");
+        result+=game.localize("chat.crt.exu1sigil2.imcomplete");
     }
     return result;
 }
@@ -234,7 +238,7 @@ events.onPlayerInteractBlock(function(event as crafttweaker.event.PlayerInteract
     }*/
     if(!isNull(event.block)&&event.block.definition.id=="minecraft:beacon"&&!isNull(event.item)&&event.item.definition.id=="contenttweaker:divisionsigilactivated"){
         for i in checkRitual(event.player.world,event.position){
-            L.say(i);
+            event.player.sendChat(i);
         }
     }
 });
@@ -246,6 +250,7 @@ function setKill(player as IPlayer, n as int){
     player.update(data);
 }
 function getKill(player as IPlayer) as int{
+    if(isNull(player))return -1 as int;
     if(player.data has tagName)return player.data.memberGet(tagName).asInt();
     else return -1 as int;
 }
@@ -264,8 +269,8 @@ events.onEntityLivingDeath(function(event as crafttweaker.event.EntityLivingDeat
                         if(L.isBlock(world,pos,"minecraft:beacon")){
                             //L.say("A");
                             var check as string[]=checkRitual(world,pos);
-                            if(check[check.length- 1]==game.localize("crt.chat.exu1sigil2.sacrifice")){
-                                L.say(game.localize("crt.chat.exu1sigil2.start"));
+                            if(check[check.length- 1]==game.localize("chat.crt.exu1sigil2.sacrifice")){
+                                player.sendChat(game.localize("chat.crt.exu1sigil2.start"));
                                 setKill(player,0);
                                 world.performExplosion(null, pos.x, pos.y, pos.z, 5, true, true);
                                 world.performExplosion(null, pos.x+5, pos.y, pos.z, 2, true, true);
@@ -281,7 +286,7 @@ events.onEntityLivingDeath(function(event as crafttweaker.event.EntityLivingDeat
                             }
                             else{
                                 for i in check{
-                                    L.say(i);
+                                    player.sendChat(i);
                                 }
                             }
                             return;
@@ -293,10 +298,10 @@ events.onEntityLivingDeath(function(event as crafttweaker.event.EntityLivingDeat
         else if(entity instanceof IEntityMob){
             if(entity.nbt.ForgeData has tagName && getKill(player)>-1 && world.getDimension()==1){
                 setKill(player,getKill(player)+1);
-                L.say("kill:"~getKill(player));
+                player.sendChat("kill:"~getKill(player));
                 if(getKill(player)>99){
+                    player.sendChat(game.localize("chat.crt.exu1sigil2.end"));
                     for i in 0 to player.inventorySize{
-                        L.say(game.localize("crt.chat.exu1sigil2.end"));
                         if(!isNull(player.getInventoryStack(i))&&(player.getInventoryStack(i).definition.id=="contenttweaker:divisionsigilactivated")){
                             player.replaceItemInInventory(i,<contenttweaker:psuinversigil>);
                             break;
@@ -386,12 +391,23 @@ events.onPlayerTick(function(event as crafttweaker.event.PlayerTickEvent){
                     entity.posY=1.0+pos.y;
                     entity.posZ=0.5+pos.z;
                     var data as IData=IData.createEmptyMutableDataMap();
-                    data.memberSet(tagName,0);
+                    data.memberSet(tagName,player.uuid);
                     entity.setNBT(data);
                     world.spawnEntity(entity);
-                    entity.addPotionEffect(<potion:minecraft:speed>.makePotionEffect(2000000000,2));
+                    entity.addPotionEffect(<potion:minecraft:speed>.makePotionEffect(2000000000,4));
                     break;
             }
+        }
+    }
+});
+events.onEntityLivingUpdate(function(event as crafttweaker.event.EntityLivingUpdateEvent){
+    if(event.entity instanceof IEntityLiving){
+        var entity as IEntityLiving=event.entity;
+        var world as IWorld=entity.world;
+        if(world.remote)return;
+        if(entity.getNBT().ForgeData has tagName){
+            var uuid as string=entity.getNBT().ForgeData.memberGet(tagName).asString();
+            if(getKill(world.getPlayerByUUID(mods.zenutils.UUID.fromString(uuid)))<0)world.removeEntity(entity);
         }
     }
 });
