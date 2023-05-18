@@ -10,7 +10,8 @@ import mods.ctutils.utils.Math;
 import scripts.Lib;
 
 
-recipes.remove(<thaumicwands:item_wand_cap>);
+mods.jei.JEI.removeAndHide(<thaumicwands:item_wand_cap>);
+recipes.remove(<thaumicwands:item_wand>);
 for i in [1,2,3,5,7]as int[]{
     AWB.removeRecipe(<thaumicwands:item_wand_cap>.definition.makeStack(i));
     mods.jei.JEI.removeAndHide(<thaumicwands:item_wand_cap>.definition.makeStack(i));
@@ -169,6 +170,10 @@ function endUp(){
         for capName,capCC in capCraftCost[0]{
             n=n+1;
             var CC as craftData=rodCC.combine(capCC);
+            if(CC.getVis()<1){
+                recipes.addShaped(<thaumicwands:item_wand>.withTag({"cap": capName, "rod": rodName}),
+                [[null,null,capCC.getItem()],[null,rodCC.getItem(),null],[capCC.getItem(),null,null]]);
+            }
             AWB.registerShapedRecipe("Art_of_Enigma_WandCraft"~n,FS,
                 CC.getVis(),CC.getAspects(),
                 <thaumicwands:item_wand>.withTag({"cap": capName, "rod": rodName}),
@@ -220,10 +225,10 @@ for rodName,cap2 in manaRods{
 
 
 RegRod("wood",10,craftData([],0,<minecraft:stick>));
-RegRod("livingwood",15,craftData([],1,<contenttweaker:wand_rod_livingwood>));
+RegRod("livingwood",12,craftData([],3,<contenttweaker:wand_rod_livingwood>));
 RegRod("dreamwood",50,craftData([],10,<contenttweaker:wand_rod_dreamwood>));
-RegCap("iron",2.0,Lib.aspect6(1,1,1,1,1,1),craftData([],0,<contenttweaker:wand_cap_iron>));
-RegCap("manasteel",2.0,Lib.aspect6(1,1,1,1,1,1),craftData([],1,<contenttweaker:wand_cap_manasteel>));
+RegCap("iron",3.0,Lib.aspect6(1,1,1,1,1,1),craftData([],0,<contenttweaker:wand_cap_iron>));
+RegCap("manasteel",2.0,Lib.aspect6(1,1,1,1,1,1),craftData([],5,<contenttweaker:wand_cap_manasteel>));
 RegCap("elementium",2.0,Lib.aspect6(1,1,1,1,1,1),craftData([],10,<contenttweaker:wand_cap_elementium>));
 endUp();
 /**/

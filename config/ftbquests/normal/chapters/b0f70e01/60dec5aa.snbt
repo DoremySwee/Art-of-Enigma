@@ -1,0 +1,23 @@
+{
+	x: -5.0d,
+	y: -9.0d,
+	dependencies: [
+		"853d1ead"
+	],
+	tasks: [{
+		uid: "db7eb9c4",
+		type: "item",
+		items: [{
+			ForgeCaps: {
+				"astralsorcery:cap_item_amulet_holder": {}
+			},
+			id: "forge:bucketfilled",
+			tag: {
+				FluidName: "bot_mana",
+				Amount: 1000
+			}
+		}],
+		ignore_damage: true,
+		ignore_nbt: 1b
+	}]
+}

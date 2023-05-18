@@ -7,8 +7,8 @@ val flower as ISubTileEntityGenerating = VanillaFactory.createSubTileGenerating(
 flower.range = 1;
 flower.maxMana = 10000000;
 flower.register();
-CotLib.createItem("divisionsigil",{"maxStackSize":1});
-CotLib.createItem("divisionsigilactivated",{
+CotLib.createItem("division_sigil",{"maxStackSize":1});
+CotLib.createItem("division_sigil_activated",{
     "maxDamage":256,"maxStackSize":1,"glowing":true});
-CotLib.createItem("psuinversigil",{
+CotLib.createItem("psu_inver_sigil",{
     "maxDamage":256,"maxStackSize":1,"glowing":true});

@@ -43,7 +43,7 @@ events.onPlayerOpenContainer(function(event as crafttweaker.event.PlayerOpenCont
 //recipes.remove(<extrautils2:unstableingots>);
 recipes.addShaped("unstable_ingot_unstable",<extrautils2:unstableingots>,[
     [null,<minecraft:diamond>,null],
-    [null,<contenttweaker:divisionsigilactivated>.anyDamage().transformDamage(),null],
+    [null,<contenttweaker:division_sigil_activated>.anyDamage().transformDamage(),null],
     [null,<minecraft:iron_ingot>,null]],
     function(out,ins,info){
         if(isNull(info.player))return null;

@@ -14,10 +14,11 @@ function isMidNight(world as IWorld)as bool{
 events.onItemToss(function(event as crafttweaker.event.ItemTossEvent){
     L.say(isMidNight(event.item.world)?"MIDNIGHT!":"not the time");
 });*/
-static BRIGHTNESS as int=1;
+static BRIGHTNESS as int=4;
 function getBrightness(world as IWorld, pos as IBlockPos)as int{
     //return world.getBlockState(pos).getLightValue(world,pos);
-    return world.getBrightness(pos);
+    //return world.getBrightness(pos);
+    return world.getBrightnessSubtracted(pos);
 }
 function checkRitual(world as IWorld, pos as IBlockPos)as int{
     var result as int=0;
@@ -49,7 +50,7 @@ events.onPlayerInteractBlock(function(event as crafttweaker.event.PlayerInteract
         var pos as IBlockPos=event.position;
         var player as IPlayer=event.player;
         if(event.block.definition.id=="minecraft:enchanting_table"
-            &&event.item.definition.id=="contenttweaker:divisionsigil"){
+            &&event.item.definition.id=="contenttweaker:division_sigil"){
             var check as int=checkRitual(world,pos);
             if(check<1){
                 player.sendChat(game.localize("chat.crt.exu1sigil.prepared"));
@@ -78,8 +79,8 @@ events.onEntityLivingDeath(function(event as crafttweaker.event.EntityLivingDeat
                     if(check<1){
                         var flag=false;
                         for i in 0 to player.inventorySize{
-                            if(!isNull(player.getInventoryStack(i))&&(player.getInventoryStack(i).definition.id=="contenttweaker:divisionsigil")){
-                                player.replaceItemInInventory(i,<contenttweaker:divisionsigilactivated>);
+                            if(!isNull(player.getInventoryStack(i))&&(player.getInventoryStack(i).definition.id=="contenttweaker:division_sigil")){
+                                player.replaceItemInInventory(i,<contenttweaker:division_sigil_activated>);
                                 flag=true;
                             }
                         }

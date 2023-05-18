@@ -87,8 +87,9 @@ function irisotosWork(world as IWorld,pos as IBlockPos){}
                 var pos1 as IBlockPos=IBlockPos.create(pos.x+i-d,pos.y+j-d,pos.z+k-d);
                 var name as string=getFlowerName(world,pos1);
                 if(pos1.x!=pos.x||pos1.y!=pos.y||pos1.z!=pos.z)if(name=="irisotos"){
-                    world.setBlockState(<blockstate:minecraft:air>,pos1);
-                    if(!world.remote)world.spawnEntity(<botania:specialflower>.withTag({type: "irisotos"}).createEntityItem(world,pos1));
+                    //world.setBlockState(<blockstate:minecraft:air>,pos1);
+                    if(!world.remote)//world.spawnEntity(<botania:specialflower>.withTag({type: "irisotos"}).createEntityItem(world,pos1));
+                        world.destroyBlock(pos1, true);
                     else{
                         for ii in 0 to 20{
                             var rat=0.1*ii;

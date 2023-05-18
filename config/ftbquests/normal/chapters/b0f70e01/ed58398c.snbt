@@ -1,0 +1,67 @@
+{
+	x: -13.5d,
+	y: -9.0d,
+	dependencies: [
+		"5da4da03"
+	],
+	tasks: [{
+		uid: "1c4a6fe1",
+		type: "item",
+		items: [{
+			ForgeCaps: {
+				"astralsorcery:cap_item_amulet_holder": {}
+			},
+			id: "calculator:calculator",
+			tag: {}
+		}],
+		ignore_damage: true,
+		ignore_nbt: 1b
+	},
+	{
+		uid: "0400e00e",
+		type: "item",
+		items: [{
+			ForgeCaps: {
+				"astralsorcery:cap_item_amulet_holder": {}
+			},
+			id: "calculator:scientificcalculator",
+			tag: {}
+		}],
+		ignore_damage: true,
+		ignore_nbt: 1b
+	},
+	{
+		uid: "b9407bf0",
+		type: "item",
+		items: [{
+			item: "calculator:atomiccalculator"
+		}]
+	},
+	{
+		uid: "7f3b0667",
+		type: "item",
+		items: [{
+			ForgeCaps: {
+				"astralsorcery:cap_item_amulet_holder": {}
+			},
+			id: "calculator:flawlesscalculator",
+			tag: {
+				0: {}
+			}
+		}],
+		ignore_damage: true,
+		ignore_nbt: 1b
+	},
+	{
+		uid: "c5721c20",
+		type: "item",
+		items: [{
+			id: "calculator:dockingstation",
+			tag: {
+				sonar_drop: {
+					energy: 0L
+				}
+			}
+		}]
+	}]
+}

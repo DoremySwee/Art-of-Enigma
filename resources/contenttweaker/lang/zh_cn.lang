@@ -57,8 +57,11 @@ description.crt.tooltip.dupSpark=与火花合成以复制。
 
 description.crt.tooltip.SmeltryF= 可以用作冶炼炉燃料。
 description.crt.tooltip.dupMana= 可以在魔力池复制。
+description.crt.tooltip.twigwand= 可以用树苗和木棍合成。
 
 info.crt.endoFlameRes.exceed=火红莲数量超过区块上限(8)。
+crt.smeltry_head.name=冶炼之脑
+crt.smeltry_head.tip=用于制作冶炼炉控制器。别把它用在其他地方。
 
 quests.ch2.portalCancel.title= 关于下界传送门
 quests.ch2.portalCancel.des= 下界传送门无法正常建造。
@@ -108,9 +111,9 @@ item.contenttweaker.wand_rod_dreamwood_inert.name=梦芯「眠」
 
 
 
-item.contenttweaker.divisionsigil.name=分割徽章
-item.contenttweaker.divisionsigilactivated.name=分割徽章（激活）
-item.contenttweaker.psuinversigil.name=伪逆徽章
+item.contenttweaker.division_sigil.name=分割徽章
+item.contenttweaker.division_sigil_activated.name=分割徽章（激活）
+item.contenttweaker.psu_inver_sigil.name=伪逆徽章
 
 chat.crt.exu1sigil.prepared=§d一切就绪§r
 chat.crt.exu1sigil.sacrifice=§d在附魔台上献祭一只动物§r
@@ -120,9 +123,9 @@ chat.crt.exu1sigil.wire=祭坛周围没有完整的红石线
 chat.crt.exu1sigil.time=静待午夜到来，进行献祭
 
 
-chat.crt.exu1sigil2.wrongdimension=§4伪逆徽章必须在末地才能激活§r
-chat.crt.exu1sigil2.completewire=§a信标周围的线缆已经成型§r
-chat.crt.exu1sigil2.imcompletewire=§4信标周围没有完整的螺旋线缆§r
+chat.crt.exu1sigil2.wrong_dimension=§4伪逆徽章必须在末地才能激活§r
+chat.crt.exu1sigil2.complete_wire=§a信标周围的线缆已经成型§r
+chat.crt.exu1sigil2.imcomplete_wire=§4信标周围没有完整的螺旋线缆§r
 chat.crt.exu1sigil2.complete=§d一切就绪§r
 chat.crt.exu1sigil2.imcomplete=§4仪式还未完成§r
 chat.crt.exu1sigil2.sacrifice=§d在信标附近献祭一只铁傀儡来开启试炼§r
@@ -152,3 +155,18 @@ chat.crt.exu1sigil2.prepared.north=北面，火之子嗣已就位
 
 
 name.crt.stone.rune=蕴魔符石
+description.crt.tooltip.liquid_mana_and_blues_lime=可以把史莱姆变成蓝色的！
+
+item.contenttweaker.shard_aer.name=风之碎片
+item.contenttweaker.shard_terra.name=地之碎片
+item.contenttweaker.shard_aqua.name=水之碎片
+item.contenttweaker.shard_ignis.name=火之碎片
+item.contenttweaker.shard_ordo.name=秩序碎片
+item.contenttweaker.shard_perditio.name=混沌碎片
+item.contenttweaker.shard_balanced.name=平衡碎片
+description.crt.tooltip.shard_anvil1=用铁砧砸
+description.crt.tooltip.shard_anvil2=方块以获取
+description.crt.tooltip.shard_anvil3=。
+description.crt.tooltip.shard_double_slab_sandstone=双层沙石台阶
+description.crt.tooltip.shard_double_slab_stone=双层石台阶
+jei.description.salis_mundus=由于技术原因，上段文字无法删除。实际上，用3种不同水晶合成世界盐的配方已经被删除了。

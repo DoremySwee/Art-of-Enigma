@@ -1,0 +1,16 @@
+{
+	x: -6.5d,
+	y: -7.0d,
+	dependencies: [
+		"3d6fa7c2",
+		"a5dd97ec",
+		"da004245"
+	],
+	tasks: [{
+		uid: "8ac0b691",
+		type: "item",
+		items: [{
+			item: "mysticalagriculture:fire_seeds"
+		}]
+	}]
+}

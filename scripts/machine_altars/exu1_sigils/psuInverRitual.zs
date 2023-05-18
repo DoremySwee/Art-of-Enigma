@@ -17,19 +17,6 @@ import crafttweaker.data.IData;
 function shift(pos as IBlockPos, x as int, z as int)as IBlockPos{
     return IBlockPos.create(pos.x+x,pos.y,pos.z+z);
 }
-function getItemsInChest(block as IBlock)as IItemStack[]{
-    if(block.definition.id!="minecraft:chest")return [];
-    if(isNull(block.data))return [];
-    var data as IData=block.data;
-    if(!(data has "Items"))return [];
-    var data1 as [IData]=data.Items.asList();
-    var result as IItemStack[]=[];
-    for data2 in data1{
-        var stack=L.formStackFromNBT(data2);
-        result+=stack;
-    }
-    return result;
-}
 static CHESTS as [IItemStack][string]={
     "east":[
         <minecraft:potion>.withTag({Potion: "minecraft:long_night_vision"}),
@@ -165,7 +152,7 @@ function checkRitual(world as IWorld, pos as IBlockPos)as string[]{
     var flag=true;
     if(world.getDimension()!=1 as int){
         //L.say(world.getDimension());
-        return [game.localize("chat.crt.exu1sigil2.wrongdimension")];
+        return [game.localize("chat.crt.exu1sigil2.wrong_dimension")];
     }
     if(!L.isBlock(world,pos,"minecraft:beacon")){
         result+="ERROR: The Block is not beacon. This should be a bug in the code. Report this to the author of the modpack";
@@ -194,7 +181,7 @@ function checkRitual(world as IWorld, pos as IBlockPos)as string[]{
             flag=false;
         }
         else{
-            if(!stacksMatch(getItemsInChest(world.getBlock(pos2)),CHESTS[direction[i]])){
+            if(!stacksMatch(L.getItemsInChest(world.getBlock(pos2)),CHESTS[direction[i]])){
                 var req as string=(color1[i]~req0)as string;
                 for item in CHESTS[direction[i]]{
                     //var display as string=(item.hasTag&&(item.tag!={}))?item.commandString:item.displayName;
@@ -210,10 +197,10 @@ function checkRitual(world as IWorld, pos as IBlockPos)as string[]{
     }
     //Check Wires
     if(countWire(world,pos)){
-        result+=game.localize("chat.crt.exu1sigil2.completewire");
+        result+=game.localize("chat.crt.exu1sigil2.complete_wire");
     }
     else{
-        result+=game.localize("chat.crt.exu1sigil2.imcompletewire");
+        result+=game.localize("chat.crt.exu1sigil2.imcomplete_wire");
         flag=false;
     }
     //EndUp
@@ -230,13 +217,13 @@ events.onPlayerInteractBlock(function(event as crafttweaker.event.PlayerInteract
     if(event.player.world.remote)return;
     /*if(!isNull(event.block)&&event.block.definition.id=="minecraft:chest"){
         var logstring as string="";
-        for i in getItemsInChest(event.block){
+        for i in L.getItemsInChest(event.block){
             //L.say(i.commandString);
             logstring=logstring~i.commandString~",\n";
         }
         print(logstring);
     }*/
-    if(!isNull(event.block)&&event.block.definition.id=="minecraft:beacon"&&!isNull(event.item)&&event.item.definition.id=="contenttweaker:divisionsigilactivated"){
+    if(!isNull(event.block)&&event.block.definition.id=="minecraft:beacon"&&!isNull(event.item)&&event.item.definition.id=="contenttweaker:division_sigil_activated"){
         for i in checkRitual(event.player.world,event.position){
             event.player.sendChat(i);
         }
@@ -302,8 +289,8 @@ events.onEntityLivingDeath(function(event as crafttweaker.event.EntityLivingDeat
                 if(getKill(player)>99){
                     player.sendChat(game.localize("chat.crt.exu1sigil2.end"));
                     for i in 0 to player.inventorySize{
-                        if(!isNull(player.getInventoryStack(i))&&(player.getInventoryStack(i).definition.id=="contenttweaker:divisionsigilactivated")){
-                            player.replaceItemInInventory(i,<contenttweaker:psuinversigil>);
+                        if(!isNull(player.getInventoryStack(i))&&(player.getInventoryStack(i).definition.id=="contenttweaker:division_sigil_activated")){
+                            player.replaceItemInInventory(i,<contenttweaker:psu_inver_sigil>);
                             break;
                         }
                     }

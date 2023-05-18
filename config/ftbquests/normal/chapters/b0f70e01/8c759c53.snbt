@@ -1,0 +1,21 @@
+{
+	x: -8.0d,
+	y: -8.0d,
+	dependencies: [
+		"68d9782e"
+	],
+	tasks: [{
+		uid: "f1db4566",
+		type: "item",
+		items: [{
+			item: "contenttweaker:wand_rod_livingwood"
+		}]
+	},
+	{
+		uid: "384e1e90",
+		type: "item",
+		items: [{
+			item: "thaumcraft:crucible"
+		}]
+	}]
+}

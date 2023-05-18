@@ -155,7 +155,7 @@ recipes.addShaped(<mysticalagriculture:dirt_seeds>*4,Lib.Mapper({
 ));
 Lib.Shaped9x9(<mysticalagriculture:wood_seeds>*4,Lib.Mapper({
 		"&":<mysticalagriculture:crafting:17>,"1":<extrautils2:decorativesolidwood:1>,
-		"_":null,"#":<chisel:bookshelf_oak:0>,"*":<botania:dreamwood:4>,"%":<botania:dreamwood:0>,
+		"_":null,"#":<chisel:bookshelf_oak:0>,"*":<botania:dreamwood:4>,"%":<botania:dreamwood:5>,
 		"~":<forge:bucketfilled:0> .withTag({FluidName: "resin", Amount: 1000}),
 		"$":<forge:bucketfilled:0> .withTag({FluidName: "sap", Amount: 1000}),
 		"@":<forge:bucketfilled:0> .withTag({FluidName: "tree_oil", Amount: 1000})
@@ -344,3 +344,21 @@ recipes.addShaped(<thaumcraft:arcane_workbench>,Lib.Mapper({
 },"BAB;AOA;BAB;"));
 <ore:blockEmerald>.remove(<chisel:emerald:10>);
 Resonator.add(<chisel:emerald:10>,<minecraft:emerald_block>,2100);
+
+Lib.Shaped9x9(<thermalfoundation:fertilizer>*8,Lib.Mapper({
+		"_":null,
+		"#":<thermalfoundation:material:819>,
+		"$":<mysticalagriculture:crafting:6>,
+		"@":<mysticalagriculture:water_essence:0>,
+		"%":<appliedenergistics2:paint_ball:20>
+	},"
+		_________;
+		_@___@___;
+		__#@_$___;
+		__@#%@$@_;
+		___%#%___;
+		_@$@%#@__;
+		___$_@#__;
+		___@___@_;
+		_________;"
+));

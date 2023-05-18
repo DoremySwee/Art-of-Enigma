@@ -1,0 +1,14 @@
+{
+	x: -6.5d,
+	y: -9.0d,
+	dependencies: [
+		"8c759c53"
+	],
+	tasks: [{
+		uid: "e79bb41a",
+		type: "item",
+		items: [{
+			item: "thaumcraft:salis_mundus"
+		}]
+	}]
+}

@@ -1,5 +1,5 @@
 {
-	x: 5.0d,
+	x: 5.5d,
 	y: -3.5d,
 	text: [
 		"{quests.ch1.sparkCheck.des}"

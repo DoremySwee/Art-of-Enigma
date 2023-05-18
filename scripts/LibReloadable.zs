@@ -1,12 +1,13 @@
 #loader crafttweaker reloadableevents
 #priority 114
 import crafttweaker.command.ICommandManager;
-import crafttweaker.player.IPlayer;
-import crafttweaker.item.IItemStack;
-import crafttweaker.data.IData;
 import crafttweaker.item.IIngredient;
-import crafttweaker.world.IWorld;
+import crafttweaker.item.IItemStack;
 import crafttweaker.world.IBlockPos;
+import crafttweaker.player.IPlayer;
+import crafttweaker.world.IWorld;
+import crafttweaker.block.IBlock;
+import crafttweaker.data.IData;
 function executeCommand(s as string){
     server.commandManager.executeCommandSilent(server,s);
 }
@@ -137,4 +138,30 @@ function formStackFromNBT(data as IData)as IItemStack{
         return stack;
     }
     return null;
+}
+function getItemsInChest(block as IBlock)as IItemStack[]{
+    if(block.definition.id!="minecraft:chest")return [];
+    if(isNull(block.data))return [];
+    var data as IData=block.data;
+    if(!(data has "Items"))return [];
+    var data1 as [IData]=data.Items.asList();
+    var result as IItemStack[]=[];
+    for data2 in data1{
+        var stack=formStackFromNBT(data2);
+        result+=stack;
+    }
+    return result;
+}
+function floor(x as double)as int{
+    if(x==(x as int)as double)return x as int;
+    if(x>=0)return x as int;
+    return 0-((0-x)as int)- 1;
+}/*
+say(floor(-1));
+say(floor(-1.2));
+say(floor(0));
+say(floor(1));
+say(floor(1.2));*/
+function formBlockPos(x as double, y as double, z as double)as IBlockPos{
+    return IBlockPos.create(floor(x),floor(y),floor(z));
 }

@@ -1,0 +1,11 @@
+{
+	title: "calculator hidden quest line",
+	x: -11.0d,
+	y: -2.5d,
+	text: [
+		""
+	],
+	dependencies: [
+		"ed58398c"
+	]
+}

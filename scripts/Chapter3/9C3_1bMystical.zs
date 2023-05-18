@@ -25,5 +25,5 @@ Casting.addTableRecipe(<mysticalagriculture:crafting:33>,
     <thermalfoundation:material:136>,<liquid:molten_essence>,144,true,600);
 Melter.add(<liquid:molten_essence>*144,<mysticalagriculture:crafting>);
 Melting.addRecipe(<liquid:molten_essence>*144,<mysticalagriculture:crafting>,500);
-Casting.addTableRecipe(<mysticalagriculture:inferium_apple>,<extrautils2:magicapple>,MoltE,1440,true,600);
+//Casting.addTableRecipe(<mysticalagriculture:inferium_apple>,<extrautils2:magicapple>,MoltE,1440,true,600);
 recipes.remove(<mysticalagriculture:inferium_apple>);

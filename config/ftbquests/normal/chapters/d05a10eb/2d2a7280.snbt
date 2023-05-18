@@ -28,5 +28,11 @@
 		type: "item",
 		item: "minecraft:sapling",
 		count: 32
+	},
+	{
+		uid: "cd11c064",
+		type: "item",
+		item: "botania:pool",
+		count: 2
 	}]
 }

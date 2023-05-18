@@ -169,3 +169,6 @@ recipes.addShaped(<betterbuilderswands:wandstone>,[
 //<botania:terraplate>.addTooltip(format.red(game.localize("description.crt.tooltip.numLim")));
 <botania:petal:*>.addTooltip(format.aqua(format.italic(game.localize("description.crt.tooltip.dupMana"))));
 <appliedenergistics2:material:7>.addTooltip(format.aqua(format.italic(game.localize("description.crt.tooltip.dupMana"))));
+
+//Tooltip 20230516
+<botania:twigwand>.addTooltip(game.localize("description.crt.tooltip.twigwand"));

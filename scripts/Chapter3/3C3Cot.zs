@@ -50,3 +50,31 @@ cap("manasteel");
 capInert("elementium");
 rod("livingwood");
 rodInert("dreamwood");
+
+//Marshmallow
+var marshmallow as mods.contenttweaker.ItemFood=
+CotLib.createItemFood("dezil_marshmallow",{
+    "healAmount":100,
+    "alwaysEdible":true,
+    "saturation":20,
+    "glowing":true
+});
+marshmallow.onItemFoodEaten=function(stack, world, player) {
+    if (!world.isRemote()) {
+        player.addPotionEffect(<potion:minecraft:speed>.makePotionEffect(600, 1));
+        player.addPotionEffect(<potion:minecraft:haste>.makePotionEffect(600, 1));
+        player.addPotionEffect(<potion:minecraft:strength>.makePotionEffect(600, 1));
+        player.addPotionEffect(<potion:minecraft:jump_boost>.makePotionEffect(600, 1));
+        player.addPotionEffect(<potion:minecraft:regeneration>.makePotionEffect(600, 1));
+        player.addPotionEffect(<potion:minecraft:resistance>.makePotionEffect(600, 1));
+        player.addPotionEffect(<potion:minecraft:water_breathing>.makePotionEffect(600, 1));
+        player.addPotionEffect(<potion:minecraft:luck>.makePotionEffect(600, 1));
+    }
+};
+CotLib.createItem("shard_aqua");
+CotLib.createItem("shard_ignis");
+CotLib.createItem("shard_aer");
+CotLib.createItem("shard_terra");
+CotLib.createItem("shard_ordo");
+CotLib.createItem("shard_perditio");
+CotLib.createItem("shard_balanced");

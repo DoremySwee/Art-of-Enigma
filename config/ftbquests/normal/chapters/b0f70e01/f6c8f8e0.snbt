@@ -1,5 +1,5 @@
 {
-	x: -19.0d,
+	x: -17.5d,
 	y: -3.0d,
 	dependencies: [
 		"d0196a37"
@@ -17,6 +17,18 @@
 		items: [{
 			id: "botania:spawnerclaw",
 			tag: {}
+		}]
+	},
+	{
+		uid: "8d5fe13c",
+		type: "item",
+		items: [{
+			id: "minecraft:spawn_egg",
+			tag: {
+				EntityTag: {
+					id: "minecraft:blaze"
+				}
+			}
 		}]
 	}]
 }

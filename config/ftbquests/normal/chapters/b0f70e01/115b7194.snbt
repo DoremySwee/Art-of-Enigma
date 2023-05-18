@@ -33,5 +33,25 @@
 		items: [{
 			item: "immersiveengineering:metal_device1 1 13"
 		}]
+	}],
+	rewards: [{
+		uid: "7ec4bcd0",
+		type: "item",
+		item: "appliedenergistics2:material 1 13"
+	},
+	{
+		uid: "393b7908",
+		type: "item",
+		item: "appliedenergistics2:material 1 14"
+	},
+	{
+		uid: "22f573a2",
+		type: "item",
+		item: "appliedenergistics2:material 1 15"
+	},
+	{
+		uid: "e33d0451",
+		type: "item",
+		item: "appliedenergistics2:material 1 19"
 	}]
 }

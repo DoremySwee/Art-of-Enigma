@@ -93,8 +93,9 @@ events.onBlockNeighborNotify(function(event as BlockNeighborNotifyEvent){
 
                     if(n>8){
                         L.say(game.localize("info.crt.endoFlameRes.exceed"));
-                        w.setBlockState(<blockstate:minecraft:air>, p);
-                        w.spawnEntity(<botania:specialflower>.withTag({type: "endoflame"}).createEntityItem(w,p.x,p.y+1,p.z));
+                        //w.setBlockState(<blockstate:minecraft:air>, p);
+                        //w.spawnEntity(<botania:specialflower>.withTag({type: "endoflame"}).createEntityItem(w,p.x,p.y+1,p.z));
+                        w.destroyBlock(p, true);
                     }
                     else w.updateCustomChunkData({"EndoResV3":{"num":n,"x":x,"y":y,"z":z}},p);
                 }

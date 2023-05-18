@@ -57,6 +57,7 @@ description.crt.tooltip.flower.dupSpark=Can be duplicated by crafting with spark
 
 description.crt.tooltip.SmeltryF= Can be used as Fuel for Smeltry.
 description.crt.tooltip.dupMana= Can be duplicated through ManaInfusion.
+description.crt.tooltip.twigwand= Check its last recipe.
 
 info.crt.endoFlameRes.exceed=number of endoflame has exceeded maximum(8) in this chunk.
 
@@ -68,6 +69,8 @@ quests.ch2.glowstoneDust.title= Glow stone Production
 quests.ch2.glowstoneDust.des= You can turn this item back into glow stone.
 
 description.crt.tooltip.haste=Eat for Haste II
+crt.smeltry_head.name=The Brain Of Smeltry
+crt.smeltry_head.tip=Used for Smeltry Crafting. Don't use it elsewhere.
 
 fluid.molten_essence=Molten Essence
 fluid.bot_mana=Mana
@@ -108,9 +111,9 @@ item.contenttweaker.wand_rod_dreamwood_inert.name=Silent Dreamwood Rod
 
 
 
-item.contenttweaker.divisionsigil.name=Division Sigil
-item.contenttweaker.divisionsigilactivated.name=Division Sigil (Activated)
-item.contenttweaker.psuinversigil.name=Pseudo-Inversion Sigil
+item.contenttweaker.division_sigil.name=Division Sigil
+item.contenttweaker.division_sigil_activated.name=Division Sigil (Activated)
+item.contenttweaker.psu_inver_sigil.name=Pseudo-Inversion Sigil
 
 chat.crt.exu1sigil.prepared=§dEverything is prepared.§r
 chat.crt.exu1sigil.sacrifice=§dSacrifice an animal on the Enchantment Table.§r
@@ -120,9 +123,9 @@ chat.crt.exu1sigil.wire=The redstone wire is imcomplete.
 chat.crt.exu1sigil.time=Wait till the midnight, and sacrifice an animal.
 
 
-chat.crt.exu1sigil2.wrongdimension=§4The Pseudo-Inversion Ritual has to take place in The End§r
-chat.crt.exu1sigil2.completewire=§aThe wires are complete.§r
-chat.crt.exu1sigil2.imcompletewire=§4The wires are imcomplete.§r
+chat.crt.exu1sigil2.wrong_dimension=§4The Pseudo-Inversion Ritual has to take place in The End§r
+chat.crt.exu1sigil2.complete_wire=§aThe wires are complete.§r
+chat.crt.exu1sigil2.imcomplete_wire=§4The wires are imcomplete.§r
 chat.crt.exu1sigil2.complete=§dEverything is prepared.§r
 chat.crt.exu1sigil2.imcomplete=§4The Ritual is imcomplete§r
 chat.crt.exu1sigil2.sacrifice=§dSacrifice one who would sacrifice himself§r
@@ -152,3 +155,18 @@ chat.crt.exu1sigil2.prepared.north=To the north, Children of Fire are all ready.
 
 
 name.crt.stone.rune= Enchanted Stone
+description.crt.tooltip.liquid_mana_and_blues_lime= Can turn slime into blue slime!
+
+item.contenttweaker.shard_aer.name=Air Shard
+item.contenttweaker.shard_terra.name=Earth Shard
+item.contenttweaker.shard_aqua.name=Water Shard
+item.contenttweaker.shard_ignis.name=Fire Shard
+item.contenttweaker.shard_ordo.name=Order Shard
+item.contenttweaker.shard_perditio.name=Entropy Shard
+item.contenttweaker.shard_balanced.name=Balanced Shard
+description.crt.tooltip.shard_anvil1=Crashing
+description.crt.tooltip.shard_anvil2= (block) with a falling anvil to get
+description.crt.tooltip.shard_anvil3=.
+description.crt.tooltip.shard_double_slab_sandstone= Double Sandstone Slab
+description.crt.tooltip.shard_double_slab_stone Double Stone Slab
+jei.description.salis_mundus=Due to technical problems, the description above cannot be deleted. However, the crafting table recipe for Salis Mundus has been deleted.

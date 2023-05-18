@@ -1,6 +1,10 @@
 {
+	title: "Casual 3",
 	x: -11.0d,
 	y: -3.5d,
+	text: [
+		""
+	],
 	tasks: [{
 		uid: "d364f4d8",
 		type: "item",

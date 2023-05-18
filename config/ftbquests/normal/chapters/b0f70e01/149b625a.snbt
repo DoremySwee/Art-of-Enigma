@@ -40,5 +40,17 @@
 		type: "command",
 		auto: "invisible",
 		command: "/tc research @a FIRSTSTEPS"
+	},
+	{
+		uid: "7bab22b1",
+		type: "command",
+		auto: "invisible",
+		command: "/tc research @a BASEALCHEMY"
+	},
+	{
+		uid: "52fc76fe",
+		type: "command",
+		auto: "invisible",
+		command: "/tc research @a ALUMENTUM"
 	}]
 }

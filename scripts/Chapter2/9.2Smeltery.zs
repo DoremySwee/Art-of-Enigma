@@ -76,6 +76,9 @@ var fcont=<tconstruct:seared_furnace_controller>;
 recipes.removeShaped(fcont);
 recipes.removeShaped(<tconstruct:smeltery_controller>);
 recipes.addShaped(<tconstruct:smeltery_controller>,[[seI,seI,seI],[fcont,<tconstruct:materials:50>.withTag({display: {Lore: ["Use it to Craft the Smeltery Controller"], Name: "Brain of Smeltery"}}),fcont],[seI,seI,seI]]);
+recipes.addShaped(<tconstruct:smeltery_controller>,[[seI,seI,seI],[fcont,<tconstruct:materials:50>.withTag({forSmeltry: true}),fcont],[seI,seI,seI]]);
+<tconstruct:materials:50>.withTag({forSmeltry: 1}).displayName=game.localize("crt.smeltry_head.name");
+<tconstruct:materials:50>.withTag({forSmeltry: 1}).addTooltip(game.localize("crt.smeltry_head.tip"));
 
 //orechid
 mods.tconstruct.Casting.addTableRecipe(<botania:specialflower>.withTag({type: "thermalily"}),<botania:specialflower>.withTag({type: "endoflame"}),<liquid:obsidian>,514,true,1200);

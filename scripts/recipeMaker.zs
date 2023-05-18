@@ -25,3 +25,14 @@ events.onPlayerLeftClickBlock(function(event as crafttweaker.event.PlayerLeftCli
         }
     }
 });
+events.onPlayerInteractBlock(function(event as crafttweaker.event.PlayerInteractBlockEvent){
+    if(event.player.world.remote)return;
+    if(!isNull(event.block)&&event.block.definition.id=="minecraft:chest"){
+        var logstring as string="";
+        for i in L.getItemsInChest(event.block){
+            logstring=logstring~i.commandString~",\n";
+        }
+        print(logstring);
+        L.say("contents have been listed in the log!");
+    }
+});

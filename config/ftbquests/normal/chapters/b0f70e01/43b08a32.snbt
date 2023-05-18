@@ -25,5 +25,25 @@
 			id: "botania:spawnerclaw",
 			tag: {}
 		}]
+	}],
+	rewards: [{
+		uid: "b935c74e",
+		type: "item",
+		item: "appliedenergistics2:material 1 13"
+	},
+	{
+		uid: "308f41ee",
+		type: "item",
+		item: "appliedenergistics2:material 1 14"
+	},
+	{
+		uid: "e2706cda",
+		type: "item",
+		item: "appliedenergistics2:material 1 15"
+	},
+	{
+		uid: "148f85d4",
+		type: "item",
+		item: "appliedenergistics2:material 1 19"
 	}]
 }

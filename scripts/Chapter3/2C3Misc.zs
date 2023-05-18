@@ -1,7 +1,6 @@
 import crafttweaker.item.ITooltipFunction;
 import crafttweaker.item.IItemStack;
 import crafttweaker.data.IData;
-import scripts.LibReloadable as L;
 function getManaInTablet(item as IItemStack)as string{
     var amount as string="0";
     if(item.hasTag){
@@ -86,3 +85,36 @@ events.onPlayerItemPickup(function(event as crafttweaker.event.PlayerItemPickupE
 );
 <botania:manatablet>.addAdvancedTooltip(function(item){return getManaInTablet(item);});
 mods.botania.ManaInfusion.addInfusion(<thaumicwands:item_wand>,<thaumicwands:item_wand>,1);
+mods.jei.JEI.hideCategory("thermalexpansion.factorizer_combine");
+mods.jei.JEI.hideCategory("thermalexpansion.factorizer_split");
+<forge:bucketfilled>.withTag({FluidName: "bot_mana", Amount: 1000}).addTooltip(format.aqua(game.localize("description.crt.tooltip.liquid_mana_and_blues_lime")));
+
+//shards tooltips
+var shard_block1 as IItemStack[IItemStack]={
+    <contenttweaker:shard_terra>:<minecraft:grass>,
+    <contenttweaker:shard_aqua>:<minecraft:ice>,
+    <contenttweaker:shard_ignis>:<minecraft:nether_brick>,
+    <contenttweaker:shard_perditio>:<minecraft:tnt>
+};
+for shard,block in shard_block1{
+    shard.addTooltip(
+        game.localize("description.crt.tooltip.shard_anvil1")~
+        block.displayName~
+        game.localize("description.crt.tooltip.shard_anvil2")~
+        shard.displayName~
+        game.localize("description.crt.tooltip.shard_anvil3")
+    );
+}
+var shard_block2 as string[IItemStack]={
+    <contenttweaker:shard_aer>:"description.crt.tooltip.shard_double_slab_sandstone",
+    <contenttweaker:shard_ordo>:"description.crt.tooltip.shard_double_slab_stone"
+};
+for shard,block in shard_block2{
+    shard.addTooltip(
+        game.localize("description.crt.tooltip.shard_anvil1")~
+        game.localize(block)~
+        game.localize("description.crt.tooltip.shard_anvil2")~
+        shard.displayName~
+        game.localize("description.crt.tooltip.shard_anvil3")
+    );
+}

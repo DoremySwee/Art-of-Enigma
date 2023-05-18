@@ -22,3 +22,7 @@ for i in MA.items{
 for i in 0 to 9{
     recipes.remove(<extrautils2:passivegenerator>.definition.makeStack(i));
 }
+val CALC=loadedMods["calculator"] as IMod;
+for i in CALC.items{
+    recipes.remove(i);
+}

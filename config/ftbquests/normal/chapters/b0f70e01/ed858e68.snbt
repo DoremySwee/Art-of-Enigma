@@ -1,0 +1,15 @@
+{
+	x: -5.0d,
+	y: -8.0d,
+	dependencies: [
+		"60dec5aa",
+		"da004245"
+	],
+	tasks: [{
+		uid: "358d34f3",
+		type: "item",
+		items: [{
+			item: "botania:alchemycatalyst"
+		}]
+	}]
+}

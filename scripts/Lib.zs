@@ -105,9 +105,40 @@ function aspect6(aer as int, terra as int, ignis as int, aqua as int, ordo as in
     if(perditio>0)stacks+=<aspect:perditio>*perditio;
     return stacks;
 }
+function aspect6array(b as int[])as CTAspectStack[]{
+    var a as int[]=[];
+    for i in b{a+=i;}
+    while(a.length<6){a+=0;}
+    return aspect6(a[0],a[1],a[2],a[3],a[4],a[5]);
+}
 static numberOfWABRecipes as int[]=[0];
+static FS as string="FIRSTSTEPS";
 function Arcane(output as IItemStack,inputs as IIngredient[][],vis as int, aspects as CTAspectStack[]=[], research as string="FIRSTSTEPS"){
+    numberOfWABRecipes[0]=numberOfWABRecipes[0]+1;
     mods.thaumcraft.ArcaneWorkbench.registerShapedRecipe("Art_of_Enigma_Arcane_Workbench_recipe_no_"~numberOfWABRecipes[0],
         research,vis,aspects,output,inputs);
-    numberOfWABRecipes[0]+=1;
+}
+function orb(level as int)as IIngredient{
+    var orbs as IIngredient[]=[
+        <bloodmagic:blood_orb>.withTag({orb: "bloodmagic:weak"}),
+        <bloodmagic:blood_orb>.withTag({orb: "bloodmagic:apprentice"}),
+        <bloodmagic:blood_orb>.withTag({orb: "bloodmagic:magician"}),
+        <bloodmagic:blood_orb>.withTag({orb: "bloodmagic:master"}),
+        <bloodmagic:blood_orb>.withTag({orb: "bloodmagic:archmage"})
+    ];
+    var result as IIngredient=orbs[level- 1];
+    for i in (level- 1) to 5{
+        result=result|orbs[i];
+    }
+    return result;
+}
+static numberOfCrucibleRecipes as int[]=[0];
+function Crucible(output as IItemStack, input as IIngredient, aspects as CTAspectStack[], research as string="FIRSTSTEPS", nameIn as string=null){
+    var name as string=nameIn;
+    if(isNull(name)){
+        var n as int=numberOfCrucibleRecipes[0];
+        numberOfCrucibleRecipes[0]=n+1;
+        name="Art_of_Enigma_Crucible_recipe_no_"~n;
+    }
+    mods.thaumcraft.Crucible.registerRecipe(name, research, output, input, aspects);
 }
