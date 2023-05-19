@@ -16,5 +16,11 @@
 		type: "item",
 		item: "botania:pool",
 		count: 2
+	},
+	{
+		uid: "5e6f4f28",
+		type: "item",
+		item: "minecraft:log",
+		count: 6
 	}]
 }

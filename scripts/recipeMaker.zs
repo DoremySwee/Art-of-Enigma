@@ -1,4 +1,5 @@
 #loader crafttweaker reloadableevents
+#norun
 import scripts.LibReloadable as L;
 import crafttweaker.events.IEventManager;
 import crafttweaker.data.IData;

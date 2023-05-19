@@ -37,5 +37,11 @@
 		type: "item",
 		item: "botania:pool",
 		count: 2
+	},
+	{
+		uid: "078c77a4",
+		type: "item",
+		item: "minecraft:golden_apple",
+		count: 4
 	}]
 }
