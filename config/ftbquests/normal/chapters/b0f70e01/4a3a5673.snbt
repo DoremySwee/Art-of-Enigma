@@ -2,7 +2,7 @@
 	title: "{quests.DifficultySelection.titCasual}",
 	icon: "botania:pylon",
 	x: -26.0d,
-	y: -7.0d,
+	y: 3.0d,
 	text: [
 		"{quests.DifficultySelection.desCasual}"
 	],

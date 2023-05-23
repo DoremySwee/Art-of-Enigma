@@ -2,7 +2,7 @@
 	title: "{quests.DifficultySelection.title}",
 	icon: "thermalfoundation:storage 1 8",
 	x: -29.0d,
-	y: -12.0d,
+	y: -10.0d,
 	shape: "gear",
 	text: [
 		"{quests.DifficultySelection.desDifference}",

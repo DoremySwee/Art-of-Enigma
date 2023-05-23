@@ -170,3 +170,6 @@ description.crt.tooltip.shard_anvil3=。
 description.crt.tooltip.shard_double_slab_sandstone=双层沙石台阶
 description.crt.tooltip.shard_double_slab_stone=双层石台阶
 jei.description.salis_mundus=由于技术原因，上段文字无法删除。实际上，用3种不同水晶合成世界盐的配方已经被删除了。
+
+quests.ch3.oremult.title=矿物增产
+quests.ch3.oremult.des=可以用气血宝珠增产矿物

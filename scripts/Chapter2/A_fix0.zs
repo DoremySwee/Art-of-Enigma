@@ -38,3 +38,10 @@ recipes.addShapeless(<botania:lens:1>.withTag({}),[<botania:lens>,<minecraft:sug
 recipes.addShapeless(<botania:lens:2>.withTag({}),[<botania:lens>,<botania:manaresource:2>]);
 recipes.addShapeless(<botania:lens:3>.withTag({}),[<botania:lens>,<extrautils2:decorativeglass:5>]);
 recipes.addShapeless(<botania:lens:4>.withTag({}),[<botania:lens>,<thermalfoundation:material:136>]);
+
+
+//20230522
+recipes.remove(<thermalfoundation:fertilizer>);
+recipes.remove(<thermalfoundation:fertilizer:1>);
+mods.thermalexpansion.Transposer.removeFillRecipe(<thermalfoundation:material:816>, <liquid:plantoil>);
+mods.thermalexpansion.Transposer.removeFillRecipe(<thermalfoundation:material:816>, <liquid:seed_oil>);

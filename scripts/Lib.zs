@@ -23,8 +23,9 @@ function Mapper(map as IIngredient[string],inputs as string)as IIngredient[][]{
                 if(inputs[i]=="_")t=t+(null as IIngredient);
                 else{
                     //t=t+(null as IIngredient);
-                    print("INVALID INPUTS!!!");// Comprehense as null.");
-                    print("\""~inputs[i]~"\"");
+                    /*
+                    print("INVALID INPUTS!!!");
+                    print("\""~inputs[i]~"\"");*/
                 }
             }
             else t=t+map[inputs[i]];

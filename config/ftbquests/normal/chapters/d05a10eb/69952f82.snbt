@@ -1,6 +1,7 @@
 {
 	x: 17.5d,
 	y: 2.5d,
+	shape: "circle",
 	dependencies: [
 		"badb784d"
 	],

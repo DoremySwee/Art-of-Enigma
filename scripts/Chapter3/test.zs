@@ -14,3 +14,7 @@ events.onItemToss(function(event as crafttweaker.event.ItemTossEvent){
     L.say(event.item.item.commandString);
     print(event.item.item.commandString);
 });
+function aa()as int{
+    return 1;
+}
+print(scripts.Chapter3.test2.bb());

@@ -10,3 +10,4 @@ InEgg("minecraft:sheep",<minecraft:wool>,<minecraft:wool>);
 InEgg("minecraft:skeleton",<minecraft:bone>,<minecraft:bone>);
 InEgg("minecraft:creeper",<minecraft:gunpowder>,<enderio:item_material:20>);
 //InEgg("minecraft:villager",<minecraft:emerald>,<minecraft:emerald>);
+InEgg("minecraft:zombie",<minecraft:rotten_flesh>,<minecraft:rotten_flesh>);

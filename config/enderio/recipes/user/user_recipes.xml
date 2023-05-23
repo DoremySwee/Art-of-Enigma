@@ -108,4 +108,8 @@
         <output name="skullZombieController"/>
         </slicing>
     </recipe>
+    <recipe name="Sagmill: Infinity Dust" disabled="true" />
+    <recipe name="Infinity Dust Block 1, Sagmilling" disabled="true" />
+    <recipe name="Infinity Dust Block 2, Sagmilling" disabled="true" />
+    <recipe name="Infinity Dust Block 3, Sagmilling" disabled="true" />
 </enderio:recipes>

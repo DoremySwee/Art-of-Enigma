@@ -170,3 +170,6 @@ description.crt.tooltip.shard_anvil3=.
 description.crt.tooltip.shard_double_slab_sandstone= Double Sandstone Slab
 description.crt.tooltip.shard_double_slab_stone Double Stone Slab
 jei.description.salis_mundus=Due to technical problems, the description above cannot be deleted. However, the crafting table recipe for Salis Mundus has been deleted.
+
+quests.ch3.oremult.title=Orb and ores
+quests.ch3.oremult.des=You can use the Blood Orb to increase the yield of metal ingots.

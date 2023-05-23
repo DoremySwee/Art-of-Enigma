@@ -1,0 +1,35 @@
+{
+	x: -16.0d,
+	y: -15.0d,
+	dependencies: [
+		"5e5cc0b5"
+	],
+	tasks: [{
+		uid: "fcd40060",
+		type: "item",
+		items: [{
+			item: "extrautils2:resonator"
+		}]
+	},
+	{
+		uid: "7957a337",
+		type: "item",
+		items: [{
+			item: "extrautils2:ingredients 1 8"
+		}]
+	},
+	{
+		uid: "817b0cf2",
+		type: "item",
+		items: [{
+			item: "extrautils2:ingredients 1 6"
+		}]
+	},
+	{
+		uid: "b68b4395",
+		type: "item",
+		items: [{
+			item: "extrautils2:passivegenerator"
+		}]
+	}]
+}

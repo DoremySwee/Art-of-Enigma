@@ -37,5 +37,18 @@
 		items: [{
 			item: "botanicbonsai:botanic_bonsai_pot"
 		}]
+	},
+	{
+		uid: "a7efc8ae",
+		type: "item",
+		items: [{
+			ForgeCaps: {
+				"astralsorcery:cap_item_amulet_holder": {}
+			},
+			id: "botania:lens",
+			tag: {},
+			Damage: 7s
+		}],
+		ignore_nbt: 1b
 	}]
 }

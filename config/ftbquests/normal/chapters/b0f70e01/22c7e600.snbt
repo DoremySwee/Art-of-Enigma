@@ -1,0 +1,45 @@
+{
+	x: -19.5d,
+	y: -14.0d,
+	dependencies: [
+		"ac8c5c8a"
+	],
+	tasks: [{
+		uid: "d20a40c9",
+		type: "item",
+		items: [{
+			id: "minecraft:spawn_egg",
+			tag: {
+				EntityTag: {
+					id: "minecraft:villager"
+				}
+			}
+		}]
+	},
+	{
+		uid: "7cd9e727",
+		type: "item",
+		items: [{
+			ForgeCaps: {
+				"astralsorcery:cap_item_amulet_holder": {}
+			},
+			id: "bloodmagic:sacrificial_dagger",
+			tag: {}
+		}],
+		ignore_nbt: 1b
+	},
+	{
+		uid: "3814ba64",
+		type: "item",
+		items: [{
+			item: "minecraft:mob_spawner"
+		}]
+	},
+	{
+		uid: "13306a47",
+		type: "item",
+		items: [{
+			item: "botania:spawnerclaw"
+		}]
+	}]
+}

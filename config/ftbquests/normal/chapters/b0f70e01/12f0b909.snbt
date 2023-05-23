@@ -2,7 +2,7 @@
 	title: "{quests.DifficultySelection.titMaster}",
 	icon: "botania:pylon 1 2",
 	x: -26.0d,
-	y: -19.0d,
+	y: -15.0d,
 	text: [
 		"{quests.DifficultySelection.desMaster}"
 	],

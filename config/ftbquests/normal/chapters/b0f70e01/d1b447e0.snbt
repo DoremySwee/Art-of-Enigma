@@ -1,0 +1,38 @@
+{
+	x: -15.0d,
+	y: -14.0d,
+	dependencies: [
+		"eac9c587"
+	],
+	tasks: [{
+		uid: "9862d5ce",
+		type: "item",
+		items: [{
+			ForgeCaps: {
+				"astralsorcery:cap_item_amulet_holder": {}
+			},
+			id: "calculator:flawlesscalculator",
+			tag: {
+				0: {},
+				slot4: "Energy Module",
+				1: {},
+				slot3: "Storage",
+				2: {},
+				slot2: "Crafting",
+				3: {},
+				slot1: "Dynamic",
+				4: {},
+				slot0: "Flawless"
+			}
+		}],
+		ignore_damage: true,
+		ignore_nbt: 1b
+	},
+	{
+		uid: "a7035f62",
+		type: "item",
+		items: [{
+			item: "calculator:dockingstation"
+		}]
+	}]
+}

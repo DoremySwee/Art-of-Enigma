@@ -385,3 +385,4 @@ Lib.Shaped9x9(<tconstruct:materials:14>,Lib.Mapper({
 		@ghijklm@;
 		@@@@@@@@@;"
 ));
+recipes.remove(<minecraft:redstone_lamp>);

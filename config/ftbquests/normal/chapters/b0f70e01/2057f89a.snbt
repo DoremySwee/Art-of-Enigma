@@ -1,6 +1,10 @@
 {
+	title: "{quests.ch3.oremult.title}",
 	x: -14.5d,
 	y: -4.0d,
+	text: [
+		"{quests.ch3.oremult.des}"
+	],
 	dependencies: [
 		"6ee1689b"
 	],
