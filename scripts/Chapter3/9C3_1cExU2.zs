@@ -29,6 +29,10 @@ recipes.addShaped(<thermalexpansion:machine:5>,Lib.Mapper(Lib.Merge(map,{
     "T":<enderio:block_dark_steel_anvil>}),"IGI;CTC;I@I;"));
 recipes.addShaped(<thermalexpansion:device:4>,Lib.Mapper(Lib.Merge(map,{
     "T":<thermalfoundation:tool.fishing_rod_platinum>}),"IGI;CTC;I@I;"));
+recipes.addShaped(<thermalexpansion:device:3>,Lib.Mapper(Lib.Merge(map,{
+    "T":<minecraft:furnace>}),"IGI;TCT;I@I;"));
+recipes.addShaped(<thermalexpansion:device>,Lib.Mapper(Lib.Merge(map,{
+    "T":<minecraft:furnace>}),"IGI;CTC;I@I;"));
 
 var Cap=<enderio:item_basic_capacitor>;
 recipes.remove(Cap);

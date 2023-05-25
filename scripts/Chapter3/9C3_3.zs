@@ -54,7 +54,7 @@ RuneAltar.addRecipe(<mysticalagriculture:tier2_inferium_seeds>*6,Lib.Mapper({
 BA.addRecipe(<mysticalagriculture:crafting:18>*4,<mysticalagriculture:tier2_inferium_seeds>*4,1,10240,1,0);
 <extrautils2:decorativesolid:3>.displayName = game.localize("name.crt.stone.rune");
 recipes.addShaped(<contenttweaker:wand_cap_iron>,Lib.Mapper({"x":<minecraft:iron_nugget>},"xxx;x_x;___;"));
-Lib.Arcane(<bloodmagic:blood_rune>*4,Lib.Mapper({
+Lib.Arcane(<bloodmagic:blood_rune>,Lib.Mapper({
 		"#":<botania:manaresource:23>,
 		"@":<enderio:item_material:20>,
 		"&":<extrautils2:decorativesolid:3>,

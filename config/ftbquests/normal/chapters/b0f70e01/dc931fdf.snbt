@@ -10,25 +10,5 @@
 		items: [{
 			item: "avaritia:extreme_crafting_table"
 		}]
-	}],
-	rewards: [{
-		uid: "253a8334",
-		type: "item",
-		item: "appliedenergistics2:material 1 13"
-	},
-	{
-		uid: "7ee7e8ed",
-		type: "item",
-		item: "appliedenergistics2:material 1 14"
-	},
-	{
-		uid: "e7f64dd4",
-		type: "item",
-		item: "appliedenergistics2:material 1 15"
-	},
-	{
-		uid: "fc7d4ecc",
-		type: "item",
-		item: "appliedenergistics2:material 1 19"
 	}]
 }
