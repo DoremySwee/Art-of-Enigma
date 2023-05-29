@@ -66,19 +66,22 @@ function MergeData(dat1 as IData,dat2 as IData)as IData{
 }
 function TemporaryLore(ins as IIngredient, lore as string)as IIngredient{
     var result as IIngredient=null;
-    for iii in 0 to 10{
+    //for iii in 0 to 10{
         for i in ins.items{
             var tag as IData={display:{Lore:[lore]}}as IData;
             if(i.hasTag){
                 tag=MergeData(i.tag,tag);
             }
-            if(isNull(result))result=i.withTag(tag);
-            else result=result|(i.withTag(tag));
+            if(isNull(result))result=i.withTag(tag,false);
+            else result=result|i.withTag(tag,false);
         }
-    }
-    for i in ins.items{
+    //}
+    result=result.only(function(item){
+        return ins.matches(item);
+    });
+    /*for i in ins.items{
         result=result|i;
-    }/*/
+    }/*
     var result as IIngredient=null;
     for i in ins.items{
         var tag as IData={display:{Lore:[lore]}}as IData;

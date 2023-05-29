@@ -315,7 +315,7 @@ Lib.Shaped9x9(<bloodmagic:blood_orb>.withTag({orb: "bloodmagic:apprentice"}),Lib
 		"%":<tconstruct:seared_tank:1> .withTag({FluidName: "emerald", Amount: 3333}),
 		"@":<minecraft:potion:0> .withTag({Potion: "minecraft:strong_leaping"}),
 		"&":<minecraft:potion:0> .withTag({Potion: "minecraft:strong_poison"}),
-		"6":<bloodmagic:blood_orb:0> .withTag({orb: "bloodmagic:weak"}),
+		"6":Lib.Consume(<bloodmagic:blood_orb:0> .withTag({orb: "bloodmagic:weak"})),
 		"#":<minecraft:potion:0> .withTag({Potion: "cofhcore:luck2"}),
 		"~":<botania:manatablet:0> .withTag({mana: 375000}),
 		"*":<botania:manatablet:0> .withTag({mana: 125000}),

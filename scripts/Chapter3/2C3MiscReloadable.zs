@@ -33,17 +33,7 @@ events.onEntityLivingUpdate(function(event as crafttweaker.event.EntityLivingUpd
         var command as string="summon tconstruct:blueslime "~entity.x~" "~entity.y~" "~entity.z~" "~entity.nbt;
         //L.say(command);
         //print(command);
-        var commandFormalized as string="";
-        var flag as int=0;
-        for i in 0 to command.length{
-            if(command[i] == " ")flag = flag - 1;
-            if( ([",","{","}","[","]"]as string[]) has command[i])flag=0;
-            if(command[i]=="a" && i>0 && i < command.length - 2 && command[i - 1]==" " && command[i+1]=="s" && command[i+2]==" "){
-                flag=2;
-            }
-            if(flag > 0)continue;
-            commandFormalized += command[i];
-        }
+        var commandFormalized as string=L.turnIDataToCommandNBT(command);
         //L.say(commandFormalized);
         //print(commandFormalized);
         L.executeCommand(commandFormalized);

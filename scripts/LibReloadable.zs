@@ -165,3 +165,20 @@ say(floor(1.2));*/
 function formBlockPos(x as double, y as double, z as double)as IBlockPos{
     return IBlockPos.create(floor(x),floor(y),floor(z));
 }
+
+
+function turnIDataToCommandNBT(rawCommand as string)as string{
+    var command=rawCommand;
+    var commandFormalized as string="";
+    var flag as int=0;
+    for i in 0 to command.length{
+        if(command[i] == " ")flag = flag - 1;
+        if( ([",","{","}","[","]"]as string[]) has command[i])flag=0;
+        if(command[i]=="a" && i>0 && i < command.length - 2 && command[i - 1]==" " && command[i+1]=="s" && command[i+2]==" "){
+            flag=2;
+        }
+        if(flag > 0)continue;
+        commandFormalized += command[i];
+    }
+    return commandFormalized;
+}
