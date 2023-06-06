@@ -1,5 +1,6 @@
 #loader crafttweaker reloadableevents
 #priority 1001
+import scripts.LibReloadable as L;
 import mods.ctutils.utils.Math;
 import crafttweaker.data.IData;
 static V000 as double[]=[0.0,0.0,0.0]as double[];
@@ -16,13 +17,14 @@ function copy(a as double[])as double[]{
     if(!isVector3D(a))return [0.0,0.0,0.0]as double[];
     return [a[0],a[1],a[2]];
 }
-function toString(a as double[])as string{
-    var b as string="(";
+function toString(a as double[], brackets as bool=true)as string{
+    var b as string="";
     for i in a{
-        if(b!="(")b=b~",";
+        if(b!="")b=b~",";
         b=b~i;
     } 
-    return b~")";
+    if(brackets)return "("~b~")";
+    return b;
 }
 function getPos(entity as crafttweaker.entity.IEntity)as double[]{
     if(isNull(entity))return V000;
@@ -105,19 +107,19 @@ function angle(a as double[], b as double[])as double{
 
 
 
-function rotateRadian(a as double[], axisIn as double[], angle as double) as double[]{
+function rotate(a as double[], axisIn as double[], angle as double) as double[]{
     if(!isVector3D(a) || !isVector3D(axisIn))return copy(V000);
     if(isZero(axisIn))return copy(V000);
     var axis=unify(axisIn);
-    return add(scale(a, Math.cos(angle)),
+    return add(scale(a, L.cosf(angle)),
         add(
-            scale(cross(axis,a),  Math.sin(angle)),
-            scale(axis,dot(a,axis)*(1.0-Math.cos(angle)))
+            scale(cross(axis,a),  L.sinf(angle)),
+            scale(axis,dot(a,axis)*(1.0-L.cosf(angle)))
         )
     );
 }
-function rotate(a as double[], axis as double[], angle as double) as double[]{
-    return rotateRadian(a, axis, angle *PIE/180.0);
+function rotateRadian(a as double[], axis as double[], angle as double) as double[]{
+    return rotateRadian(a, axis, angle/PIE*180.0);
 }
 function rot(a as double[], axis as double[], angle as double) as double[]{
     return rotate(a, axis, angle);
@@ -139,8 +141,8 @@ static cube as double[][]=[
     [-1.0,1.0,1.0],[-1.0,1.0,-1.0],[-1.0,-1.0,1.0],[-1.0,-1.0,-1.0]
 ];
 static octaHedron as double[][]=[
-    [1.0,1.0,1.0],[1.0,-1.0,-1.0],[-1.0,-1.0,1.0],[-1.0,1.0,-1.0],
-    [-1.0,1.0,1.0],[-1.0,-1.0,-1.0],[1.0,-1.0,1.0],[1.0,1.0,-1.0]
+    [1.0,0.0,0.0],[0.0,1.0,0.0],[0.0,0.0,1.0],
+    [-1.0,0.0,0.0],[0.0,-1.0,0.0],[0.0,0.0,-1.0]
 ];
 static dodecaHedron as double[][]=[
     [0.0,0.618034,1.618034],[0.618034,1.618034,0.0],[1.618034,0.0,0.618034],
@@ -156,7 +158,33 @@ static icosaHedron as double[][]=[
     [0.0,-1.0,1.618034],[-1.0,1.618034,0.0],[1.618034,0.0,-1.0],
     [0.0,-1.0,-1.618034],[-1.0,-1.618034,0.0],[-1.618034,0.0,-1.0]
 ];
+static tetraHedronSides as int[][]=[[0,1],[0,2],[0,3],[1,2],[1,3],[2,3]];
+static cubeSides as int[][]=[[0,1],[0,2],[0,4],[1,3],[1,5],[2,3],[2,6],[3,7],[4,5],[4,6],[5,7],[6,7]];
+static octaHedronSides as int[][]=[[0,1],[0,2],[0,4],[0,5],[1,2],[1,3],[1,5],[2,3],[2,4],[3,4],[3,5],[4,5]];
+static dodecaHedronSides as int[][]=[
+    [0,12],[1,12],[2,12],   [1,13],[3,13],[8,13],   [2,14],[4,14],[6,14],   [4,15],[8,15],[9,15],
+    [0,16],[5,16],[7,16],   [3,17],[7,17],[11,17],  [5,18],[6,18],[10,18],  [9,19],[10,19],[11,19],
+    [0,6],[1,7],[2,8],[3,9],[4,10],[5,11]
+];
+static icosaHedronSides as int[][]=[
+    [0,1],[0,2],[1,2],  [3,4],[3,5],[4,5],  [6,7],[6,8],[7,8],  [9,10],[9,11],[10,11],  
+    [0,7],[0,8],[1,8],  [3,10],[3,11],[4,1],  [6,1],[6,2],[7,2],  [9,4],[9,5],[10,5],  
+    [0,6],[3,9],[1,7],[4,10],[2,4],[5,7],[5,11],[7,11],
+];
 
+
+
+static star1 as double[][]=[
+    [1.0,0.0,0.0],[0.0,1.0,0.0],[0.0,0.0,1.0],
+    [-1.0,0.0,0.0],[0.0,-1.0,0.0],[0.0,0.0,-1.0],
+    [1.0,1.0,1.0],[1.0,1.0,-1.0],[1.0,-1.0,1.0],[1.0,-1.0,-1.0],
+    [-1.0,1.0,1.0],[-1.0,1.0,-1.0],[-1.0,-1.0,1.0],[-1.0,-1.0,-1.0]
+];
+static star1Sides as int[][]=[
+    [0,1],[0,2],[0,4],[0,5],[1,2],[1,3],[1,5],[2,3],[2,4],[3,4],[3,5],[4,5],
+    [0,8],[0,9],[0,10],[0,11],  [1,8],[1,9],[1,12],[1,13],  [2,8],[2,10],[2,12],[2,14],
+    [3,12],[3,13],[3,14],[3,15],  [4,10],[4,11],[4,14],[4,15],  [5,9],[5,11],[5,13],[5,15]
+];
 
 
 function pointLineDistance(linePointA as double[], linePointB as double[], point as double[])as double{
@@ -184,12 +212,6 @@ function pointSegmentDistance(linePointA as double[], linePointB as double[], po
 //print(pointSegmentDistance(VX,V000,[0.3,0.3,0.0]));
 //print(pointSegmentDistance(VX,V000,[2.0,0.3,0.0]));
 
-function sin(x as double)as double{
-    return Math.sin(x*PIE/180);
-}
-function cos(x as double)as double{
-    return Math.cos(x*PIE/180);
-}
-function tan(x as double)as double{
-    return Math.tan(x*PIE/180);
+function eulaAng(v as double[],x as double,y as double,z as double)as double[]{
+    return rot(rot(rot(v,VX,x),VY,y),VZ,z);
 }

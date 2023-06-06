@@ -20,7 +20,6 @@ import scripts.LibReloadable as L;
 import scripts.libs.Vector3D as V;
 
 
-
 zenClass Orb{
     static PlayerHits as long[string]={} as long[string];
     var data as IData={
@@ -33,11 +32,14 @@ zenClass Orb{
         "life":0,
         "removal":false,
         "color":0xFFFFFF,
-        "damage":3.0,
+        "damage":1.0,
         "radius":3.0,
         "DeleteRadius":500.0,
         "LifeLim":3000,
-        "ClearOnPlayerHit":true
+        "ClearOnPlayerHit":false,
+        "LazyTimer":0,
+        "maxPlayerSpeed":5.0,    //per GameTick
+        "colli":true
     };
     function setData(dat as IData)as Orb{
         data=dat;return this;
@@ -53,6 +55,13 @@ zenClass Orb{
     function getX()as double{return getData().x.asDouble();}
     function getY()as double{return getData().y.asDouble();}
     function getZ()as double{return getData().z.asDouble();}
+    function getV()as double[]{
+        var dx=(data has"vx")?data.vx.asDouble():data.x.asDouble()-data.lastX.asDouble();
+        var dy=(data has"vy")?data.vy.asDouble():data.y.asDouble()-data.lastY.asDouble();
+        var dz=(data has"vz")?data.vz.asDouble():data.z.asDouble()-data.lastZ.asDouble();
+        return [dx,dy,dz];
+        /*/return [0.0,0.0,0.0];/**/
+    }
     function inSphere(r as double, x as double, y as double, z as double)as bool{
         var dx=x-this.getX();
         var dy=y-this.getY();
@@ -72,25 +81,36 @@ zenClass Orb{
         };
     var colliTick as function(IWorld,IPlayer,IData)bool=
         function(world as IWorld, player as IPlayer, data as IData)as bool{
+            /*if(data.memberGet("LazyTimer")>0){
+                this.updateData({"LazyTimer":data.memberGet("LazyTimer").asInt()- 1});
+                return false;
+            }*/
             if(this.isRemoved())return true;
             if(world.remote)return false;
-            if(data.memberGet("ClearOnPlayerHit").asBool()){
-                //var diff as int = world.getWorldTime()-M.getIntFromData(player,"getHit");
-                var diff as long=(PlayerHits has player.uuid)?(world.getWorldTime()-PlayerHits[player.uuid]):-1;
-                if(diff>0 && diff<40 && this.inSphere(diff*12,player.x,player.y+player.eyeHeight,player.z)){
-                    this.updateData({"removal":true}as IData);
-                    L.say("deleted!");
-                }
-            }/**/
+            if(!data.memberGet("colli").asBool())return false;
             var d as IData=data;
-            if(V.pointSegmentDistance([d.lastX,d.lastY,d.lastZ],[d.x,d.y,d.z],[player.x,player.y+player.eyeHeight,player.z])<d.radius ){
-                player.attackEntityFrom(<damageSource:MAGIC>,this.getData().damage);
-                //player.setNBT({"HitByDanmuku":world.getWorldTime()});
-                PlayerHits[player.uuid]=world.getWorldTime();
-                print("TTTTTT");
-                L.say("colli!");
-                return true;
+            var dist as double=V.pointSegmentDistance([d.lastX,d.lastY,d.lastZ],[d.x,d.y,d.z],[player.x,player.y+player.eyeHeight,player.z])-d.radius;
+            if(data.memberGet("ClearOnPlayerHit").asBool()){
+                var diff as long=(PlayerHits has player.uuid)?(world.getWorldTime()-PlayerHits[player.uuid]):-1;
+                if(diff>0 && diff<40 && this.inSphere(diff*5,player.x,player.y+player.eyeHeight,player.z)){
+                    return true;
+                }
             }
+            if(dist<0){
+                player.attackEntityFrom(<damageSource:MAGIC>,this.getData().damage);
+                //PlayerHits[player.uuid]=world.getWorldTime();
+                L.say("colli!");
+                //L.say("pos:"~data.x~","~data.y~","~data.z);
+                return true;
+            }/*
+            if(data.maxPlayerSpeed>0){
+                var VMax=1.5*(((V.angle(this.getV(),V.subtract([player.x,player.y+player.eyeHeight,player.z],[d.x,d.y,d.z]))<90)?(V.length(this.getV())):(0.0))+data.maxPlayerSpeed);
+                if(dist/VMax>3){
+                    var timer as int=0+ dist/VMax- 2;
+                    if(timer>30)timer=30;
+                    this.updateData({"LazyTimer":timer});
+                }
+            }*/
             return false;
         };
     var renderTick as function(IWorld,IData)void=
@@ -162,10 +182,20 @@ zenClass Orb{
     }
 
     static OrbList as [Orb][int]={} as [Orb][int];
+    static RegiList as [Orb][int]={} as [Orb][int];
     function regi(world as IWorld)as bool{
         //L.say(data);
         //L.say(isRemoved());
         var dim as int=world.getDimension();
+        if(RegiList has dim){
+            RegiList[dim]=RegiList[dim]+this;
+        }
+        else{
+            RegiList[dim]=[this];
+        }
+        return true;
+    }
+    function regiInner(dim as int)as bool{
         if(OrbList has dim){
             OrbList[dim]=OrbList[dim]+this;
         }
@@ -224,7 +254,14 @@ events.onWorldTick(function(event as crafttweaker.event.WorldTickEvent){
     var world as IWorld=event.world;
     if(event.phase=="START"&&event.side=="SERVER"){
         var dim as int=world.getDimension();
+        if(Orb.RegiList has dim){
+            for i in Orb.RegiList[dim]{
+                i.regiInner(dim);
+            }
+            Orb.RegiList[dim]=[];
+        }
         if(Orb.OrbList has dim){
+            //L.say("DanmuCount:"~Orb.OrbList[dim].length);
             var effectiveOrb as int=0;
             for orb in Orb.OrbList[dim]{
                 if(orb.isRemoved())continue;
@@ -245,7 +282,8 @@ events.onWorldTick(function(event as crafttweaker.event.WorldTickEvent){
     }
 });
 
-function LinearOrb(x as double, y as double, z as double,vx as double, vy as double, vz as double)as Orb{
+function LinearOrb(x as double, y as double, z as double,vx as double, vy as double, vz as double, reducedRenderer as bool=true)as Orb{
+    if(reducedRenderer)
     return Orb(
         function(world as IWorld, data as IData)as IData{
             return data+{
@@ -255,6 +293,17 @@ function LinearOrb(x as double, y as double, z as double,vx as double, vy as dou
             };
         },x,y,z)
         .useReducedRender().updateData({
+            "vx":vx,"vy":vy,"vz":vz
+        });
+    return Orb(
+        function(world as IWorld, data as IData)as IData{
+            return data+{
+                "x":data.x.asDouble()+data.vx,
+                "y":data.y.asDouble()+data.vy,
+                "z":data.z.asDouble()+data.vz
+            };
+        },x,y,z)
+        .updateData({
             "vx":vx,"vy":vy,"vz":vz
         });
 }
