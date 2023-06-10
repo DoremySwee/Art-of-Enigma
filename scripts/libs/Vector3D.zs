@@ -1,217 +1,518 @@
 #loader crafttweaker reloadableevents
-#priority 1001
-import scripts.LibReloadable as L;
+#priority 1000000009
 import mods.ctutils.utils.Math;
 import crafttweaker.data.IData;
-static V000 as double[]=[0.0,0.0,0.0]as double[];
-static VX as double[]=[1.0,0.0,0.0]as double[];
-static VY as double[]=[0.0,1.0,0.0]as double[];
-static VZ as double[]=[0.0,0.0,1.0]as double[];
-static PIE as double=3.1415927;
-static Pie as double=3.1415927;
+import scripts.libs.Data;
 
-function isVector3D(a as double[])as bool{
-    return a.length==3;
-}
-function copy(a as double[])as double[]{
-    if(!isVector3D(a))return [0.0,0.0,0.0]as double[];
-    return [a[0],a[1],a[2]];
-}
-function toString(a as double[], brackets as bool=true)as string{
-    var b as string="";
-    for i in a{
-        if(b!="")b=b~",";
-        b=b~i;
-    } 
-    if(brackets)return "("~b~")";
-    return b;
-}
-function getPos(entity as crafttweaker.entity.IEntity)as double[]{
-    if(isNull(entity))return V000;
-    return [entity.x,entity.y,entity.z];
-}
+import crafttweaker.world.IBlockPos;
+import crafttweaker.world.IVector3d;
+import crafttweaker.entity.IEntity;
+import crafttweaker.world.IWorld;
 
 
-function scale(a as double[], r as double)as double[]{
-    if(!isVector3D(a))return copy(V000);
-    return [a[0]*r, a[1]*r, a[2]*r];
+// Vectors are represented by double[] with length 3
+// All trigonometric functions use degree
+static PIE as double = 3.1415927;
+
+// Fast trigonometric
+static sinfans as double[]=[]as double[];
+for i in 0 to 900{
+    sinfans+=Math.sin(PIE*0.1*i/180);
 }
-function isZero(a as double[])as bool{
-    if(!isVector3D(a))return true;
-    for i in a {
-        if(i!=0)return false;
+function getsinfans(x1 as int)as double{
+    var x=(x1%3600+3600)%3600;
+    if(x==900)return 1.0;
+    if(x<900)return sinfans[x];
+    if(x<1800)return getsinfans(1800-x);
+    return -getsinfans(x- 1800);
+}
+function sinf(x as double)as double{
+    var a as int=Math.floor(x*10)as int;
+    return getsinfans(a)*(1.0+a-x*10)+getsinfans(a+1)*(x*10-a);
+}
+function cosf(x as double)as double{
+    return sinf(x+90);
+}
+function tanf(x as double)as double{
+    if(cosf(x)==0.0)return 0.0;
+    return sinf(x)/cosf(x);
+}
+function sinfR(x as double)as double{
+    return sinf(x*PIE/180);
+}
+function cosfR(x as double)as double{
+    return cosf(x*PIE/180);
+}
+function tanfR(x as double)as double{
+    return tanf(x*PIE/180);
+}
+
+//Random Number
+function randDoubleRaw(world as IWorld=null)as double{
+    if(isNull(world)){
+        return Math.random();
     }
-    return true;
+    else{
+        return world.random.nextDouble();
+    }
+}
+function randDouble(max as double=1.0, min as double=0.0, world as IWorld=null)as double{
+    return randDoubleRaw(world)*(max-min)+min;
+}
+function randInt(max as int, min as int=0, world as IWorld=null)as int{
+    return Math.floor(randDouble(0.99999+max, 0.0+min, world))as int;
+}
+function randBool(world as IWorld=null)as bool{
+    return randInt(1,0,world)>0;
+}
+
+// Constant Vectors
+static V000 as double[]  =[0.0,0.0,0.0]as double[];
+static VX as double[]    =[1.0,0.0,0.0]as double[];
+static VY as double[]    =[0.0,1.0,0.0]as double[];
+static VZ as double[]    =[0.0,0.0,1.0]as double[];
+
+// Basic Data Operations
+function isVector3D(x as double[])as bool{
+    return x.length==3;
+}
+function copy(x as double[])as double[]{
+    if(isVector3D(x))return [x[0],x[1],x[2]];
+    return [0.0,0.0,0.0];
+}
+function isZero(x as double[])as bool{
+    if(!isVector3D(x))return true;
+    return (x[0]==0)&&(x[1]==0)&&(x[2]==0);
+}
+
+//Convertion: Data
+function readFromData(data as IData, keyPrefix as string="", cap as bool=false)as double[]{
+    var keys as string[]= cap?["X","Y","Z"]:["x","y","z"];
+    var t = copy(V000);
+    for i in 0 to 3{
+        var d = Data.get(data, keyPrefix~keys[i]);
+        if(!isNull(d)){
+            t[i]=d.asDouble();
+        }
+    }
+    return t;
+}
+function asData(pos as double[], keyPrefix as string="", cap as bool=false)as IData{
+    if(!isVector3D(pos))return {};
+    var keys as string[]= cap?["X","Y","Z"]:["x","y","z"];
+    var d = IData.createEmptyMutableDataMap();
+    for i in 0 to 3{
+        d = Data.set(d,pos[i]as IData,keyPrefix~keys[i]);
+    }
+    return d;
+}
+function getPos(entity as IEntity)as double[]{
+    if(isNull(entity))return copy(V000);
+    return [entity.x, entity.y, entity.z]as double[];
+}
+//Convertion: BlockPos
+function fromBlockPos(pos as IBlockPos, shift as bool = true) as double[]{
+    if(shift)   return [0.5+pos.x, 0.5+pos.y, 0.5+pos.z] as double[];
+    else        return [0.0+pos.x, 0.0+pos.y, 0.0+pos.z] as double[];
+}
+function asBlockPos(pos as double[])as IBlockPos{
+    if(!isVector3D(pos))return asBlockPos(V000);
+    return IBlockPos.create(
+        Math.floor(pos[0]),
+        Math.floor(pos[1]),
+        Math.floor(pos[2])
+    );
+}
+function fromIBlockPos(pos as IBlockPos, shift as bool = true) as double[]{
+    return fromBlockPos(pos,shift);
+}
+function asIBlockPos(pos as double[])as IBlockPos{
+    return asBlockPos(pos);
+}
+//Conversion: IVector3d
+function fromIVector3d(v as IVector3d)as double[]{
+    return [v.x,v.y,v.z]as double[];
+}
+function fromIVector3D(v as IVector3d)as double[]{
+    return [v.x,v.y,v.z]as double[];
+}
+function asIVector3d(v as double[])as IVector3d{
+    if(!isVector3D(v))return asIVector3d(V000);
+    return IVector3d.create(v[0],v[1],v[2]);
+}
+function asIVector3D(v as double[])as IVector3d{
+    return asIVector3d(v);
+}
+//Convertion: toString
+function asString(x as double[], char as string=" ")as string{
+    if(!isVector3D(x))return "invalid vector";
+    return x[0]~char~x[1]~char~x[2];
+}
+function display(x as double[])as string{
+    return "("~asString(x,",")~")";
 }
 
 
-
-function add(a as double[], b as double[]) as double[]{
-    if(!isVector3D(a)||!isVector3D(b))return copy(V000);
-    return [a[0]+b[0], a[1]+b[1], a[2]+b[2]] as double[];
+//Basic Operations
+function add(x as double[], y as double[])as double[]{
+    if(!isVector3D(x))return add(copy(V000),y);
+    if(!isVector3D(y))return add(x,copy(V000));
+    return [x[0]+y[0], x[1]+y[1], x[2]+y[2]]as double[];
 }
-function reverse(a as double[]) as double[]{
-    if(!isVector3D(a))return copy(V000);
-    return [-a[0],-a[1],-a[2]];
-}
-function combine(a as double[], b as double[], r as double) as double[]{
-    return add(scale(a,r),scale(b,1.0-r));
-}
-function subtract(a as double[], b as double[]) as double[]{
-    return add(a, reverse(b));
-}
-
-function stretch(a as double[], b as double[]) as double[]{
-    if(!isVector3D(a) || !isVector3D(b))return copy(V000);
-    return [a[0]*b[0],a[1]*b[1],a[2]*b[2]];
+function stretch(x as double[], y as double[])as double[]{
+    if(!isVector3D(x) || !isVector3D(y))return copy(V000);
+    return [
+        x[0]*y[0],
+        x[1]*y[1],
+        x[2]*y[2]
+    ];
 }
 
 
-
-function dotProduct(a as double[], b as double[])as double{
-    if(!isVector3D(a) || !isVector3D(b))return 0.0 as double;
-    return (a[0]*b[0]+a[1]*b[1]+a[2]*b[2]) as double;
+function dot(x as double[], y as double[])as double{
+    if(!isVector3D(x) || !isVector3D(y))return 0.0;
+    return x[0]*y[0]+x[1]*y[1]+x[2]*y[2];
 }
-function crossProduct(a as double[], b as double[]) as double[]{
-    if(!isVector3D(a) || !isVector3D(b))return copy(V000);
-    return [a[1]*b[2]-a[2]*b[1], a[2]*b[0]-a[0]*b[2], a[0]*b[1]-a[1]*b[0]];
-}
-function dot(a as double[], b as double[])as double{
-    return dotProduct(a,b);
-}
-function cross(a as double[], b as double[])as double[]{
-    return crossProduct(a,b);
+function cross(x as double[], y as double[])as double[]{
+    if(!isVector3D(x) || !isVector3D(y))return copy(V000);
+    return [
+        x[1]*y[2]- x[2]*y[1], 
+        x[2]*y[0]- x[0]*y[2], 
+        x[0]*y[1]- x[1]*y[0]
+    ];
 }
 
 
-
-function length(a as double[])as double{
-    return Math.sqrt(dot(a,a));
+function perpendicular(x as double[], y as double[])as bool{
+    return dot(x,y)==0;
 }
-function unify(a as double[])as double[]{
-    if(isZero(a))return copy(V000);
-    return scale(a,1.0/length(a));
+function para(x as double[], y as double[])as bool{
+    if(isZero(x) || isZero(y))return true;
+    return x[0]*y[1]*y[2] == x[1]*y[0]*y[2]  &&  x[1]*y[0]*y[2] ==x[2]*y[0]*y[1];
 }
-function project(a as double[], b as double[]) as double[]{
-    if(isZero(b))return copy(V000);
-    return scale(b, dot(a,b)/dot(b,b));
-}
-function angleRadian(a as double[], b as double[])as double{
-    if(isZero(a)||isZero(b))return 0.0;
-    return PIE/2-Math.asin(dot(a,b)/length(a)/length(b));
-}
-function angle(a as double[], b as double[])as double{
-    if(isZero(a)||isZero(b))return -114514.0;
-    return angleRadian(a,b) *180/PIE;
+function divide(x as double[], y as double[])as double{
+    if(!para(x,y))return 0.0;
+    if(isZero(y))return 0.0;
+    if(y[0]!=0.0)return x[0]/y[0];
+    if(y[1]!=0.0)return x[1]/y[1];
+    return x[2]/y[2];
 }
 
 
-
+function angleRadian(x as double[], y as double[])as double{
+    if(isZero(x)||isZero(y))return 0.0;
+    return PIE/2-Math.asin(dot(x,y)/length(x)/length(y));
+}
 function rotate(a as double[], axisIn as double[], angle as double) as double[]{
     if(!isVector3D(a) || !isVector3D(axisIn))return copy(V000);
     if(isZero(axisIn))return copy(V000);
     var axis=unify(axisIn);
-    return add(scale(a, L.cosf(angle)),
+    return add(scale(a, cosf(angle)),
         add(
-            scale(cross(axis,a),  L.sinf(angle)),
-            scale(axis,dot(a,axis)*(1.0-L.cosf(angle)))
+            scale(cross(axis,a),sinf(angle)),
+            scale(axis,dot(a,axis)*(1.0-cosf(angle)))
         )
     );
 }
-function rotateRadian(a as double[], axis as double[], angle as double) as double[]{
-    return rotateRadian(a, axis, angle/PIE*180.0);
+
+//Combined Operations
+function scale(x as double[], ratio as double)as double[]{
+    return stretch(x, [ratio,ratio,ratio]as double[]);
 }
-function rot(a as double[], axis as double[], angle as double) as double[]{
-    return rotate(a, axis, angle);
+function reverse(x as double[])as double[]{
+    return scale(x,-1.0);
+}
+function subtract(x as double[], y as double[])as double[]{
+    return add(x,reverse(y));
+}
+function combine(x as double[], y as double[], ratio as double)as double[]{
+    return add(scale(x,1.0-ratio),scale(y,ratio));
+}
+
+function length(x as double[])as double{
+    return Math.sqrt(dot(x,x));
+}
+function unify(x as double[])as double[]{
+    if(isZero(x))return copy(V000);
+    else return scale(x, 1.0/length(x));
+}
+
+function project(x as double[], y as double[]) as double[]{
+    if(isZero(y))return copy(V000);
+    return scale(y, dot(x,y)/dot(y,y));
+}
+function angle(a as double[], b as double[])as double{
+    return angleRadian(a,b) *180/PIE;
+}
+function rot(a as double[], axisIn as double[], angle as double) as double[]{
+    return rotate(a,axisIn,angle);
+}
+function rotRadian(a as double[], axisIn as double[], angle as double) as double[]{
+    return rotate(a,axisIn,angle*180/PIE);
+}
+function eulaAng(x as double[], ang as double[])as double[]{
+    var a = copy(ang);
+    return rot(rot(rot(x,VX,a[0]),VY,a[1]),VZ,a[2]);
+}
+//print(para([PIE,PIE,PIE],[1.14,1.14,1.14]));
+
+//Random
+function randomUnitVector(world as IWorld=null)as double[]{
+    var p as double[]= [
+        randDouble(1.0,-1.0,world),
+        randDouble(1.0,-1.0,world),
+        randDouble(1.0,-1.0,world)
+    ];
+    if(isZero(p))return randomUnitVector(world);
+    else return unify(p);
+}
+
+//Line Related Calculations         //Lines should be represented by giving two points, since all other contents in this file are point based.
+function getFootPoint(point as double[], linePointA as double[], linePointB as double[])as double[]{
+    var dir = subtract(linePointA,linePointB);
+    if(isZero(dir))return point;
+    return add( linePointA , project( subtract(point, linePointA) , dir ));
+}
+function pointLineDist(point as double[], linePointA as double[], linePointB as double[])as double{
+    return length(subtract(point, getFootPoint(point,linePointA,linePointB)));
+}
+function pointSegmentDist(point as double[], linePointA as double[], linePointB as double[])as double{
+    var A = copy(linePointA);
+    var B = copy(linePointB);
+    var C = getFootPoint(point,A,B);
+    var AC= subtract(C,A);
+    var BC= subtract(C,B);
+    if(angle(AC,BC)>90.0)return pointLineDist(point,A,B);
+    else return Math.min(length(subtract(point,A)),length(subtract(point,B)));
+}
+
+function lineDist(l1A as double[], l1B as double[], l2A as double[], l2B as double[])as double{
+    var dir1=subtract(l1B,l1A);
+    var dir2=subtract(l2B,l2A);
+    if(para(dir1,dir2))return pointLineDist(l1A,l2A,l2B);
+    else return length(project(subtract(l1A,l2A),cross(dir1,dir2)));
+}
+function lineFoot(l1A as double[], l1B as double[], l2A as double[], l2B as double[])as double[]{
+    var dir1=subtract(l1B,l1A);
+    var dir2=subtract(l2B,l2A);
+    if(para(dir1,dir2))return l1A;
+    var dir3=cross(dir1,dir2);
+    var ta = subtract(l1A, getFootPoint(l1A,l2A,l2B));
+    var pa = subtract(ta, project(ta, dir3));
+    var tb = subtract(l1B, getFootPoint(l1B,l2A,l2B));
+    var pb = subtract(tb, project(tb, dir3));
+    if(isZero(pa))return l1A;
+    if(isZero(pb))return l1B;
+    var ratio = divide(pb,pa);
+    return combine(l1A,l1B,1.0/(1.0-ratio));
+}
+function linesDist(l1A as double[], l1B as double[], l2A as double[], l2B as double[])as double{
+    return lineDist(l1A,l1B,l2A,l2B);
+}
+function linesFoot(l1A as double[], l1B as double[], l2A as double[], l2B as double[])as double[]{
+    return lineFoot(l1A,l1B,l2A,l2B);
+}
+/*
+function lineDistTest(l1A as double[], l1B as double[], l2A as double[], l2B as double[])as double{
+    return pointLineDist(lineFoot(l1A,l1B,l2A,l2B),l2A,l2B);
+}
+print(lineDist(V000,VX,VY,VZ));
+print(lineDistTest(V000,VX,VY,VZ));
+*/
+function segmentLineDist(l1A as double[], l1B as double[], l2A as double[], l2B as double[])as double{
+    var A = copy(l1A);
+    var B = copy(l1B);
+    var C = lineFoot(A,B,l2A,l2B);
+    var AC= subtract(C,A);
+    var BC= subtract(C,B);
+    if(angle(AC,BC)>90.0)return lineDist(A,B,l2A,l2B);
+    else return Math.min(pointLineDist(A,l2A,l2B),pointLineDist(B,l2A,l2B));
 }
 
 
-function randomUnitVector()as double[]{
-    var ans as double[]=[Math.random()*2- 1,Math.random()*2- 1,Math.random()*2- 1];
-    if(isZero(ans))return randomUnitVector();
-    return unify(ans);
+//The following calculation is questionable.
+function segmentDistRaw(l1A as double[], l1B as double[], l2A as double[], l2B as double[], reversed as bool)as double{
+    var A = copy(l1A);
+    var B = copy(l1B);
+    var C = lineFoot(A,B,l2A,l2B);
+    var AC= subtract(C,A);
+    var BC= subtract(C,B);
+    if(angle(AC,BC)<90.0){
+        return Math.min(pointSegmentDist(A,l2A,l2B),pointSegmentDist(B,l2A,l2B));
+        //If l1//l2, then C=A, AC=0, angle(AC,BC)=0.0
+    }
+    else{
+        if(reversed){
+            return lineDist(l1A,l1B,l2A,l2B);
+        }
+        else{
+            return segmentDistRaw(l2A,l2B,A,B,true);
+        }
+    }
 }
-
-
-static tetraHedron as double[][]=[
-    [1.0,1.0,1.0],[1.0,-1.0,-1.0],[-1.0,-1.0,1.0],[-1.0,1.0,-1.0]
-];
-static cube as double[][]=[
-    [1.0,1.0,1.0],[1.0,1.0,-1.0],[1.0,-1.0,1.0],[1.0,-1.0,-1.0],
-    [-1.0,1.0,1.0],[-1.0,1.0,-1.0],[-1.0,-1.0,1.0],[-1.0,-1.0,-1.0]
-];
-static octaHedron as double[][]=[
-    [1.0,0.0,0.0],[0.0,1.0,0.0],[0.0,0.0,1.0],
-    [-1.0,0.0,0.0],[0.0,-1.0,0.0],[0.0,0.0,-1.0]
-];
-static dodecaHedron as double[][]=[
-    [0.0,0.618034,1.618034],[0.618034,1.618034,0.0],[1.618034,0.0,0.618034],
-    [0.0,0.618034,-1.618034],[0.618034,-1.618034,0.0],[-1.618034,0.0,0.618034],
-    [0.0,-0.618034,1.618034],[-0.618034,1.618034,0.0],[1.618034,0.0,-0.618034],
-    [0.0,-0.618034,-1.618034],[-0.618034,-1.618034,0.0],[-1.618034,0.0,-0.618034],
-    [1.0,1.0,1.0],[1.0,1.0,-1.0],[1.0,-1.0,1.0],[1.0,-1.0,-1.0],
-    [-1.0,1.0,1.0],[-1.0,1.0,-1.0],[-1.0,-1.0,1.0],[-1.0,-1.0,-1.0]
-];
-static icosaHedron as double[][]=[
-    [0.0,1.0,1.618034],[1.0,1.618034,0.0],[1.618034,0.0,1.0],
-    [0.0,1.0,-1.618034],[1.0,-1.618034,0.0],[-1.618034,0.0,1.0],
-    [0.0,-1.0,1.618034],[-1.0,1.618034,0.0],[1.618034,0.0,-1.0],
-    [0.0,-1.0,-1.618034],[-1.0,-1.618034,0.0],[-1.618034,0.0,-1.0]
-];
-static tetraHedronSides as int[][]=[[0,1],[0,2],[0,3],[1,2],[1,3],[2,3]];
-static cubeSides as int[][]=[[0,1],[0,2],[0,4],[1,3],[1,5],[2,3],[2,6],[3,7],[4,5],[4,6],[5,7],[6,7]];
-static octaHedronSides as int[][]=[[0,1],[0,2],[0,4],[0,5],[1,2],[1,3],[1,5],[2,3],[2,4],[3,4],[3,5],[4,5]];
-static dodecaHedronSides as int[][]=[
-    [0,12],[1,12],[2,12],   [1,13],[3,13],[8,13],   [2,14],[4,14],[6,14],   [4,15],[8,15],[9,15],
-    [0,16],[5,16],[7,16],   [3,17],[7,17],[11,17],  [5,18],[6,18],[10,18],  [9,19],[10,19],[11,19],
-    [0,6],[1,7],[2,8],[3,9],[4,10],[5,11]
-];
-static icosaHedronSides as int[][]=[
-    [0,1],[0,2],[1,2],  [3,4],[3,5],[4,5],  [6,7],[6,8],[7,8],  [9,10],[9,11],[10,11],  
-    [0,7],[0,8],[1,8],  [3,10],[3,11],[4,1],  [6,1],[6,2],[7,2],  [9,4],[9,5],[10,5],  
-    [0,6],[3,9],[1,7],[4,10],[2,4],[5,7],[5,11],[7,11],
-];
-
-
-
-static star1 as double[][]=[
-    [1.0,0.0,0.0],[0.0,1.0,0.0],[0.0,0.0,1.0],
-    [-1.0,0.0,0.0],[0.0,-1.0,0.0],[0.0,0.0,-1.0],
-    [1.0,1.0,1.0],[1.0,1.0,-1.0],[1.0,-1.0,1.0],[1.0,-1.0,-1.0],
-    [-1.0,1.0,1.0],[-1.0,1.0,-1.0],[-1.0,-1.0,1.0],[-1.0,-1.0,-1.0]
-];
-static star1Sides as int[][]=[
-    [0,1],[0,2],[0,4],[0,5],[1,2],[1,3],[1,5],[2,3],[2,4],[3,4],[3,5],[4,5],
-    [0,8],[0,9],[0,10],[0,11],  [1,8],[1,9],[1,12],[1,13],  [2,8],[2,10],[2,12],[2,14],
-    [3,12],[3,13],[3,14],[3,15],  [4,10],[4,11],[4,14],[4,15],  [5,9],[5,11],[5,13],[5,15]
-];
-
-
-function pointLineDistance(linePointA as double[], linePointB as double[], point as double[])as double{
-    if(!isVector3D(linePointA)||!isVector3D(linePointB)||!isVector3D(point))return -1.0;
-    var direction as double[]=unify(subtract(linePointB, linePointA));
-    if(isZero(direction))return -1.0;
-    var diff as double[]=subtract(point,linePointB);
-    var proj as double[]=project(diff, direction);
-    return Math.sqrt(dot(diff,diff)-dot(proj,proj));
+function segmentDist(l1A as double[], l1B as double[], l2A as double[], l2B as double[])as double{
+    return Math.min(
+        Math.min(
+            Math.min(
+                segmentDistRaw(l1A,l1B,l2A,l2B,false),
+                segmentDistRaw(l1B,l1A,l2A,l2B,false)
+            ),
+            Math.min(
+                segmentDistRaw(l1A,l1B,l2B,l2A,false),
+                segmentDistRaw(l1B,l1A,l2B,l2A,false)
+            )
+        ),
+        Math.min(
+            Math.min(
+                segmentDistRaw(l2A,l2B,l1A,l1B,false),
+                segmentDistRaw(l2B,l2A,l1A,l1B,false)
+            ),
+            Math.min(
+                segmentDistRaw(l2A,l2B,l1B,l1A,false),
+                segmentDistRaw(l2B,l2A,l1B,l1A,false)
+            )
+        )
+    );
 }
-function pointSegmentDistance(linePointA as double[], linePointB as double[], point as double[])as double{
-    var direction as double[]=unify(subtract(linePointB, linePointA));
-    var diffA as double[]=subtract(point,linePointA);
-    var projA as double[]=project(diffA, direction);
-    var diffB as double[]=subtract(point,linePointB);
-    var projB as double[]=project(diffB, direction);
-    if(angle(diffA,diffB)>90)return Math.sqrt(dot(diffA,diffA)-dot(projA,projA));
-    else return Math.min(length(subtract(point,linePointA)),length(subtract(point,linePointB)));
+function segmentsDist(l1A as double[], l1B as double[], l2A as double[], l2B as double[])as double{
+    return segmentDist(l1A,l1B,l2A,l2B);
 }
-//print(length(project(VX,rot(VX,VY,60.0))));
-//print(cross(VX,VZ)[1]);
-//print(pointLineDistance(V000, VX, VY));
-//print(angle(VX,rot(VX,VY,77)));
-//print(pointSegmentDistance(VX,V000,VY));
-//print(pointSegmentDistance(VX,V000,[0.3,0.3,0.0]));
-//print(pointSegmentDistance(VX,V000,[2.0,0.3,0.0]));
+/*
+print(segmentDist([16.0,0.0,2.7],[-16.0,0.0,2.7],[-17.0,0.0,0.0],[-6.0,0.0,0.0]));
+print(segmentDist([-17.0,0.0,0.0],[-6.0,0.0,0.0],[16.0,0.0,2.7],[-16.0,0.0,2.7]));
+print(segmentDist([16.0,0.0,2.7],[-16.0,0.0,2.7],[-7.0,0.0,0.0],[-6.0,0.0,0.0]));
+print(segmentDist([-7.0,0.0,0.0],[-6.0,0.0,0.0],[16.0,0.0,2.7],[-16.0,0.0,2.7]));
+print(segmentDist([-17.0,0.0,0.0],[-6.0,0.0,0.0],[6.0,0.0,2.7],[16.0,0.0,1.7]));*/
 
-function eulaAng(v as double[],x as double,y as double,z as double)as double[]{
-    return rot(rot(rot(v,VX,x),VY,y),VZ,z);
+zenClass polyhedron{
+    var vertexes as double[][]=[];
+    var sides as int[][]=[];
+    zenConstructor ( vs as double[][] , s as int[][] ){
+        for v in vs{
+            if(v.length<3)continue;
+            vertexes+=[v[0],v[1],v[2]]as double[];
+        }
+        for s0 in s{
+            if(s0.length<2)continue;
+            sides+=[s0[0],s0[1]]as int[];
+        }
+    }
+    function copy()as polyhedron{
+        return polyhedron(vertexes,sides);
+    }
 }
+static TETRA_HEDRON as polyhedron = polyhedron(
+    [[1.0,1.0,1.0],[1.0,-1.0,-1.0],[-1.0,-1.0,1.0],[-1.0,1.0,-1.0]],
+    [[0,1],[0,2],[0,3],[1,2],[1,3],[2,3]]
+);
+static CUBE as polyhedron = polyhedron(
+    [[1.0,1.0,1.0],[1.0,1.0,-1.0],[1.0,-1.0,1.0],[1.0,-1.0,-1.0],[-1.0,1.0,1.0],[-1.0,1.0,-1.0],[-1.0,-1.0,1.0],[-1.0,-1.0,-1.0]],
+    [[0,1],[0,2],[0,4],[1,3],[1,5],[2,3],[2,6],[3,7],[4,5],[4,6],[5,7],[6,7]]
+);
+static OCTA_HEDRON as polyhedron = polyhedron(
+    [[1.0,0.0,0.0],[0.0,1.0,0.0],[0.0,0.0,1.0],[-1.0,0.0,0.0],[0.0,-1.0,0.0],[0.0,0.0,-1.0]],
+    [[0,1],[0,2],[0,4],[0,5],[1,2],[1,3],[1,5],[2,3],[2,4],[3,4],[3,5],[4,5]]
+);
+static DODECA_HEDRON as polyhedron = polyhedron(
+    [
+        [0.0,0.618034,1.618034],[0.618034,1.618034,0.0],[1.618034,0.0,0.618034],
+        [0.0,0.618034,-1.618034],[0.618034,-1.618034,0.0],[-1.618034,0.0,0.618034],
+        [0.0,-0.618034,1.618034],[-0.618034,1.618034,0.0],[1.618034,0.0,-0.618034],
+        [0.0,-0.618034,-1.618034],[-0.618034,-1.618034,0.0],[-1.618034,0.0,-0.618034],
+        [1.0,1.0,1.0],[1.0,1.0,-1.0],[1.0,-1.0,1.0],[1.0,-1.0,-1.0],
+        [-1.0,1.0,1.0],[-1.0,1.0,-1.0],[-1.0,-1.0,1.0],[-1.0,-1.0,-1.0]
+    ],
+    [
+        [0,12],[1,12],[2,12],   [1,13],[3,13],[8,13],   [2,14],[4,14],[6,14],   [4,15],[8,15],[9,15],
+        [0,16],[5,16],[7,16],   [3,17],[7,17],[11,17],  [5,18],[6,18],[10,18],  [9,19],[10,19],[11,19],
+        [0,6],[1,7],[2,8],[3,9],[4,10],[5,11]
+    ]
+);
+static ICOSA_HEDRON as polyhedron = polyhedron(
+    [
+        [0.0,1.0,1.618034],[1.0,1.618034,0.0],[1.618034,0.0,1.0],
+        [0.0,1.0,-1.618034],[1.0,-1.618034,0.0],[-1.618034,0.0,1.0],
+        [0.0,-1.0,1.618034],[-1.0,1.618034,0.0],[1.618034,0.0,-1.0],
+        [0.0,-1.0,-1.618034],[-1.0,-1.618034,0.0],[-1.618034,0.0,-1.0]
+    ],
+    [
+        [0,1],[0,2],[1,2],  [9,10],[9,11],[10,11],  
+        [0,5],[0,7],[5,7],  [1,3],[1,8],[3,8],  [2,4],[2,6],[4,6],
+        [3,7],[3,11],[7,11],[4,8],[4,9],[8,9],  [5,6],[5,10],[6,10],
+        [0,6],[1,7],[2,8],  [3,9],[4,10],[5,11]
+    ]
+);
+function getPolyhedron(faceNum as int)as polyhedron{
+    var n = faceNum;
+    if(n==6)return CUBE.copy();
+    if(n==8)return OCTA_HEDRON.copy();
+    if(n==12)return DODECA_HEDRON.copy();
+    if(n==20)return ICOSA_HEDRON.copy();
+    return TETRA_HEDRON.copy();
+}/*
+static STAR_A1 as polyhedron = polyhedron(
+    [
+        [1.0,0.0,0.0],[0.0,1.0,0.0],[0.0,0.0,1.0],
+        [-1.0,0.0,0.0],[0.0,-1.0,0.0],[0.0,0.0,-1.0],
+        [1.0,1.0,1.0],[1.0,1.0,-1.0],[1.0,-1.0,1.0],[1.0,-1.0,-1.0],
+        [-1.0,1.0,1.0],[-1.0,1.0,-1.0],[-1.0,-1.0,1.0],[-1.0,-1.0,-1.0]
+    ],
+    [
+        [0,1],[0,2],[0,4],[0,5],[1,2],[1,3],[1,5],[2,3],[2,4],[3,4],[3,5],[4,5],
+        [0,8],[0,9],[0,10],[0,11],  [1,8],[1,9],[1,12],[1,13],  [2,8],[2,10],[2,12],[2,14],
+        [3,12],[3,13],[3,14],[3,15],  [4,10],[4,11],[4,14],[4,15],  [5,9],[5,11],[5,13],[5,15]
+    ]
+);*/
+static STAR_A as polyhedron = polyhedron(
+    [[1.0,1.0,1.0],[1.0,1.0,-1.0],[1.0,-1.0,1.0],[1.0,-1.0,-1.0],[-1.0,1.0,1.0],[-1.0,1.0,-1.0],[-1.0,-1.0,1.0],[-1.0,-1.0,-1.0]],
+    [[0,3],[0,5],[0,6],[3,5],[3,6],[5,6],   [1,2],[1,4],[1,7],[2,4],[2,7],[4,7]]
+);
+static STAR_B as polyhedron = polyhedron(
+    [
+        [0.0,1.0,1.618034],[1.0,1.618034,0.0],[1.618034,0.0,1.0],
+        [0.0,1.0,-1.618034],[1.0,-1.618034,0.0],[-1.618034,0.0,1.0],
+        [0.0,-1.0,1.618034],[-1.0,1.618034,0.0],[1.618034,0.0,-1.0],
+        [0.0,-1.0,-1.618034],[-1.0,-1.618034,0.0],[-1.618034,0.0,-1.0]
+    ],/*
+    [
+        [0,1],[0,2],[1,2],  [9,10],[9,11],[10,11],  
+        [0,5],[0,7],[5,7],  [1,3],[1,8],[3,8],  [2,4],[2,6],[4,6],
+        [3,7],[3,11],[7,11],[4,8],[4,9],[8,9],  [5,6],[5,10],[6,10],
+        [0,6],[1,7],[2,8],  [3,9],[4,10],[5,11]
+    ]
+    */
+    [
+        [0,3],[0,4],[0,8],[0,10],[0,11],
+        [1,4],[1,5],[1,6],[1,9],[1,11],
+        [2,3],[2,5],[2,7],[2,9],[2,10],
+        [3,4],[3,5],[3,10],
+        [4,5],[4,11],
+        [5,9],
+        [6,7],[6,8],[6,9],[6,11],
+        [7,8],[7,9],[7,10],
+        [8,10],[8,11],
+    ]
+);
+static STAR_C as polyhedron = polyhedron(
+    [
+        [0.0,1.0,1.618034],[1.0,1.618034,0.0],[1.618034,0.0,1.0],
+        [0.0,1.0,-1.618034],[1.0,-1.618034,0.0],[-1.618034,0.0,1.0],
+        [0.0,-1.0,1.618034],[-1.0,1.618034,0.0],[1.618034,0.0,-1.0],
+        [0.0,-1.0,-1.618034],[-1.0,-1.618034,0.0],[-1.618034,0.0,-1.0]
+    ],
+    [
+        [0,1],[0,2],[1,2],  [9,10],[9,11],[10,11],  
+        [0,5],[0,7],[5,7],  [1,3],[1,8],[3,8],  [2,4],[2,6],[4,6],
+        [3,7],[3,11],[7,11],[4,8],[4,9],[8,9],  [5,6],[5,10],[6,10],
+        [0,6],[1,7],[2,8],  [3,9],[4,10],[5,11],
+        [0,3],[0,4],[0,8],[0,10],[0,11],
+        [1,4],[1,5],[1,6],[1,9],[1,11],
+        [2,3],[2,5],[2,7],[2,9],[2,10],
+        [3,4],[3,5],[3,10],
+        [4,5],[4,11],
+        [5,9],
+        [6,7],[6,8],[6,9],[6,11],
+        [7,8],[7,9],[7,10],
+        [8,10],[8,11],
+    ]
+);

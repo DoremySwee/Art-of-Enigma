@@ -1798,7 +1798,7 @@ extrautils2:screen, 屏幕
 extrautils2:decorativesolid:0, 镶边石头
 extrautils2:decorativesolid:1, 交错石头
 extrautils2:decorativesolid:2, 磨制石头
-extrautils2:decorativesolid:3, 蕴魔符石
+extrautils2:decorativesolid:3, 烧制石头
 extrautils2:decorativesolid:4, 沙化玻璃
 extrautils2:decorativesolid:5, 錾制石头
 extrautils2:decorativesolid:6, 蓝色石英
@@ -2506,7 +2506,7 @@ thermaldynamics:cover:0, 覆盖板：能量过载器
 thermaldynamics:cover:0, 覆盖板：镶边石头
 thermaldynamics:cover:0, 覆盖板：交错石头
 thermaldynamics:cover:0, 覆盖板：磨制石头
-thermaldynamics:cover:0, 覆盖板：蕴魔符石
+thermaldynamics:cover:0, 覆盖板：烧制石头
 thermaldynamics:cover:0, 覆盖板：沙化玻璃
 thermaldynamics:cover:0, 覆盖板：錾制石头
 thermaldynamics:cover:0, 覆盖板：蓝色石英
@@ -5586,7 +5586,7 @@ appliedenergistics2:facade:0, 线缆伪装板 - 六重压缩地狱岩
 appliedenergistics2:facade:0, 线缆伪装板 - 镶边石头
 appliedenergistics2:facade:0, 线缆伪装板 - 交错石头
 appliedenergistics2:facade:0, 线缆伪装板 - 磨制石头
-appliedenergistics2:facade:0, 线缆伪装板 - 蕴魔符石
+appliedenergistics2:facade:0, 线缆伪装板 - 烧制石头
 appliedenergistics2:facade:0, 线缆伪装板 - 沙化玻璃
 appliedenergistics2:facade:0, 线缆伪装板 - 錾制石头
 appliedenergistics2:facade:0, 线缆伪装板 - 蓝色石英
@@ -8990,7 +8990,6 @@ botania:specialflower:0, 小气泡铃
 botania:specialflower:0, 弱磁兰
 botania:specialflower:0, 小弱磁兰
 botania:specialflower:0, 消音柑
-botania:specialflower:0, 彩虹莲
 botania:spreader:0, 魔力发射器
 botania:spreader:1, 魔力发射器(红石)
 botania:spreader:2, 精灵魔力发射器
@@ -9145,7 +9144,6 @@ botania:floatingspecialflower:0, 浮空小气泡铃
 botania:floatingspecialflower:0, 浮空弱磁兰
 botania:floatingspecialflower:0, 浮空小弱磁兰
 botania:floatingspecialflower:0, 浮空消音柑
-botania:floatingspecialflower:0, 浮空彩虹莲
 botania:prism, tile.prism.name
 botania:enchantedsoil, tile.enchantedSoil.name
 botania:petalblock:0, 白色花瓣块
@@ -11002,7 +11000,7 @@ tconstruct:materials:16, 精致珠宝
 tconstruct:materials:17, 凋零之骨
 tconstruct:materials:18, 苔藓球
 tconstruct:materials:19, 修复苔藓
-tconstruct:materials:50, 冶炼之脑
+tconstruct:materials:50, 创造模式强化头颅
 tconstruct:edible:0, 培根
 tconstruct:edible:1, 蓝色史莱姆球
 tconstruct:edible:2, 紫色史莱姆球
@@ -11068,34 +11066,34 @@ tconstruct:slime_vine_purple_end:0, 紫色史莱姆藤蔓
 tconstruct:slime_vine_purple_mid:0, 紫色史莱姆藤蔓
 tconstruct:slime_vine_purple:0, 紫色史莱姆藤蔓
 tconstruct:pattern:0, 空白模具
-tconstruct:pattern:0, 铲头模具
-tconstruct:pattern:0, 磨制工具模具
-tconstruct:pattern:0, 手柄模具
-tconstruct:pattern:0, 坚韧绑定结模具
-tconstruct:pattern:0, 碎片模具
-tconstruct:pattern:0, 镰刀头模具
-tconstruct:pattern:0, 牌板模具
-tconstruct:pattern:0, 箭羽模具
-tconstruct:pattern:0, 宽护手模具
-tconstruct:pattern:0, 绑定结模具
+tconstruct:pattern:0, 镐头模具
 tconstruct:pattern:0, 盘模具
-tconstruct:pattern:0, 大板模具
-tconstruct:pattern:0, 刀刃模具
-tconstruct:pattern:0, 坚韧手柄模具
-tconstruct:pattern:0, 开掘铲头模具
-tconstruct:pattern:0, 宽剑刃模具
-tconstruct:pattern:0, 宽斧刃模具
-tconstruct:pattern:0, 弓臂模具
-tconstruct:pattern:0, 弓弦模具
+tconstruct:pattern:0, 磨制工具模具
+tconstruct:pattern:0, 绑定结模具
+tconstruct:pattern:0, 箭头模具
+tconstruct:pattern:0, 铲头模具
+tconstruct:pattern:0, 手柄模具
+tconstruct:pattern:0, 镰刀头模具
+tconstruct:pattern:0, 斧刃模具
 tconstruct:pattern:0, 护手模具
 tconstruct:pattern:0, 园艺镰头模具
+tconstruct:pattern:0, 坚韧绑定结模具
+tconstruct:pattern:0, 开掘铲头模具
+tconstruct:pattern:0, 弓弦模具
+tconstruct:pattern:0, 刀刃模具
 tconstruct:pattern:0, 箭杆模具
-tconstruct:pattern:0, 镐头模具
-tconstruct:pattern:0, 十字柄模具
-tconstruct:pattern:0, 锤头模具
-tconstruct:pattern:0, 箭头模具
 tconstruct:pattern:0, 剑刃模具
-tconstruct:pattern:0, 斧刃模具
+tconstruct:pattern:0, 弓臂模具
+tconstruct:pattern:0, 牌板模具
+tconstruct:pattern:0, 宽斧刃模具
+tconstruct:pattern:0, 坚韧手柄模具
+tconstruct:pattern:0, 大板模具
+tconstruct:pattern:0, 宽剑刃模具
+tconstruct:pattern:0, 锤头模具
+tconstruct:pattern:0, 箭羽模具
+tconstruct:pattern:0, 碎片模具
+tconstruct:pattern:0, 十字柄模具
+tconstruct:pattern:0, 宽护手模具
 tconstruct:shard:0, Electrical 碎片
 tconstruct:shard:0, Energetic 碎片
 tconstruct:shard:0, Vibrant 碎片
@@ -12416,64 +12414,64 @@ tconstruct:seared_stairs_road:0, 焦黑铺路石楼梯
 tconstruct:seared_stairs_tile:0, 焦黑瓷砖楼梯
 tconstruct:seared_stairs_creeper:0, 焦黑雕琢楼梯
 tconstruct:cast:0, 空白铸模
-tconstruct:cast:0, 铲头铸模
-tconstruct:cast:0, 磨制工具铸模
-tconstruct:cast:0, 手柄铸模
-tconstruct:cast:0, 坚韧绑定结铸模
-tconstruct:cast:0, 碎片铸模
-tconstruct:cast:0, 镰刀头铸模
-tconstruct:cast:0, 牌板铸模
-tconstruct:cast:0, 宽护手铸模
-tconstruct:cast:0, 绑定结铸模
+tconstruct:cast:0, 镐头铸模
 tconstruct:cast:0, 盘铸模
-tconstruct:cast:0, 大板铸模
-tconstruct:cast:0, 刀刃铸模
-tconstruct:cast:0, 坚韧手柄铸模
-tconstruct:cast:0, 开掘铲头铸模
-tconstruct:cast:0, 宽剑刃铸模
-tconstruct:cast:0, 宽斧刃铸模
-tconstruct:cast:0, 弓臂铸模
-tconstruct:cast:0, 弓弦铸模
+tconstruct:cast:0, 磨制工具铸模
+tconstruct:cast:0, 绑定结铸模
+tconstruct:cast:0, 箭头铸模
+tconstruct:cast:0, 铲头铸模
+tconstruct:cast:0, 手柄铸模
+tconstruct:cast:0, 镰刀头铸模
+tconstruct:cast:0, 斧刃铸模
 tconstruct:cast:0, 护手铸模
 tconstruct:cast:0, 园艺镰头铸模
-tconstruct:cast:0, 镐头铸模
-tconstruct:cast:0, 十字柄铸模
-tconstruct:cast:0, 锤头铸模
-tconstruct:cast:0, 箭头铸模
+tconstruct:cast:0, 坚韧绑定结铸模
+tconstruct:cast:0, 开掘铲头铸模
+tconstruct:cast:0, 弓弦铸模
+tconstruct:cast:0, 刀刃铸模
 tconstruct:cast:0, 剑刃铸模
-tconstruct:cast:0, 斧刃铸模
+tconstruct:cast:0, 弓臂铸模
+tconstruct:cast:0, 牌板铸模
+tconstruct:cast:0, 宽斧刃铸模
+tconstruct:cast:0, 坚韧手柄铸模
+tconstruct:cast:0, 大板铸模
+tconstruct:cast:0, 宽剑刃铸模
+tconstruct:cast:0, 锤头铸模
+tconstruct:cast:0, 碎片铸模
+tconstruct:cast:0, 十字柄铸模
+tconstruct:cast:0, 宽护手铸模
 tconstruct:cast_custom:0, 锭铸模
 tconstruct:cast_custom:1, 粒铸模
 tconstruct:cast_custom:2, 宝石铸模
 tconstruct:cast_custom:3, 板铸模
 tconstruct:cast_custom:4, 齿轮铸模
 tconstruct:clay_cast:0, item.tconstruct.clay_cast.blank
-tconstruct:clay_cast:0, 铲头粘土铸模
-tconstruct:clay_cast:0, 磨制工具粘土铸模
-tconstruct:clay_cast:0, 手柄粘土铸模
-tconstruct:clay_cast:0, 坚韧绑定结粘土铸模
-tconstruct:clay_cast:0, 碎片粘土铸模
-tconstruct:clay_cast:0, 镰刀头粘土铸模
-tconstruct:clay_cast:0, 牌板粘土铸模
-tconstruct:clay_cast:0, 宽护手粘土铸模
-tconstruct:clay_cast:0, 绑定结粘土铸模
+tconstruct:clay_cast:0, 镐头粘土铸模
 tconstruct:clay_cast:0, 盘粘土铸模
-tconstruct:clay_cast:0, 大板粘土铸模
-tconstruct:clay_cast:0, 刀刃粘土铸模
-tconstruct:clay_cast:0, 坚韧手柄粘土铸模
-tconstruct:clay_cast:0, 开掘铲头粘土铸模
-tconstruct:clay_cast:0, 宽剑刃粘土铸模
-tconstruct:clay_cast:0, 宽斧刃粘土铸模
-tconstruct:clay_cast:0, 弓臂粘土铸模
-tconstruct:clay_cast:0, 弓弦粘土铸模
+tconstruct:clay_cast:0, 磨制工具粘土铸模
+tconstruct:clay_cast:0, 绑定结粘土铸模
+tconstruct:clay_cast:0, 箭头粘土铸模
+tconstruct:clay_cast:0, 铲头粘土铸模
+tconstruct:clay_cast:0, 手柄粘土铸模
+tconstruct:clay_cast:0, 镰刀头粘土铸模
+tconstruct:clay_cast:0, 斧刃粘土铸模
 tconstruct:clay_cast:0, 护手粘土铸模
 tconstruct:clay_cast:0, 园艺镰头粘土铸模
-tconstruct:clay_cast:0, 镐头粘土铸模
-tconstruct:clay_cast:0, 十字柄粘土铸模
-tconstruct:clay_cast:0, 锤头粘土铸模
-tconstruct:clay_cast:0, 箭头粘土铸模
+tconstruct:clay_cast:0, 坚韧绑定结粘土铸模
+tconstruct:clay_cast:0, 开掘铲头粘土铸模
+tconstruct:clay_cast:0, 弓弦粘土铸模
+tconstruct:clay_cast:0, 刀刃粘土铸模
 tconstruct:clay_cast:0, 剑刃粘土铸模
-tconstruct:clay_cast:0, 斧刃粘土铸模
+tconstruct:clay_cast:0, 弓臂粘土铸模
+tconstruct:clay_cast:0, 牌板粘土铸模
+tconstruct:clay_cast:0, 宽斧刃粘土铸模
+tconstruct:clay_cast:0, 坚韧手柄粘土铸模
+tconstruct:clay_cast:0, 大板粘土铸模
+tconstruct:clay_cast:0, 宽剑刃粘土铸模
+tconstruct:clay_cast:0, 锤头粘土铸模
+tconstruct:clay_cast:0, 碎片粘土铸模
+tconstruct:clay_cast:0, 十字柄粘土铸模
+tconstruct:clay_cast:0, 宽护手粘土铸模
 tconstruct:stone_torch:0, 石柄火把
 tconstruct:stone_ladder:0, 石梯
 tconstruct:punji:0, 尖竹钉
@@ -12551,27 +12549,6 @@ tconstruct:fancy_frame:4, 玛玉灵展示框
 tconstruct:fancy_frame:5, 金制展示框
 tconstruct:fancy_frame:6, 通透展示框
 tconstruct:moms_spaghetti, 妈妈做的意大利面
-storagedrawers:upgrade_template, 升级模板
-storagedrawers:upgrade_storage:0, 抽屉容量升级 (I)
-storagedrawers:upgrade_storage:1, 抽屉容量升级 (II)
-storagedrawers:upgrade_storage:2, 抽屉容量升级 (III)
-storagedrawers:upgrade_storage:3, 抽屉容量升级 (IV)
-storagedrawers:upgrade_storage:4, 抽屉容量升级 (V)
-storagedrawers:upgrade_one_stack, 抽屉容量降级
-storagedrawers:upgrade_status:0, 状态显示升级 (I)
-storagedrawers:upgrade_status:1, 状态显示升级 (II)
-storagedrawers:upgrade_void, 清空升级
-storagedrawers:upgrade_conversion, 转换升级
-storagedrawers:upgrade_creative:0, 创造模式容量升级
-storagedrawers:upgrade_creative:1, 创造模式取出升级
-storagedrawers:upgrade_redstone:0, 红石升级
-storagedrawers:upgrade_redstone:1, 红石升级（最多）
-storagedrawers:upgrade_redstone:2, 红石升级（最少）
-storagedrawers:drawer_key, 绑定钥匙
-storagedrawers:shroud_key, 屏蔽钥匙
-storagedrawers:personal_key, 私人钥匙
-storagedrawers:quantify_key, 数量钥匙
-storagedrawers:tape, 打包带
 storagedrawers:basicdrawers:0, 基础抽屉
 storagedrawers:basicdrawers:0, 基础抽屉
 storagedrawers:basicdrawers:0, 基础抽屉
@@ -12622,6 +12599,27 @@ storagedrawers:customdrawers:2, 2x2 镶框抽屉
 storagedrawers:customdrawers:3, 1x2 小型镶框抽屉
 storagedrawers:customdrawers:4, 2x2 小型镶框抽屉
 storagedrawers:customtrim, 镶框
+storagedrawers:upgrade_template, 升级模板
+storagedrawers:upgrade_storage:0, 抽屉容量升级 (I)
+storagedrawers:upgrade_storage:1, 抽屉容量升级 (II)
+storagedrawers:upgrade_storage:2, 抽屉容量升级 (III)
+storagedrawers:upgrade_storage:3, 抽屉容量升级 (IV)
+storagedrawers:upgrade_storage:4, 抽屉容量升级 (V)
+storagedrawers:upgrade_one_stack, 抽屉容量降级
+storagedrawers:upgrade_status:0, 状态显示升级 (I)
+storagedrawers:upgrade_status:1, 状态显示升级 (II)
+storagedrawers:upgrade_void, 清空升级
+storagedrawers:upgrade_conversion, 转换升级
+storagedrawers:upgrade_creative:0, 创造模式容量升级
+storagedrawers:upgrade_creative:1, 创造模式取出升级
+storagedrawers:upgrade_redstone:0, 红石升级
+storagedrawers:upgrade_redstone:1, 红石升级（最多）
+storagedrawers:upgrade_redstone:2, 红石升级（最少）
+storagedrawers:drawer_key, 绑定钥匙
+storagedrawers:shroud_key, 屏蔽钥匙
+storagedrawers:personal_key, 私人钥匙
+storagedrawers:quantify_key, 数量钥匙
+storagedrawers:tape, 打包带
 itemfilters:filter, Item Filter
 itemfilters:missing, 缺少物品
 ftbquests:screen, 任务显示器
@@ -13736,25 +13734,6 @@ botania_tweaks:compressed_tiny_potato_7, Colossal Potato
 botania_tweaks:compressed_tiny_potato_8, Galactic Potato
 botania_tweaks:potted_tiny_potato, Tiny Pot-tato
 botania_tweaks:dire_crafty_crate, Dire Crafty Crate
-contenttweaker:wand_cap_iron, 铁杖端
-contenttweaker:wand_cap_manasteel, 魔钢杖端
-contenttweaker:wand_cap_elementium, 源质杖端
-contenttweaker:wand_cap_elementium_inert, 休眠源质杖端
-contenttweaker:wand_rod_livingwood, 活木杖芯
-contenttweaker:wand_rod_dreamwood, 梦芯
-contenttweaker:wand_rod_dreamwood_inert, 梦芯「眠」
-contenttweaker:dezil_marshmallow, item.contenttweaker.dezil_marshmallow.name
-contenttweaker:shard_aqua, 水之碎片
-contenttweaker:shard_ignis, 火之碎片
-contenttweaker:shard_aer, 风之碎片
-contenttweaker:shard_terra, 地之碎片
-contenttweaker:shard_ordo, 秩序碎片
-contenttweaker:shard_perditio, 混沌碎片
-contenttweaker:shard_balanced, 平衡碎片
-contenttweaker:division_sigil, 分割徽章
-contenttweaker:division_sigil_activated, 分割徽章（激活）
-contenttweaker:psu_inver_sigil, 伪逆徽章
-contenttweaker:resurrection_stone:0, tile.contenttweaker.resurrection_stone.name
 embers:block_caminite_brick_slab, 方镁矾台阶
 embers:ashen_stone_slab, 灰石台阶
 embers:ashen_brick_slab, 灰石砖台阶

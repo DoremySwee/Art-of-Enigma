@@ -1,58 +1,141 @@
 #loader crafttweaker reloadableevents
-#priority 1000000000
-import crafttweaker.command.ICommandManager;
-import crafttweaker.item.IIngredient;
+#priority 1000000010
 import crafttweaker.item.IItemStack;
 import crafttweaker.world.IBlockPos;
-import crafttweaker.entity.IEntity;
-import crafttweaker.player.IPlayer;
-import crafttweaker.world.IWorld;
-import crafttweaker.block.IBlock;
-import mods.ctutils.utils.Math;
 import crafttweaker.data.IData;
-static PIE as double=3.1415927;
-static Pie as double=3.1415927;
-print("PPP");
-var temp as string[]= "a.b.c.d".split("\\.");
-print(temp.length);
-for i in 0 to temp.length{
-    print(temp[i]);
-}
-var temp2 as string[]=["a","b","c","d"];
-for i in 0 to temp2.length{
-    print(temp2[i]);
-}
 
-/*string
-function splitString(input as string, char as string)as string[]{
-    if(input=="")return [] as string[];
-    var ans as string[]= [] as string[];
-    var temp = "";
-    for i in 0 to input.length{
-        if(input[i]==char){
-            ans += temp;
-            temp = "";
+function get(data as IData, path as string)as IData{
+    var d as IData= data;
+    for key in path.split("[.\\[\\]]"){
+        if(key=="")continue;
+        if(!isNull(d.asMap())){
+            if(!(d has key))return null;
+            d = d.memberGet(key);
+            continue;
+        }
+        else if(!isNull(d.asList())){
+            if(key.matches("\\d+")){
+                var n = key as int;
+                if(n < d.asList().length){
+                    d = d.asList()[n];
+                    continue;
+                }
+            }
+            else if(key=="last"){
+                d = d.asList()[d.asList().length- 1];
+                continue;
+            }
+        }
+        return null;
+    }
+    return d;
+}
+function setRaw(data as IData, data2 as IData, path as string, index as int, isList as bool)as IData{
+    var TESTING=false;
+    if(index>=path.length)return data2;
+    var key = "";
+    var isNextList = isList;
+    var jt = 0;
+    for j in index to path.length{
+        jt=j;
+        //if(path[j]=="]")continue;
+        if(path[j]=="["){
+            isNextList = true;
+            break;
+        }
+        if(path[j]=="." || path[j]=="]"){
+            isNextList = false;
+            break;
+        }
+        key+=path[j];
+    }
+    if(key==""){
+        return setRaw(data, data2, path, jt+1, isNextList);
+    }
+    if(!isList){
+        var d = IData.createEmptyMutableDataMap();
+        if(isNull(data.asMap())){
+            if ( TESTING ) print("key:"~key~";  return:"~(d));
+            return d;
         }
         else{
-            temp += input[i];
+            var flag = true;
+            for k,v in data.asMap(){
+                if(k==key){
+                    d.memberSet(key, setRaw(data.memberGet(key), data2, path, jt+1, isNextList));
+                    flag=false;
+                }
+                else d.memberSet(k,v);
+            }
+            if(flag)d.memberSet(key, setRaw({}, data2, path, jt+1, isNextList));
+            if ( TESTING ) print("key:"~key~";  return:"~(d));
+            return d;
         }
     }
-    if(temp!="") ans += temp;
-    for j in ans{
-        print("    "~j);
+    else{
+        if(!key.matches("\\d+") && key!="last")return data;
+        if(isNull(data.asList()))return data;
+        var n = (key=="last")?data.asList().length:(key as int);
+        if(n > data.asList().length)return data;
+        var d=setRaw({}, data2, path, jt+1, isNextList);
+        var list =[]as IData;
+        for i in 0 to data.asList().length{
+            if(i==n)list=list+[d];
+            else list=list+[data.asList()[i]];
+            //print(i~"  "~list);
+        }
+        if(data.asList().length==n)list=list+[d];
+        if ( TESTING ) print("key:"~key~";  return:"~list);
+        return list as IData;
     }
-    return ans;
+}
+function set(data as IData, data2 as IData, path as string)as IData{
+    return setRaw(data,data2,path,0,false);
 }
 
+function matches(data as IData, data2 as IData)as bool{
+    return data==({}as IData + data).deepUpdate(data2,mods.zenutils.DataUpdateOperation.MERGE);
+}
 
-//Data
-function deepHas(data as IData, path as string)as bool{
-    var d = data;
-    for key in path.split("\\."){
-        print(key);
-        //if(!(d has key))return false;
-        //print(d);
-        //d = d.memberGet(key);
+/*Example
+    var data = {
+        "a":[{"b":114},{"b":514}]
+    } as IData;
+    data=set(data,{"aaa":1919},"a[last]b");
+    data=set(data,data,"a[last].b");
+    print(get(data,"a[last].b.a.[0].b"));
+    print( matches({"a":114,"b":[{"x":1},{"x":2}]},{"b":[{"x":2}]}));  //true
+*/
+
+
+
+
+function fromStack(stack as IItemStack)as IData{
+    var d = IData.createEmptyMutableDataMap();
+    d.memberSet("id",stack.definition.id);
+    d.memberSet("Damage",stack.damage);
+    if(stack.hasTag)d.memberSet("tag",stack.tag);
+    return d;
+}
+function getStack(data as IData)as IItemStack{
+    if(data has "id"){
+        var stack as IItemStack=itemUtils.getItem(data.id as string);
+        if(data has "Damage")stack=stack.definition.makeStack(data.Damage as int);
+        if(data has "tag")stack=stack.withTag(data.tag);
+        return stack;
     }
-    return true;
-}*/
+    return null;
+}
+function fromBlockPos(pos as IBlockPos)as IData{
+    return {
+        "x":pos.x,
+        "y":pos.y,
+        "z":pos.z
+    }as IData;
+}
+function getBlockPos(data as IData)as IBlockPos{
+    if(data has "x" && data has "y" && data has "z"){
+        return IBlockPos.create(data.x.asInt(),data.y.asInt(),data.z.asInt());
+    }
+    return IBlockPos.create(0,0,0);
+}
