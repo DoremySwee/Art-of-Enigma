@@ -1,0 +1,13 @@
+0.1B	basic library
+1M	scripts
+50k	system library + mechanism
+10k	do system registering : 	e.g. Adding wands recipes
+<3k	scripts that will not be imported
+
+recipes:
+	2k:	preloading
+	1k:	massive recipe registering.	e.g. Smeltry Alloying Contamination  (Chapter2)
+	500:	techban
+	0:	normal
+	-100:	fix
+	<-200:	fixes after release

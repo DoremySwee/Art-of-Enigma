@@ -2,7 +2,7 @@
 #priority 1000000009
 import mods.ctutils.utils.Math;
 import crafttweaker.data.IData;
-import scripts.libs.Data;
+import scripts.advanced.libs.Data;
 
 import crafttweaker.world.IBlockPos;
 import crafttweaker.world.IVector3d;
@@ -46,7 +46,9 @@ function cosfR(x as double)as double{
 function tanfR(x as double)as double{
     return tanf(x*PIE/180);
 }
-
+function atan2(y as double, x as double)as double{
+    //TODO
+}
 //Random Number
 function randDoubleRaw(world as IWorld=null)as double{
     if(isNull(world)){
@@ -102,7 +104,7 @@ function asData(pos as double[], keyPrefix as string="", cap as bool=false)as ID
     var keys as string[]= cap?["X","Y","Z"]:["x","y","z"];
     var d = IData.createEmptyMutableDataMap();
     for i in 0 to 3{
-        d = Data.set(d,pos[i]as IData,keyPrefix~keys[i]);
+        d.deepSet((pos[i])as IData,keyPrefix~keys[i]);
     }
     return d;
 }

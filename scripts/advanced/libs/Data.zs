@@ -30,6 +30,9 @@ function get(data as IData, path as string)as IData{
     }
     return d;
 }
+$ expand IData $ deepGet(path as string)as IData{
+    return get(this,path);
+}
 function setRaw(data as IData, data2 as IData, path as string, index as int, isList as bool)as IData{
     var TESTING=false;
     if(index>=path.length)return data2;
@@ -92,9 +95,14 @@ function setRaw(data as IData, data2 as IData, path as string, index as int, isL
 function set(data as IData, data2 as IData, path as string)as IData{
     return setRaw(data,data2,path,0,false);
 }
-
+$ expand IData $ deepSet(data as IData,path as string)as IData{
+    return set(this,data,path);
+}
 function matches(data as IData, data2 as IData)as bool{
     return data==({}as IData + data).deepUpdate(data2,mods.zenutils.DataUpdateOperation.MERGE);
+}
+$ expand IData $ matches(data as IData)as bool{
+    return matches(this,data);
 }
 
 /*Example
@@ -126,6 +134,11 @@ function getStack(data as IData)as IItemStack{
     }
     return null;
 }
+
+$ expand IData $ asStack()as IItemStack{
+    return getStack(this);
+}
+
 function fromBlockPos(pos as IBlockPos)as IData{
     return {
         "x":pos.x,
@@ -138,4 +151,8 @@ function getBlockPos(data as IData)as IBlockPos{
         return IBlockPos.create(data.x.asInt(),data.y.asInt(),data.z.asInt());
     }
     return IBlockPos.create(0,0,0);
+}
+
+$ expand IData $ asBlockPos()as IBlockPos{
+    return getBlockPos(this);
 }

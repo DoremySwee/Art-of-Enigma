@@ -11,25 +11,26 @@ import crafttweaker.world.IWorld;
 import crafttweaker.block.IBlock;
 import crafttweaker.data.IData;
 
-import scripts.libs.Vector3D as V;
-import scripts.libs.Data as D;
+import scripts.advanced.libs.Vector3D as V;
+import scripts.advanced.libs.Data as D;
 
 
 //FX Table
     //{"type":?}
     static DE_PARTICLE_TYPES as int[string]={
         "energyParticle" :  0,  //RGB, alpha
-        //"energyCore" :      1,
-        "lineIndicator":    2,  //a(Age), RGB
-        "chaosProjectile":  3,  //RGB
-        "chaosImplosion":   4,  //implosionType
-        "portal":           5,  //No Parameter
-        "dragonHeart":      6,  //RGB, expired
-        "axeSelection":     7,  //No Parameter
-        "soulExtraction":   8,  //Size, RGB
-        "arrowShockWave":   9,  //Size
+        //"energyCore" :    1,
+        "infuser":          2,
+        "lineIndicator":    3,  //a(Age), RGB
+        "chaosProjectile":  4,  //RGB
+        "chaosImplosion":   5,  //implosionType
+        "portal":           6,  //No Parameter
+        "dragonHeart":      7,  //RGB, expired
+        "axeSelection":     8,  //No Parameter
+        "soulExtraction":   9,  //Size, RGB
+        "arrowShockWave":   10,  //Size
         //The main FX We use is [custom]
-        "custom":           10
+        "custom":           11
             //RGB, alpha, r, a, textureIndex, collideWithBlock(default: false)
     };
     //{"implosionType":?}
@@ -138,16 +139,10 @@ function createBotSparkle(data as IData){
 }*/
 
 function createFX(data as IData)as void{
-    //var p as double[] = V.readFromData(data);
-    //var v as double[] = V.readFromData(data,"v");
-    //DEFX.spawnFX(10,V.asIVector3d(p),V.asIVector3d(V.scale(v,0)),[0,180,255,255,10000,120,10,10,10,1]as int[]);
-    //DEFX.spawnFX(2,V.asIVector3d(p),V.asIVector3d(V.scale(v,0)),[0,180,255,255,10000,120,10,10,10,1]as int[]);
-    //return;
     var typeD = D.get(data,"type");
     if(isNull(typeD)) createBotFX(data);
     else{
         var type as string= typeD.asString();
-        //print(type);
         if(DE_PARTICLE_TYPES has type){
             var p as double[] = V.readFromData(data);
             var v as double[] = V.readFromData(data,"v");
@@ -156,48 +151,42 @@ function createFX(data as IData)as void{
             var args as int[] = [];
             var alpha as double = (data has "alpha")?(data.memberGet("alpha").asDouble()):1.0;
             var c as int[] = getIntRGB(data.memberGet("color").asInt());
-            print(t);
             if(t==0){
                 args=[c[0],c[1],c[2],(alpha*100)as int];
             }
-            else if(t==2){
+            else if(t==3){
                 args=[c[0],c[1],c[2],data.memberGet("a").asDouble()];
             }
-            else if(t==3){
+            else if(t==4){
                 args=[0,c[0],c[1],c[2]];
             }
-            else if(t==4){
+            else if(t==5){
                 var type2d = D.get(data,"implosionType");
                 var type2 = "tracer";
                 if(!isNull(type2d))type2 = type2d.asString();
                 var type2i as int= (IMPLOSIONTYPES has type2)?IMPLOSIONTYPES[type2]as int:0;
                 args=[type2i];
             }
-            else if(t==6){
+            else if(t==7){
                 var expired = (data has "expired") && D.get(data,"expired").asBool();  //Create the particles when the heart expires
                 args=c;
                 if(expired)args+=0;
             }
-            else if(t==8 || t==9){
+            else if(t==10 || t==9){
                 var r = (data has "size")?(data.memberGet("size").asInt()):(data.memberGet("r").asDouble() as int);
                 args=[r,c[0],c[1],c[2]];
             }
-            else if(t==10){
-                var r = (data has "size")?(data.memberGet("size").asDouble()):(data.memberGet("r").asDouble());
-                var a = data.memberGet("a").asDouble()*20;
+            else if(t==11){
+                var r = ((data has "size")?(data.memberGet("size").asDouble()):(data.memberGet("r").asDouble()))*3;
+                var a = data.memberGet("a").asDouble()*5;
                 var colli = (data has "collideWithBlock") && data.memberGet("collideWithBlock").asBool();
                 var i = (data has "textureIndex")?(data.memberGet("textureIndex").asInt()):0;
                 args=[c[0],c[1],c[2],(alpha*255)as int,
                     0+r*10000,a as int,0,0,i,colli?1:0];
-                print("args:");
-                for pp in args{
-                    print(pp);
-                }
             }
-            
-            if(!isNull(viewRD))DEFX.spawnFX(t,V.asIVector3d(p),V.asIVector3d(v),viewRD.asDouble(),args);
-            else DEFX.spawnFX(t,V.asIVector3d(p),V.asIVector3d(v),args);
-            
+            var vt = V.asIVector3d(V.scale(v,1.0));
+            if(!isNull(viewRD))DEFX.spawnFX(t,V.asIVector3d(p),vt,viewRD.asDouble(),args);
+            else DEFX.spawnFX(t,V.asIVector3d(p),vt,args);
         }
         else createBotFX(data);
     }

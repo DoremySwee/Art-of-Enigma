@@ -1,8 +1,8 @@
 #loader crafttweaker reloadableevents
-import scripts.libs.StructureTester as ST;
+import scripts.advanced.libs.StructureTester as ST;
 import crafttweaker.item.IItemStack;
 import crafttweaker.data.IData;
-import scripts.libs.Misc as M;
+import scripts.advanced.libs.Misc as M;
 
 //StructureTester
 /*

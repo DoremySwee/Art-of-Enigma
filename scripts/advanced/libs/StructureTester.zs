@@ -6,9 +6,9 @@ import crafttweaker.world.IWorld;
 import crafttweaker.block.IBlock;
 import crafttweaker.data.IData;
 
-import scripts.libs.Vector3D as V;
-import scripts.libs.Data as D;
-import scripts.libs.Misc as M;
+import scripts.advanced.libs.Vector3D as V;
+import scripts.advanced.libs.Data as D;
+import scripts.advanced.libs.Misc as M;
 
 
 

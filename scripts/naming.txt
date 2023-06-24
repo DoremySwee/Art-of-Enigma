@@ -1,0 +1,13 @@
+folders:				goldenapple
+files:	work as lib:  		GoldenApple
+	will not be imported:  	name it anyway
+variable:				goldenApple
+function:				goldenApple()
+
+translation key:			golden_apple
+				aoe.quests.chapter[?].[quest name].[title/subtitle/des]
+				aoe.quests.chapter[?].[title/subtitle]	(Well, we don't have a quest called "title".)
+				crt.tooltips.[category]    (.[component name])
+					crt.tooltips.endoflame.restriction
+					crt.tooltips.chapter1_flowers.crafting
+				crt.chat.[category]	(.[component name])

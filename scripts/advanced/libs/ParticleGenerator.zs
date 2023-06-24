@@ -1,9 +1,9 @@
 #loader crafttweaker reloadableevents
 #priority 1000000004
 
-import scripts.libs.Vector3D as V;
-import scripts.libs.Misc as M;
-import scripts.libs.Data as D;
+import scripts.advanced.libs.Vector3D as V;
+import scripts.advanced.libs.Misc as M;
+import scripts.advanced.libs.Data as D;
 
 import crafttweaker.player.IPlayer;
 import crafttweaker.world.IWorld;
@@ -12,6 +12,9 @@ import crafttweaker.data.IData;
 import mods.zenutils.NetworkHandler;
 import mods.zenutils.IByteBuf;
 
+//Dist Unit: block
+//Time Unit: GameTick (0.05s if full tps)
+//SpeedUnit: block/s  (ATTENTION!)
 
 zenClass FXGenerator{
     var name as string;
@@ -254,13 +257,14 @@ static segmentMoving as FXGenerator = segment.copy("segmentMoving")
     })
     .regi();
 /*
+//TODO
 static arc as FXGenerator = FXGenerator("arc")
     .addAging(300)
     .updateDefaultData({
         "lastX":0.0,"lastY":0.0,"lastZ":0.0,
         "axisAx":0.0,"axisAy":0.0,"axisAz":0.0,
         "axisBx":0.0,"axisBy":0.0,"axisBz":0.0,
-        "angleA":0.0,"angleB":360.0,"radius":0.0,
+        "angleA":0.0,"angleB":360.0,//"radius":0.0,
         "renderNum":20, "renderTime":1, "size":3.0,
         "renderInterval":6, "particleLifeCoef":2.0
     })
@@ -270,37 +274,60 @@ static arc as FXGenerator = FXGenerator("arc")
     })
     .addTick(function(world as IWorld, data as IData)as IData{
         var p0 = V.readFromData(data);
-        var diffMin = V.subtract(p0,V.getPos(world.getClosestPlayer(p[0],p[1],p[2],R,false)));
-        var temp0 = data.radius.asDouble()+data.size.asDouble();
-        if(V.dot(diffMin,diffMin)>temp0*temp0) return;
-        var temp1 = data.radius.asDouble()-data.size.asDouble();
+        var nearestPlayer = world.getClosestPlayer(p0[0],p0[1],p0[2],data.effectiveRadius.asDouble(),false);
+        if(isNull(nearestPlayer))return data;
+        var diffMin = V.subtract(p0,V.getPos(nearestPlayer));
         var a = V.readFromData(data,"axisA");
         var b = V.readFromData(data,"axisB");
-        for player in world.getAllPlayers(){
-            var diff = V.subtract(p0,V.getPos(world.getClosestPlayer(p[0],p[1],p[2],R,false)));
-            if(V.dot(diff,diff)>temp0*temp0) continue;
-            if(V.dot(diff,diff)<temp1*temp1) continue;
-            var pr0 = V.prject()
+        if(V.para(a,b))return data;
+        var r = data.size.asDouble();
+        var RMax = V.length(a)+V.length(b);
+        var RMin = V.length(a)-V.length(b);
+        RMin = (RMin<0)?(-RMin):RMin;
+        if(V.length(diffMin) > RMax+r)return data;
+        for p in world.getAllPlayers(){
+            var diff = V.subtract(p0,V.getPos(p));
+            if(V.length(diff) > RMax + r)continue;
+            if(V.length(diff) < RMin - r)continue;
+            var c = V.unify(V.cross(a,b));
+            var pr1 = V.project(diff,c);
+            if(V.length(pr1) > r)continue;
+            var pr = V.subtract(diff,pr1);
+            var cfA=0.0;
+            var cfB=0.0;
+            var t2 = a[0]*b[1] - b[0]*a[1];
+            var t1 = a[0]*b[2] - b[0]*a[2];
+            if(t2!=0){
+                cfA = (pr1[0]*b[1] - pr1[1]*b[0])/t2;
+                cfB = (pr1[0]*a[1] - pr1[1]*a[0])/(-t2);
+            }
+            else{
+                cfA = (pr1[0]*b[2] - pr1[2]*b[0])/t1;
+                cfB = (pr1[0]*a[2] - pr1[2]*a[0])/(-t1);
+            }
+            if(cfA+cfB==0.0)continue;
+            var cfAt = cfA/(cfA+cfB);
+            var cfBt = cfB/(cfA+cfB);
+            var diffT = V.add(V.scale(a,cfAt),V.scale(b,cfBt));
+            var diff1 = V.subtract(diffT,diff);
+            if(V.dot(diff1,diff1)+V.dot(pr1,pr1)<r*r){
+
+                p.attackEntityFrom(<damageSource:MAGIC>,data.damage);
+                return data+{"removed":true}as IData;
+            }
         }
+        return data;
     })
     .setRender(function(player as IPlayer, data as IData)as void{
     })
-    .regi();*/
+    .regi();
+*
 events.onItemToss(function(event as crafttweaker.event.ItemTossEvent){
      var H = V.STAR_A;
     var player = event.player;
     var world = player.world;
     
     for side in H.sides{
-        /*for i in 0 to 40{
-            var ratio = 1.0/41*(i+1);
-            var p = V.combine(H.vertexes[side[0]],H.vertexes[side[1]],ratio);
-            SingleOrb.create(world,{
-                "color":0x7777FF,
-                "size":0.3,
-                "colli":false
-            }+V.asData(V.add(V.getPos(player),V.scale(p,3))));
-        }*/
         segmentMoving.create(world,{
             "color":0x077777,
             "size":0.3,
@@ -308,22 +335,9 @@ events.onItemToss(function(event as crafttweaker.event.ItemTossEvent){
             "renderNum":3,
             "renderInterval":9,
             "lifeLimit":200,
-            "type":"chaosProjectile",
             "textureIndex":0
         }+V.asData(V.scale(H.vertexes[side[0]],0.02),"vA")
         +V.asData(V.scale(H.vertexes[side[1]],0.02),"vB")
         +V.asData(V.getPos(player),"A")+V.asData(V.getPos(player),"B"));
-    }/*
-    for p in H.vertexes{
-        SingleOrb.create(world,{
-            "color":0x7777FF,
-            "size":0.9,
-            "colli":false,
-            "renderTime":3
-        }+V.asData(V.add(V.getPos(player),V.scale(p,7))));
-    }*
-    M.createBotSparkle({
-        "color":0x7777FF,
-        "r":0.3
-    }+V.asData(V.getPos(player)));*/
-});
+    }
+});*/
