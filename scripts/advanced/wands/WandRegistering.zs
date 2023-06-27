@@ -2,7 +2,7 @@
 #priority 50000
 import crafttweaker.data.IData;
 import scripts.advanced.libs.Data as D;
-import scripts.recipes.libs.aspects as A;
+import scripts.recipes.libs.Aspects as A;
 
 static rodsData as IData={
     "wood":{

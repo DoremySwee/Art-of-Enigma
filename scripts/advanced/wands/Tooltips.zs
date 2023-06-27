@@ -1,6 +1,6 @@
 #priority 10000
 import scripts.advanced.wands.WandRegistering as WR;
-import scripts.recipes.libs.aspects as A;
+import scripts.recipes.libs.Aspects as A;
 import crafttweaker.item.IItemStack;
 import crafttweaker.data.IData;
 

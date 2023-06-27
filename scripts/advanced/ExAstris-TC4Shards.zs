@@ -54,3 +54,33 @@ events.onWorldTick(function(event as crafttweaker.event.WorldTickEvent){
         world.spawnEntity(drop.createEntityItem(world,blockPos));
     }
 });
+
+//shards tooltips
+var shard_block1 as IItemStack[IItemStack]={
+    <contenttweaker:shard_terra>:<minecraft:grass>,
+    <contenttweaker:shard_aqua>:<minecraft:ice>,
+    <contenttweaker:shard_ignis>:<minecraft:nether_brick>,
+    <contenttweaker:shard_perditio>:<minecraft:tnt>
+};
+for shard,block in shard_block1{
+    shard.addTooltip(
+        game.localize("description.crt.tooltip.shard_anvil1")~
+        block.displayName~
+        game.localize("description.crt.tooltip.shard_anvil2")~
+        shard.displayName~
+        game.localize("description.crt.tooltip.shard_anvil3")
+    );
+}
+var shard_block2 as string[IItemStack]={
+    <contenttweaker:shard_aer>:"description.crt.tooltip.shard_double_slab_sandstone",
+    <contenttweaker:shard_ordo>:"description.crt.tooltip.shard_double_slab_stone"
+};
+for shard,block in shard_block2{
+    shard.addTooltip(
+        game.localize("description.crt.tooltip.shard_anvil1")~
+        game.localize(block)~
+        game.localize("description.crt.tooltip.shard_anvil2")~
+        shard.displayName~
+        game.localize("description.crt.tooltip.shard_anvil3")
+    );
+}

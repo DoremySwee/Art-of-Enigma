@@ -1,6 +1,6 @@
 #priority 10000
 import scripts.advanced.libs.Data as D;
-import scripts.recipes.libs.aspects as A;
+import scripts.recipes.libs.Aspects as A;
 import scripts.advanced.wands.WandRegistering as WR;
 
 import mods.thaumicwands.WandCaps;

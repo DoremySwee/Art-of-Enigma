@@ -9,6 +9,8 @@ import mods.ctutils.utils.Math;
 import scripts.advanced.libs.Data as D;
 import scripts.advanced.wands.WandRegistering as WR;
 
+mods.botania.ManaInfusion.addInfusion(<thaumicwands:item_wand>,<thaumicwands:item_wand>,1);
+
 events.onPoolTrade(function(event as mods.randomtweaker.botania.PoolTradeEvent){
     var wand=event.input.item;
     if(wand.definition.id!=<thaumicwands:item_wand>.definition.id)return;

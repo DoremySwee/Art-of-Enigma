@@ -49,6 +49,11 @@ function tanfR(x as double)as double{
 function atan2(y as double, x as double)as double{
     //TODO
 }
+function sqrt(x as double)as double{
+    return Math.sqrt(x);
+}
+
+
 //Random Number
 function randDoubleRaw(world as IWorld=null)as double{
     if(isNull(world)){
@@ -104,8 +109,9 @@ function asData(pos as double[], keyPrefix as string="", cap as bool=false)as ID
     var keys as string[]= cap?["X","Y","Z"]:["x","y","z"];
     var d = IData.createEmptyMutableDataMap();
     for i in 0 to 3{
-        d.deepSet((pos[i])as IData,keyPrefix~keys[i]);
+        d=d.deepSet((pos[i])as IData,keyPrefix~keys[i]);
     }
+    //print(d);
     return d;
 }
 function getPos(entity as IEntity)as double[]{

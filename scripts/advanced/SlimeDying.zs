@@ -32,3 +32,4 @@ events.onEntityLivingUpdate(function(event as crafttweaker.event.EntityLivingUpd
         world.spawnEntity(newSlime);
     }
 });
+<forge:bucketfilled>.withTag({FluidName: "bot_mana", Amount: 1000}).addTooltip(format.aqua(game.localize("description.crt.tooltip.liquid_mana_and_blues_lime")));
