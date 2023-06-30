@@ -1,12 +1,10 @@
-#loader crafttweaker reloadableevents
 #priority 1000
 import scripts.recipes.libs.Transcript as T;
 import crafttweaker.liquid.ILiquidStack;
 import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
 
-//T.test();
-/*
+
 addRegexLogFilter("^No InductionSmelter recipe exists for.*");
 //Embers
 if(true){
@@ -68,8 +66,8 @@ if(true){
 
 //Tic contamination
 if (true) {
-    var Basic = [ <liquid:water>, <liquid:lava> ] as crafttweaker.liquid.ILiquidStack[];
-    var MetalB = [ <liquid:silver>, <liquid:gold> ] as crafttweaker.liquid.ILiquidStack[];
+    var Basic = [ <liquid:water>, <liquid:lava> ] as ILiquidStack[];
+    var MetalB = [ <liquid:silver>, <liquid:gold> ] as ILiquidStack[];
     var MetalA = [ 
         <liquid:copper>,
         <liquid:iron>,
@@ -86,7 +84,7 @@ if (true) {
         <liquid:brass>,
         <liquid:constantan>,
         <liquid:conductive_iron>
-    ] as crafttweaker.liquid.ILiquidStack[];
+    ] as ILiquidStack[];
     var Bio = [
         <liquid:syrup>,
         <liquid:resin>,
@@ -95,17 +93,13 @@ if (true) {
         <liquid:creosote>,
         <liquid:seed_oil>,
         <liquid:refined_biofuel>
-    ] as crafttweaker.liquid.ILiquidStack[];
+    ] as ILiquidStack[];
 
     for i in MetalA {
         for j in MetalB {
-            //T.test();
-            //T.tic.alloy(<liquid:construction_alloy>*7,[i*5,j*2]);
-            //mods.tconstruct.Alloy.addRecipe(<liquid:construction_alloy>*7,[i*5,j*2]);
-            //print(i.name);
-            //print(j.name);
+            T.tic.alloy(<liquid:construction_alloy>*7,[i*5,j*2]);
         }
-    }/*
+    }
     for i in Basic {
         for j in MetalA {
             T.tic.alloy(<liquid:stone>*13,[i*9,j*4]);
@@ -126,7 +120,7 @@ if (true) {
             T.tic.alloy(<liquid:dirt>*13,[i*11,j*2]);
         }
         T.tic.alloy(<liquid:dirt>*13,[i*11,<liquid:construction_alloy>*2]);
-    }*
+    }
 }
 
 //dust banning
@@ -189,4 +183,3 @@ mods.immersiveengineering.AlloySmelter.removeRecipe(<immersiveengineering:metal:
 mods.immersiveengineering.AlloySmelter.removeRecipe(<immersiveengineering:metal:7>);
 mods.immersiveengineering.AlloySmelter.removeRecipe(<thermalfoundation:material:162>);
 mods.immersiveengineering.AlloySmelter.addRecipe(<thermalfoundation:material:162>*3,<ore:dustNickel>,<ore:dustIron>*2,1800);
-*/

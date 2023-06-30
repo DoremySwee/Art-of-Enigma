@@ -397,7 +397,7 @@ zenClass ExU{
         mods.extrautils2.Resonator.add(output, input, energy);
     }
 }
-static exu as EXU = EXU();
+static exu as ExU = ExU();
 zenClass CC{
     zenConstructor(){}
     function flawless(output as It, inputs as In[]){
@@ -417,16 +417,16 @@ static cc as CC = CC();
 zenClass TC{
     zenConstructor(){}
     static recipeNum as int[] = [0] as int[];
-    static id = "ArtOfEngima_Auto_Generated_ThaumCraft_Id_";
-    static research = "FIRSTSTEPS";
+    static id as string= "ArtOfEngima_Auto_Generated_ThaumCraft_Id_";
+    static research as string= "FIRSTSTEPS";
     function getId()as string{
         recipeNum[0] += 1;
         return id~(recipeNum[0] - 1);
     }
-    function shaped(output as It, inputs as In[][], vis as int = 0,aspects as ASt[] = [] as ASt[], research as string = "FIRSTSTEPS"){
+    function shaped(output as It, inputs as In[][], vis as int = 0, aspects as ASt[] = [] as ASt[], research as string = "FIRSTSTEPS"){
         mods.thaumcraft.ArcaneWorkbench.registerShapedRecipe(getId(),research,vis,aspects,output,inputs);
     }
-    function shaped(output as It, inputs as In[][], vis as int = 0,aspects as int[] = [] as int[], research as string = "FIRSTSTEPS"){
+    function shaped(output as It, inputs as In[][], vis as int = 0, aspects as int[] = [] as int[], research as string = "FIRSTSTEPS"){
         mods.thaumcraft.ArcaneWorkbench.registerShapedRecipe(getId(),research,vis,
             scripts.recipes.libs.Aspects.aspect6(aspects),
             output,inputs);
@@ -449,7 +449,43 @@ zenClass TC{
 static tc as TC = TC();
 zenClass Embers{
     zenConstructor(){}
-    //TODO
+    function melt(outputs as IL[], input as In){
+        if(outputs.length==1)mods.embers.Melter.add(outputs[0], input);
+        if(outputs.length>1)mods.embers.Melter.add(outputs[0],input,outputs[1]);
+    }
+    function melter(outputs as IL[], input as In){
+        melt(outputs,input);
+    }
+    function melting(outputs as IL[], input as In){
+        melt(outputs,input);
+    }
+    function stamp(output as It, liquidInput as IL, itemInputs as It[]){
+        if(itemInputs.length==1)mods.embers.Stamper.add(output,liquidInput,itemInputs[0]);
+        if(itemInputs.length>1)mods.embers.Stamper.add(output,liquidInput,itemInputs[0],itemInputs[1]);
+    }
+    function stamper(output as It, liquidInput as IL, itemInputs as It[]){
+        stamp(output,liquidInput,itemInputs);
+    }
+    function stamping(output as It, liquidInput as IL, itemInputs as It[]){
+        stamp(output,liquidInput,itemInputs);
+    }
+    //There can be 4 inputs, but JEI only shows 3
+    function mix(output as IL, inputs as IL[]){
+        mods.embers.Mixer.add(output, inputs);
+    }
+    function mixer(output as IL, inputs as IL[]){
+        mods.embers.Mixer.add(output, inputs);
+    }
+    function mixing(output as IL, inputs as IL[]){
+        mods.embers.Mixer.add(output, inputs);
+    }
+
+    function alchemy(output as It, inputs as In[]){
+        //TODO
+    }
+    function anvil(){
+        //TODO
+    }
 }
 static embers as Embers = Embers();
 static ember as Embers = Embers();

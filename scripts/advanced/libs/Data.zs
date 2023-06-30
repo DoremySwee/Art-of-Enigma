@@ -1,5 +1,5 @@
 #loader crafttweaker reloadableevents
-#priority 1000000010
+#priority 1000000030
 import crafttweaker.item.IItemStack;
 import crafttweaker.world.IBlockPos;
 import crafttweaker.data.IData;
