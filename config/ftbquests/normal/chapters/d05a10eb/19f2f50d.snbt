@@ -1,10 +1,9 @@
 {
-	title: "{quests.ch1.waterAgg.title}",
 	x: 3.85d,
 	y: -2.8d,
-	description: "{quests.ch1.waterAgg.subtitle}",
 	text: [
-		"{quests.ch1.pureDaisy.LiquidAgg}"
+		"{quests.ch1.pureDaisy.LiquidAgg}",
+		"{quests.ch1.pureDaisy.craft2}"
 	],
 	dependencies: [
 		"3635e1e2"

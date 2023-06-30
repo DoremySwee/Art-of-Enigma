@@ -3,7 +3,8 @@
 	y: 2.5d,
 	shape: "pentagon",
 	text: [
-		"{quests.ch1.pureDaisy.LiquidAgg}"
+		"{quests.ch1.pureDaisy.LiquidAgg}",
+		"{quests.ch1.pureDaisy.craft2}"
 	],
 	dependencies: [
 		"9fc6bb50"

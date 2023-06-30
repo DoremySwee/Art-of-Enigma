@@ -45,3 +45,4 @@ events.onBlockNeighborNotify(function(event as BlockNeighborNotifyEvent){
         }).start();
     }
 });
+<botania:specialflower>.withTag({type: "endoflame"}).addTooltip(format.bold(format.yellow(game.localize("description.crt.tooltip.flower.endoRestrict"))));

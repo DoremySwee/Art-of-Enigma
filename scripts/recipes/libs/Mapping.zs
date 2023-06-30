@@ -1,15 +1,16 @@
 #loader crafttweaker reloadableevents
 #priority 100000000
 import crafttweaker.item.IIngredient as I;
-var dev = scripts.config.dev;
+static dev as bool= scripts.config.dev;
+static whiteSpaces as string[]=["\n","\r"," ","\t"];
 function read1d(pattern as string, map as I[string])as I[]{
     var result as I[] = [] as I[];
-    for i in pattern{
-        if(i=="_")result+=null;
+    for index in 0 to pattern.length{
+        var i = pattern[index];
+        if(i=="_")result+=null as I;
         else if(map has i)result+=map[i];
         else if(dev){
-            if(["\n","
-",              " ","\t"]has i)continue;
+            if(whiteSpaces has i)continue;
             else print("[Warning] mapping.zs: invalid key \""~i~"\"");
         }
     }

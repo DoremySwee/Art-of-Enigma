@@ -34,6 +34,7 @@ quests.ch1.waterAgg.des4=4. Identify the liquids by checking the tooltips of inp
 quests.ch1.waterAgg.des5=5. Additionally, water comes from agglomeration of tall_grass*8, while lava comes from those involving the magma blocks.
 
 quests.ch1.pureDaisy.LiquidAgg= Liquid Blocks in terra agglomeration must be the source.
+quests.ch1.pureDaisy.craft2= You are suggested to crafting 2 pure daisies, since one of them will be consumed in later crafting.
 quests.ch1.mana.title=Where is my Mana?
 quests.ch1.mana.des=Terraplate accepts mana beams, which come from... Find it out by yourself.
 quests.ch1.sapl.title=Saplings

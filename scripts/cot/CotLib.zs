@@ -6,6 +6,11 @@ import mods.contenttweaker.Fluid;
 import mods.contenttweaker.Color;
 import mods.contenttweaker.Item;
 import crafttweaker.data.IData;
+val lightStill="astralsorcery:blocks/fluid/starlight_still";
+val lightFlow="astralsorcery:blocks/fluid/starlight_flow";
+val moltStill="base:fluids/molten";
+val moltFlow="base:fluids/molten_flowing";
+val exu2Molt="extrautils2:molten_fluid_base";
 function createFluid(id as string, c as string, attributes as IData={}){
     var fluid=VanillaFactory.createFluid(id,Color.fromHex(c));
     if(attributes has "density")fluid.density=attributes.density as int;
