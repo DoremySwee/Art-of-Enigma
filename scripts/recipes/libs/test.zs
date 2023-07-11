@@ -9,3 +9,4 @@ function test(item as IItemStack){
 }
 test(<minecraft:apple>);
 */
+//test
