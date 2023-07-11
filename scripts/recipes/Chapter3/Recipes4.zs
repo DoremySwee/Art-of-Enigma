@@ -224,7 +224,7 @@ T.tic.casting(<botania:manaresource:7>,<botania:manaresource>,<liquid:bot_elf>*1
 T.tic.casting(<botania:manaresource:8>,<botania:manaresource:23>,<liquid:bot_elf>*1440,900);
 T.tic.casting(<botania:manaresource:9>,<botania:manaresource:2>,<liquid:bot_elf>*1440,900);
 
-T.bot.rune(<contenttweaker:wand_cap_manasteel_inert>,Mp.read("BAAAAAA",{"B":<contenttweaker:wand_cap_iron>,"A":<mysticalagriculture:manasteel_essence>}));
+T.bot.rune(<contenttweaker:wand_cap_manasteel_inert>,Mp.read1d("BAAAAAA",{"B":<contenttweaker:wand_cap_iron>,"A":<mysticalagriculture:manasteel_essence>}), 6000);
 T.tic.casting(<contenttweaker:wand_cap_manasteel>, <contenttweaker:wand_cap_manasteel_inert>, <liquid:bot_mana>*1440,900);
 
 T.ava.shaped(<botania:alfheimportal>,Mp.read("
