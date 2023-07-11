@@ -64,7 +64,6 @@ Agg.addRecipe(<bloodmagic:blood_orb>.withTag({orb: "bloodmagic:magician"}),Mp.re
     <botania:miniisland>,<liquid:bot_mana>,<botania:enchanter:1>,
     <minecraft:red_flower:1>,<liquid:water>,<minecraft:lapis_ore>
 );
-//test
 if(false){
     Agg.addRecipe(<minecraft:apple>,Mp.read("#", {
             "#":<thermalfoundation:fertilizer:2>
@@ -95,8 +94,6 @@ if(false){
         })[0],3000000,0x00FF00,0x0088FF
     );
 }
-//TODO: elf portal
-
 //seeds
 T.tic.casting(<mysticalagriculture:redstone_seeds>,
     seed3,<liquid:redstone_alloy>*100000,3000);/*
@@ -210,6 +207,64 @@ T.ava.shaped(<mysticalagriculture:glowstone_seeds>*3, Mp.read("
     "&":<mysticalagriculture:chunk:17>,
     "*":<extrautils2:decorativeglass:4>,
     "~":<thaumcraft:alumentum>
+}));
+//TODO: Knight Slime
+//TODO: Liquid Elf
+//Elf portal
+//Cholorophyte
+T.eio.vat(<liquid:molten_choloryphyte>, <liquid:emerald>, 1.0f/9, [<mysticalagriculture:nature_seeds>%160],[<contenttweaker:shard_terra>%9]);
+T.tic.casting(<contenttweaker:chlorophyteore>,<thermalfoundation:ore:6>,<liquid:molten_choloryphyte>*144,900,true,true);
+T.tic.melting(<liquid:molten_choloryphyte>*16,<contenttweaker:chlorophyteore>);
+T.tic.casting(<botania:pylon:1>,<botania:pylon>,<liquid:molten_choloryphyte>*1440,900,true,true);
+T.tic.casting(<contenttweaker:cholorophyte_ingot>,<tconstruct:cast_custom>,<liquid:molten_choloryphyte>*144,80,false);
+T.tic.melting(<liquid:molten_choloryphyte>*144,<contenttweaker:cholorophyte_ingot>);
+T.tic.casting(<botania:livingwood:5>,<botania:livingwood>,<liquid:molten_choloryphyte>*144,900,true,true);
+
+T.tic.casting(<botania:manaresource:7>,<botania:manaresource>,<liquid:bot_elf>*1440,900);
+T.tic.casting(<botania:manaresource:8>,<botania:manaresource:23>,<liquid:bot_elf>*1440,900);
+T.tic.casting(<botania:manaresource:9>,<botania:manaresource:2>,<liquid:bot_elf>*1440,900);
+
+T.bot.rune(<contenttweaker:wand_cap_manasteel_inert>,Mp.read("BAAAAAA",{"B":<contenttweaker:wand_cap_iron>,"A":<mysticalagriculture:manasteel_essence>}));
+T.tic.casting(<contenttweaker:wand_cap_manasteel>, <contenttweaker:wand_cap_manasteel_inert>, <liquid:bot_mana>*1440,900);
+
+T.ava.shaped(<botania:alfheimportal>,Mp.read("
+    @@@@#@@@@;
+    @$%&*~%1@;
+    @2%343%5@;
+    @6#7*8#6@;
+    909`!`909;
+    @6#^a^#6@;
+    @b%cdc%e@;
+    @f%^a^%g@;
+    @@@@#@@@@;
+    ",{
+    "@":<botania:livingwood>,
+    "^":<mysticalagriculture:manasteel_essence>,
+    "`":<botania:manaresource:9>,
+    "!":<appliedenergistics2:spatial_pylon>,
+    "a":<mysticalagriculture:crafting:10>,
+    "b":<botania:elementiumlegs>,
+    "#":<botania:livingwood:5>,
+    "c":<mysticalagriculture:manasteel_seeds>,
+    "$":<botania:elementiumhelm>.withTag({}),
+    "d":<thaumicwands:item_wand>.withTag({cap: "manasteel", rod: "livingwood"}),
+    "%":<botania:pylon:1>,
+    "e":<botania:elementiumshovel>,
+    "&":<botania:manatablet>.withTag({mana: 102400}),
+    "f":<botania:elementiumboots>,
+    "g":<botania:elementiumsword>,
+    "*":<botania:manaresource:8>,
+    "0":<botania:manaresource:7>,
+    "1":<botania:elementiumpick>,
+    "2":<botania:elementiumchest>.withTag({}),
+    "3":M.consume(M.orb(3));
+    "4":<botania:manatablet>.withTag({mana: 114514}),
+    "5":<botania:elementiumaxe>,
+    "6":<botania:storage:4>,
+    "7":<botania:manatablet>.withTag({mana: 167000}),
+    "8":<botania:manatablet>.withTag({mana: 200000}),
+    "9":<appliedenergistics2:controller>,
+    "~":<botania:manatablet>.withTag({mana: 130000})
 }));
 /*
     史莱姆骑士：

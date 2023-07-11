@@ -33,7 +33,7 @@ function copyRod(name as string){
 
 
 copyCap("iron");
-cap("manasteel");
+capInert("manasteel");
 capInert("elementium");
 rod("livingwood");
 rodInert("dreamwood");

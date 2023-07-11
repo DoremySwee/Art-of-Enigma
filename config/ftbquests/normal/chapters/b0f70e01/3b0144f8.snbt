@@ -1,15 +1,21 @@
 {
 	x: -0.5d,
-	y: -1.0d,
-	hide_dependency_lines: true,
+	y: -3.0d,
 	dependencies: [
-		"37766c85"
+		"cdb3f392"
 	],
 	tasks: [{
 		uid: "b9e4b490",
 		type: "item",
 		items: [{
 			item: "botania:pylon 1 1"
+		}]
+	},
+	{
+		uid: "5c297b93",
+		type: "item",
+		items: [{
+			item: "botania:alfheimportal"
 		}]
 	}]
 }

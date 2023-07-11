@@ -2,13 +2,23 @@
 	x: -2.0d,
 	y: -4.0d,
 	dependencies: [
+		"b026c87f",
 		"680c062e"
 	],
 	tasks: [{
-		uid: "4a566858",
+		uid: "c73d79a9",
 		type: "item",
 		items: [{
-			item: "minecraft:stone"
-		}]
+			ForgeCaps: {
+				"astralsorcery:cap_item_amulet_holder": {}
+			},
+			id: "forge:bucketfilled",
+			tag: {
+				FluidName: "bot_elf",
+				Amount: 1000
+			}
+		}],
+		ignore_damage: true,
+		ignore_nbt: 1b
 	}]
 }

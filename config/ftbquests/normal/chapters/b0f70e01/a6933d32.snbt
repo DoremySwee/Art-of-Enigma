@@ -1,0 +1,14 @@
+{
+	x: 4.0d,
+	y: -4.0d,
+	dependencies: [
+		"225f4a65"
+	],
+	tasks: [{
+		uid: "8260e2c1",
+		type: "item",
+		items: [{
+			item: "botania:pylon 1 2"
+		}]
+	}]
+}

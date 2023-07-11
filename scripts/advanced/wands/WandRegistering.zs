@@ -43,7 +43,7 @@ static capsData as IData={
         "itemId":"contenttweaker:wand_cap_manasteel",
         "multiplier":2.0,
         "discounts":{}, //{"aer":1,"terra":1}
-        "craftCost":0,
+        "craftCost":2,
         "craftAspects":{},
         "botCapData":{
             "manaRate":2000,
@@ -54,7 +54,7 @@ static capsData as IData={
         "itemId":"contenttweaker:wand_cap_elementium",
         "multiplier":2.0,
         "discounts":{},
-        "craftCost":0,
+        "craftCost":10,
         "craftAspects":{},
         "botCapData":{
             "manaRate":10000,

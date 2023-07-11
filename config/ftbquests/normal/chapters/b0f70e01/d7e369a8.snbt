@@ -1,0 +1,14 @@
+{
+	x: 1.0d,
+	y: -2.0d,
+	dependencies: [
+		"3b0144f8"
+	],
+	tasks: [{
+		uid: "f4b5349e",
+		type: "item",
+		items: [{
+			item: "mysticalagriculture:nether_quartz_seeds"
+		}]
+	}]
+}
