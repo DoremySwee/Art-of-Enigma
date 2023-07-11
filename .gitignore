@@ -21,7 +21,8 @@ BotaniaVars.dat
 config/AppliedEnergistics2/VersionChecker.cfg
 config/splash.properties
 config/brandon3055/contributors.json
-config/worldedit/worldwdit.propertiesc
+config/worldedit/worldwdit.properties
+resources/witchery-1.7.10-0.24.1.jar
 usercache.json
 usernamecache.json
 temp.txt

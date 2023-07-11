@@ -1,0 +1,14 @@
+{
+	x: -3.5d,
+	y: -3.0d,
+	dependencies: [
+		"c4010d60"
+	],
+	tasks: [{
+		uid: "c9c07996",
+		type: "item",
+		items: [{
+			item: "mysticalagriculture:knightslime_seeds"
+		}]
+	}]
+}

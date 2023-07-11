@@ -11,3 +11,4 @@ translation key:			golden_apple
 					crt.tooltips.endoflame.restriction
 					crt.tooltips.chapter1_flowers.crafting
 				crt.chat.[category]	(.[component name])
+				jei.description.[item] (.[component name])

@@ -171,7 +171,7 @@ if(true){
         "P":<minecraft:planks>,"I":<minecraft:iron_ingot>,"C":<minecraft:chest>
     }));
     recipes.addShaped(<appliedenergistics2:material:40>,Mp.read("_S_;SDS;_S_;",{
-        "S":<minecraft:stick>,"D":<endio:item_material:20>
+        "S":<minecraft:stick>,"D":<enderio:item_material:20>
     }));
     Agg.addRecipe(gearSteel, [gearGold], 70000, 0xDDDD00, 0x888888,
         <tconstruct:wooden_hopper>,<immersiveengineering:sheetmetal:8>,<thermalfoundation:storage_alloy:2>,

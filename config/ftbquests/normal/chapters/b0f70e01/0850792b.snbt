@@ -1,0 +1,22 @@
+{
+	x: 1.0d,
+	y: -2.0d,
+	dependencies: [
+		"3b0144f8",
+		"0adce1ea"
+	],
+	tasks: [{
+		uid: "d3285517",
+		type: "item",
+		items: [{
+			item: "appliedenergistics2:material 1 9"
+		}]
+	},
+	{
+		uid: "3b920225",
+		type: "item",
+		items: [{
+			item: "astralsorcery:itemcraftingcomponent 1 1"
+		}]
+	}]
+}

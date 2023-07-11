@@ -14,8 +14,8 @@
 		}]
 	}],
 	rewards: [{
-		uid: "4f9bc864",
+		uid: "e59c990e",
 		type: "item",
-		item: "enderio:item_basic_capacitor"
+		item: "enderio:item_basic_capacitor 1 4"
 	}]
 }

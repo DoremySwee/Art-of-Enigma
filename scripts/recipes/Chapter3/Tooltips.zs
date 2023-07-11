@@ -11,6 +11,11 @@ function getManaInTablet(item as IItemStack)as string{
     }
     return "§b"~game.localize("description.crt.manatab.has")~"§b§o"~amount~"mana§r";
 }
+function getCrystalSeedProgress(item as IItemStack)as int{
+    if(item.hasTag && item.tag has "progress")
+        return item.tag.memberGet("progress").asInt()%600;
+    return 0;
+}
 function getItemsInCell(data as IData)as string[]{
     var ans as string[]=[]as string[];
     for i in 0 to 63{
@@ -84,7 +89,7 @@ events.onPlayerItemPickup(function(event as crafttweaker.event.PlayerItemPickupE
     function(item){return shortCellDisplay(item);}
 );
 <botania:manatablet>.addAdvancedTooltip(function(item){return getManaInTablet(item);});
-mods.botania.ManaInfusion.addInfusion(<thaumicwands:item_wand>,<thaumicwands:item_wand>,1);
-mods.jei.JEI.hideCategory("thermalexpansion.factorizer_combine");
-mods.jei.JEI.hideCategory("thermalexpansion.factorizer_split");
-<forge:bucketfilled>.withTag({FluidName: "bot_mana", Amount: 1000}).addTooltip(format.aqua(game.localize("description.crt.tooltip.liquid_mana_and_blues_lime")));
+
+<appliedenergistics2:crystal_seed:*>.addAdvancedTooltip(function(item){
+    return "§b§o"~getCrystalSeedProgress(item)~"/600§r";
+});

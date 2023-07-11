@@ -123,7 +123,7 @@ function getIntRGB(color as int)as int[]{
 }
 
 function createBotFX(data as IData){
-    var c as double[]= getDoubleRGB(data.memberGet("color").asInt());
+    var c as double[]= (data has "color")?(getDoubleRGB(data.memberGet("color").asInt())):(getDoubleRGB(data.memberGet("c").asInt()));
     var p as double[]= V.readFromData(data);
     var v as double[]= V.readFromData(data,"v");
     var r = data.memberGet("r");
@@ -150,7 +150,7 @@ function createFX(data as IData)as void{
             var t as int = DE_PARTICLE_TYPES[type]as int;
             var args as int[] = [];
             var alpha as double = (data has "alpha")?(data.memberGet("alpha").asDouble()):1.0;
-            var c as int[] = getIntRGB(data.memberGet("color").asInt());
+            var c as int[] = (data has "color")?(getIntRGB(data.memberGet("color").asInt())):(getIntRGB(data.memberGet("c").asInt()));
             if(t==0){
                 args=[c[0],c[1],c[2],(alpha*100)as int];
             }

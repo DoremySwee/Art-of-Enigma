@@ -174,3 +174,9 @@ jei.description.salis_mundus=由于技术原因，上段文字无法删除。实
 
 quests.ch3.oremult.title=矿物增产
 quests.ch3.oremult.des=可以用气血宝珠增产矿物
+
+tile.chlorophyteOre.name=叶绿矿
+jei.description.chlorophyteore.introduction=是的，这是叶绿矿。将它种植在地底深处，在特定条件下，它会把周围 (26格) 的苔石转换为叶绿矿。
+jei.description.chlorophyteore.liquid=叶绿是大地与植物的奇迹，需要水与岩浆的滋养。不过，如果在它周围水与岩浆在叶绿矿完全相反的两侧，便相互抵消相当于不存在了。
+jei.description.chlorophyteore.connection=多个叶绿矿连在一起可以长得更快。不过，如果一个叶绿矿完全相反的两侧都有其它叶绿矿，那么它也会因为太过拥挤不太生长。
+jei.description.chlorophyteore.light=叶绿不会在太亮的地方生长，但是也需要太阳光的斜射。

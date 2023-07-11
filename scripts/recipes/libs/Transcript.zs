@@ -16,8 +16,8 @@ function test(){
 //output>input, main product>side product(optional/chanced), item>liquid
 
 //these words work as method name, as long as the machine is for these usage:
-//alloy, grind, infusion
-//If one word is clear for the machine/altar, then we may not use full name for the recipe adding
+//alloy, grind, infusion, shaped, shapeless
+//If one word is clear for the machine/altar, then we prefer not to use full name for the recipe adding
 
 //How to use?
 //call the uncapitalized static variables, and then their methods.
@@ -305,7 +305,7 @@ zenClass EIO{
     function alloy(output as It, inputs as In[], energy as int = 10000, xp as float =0.0f){
         mods.enderio.AlloySmelter.addRecipe(output, inputs, energy, xp);
     }
-    function enchant(output as crafttweaker.enchantments.IEnchantmentDefinition, inputPerLevel as IIngredient, xpMultiplier as double=1.0){
+    function enchant(output as crafttweaker.enchantments.IEnchantmentDefinition, inputPerLevel as In, xpMultiplier as double=1.0){
         mods.enderio.Enchanter.addRecipe(output, inputPerLevel, inputPerLevel.amount, xpMultiplier);
     }
     function grind(outputs as WI[], input as In, energy as int = 2000, xp as float =0.0f,  bonusType as string = "CHANCE_ONLY"){
@@ -353,7 +353,7 @@ zenClass EIO{
     The ratio of input to output fluid is equal to inMult.*/
     //Note that here we combine inputs1 and their mults together as a Weighted IIngredient.
     //The chances are allowde to exceed 100%
-    function vat(output as IL, input as IL, fluidYield as float, inputs1WithMultipliers as WIn[], inputs2WithMultipliers as WIn[], enregy as int = 3000){
+    function vat(output as IL, input as IL, fluidYield as float, inputs1WithMultipliers as WIn[], inputs2WithMultipliers as WIn[], energy as int = 3000){
         var I1 = [] as In[];
         var M1 = [] as float[];
         for item in inputs1WithMultipliers{
@@ -373,18 +373,19 @@ static eio as EIO = EIO();
 zenClass BM{
     zenConstructor(){}
     function altar(output as It, input as It, amount as int, tier as int = 1, consumeRate as int = -1 as int, drainRate as int = -1 as int){
-        tier-=1;
-        if(consumeRate<0) consumeRate = 1 + V.sqrt(amount as double)/3.0;
-        if(drainRate<0) drainRate = 1 + 1.3*consumeRate;
-        mods.bloodmagic.BloodAltar.addRecipe(output, input, tier, amount, consumeRate, drainRate);
+        var cr = consumeRate;
+        var dr = drainRate;
+        if(cr<0) cr = 1 + V.sqrt(amount as double)/3.0;
+        if(dr<0) dr = 1 + 1.3*cr;
+        mods.bloodmagic.BloodAltar.addRecipe(output, input, tier - 1, amount, cr, dr);
     }
     function forge(output as It, inputs as It[], minSoul as double = 10.0, drainSoul as double = -1.0){
-        if(drainSoul<0) drainSoul = minSoul;
-        mods.bloodmagic.TartaricForge.addRecipe(output, inputs, minSoul, drainSoul);
+        var ds = drainSoul;
+        if(ds<0) ds = minSoul;
+        mods.bloodmagic.TartaricForge.addRecipe(output, inputs, minSoul, ds);
     }
     function table(output as It, inputs as It[], amount as int, time as int, tier as int = 1){
-        tier -= 1;
-        mods.bloodmagic.AlchemyTable.addRecipe(output, inputs, amount, time, tier);
+        mods.bloodmagic.AlchemyTable.addRecipe(output, inputs, amount, time, tier - 1);
     }
 }
 static bm as BM = BM();
@@ -420,21 +421,31 @@ zenClass TC{
     static id as string= "ArtOfEngima_Auto_Generated_ThaumCraft_Id_";
     static research as string= "FIRSTSTEPS";
     function getId()as string{
-        recipeNum[0] += 1;
-        return id~(recipeNum[0] - 1);
+        var ans = id~(recipeNum[0]);
+        print(ans);
+        recipeNum[0] = recipeNum[0] + 1;
+        return ans;
     }
-    function shaped(output as It, inputs as In[][], vis as int = 0, aspects as ASt[] = [] as ASt[], research as string = "FIRSTSTEPS"){
+    function shaped(output as It, inputs as In[][], vis as int=0){
+        var aspects as ASt[] = [];
         mods.thaumcraft.ArcaneWorkbench.registerShapedRecipe(getId(),research,vis,aspects,output,inputs);
     }
-    function shaped(output as It, inputs as In[][], vis as int = 0, aspects as int[] = [] as int[], research as string = "FIRSTSTEPS"){
+    function shaped(output as It, inputs as In[][], vis as int, aspects as ASt[], research as string = "FIRSTSTEPS"){
+        mods.thaumcraft.ArcaneWorkbench.registerShapedRecipe(getId(),research,vis,aspects,output,inputs);
+    }
+    function shaped(output as It, inputs as In[][], vis as int, aspects as int[], research as string = "FIRSTSTEPS"){
         mods.thaumcraft.ArcaneWorkbench.registerShapedRecipe(getId(),research,vis,
             scripts.recipes.libs.Aspects.aspect6(aspects),
             output,inputs);
     }
-    function shapeless(output as It, inputs as In[], vis as int = 0,aspects as ASt[] = [] as ASt[], research as string = "FIRSTSTEPS"){
+    function shapeless(output as It, inputs as In[], vis as int = 0){
+        var aspects as ASt[] = [];
         mods.thaumcraft.ArcaneWorkbench.registerShapelessRecipe(getId(),research,vis,aspects,output,inputs);
     }
-    function shapeless(output as It, inputs as In[], vis as int = 0,aspects as int[] = [] as int[], research as string = "FIRSTSTEPS"){
+    function shapeless(output as It, inputs as In[], vis as int, aspects as ASt[], research as string = "FIRSTSTEPS"){
+        mods.thaumcraft.ArcaneWorkbench.registerShapelessRecipe(getId(),research,vis,aspects,output,inputs);
+    }
+    function shapeless(output as It, inputs as In[], vis as int, aspects as int[], research as string = "FIRSTSTEPS"){
         mods.thaumcraft.ArcaneWorkbench.registerShapelessRecipe(getId(),research,vis,
             scripts.recipes.libs.Aspects.aspect6(aspects),
             output,inputs);

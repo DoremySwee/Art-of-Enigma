@@ -9,6 +9,7 @@
 		type: "item",
 		items: [{
 			item: "thaumcraft:arcane_workbench"
-		}]
+		}],
+		consume_items: false
 	}]
 }

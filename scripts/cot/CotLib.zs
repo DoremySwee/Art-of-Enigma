@@ -4,15 +4,16 @@ import mods.contenttweaker.VanillaFactory;
 import mods.contenttweaker.CreativeTab;
 import mods.contenttweaker.Fluid;
 import mods.contenttweaker.Color;
+import mods.contenttweaker.Block;
 import mods.contenttweaker.Item;
 import crafttweaker.data.IData;
-val lightStill="astralsorcery:blocks/fluid/starlight_still";
-val lightFlow="astralsorcery:blocks/fluid/starlight_flow";
-val moltStill="base:fluids/molten";
-val moltFlow="base:fluids/molten_flowing";
-val exu2Molt="extrautils2:molten_fluid_base";
-function createFluid(id as string, c as string, attributes as IData={}){
-    var fluid=VanillaFactory.createFluid(id,Color.fromHex(c));
+static lightStill as string="astralsorcery:blocks/fluid/starlight_still";
+static lightFlow as string="astralsorcery:blocks/fluid/starlight_flow";
+static moltStill as string="base:fluids/molten";
+static moltFlow as string="base:fluids/molten_flowing";
+static exu2Molt as string="extrautils2:molten_fluid_base";
+function createFluid(id as string, color as string, attributes as IData={}){
+    var fluid=VanillaFactory.createFluid(id,Color.fromHex(color));
     if(attributes has "density")fluid.density=attributes.density as int;
     if(attributes has "gaseous")fluid.gaseous=attributes.gaseous as bool;
     if(attributes has "luminosity")fluid.luminosity=attributes.luminosity as int;
@@ -25,7 +26,7 @@ function createFluid(id as string, c as string, attributes as IData={}){
     if(attributes has "flowingLocation")fluid.flowingLocation=attributes.flowingLocation as string;
     /*print("registeringFluid"~id);
     print(fluid.flowingLocation);
-    print(c)*/
+    print(color)*/
     fluid.register();
 }
 function editItem(item as Item, attributes as IData, creativeTab as CreativeTab)as Item{
@@ -57,4 +58,32 @@ function createItemFood(id as string,attributes as IData={},creativeTab as Creat
     if(attributes has "saturation")item.saturation=attributes.saturation as float;
     if(register)item.register();
     return item;
+}
+function createBlock(id as string, attributes as IData={}, creativeTab as CreativeTab=<creativetab:misc>, material as mods.contenttweaker.BlockMaterial = <blockmaterial:iron>, register as bool=true)as Block{
+    var b as Block = VanillaFactory.createBlock(id, material);
+    var a = {}as IData + attributes;
+    if(a has "beaconBase") b.beaconBase = a.beaconBase.asBool();
+    if(a has "entitySpawnable") b.entitySpawnable = a.entitySpawnable.asBool();
+    if(a has "fullBlock") b.fullBlock = a.fullBlock.asBool();
+    if(a has "gravity") b.gravity = a.gravity.asBool();
+    if(a has "passable") b.passable = a.passable.asBool();
+    if(a has "replaceable") b.replaceable = a.replaceable.asBool();
+    if(a has "translucent") b.translucent = a.translucent.asBool();
+    if(a has "witherProof") b.witherProof = a.witherProof.asBool();
+    if(a has "blockHardness") b.blockHardness = a.blockHardness.asFloat();
+    if(a has "blockResistance") b.blockResistance = a.blockResistance.asFloat();
+    if(a has "slipperiness") b.slipperiness = a.slipperiness.asFloat();
+    if(a has "enumBlockRenderType") b.enumBlockRenderType = a.enumBlockRenderType.asString();
+    if(a has "blockLayer") b.blockLayer = a.blockLayer.asString();
+    if(a has "toolClass") b.toolClass = a.toolClass.asString();
+    if(a has "lightOpacity") b.lightOpacity = a.lightOpacity.asInt();
+    if(a has "lightValue") b.lightValue = a.lightValue.asInt();
+    if(a has "toolLevel") b.toolLevel = a.toolLevel.asInt();
+    if(a has "resourceLocation")
+        b.textureLocation=mods.contenttweaker.ResourceLocation.create(a.resourceLocation.asString());
+    if(a has "textureLocation")
+        b.textureLocation=mods.contenttweaker.ResourceLocation.create(a.textureLocation.asString());
+    if(register)
+        b.register();
+    return b;
 }

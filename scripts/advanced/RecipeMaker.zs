@@ -7,7 +7,7 @@ import crafttweaker.data.IData;
 
 var wand=<minecraft:iron_axe>;
 
-if(scripts.config.dev){
+if(scripts.Config.dev){
     //Items in chest are printed as list and map.
     events.onPlayerInteractBlock(function(event as crafttweaker.event.PlayerInteractBlockEvent){
         if(event.player.world.remote)return;
@@ -58,12 +58,12 @@ if(scripts.config.dev){
                 }
                 var map = Mp.getMap(list);
                 //if(1.0 * (map.keys.length+0.7) / (list.length+1) > 0.8){
-                if(map.keys.length>30){
+                if(map.keys.length>65){
                     var logstring = "[\n";
                     for i in inputs{
                         if(logstring!="[\n")logstring+=",\n";
                         var t = "[";
-                        for j in inputs{
+                        for j in i{
                             if(t!="[")t+=", ";
                             if(isNull(j))t+="null";
                             else t+=j.commandString;

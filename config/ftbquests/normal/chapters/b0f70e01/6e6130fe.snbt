@@ -1,0 +1,19 @@
+{
+	x: -6.5d,
+	y: -3.0d,
+	dependencies: [
+		"5bcb5d84"
+	],
+	tasks: [{
+		uid: "fb7fdf66",
+		type: "item",
+		items: [{
+			ForgeCaps: {
+				"astralsorcery:cap_item_amulet_holder": {}
+			},
+			id: "mysticalagriculture:soulium_dagger"
+		}],
+		ignore_damage: true,
+		ignore_nbt: 1b
+	}]
+}

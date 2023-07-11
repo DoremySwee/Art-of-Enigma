@@ -17,5 +17,12 @@
 			}
 		}],
 		ignore_nbt: 1b
+	},
+	{
+		uid: "f836377f",
+		type: "item",
+		items: [{
+			item: "botania_tweaks:dire_crafty_crate"
+		}]
 	}]
 }

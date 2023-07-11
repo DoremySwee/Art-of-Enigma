@@ -1,0 +1,32 @@
+命名
+	文件夹命名：	全小写，无下划线	goldenapple
+	库文件：    	大驼峰		GoldenApple
+	变量、函数：	小驼峰		goldenApple
+	翻译键、物品id：	蛇形命名		golden_apple
+	翻译键：	语言文件暂未重置。
+		任务：	aoe.quests.chapter[num].["title"/"subtitile"]
+			aoe.quests.chapter[num].]questName].["title"/"subtitile"/"des"]
+			我们应该不会有叫"title"或者"subtitle"的任务，对吧
+		CoT：	它生成啥id我们就写啥
+		CrT：	Tooltips：	crt.tooltips.[category] (.[component name])
+				e.g.  crt.tooltips.endoflame.restriction
+			Chat:	crt.chat.[category] (.[component name])
+			JEI:	jei.description.[item] (.[component name])
+优先级
+	10亿：	Config.zs
+	2亿：	最基础库文件（Data、数学……）
+	1亿：	基础库文件（Transcript、Misc、……）
+	50000：	某个系统的lib
+	10000：	使用这些系统 （例：注册法杖合成表）
+	<3000：	不会被import的系统
+	0：	普通机制
+	合成表：	2000：	预留位置
+		1000：	批量添加合成表
+		500：	techBan（砍科技树，为后续重新接上科技树做准备）
+		0：	正常合成表
+	-100：	修复
+	<-200：	发布后修复
+
+工具
+	1. 如果你想要用已经存在的libs，可以看看各个代码使用例
+	2. 在Config.zs中设置"dev=true"，打开箱子时，箱子中的物品会被输出到crafttweaker.log中。拿铁斧子左键敲无尽工作台，也可以将无尽工作台里的材料输出到crafttweaker.log中。

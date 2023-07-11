@@ -1,5 +1,6 @@
 #loader crafttweaker reloadableevents
 #priority 1000000030
+import crafttweaker.liquid.ILiquidStack;
 import crafttweaker.item.IItemStack;
 import crafttweaker.world.IBlockPos;
 import crafttweaker.data.IData;
@@ -156,3 +157,21 @@ function getBlockPos(data as IData)as IBlockPos{
 $ expand IData $ asBlockPos()as IBlockPos{
     return getBlockPos(this);
 }
+
+function fromFluid(stack as ILiquidStack)as IData{
+    var d = IData.createEmptyMutableDataMap();
+    d.memberSet("FluidName",stack.name);
+    d.memberSet("Amount",stack.amount);
+    if(!isNull(stack.tag))d.memberSet("Tag",stack.tag);
+    return d;
+}
+/*
+function asFluid(data as IData)as ILiquidStack{
+    if(data has "id"){
+        var stack as IItemStack=itemUtils.getItem(data.id as string);
+        if(data has "Damage")stack=stack.definition.makeStack(data.Damage as int);
+        if(data has "tag")stack=stack.withTag(data.tag);
+        return stack;
+    }
+    return null;
+}*/

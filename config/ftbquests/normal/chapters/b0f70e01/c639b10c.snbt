@@ -1,0 +1,14 @@
+{
+	x: -3.5d,
+	y: -1.0d,
+	dependencies: [
+		"d76b31d3"
+	],
+	tasks: [{
+		uid: "23ea2b29",
+		type: "item",
+		items: [{
+			item: "tconstruct:slime_sapling"
+		}]
+	}]
+}

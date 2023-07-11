@@ -1,0 +1,14 @@
+{
+	x: -16.0d,
+	y: -4.0d,
+	dependencies: [
+		"be472f50"
+	],
+	tasks: [{
+		uid: "3b274b73",
+		type: "item",
+		items: [{
+			item: "botania_tweaks:dire_crafty_crate"
+		}]
+	}]
+}

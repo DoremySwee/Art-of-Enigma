@@ -5,6 +5,7 @@ import scripts.recipes.libs.Transcript as T;
 import crafttweaker.item.IItemDefinition;
 import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
+import crafttweaker.data.IData;
 function dup(item as IItemStack, recipe as bool = true){
     item.addTooltip(format.aqua(format.italic(game.localize("description.crt.tooltip.dup0"))));
     if(recipe){
@@ -50,8 +51,8 @@ function temporaryLore(ins as IIngredient, lore as string)as IIngredient{
         if(i.hasTag){
             tag=i.tag.deepUpdate(tag);
         }
-        if(isNull(result))result=i.withTag(tag,false);
-        else result=result|i.withTag(tag,false);
+        if(isNull(result))result=i.updateTag(tag,false);
+        else result=result|i.updateTag(tag,false);
     }
     result=result.only(function(item){
         return ins.matches(item);
@@ -59,18 +60,18 @@ function temporaryLore(ins as IIngredient, lore as string)as IIngredient{
     return result;
 }
 function reuse(ins as IIngredient)as IIngredient{
-    return TemporaryLore(ins,"§a§o"~game.localize("description.crt.reuse")~"§r").reuse();
+    return temporaryLore(ins,"§a§o"~game.localize("description.crt.reuse")~"§r").reuse();
 }
 function consume(ins as IIngredient)as IIngredient{
-    return TemporaryLore(ins,"§a§o"~game.localize("description.crt.consume")~"§r");
+    return temporaryLore(ins,"§a§o"~game.localize("description.crt.consume")~"§r");
 }
 function orb(level as int)as IIngredient{
     var orbs as IIngredient[]=[
-        <bloodmagic:blood_orb>.withTag({orb: "bloodmagic:weak"}),
-        <bloodmagic:blood_orb>.withTag({orb: "bloodmagic:apprentice"}),
-        <bloodmagic:blood_orb>.withTag({orb: "bloodmagic:magician"}),
-        <bloodmagic:blood_orb>.withTag({orb: "bloodmagic:master"}),
-        <bloodmagic:blood_orb>.withTag({orb: "bloodmagic:archmage"})
+        <bloodmagic:blood_orb>.withTag({"orb": "bloodmagic:weak"}),
+        <bloodmagic:blood_orb>.withTag({"orb": "bloodmagic:apprentice"}),
+        <bloodmagic:blood_orb>.withTag({"orb": "bloodmagic:magician"}),
+        <bloodmagic:blood_orb>.withTag({"orb": "bloodmagic:master"}),
+        <bloodmagic:blood_orb>.withTag({"orb": "bloodmagic:archmage"})
     ];
     var result as IIngredient=orbs[level- 1];
     for i in (level- 1) to 5{

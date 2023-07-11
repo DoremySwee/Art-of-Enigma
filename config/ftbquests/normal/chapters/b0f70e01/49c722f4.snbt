@@ -1,0 +1,14 @@
+{
+	x: -3.5d,
+	y: -9.0d,
+	dependencies: [
+		"b026c87f"
+	],
+	tasks: [{
+		uid: "ef4f796a",
+		type: "item",
+		items: [{
+			item: "contenttweaker:wand_cap_manasteel"
+		}]
+	}]
+}

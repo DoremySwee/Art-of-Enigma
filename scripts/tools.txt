@@ -1,0 +1,2 @@
+1. If you want to use the libs written, please check the examples.
+2. By setting "dev=true" in Config.zs, opening a chest makes the items printed in crafttweaker.log, and left-clicking an avaritia crafting table with an iron_axe can print the shaped contents to crafttweaker.log.

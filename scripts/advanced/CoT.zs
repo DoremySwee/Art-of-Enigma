@@ -21,7 +21,6 @@ val ResurrectionStone = VanillaFactory.createExpandBlock("resurrection_stone", <
     ResurrectionStone.tileEntity = ResurrectionStonetileEntity;
     ResurrectionStone.register();
 
-    
 CotLib.createItem("shard_aqua");
 CotLib.createItem("shard_ignis");
 CotLib.createItem("shard_aer");
@@ -29,19 +28,6 @@ CotLib.createItem("shard_terra");
 CotLib.createItem("shard_ordo");
 CotLib.createItem("shard_perditio");
 CotLib.createItem("shard_balanced");
-
-
-CotLib.createFluid("molten_essence","D099FF55",{
-    density:1,luminosity:15,
-    stillLocation:moltStill,
-    flowingLocation:moltFlow
-});
-CotLib.createFluid("bot_mana","BB9999FF",{
-    density:1,luminosity:15,
-    stillLocation:lightStill,
-    flowingLocation:lightFlow
-});
-
 
 var marshmallow as mods.contenttweaker.ItemFood=
 CotLib.createItemFood("dezil_marshmallow",{

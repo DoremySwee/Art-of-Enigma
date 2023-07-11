@@ -1,7 +1,7 @@
 #loader crafttweaker reloadableevents
 #priority 100000000
 import crafttweaker.item.IIngredient as I;
-static dev as bool= scripts.config.dev;
+static dev as bool= scripts.Config.dev;
 static whiteSpaces as string[]=["\n","\r"," ","\t"];
 function read1d(pattern as string, map as I[string])as I[]{
     var result as I[] = [] as I[];
@@ -40,16 +40,18 @@ static CHARS as string[]=[
 ]as string[];
 
 function getMap(ingredients as I[])as I[string]{
+    var list as string[] = [] as string[];
     var result as I[string] = {} as I[string];
     var n = 0;
     for i in ingredients{
         if(isNull(i))continue;
-        if(result.values has i)continue;
+        if(list has i.commandString)continue;
         if(n>=CHARS.length){
             if(dev)print("[ERROR] mapping.zs: too various inputs! cannot be coded as map!");
             return {}as I[string];
         }
         result[CHARS[n]]=i;
+        list+=i.commandString;
         n+=1;
     }
     return result;

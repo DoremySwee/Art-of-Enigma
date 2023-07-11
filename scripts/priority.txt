@@ -1,6 +1,6 @@
 0.1B	basic library
 1M	scripts
-50k	system library + mechanism
+50k	system library
 10k	do system registering : 	e.g. Adding wands recipes
 <3k	scripts that will not be imported
 

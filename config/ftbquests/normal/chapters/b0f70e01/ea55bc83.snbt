@@ -1,0 +1,21 @@
+{
+	x: -2.0d,
+	y: -6.0d,
+	dependencies: [
+		"b026c87f"
+	],
+	tasks: [{
+		uid: "56210536",
+		type: "item",
+		items: [{
+			item: "mysticalagriculture:glowstone_seeds"
+		}]
+	},
+	{
+		uid: "c7140cfd",
+		type: "item",
+		items: [{
+			item: "mysticalagriculture:redstone_seeds"
+		}]
+	}]
+}

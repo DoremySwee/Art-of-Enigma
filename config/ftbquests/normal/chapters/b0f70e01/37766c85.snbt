@@ -1,0 +1,14 @@
+{
+	x: -11.5d,
+	y: -1.0d,
+	dependencies: [
+		"c67fbe7a"
+	],
+	tasks: [{
+		uid: "54a51454",
+		type: "item",
+		items: [{
+			item: "contenttweaker:chlorophyteore"
+		}]
+	}]
+}

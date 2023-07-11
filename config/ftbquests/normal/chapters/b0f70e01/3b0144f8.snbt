@@ -1,0 +1,15 @@
+{
+	x: -0.5d,
+	y: -1.0d,
+	hide_dependency_lines: true,
+	dependencies: [
+		"37766c85"
+	],
+	tasks: [{
+		uid: "b9e4b490",
+		type: "item",
+		items: [{
+			item: "botania:pylon 1 1"
+		}]
+	}]
+}
