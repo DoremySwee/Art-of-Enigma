@@ -257,7 +257,7 @@ T.ava.shaped(<botania:alfheimportal>,Mp.read("
     "0":<botania:manaresource:7>,
     "1":<botania:elementiumpick>,
     "2":<botania:elementiumchest>.withTag({}),
-    "3":M.consume(M.orb(3));
+    "3":M.consume(M.orb(3)),
     "4":<botania:manatablet>.withTag({mana: 114514}),
     "5":<botania:elementiumaxe>,
     "6":<botania:storage:4>,
