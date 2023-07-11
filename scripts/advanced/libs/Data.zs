@@ -123,6 +123,7 @@ function fromStack(stack as IItemStack)as IData{
     var d = IData.createEmptyMutableDataMap();
     d.memberSet("id",stack.definition.id);
     d.memberSet("Damage",stack.damage);
+    d.memberSet("Count", stack.amount);
     if(stack.hasTag)d.memberSet("tag",stack.tag);
     return d;
 }
@@ -131,6 +132,7 @@ function getStack(data as IData)as IItemStack{
         var stack as IItemStack=itemUtils.getItem(data.id as string);
         if(data has "Damage")stack=stack.definition.makeStack(data.Damage as int);
         if(data has "tag")stack=stack.withTag(data.tag);
+        if(data has "Count") stack = stack.withAmount(data.Count as int);
         return stack;
     }
     return null;
