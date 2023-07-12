@@ -32,3 +32,8 @@ generated.zip
 backups/
 .vscode/
 Code/
+scripts/recipes/Chapter3/Recipes4.zs
+config/InvTweaks/InvTweaks.cfg
+config/jei/worldSettings.cfg
+config/worldedit/worldedit.properties
+config/splash.properties

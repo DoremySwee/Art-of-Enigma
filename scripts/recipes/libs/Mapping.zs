@@ -16,17 +16,26 @@ function read1d(pattern as string, map as I[string])as I[]{
     }
     return result;
 }
-function read(pattern as string, map as I[string])as I[][]{
+function read(pattern as string, map as I[string], deleteLastEmptyLines as bool = true)as I[][]{
     var result as I[][] = [] as I[][];
     for i in pattern.split(";"){
         result+=read1d(i,map);
     }
-    return result;
+    if(!deleteLastEmptyLines)return result;
+    var r2 as I[][] = [] as I[][];
+    var n = 0;
+    for i in 0 to result.length{
+        if(result[i].length>0)n=i+1;
+    }
+    for i in 0 to n{
+        r2+=result[i];
+    }
+    return r2;
 }
 function read3d(pattern as string, map as I[string])as I[][][]{
     var result as I[][][]=[] as I[][][];
     for i in pattern.split("."){
-        result+=read(i,map);
+        result+=read(i,map,false);
     }
     return result;
 }
