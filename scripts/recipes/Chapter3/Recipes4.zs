@@ -9,8 +9,86 @@ import crafttweaker.item.IItemStack;
 var seed3 = <mysticalagriculture:crafting:19>;
 recipes.remove(<extrautils2:decorativeglass:4>);
 T.te.compress(<calculator:smalltanzanite>,<calculator:largetanzanite>);
-T.cc.scientific(<calculator:shardtanzanite>,[<calculator:smalltanzanite>,<calculator:largetanzanite>]);
+T.cc.scientific(<calculator:shardtanzanite>,[<calculator:largetanzanite>,<calculator:smalltanzanite>]);
 T.tic.casting(<extrautils2:decorativeglass:4>,<extrautils2:decorativeglass:5>,<liquid:glowstone>*1000,3000,true,true);
+if(true){
+    T.ava.shaped(<mysticalagriculture:prudentium_apple>*12, Mp.read("
+        _________;
+        _________;
+        _@@#$#@@_;
+        _@%&$&%@_;
+        _*$*~*$*_;
+        _@%&$&%@_;
+        _@@#$#@@_;
+        _________;
+        _________;
+        ",{
+        "@":<minecraft:golden_apple>,
+        "#":null,
+        "$":null,
+        "%":null,
+        "&":null,
+        "*":null,
+        "~":null
+    }));
+    T.ava.shaped(<mysticalagriculture:prudentium_apple>*12, Mp.read("
+        _________;
+        _________;
+        _@@#$#@@_;
+        _@%&$&%@_;
+        _*$*~*$*_;
+        _@%&$&%@_;
+        _@@#$#@@_;
+        _________;
+        _________;
+        ",{
+        "@":<minecraft:golden_apple>,
+        "#":<mysticalagriculture:dye_essence>,
+        "$":<extrautils2:magicapple>,
+        "%":<mysticalagriculture:inferium_apple>,
+        "&":null,
+        "*":null,
+        "~":null
+    }));
+    T.ava.shaped(<mysticalagriculture:prudentium_apple>*12, Mp.read("
+        _________;
+        _________;
+        _@@#$#@@_;
+        _@%&$&%@_;
+        _*$*~*$*_;
+        _@%&$&%@_;
+        _@@#$#@@_;
+        _________;
+        _________;
+        ",{
+        "@":<minecraft:golden_apple>,
+        "#":<mysticalagriculture:dye_essence>,
+        "$":null,
+        "%":null,
+        "&":null,
+        "*":null,
+        "~":null
+    }));
+    T.ava.shaped(<mysticalagriculture:prudentium_apple>*12, Mp.read("
+        _________;
+        _________;
+        _@@#$#@@_;
+        _@%&$&%@_;
+        _*$*~*$*_;
+        _@%&$&%@_;
+        _@@#$#@@_;
+        _________;
+        _________;
+        ",{
+        "@":<minecraft:golden_apple>,
+        "#":<mysticalagriculture:dye_essence>,
+        "$":<extrautils2:magicapple>,
+        "%":<mysticalagriculture:inferium_apple>,
+        "&":<mysticalagriculture:fire_essence>,
+        "*":null,
+        "~":null
+    }));
+}
 T.ava.shaped(<mysticalagriculture:prudentium_apple>*12, Mp.read("
     _________;
     _________;
@@ -246,7 +324,7 @@ T.ava.shaped(<botania:alfheimportal>,Mp.read("
     "b":<botania:elementiumlegs>,
     "#":<botania:livingwood:5>,
     "c":<mysticalagriculture:manasteel_seeds>,
-    "$":<botania:elementiumhelm>.withTag({}),
+    "$":<botania:elementiumhelm>,
     "d":<thaumicwands:item_wand>.withTag({cap: "manasteel", rod: "livingwood"}),
     "%":<botania:pylon:1>,
     "e":<botania:elementiumshovel>,
@@ -256,7 +334,7 @@ T.ava.shaped(<botania:alfheimportal>,Mp.read("
     "*":<botania:manaresource:8>,
     "0":<botania:manaresource:7>,
     "1":<botania:elementiumpick>,
-    "2":<botania:elementiumchest>.withTag({}),
+    "2":<botania:elementiumchest>,
     "3":M.consume(M.orb(3)),
     "4":<botania:manatablet>.withTag({mana: 114514}),
     "5":<botania:elementiumaxe>,
