@@ -10,5 +10,12 @@
 		items: [{
 			item: "tconstruct:slime_sapling"
 		}]
+	},
+	{
+		uid: "972dde24",
+		type: "item",
+		items: [{
+			item: "tconstruct:slime_grass 1 10"
+		}]
 	}]
 }

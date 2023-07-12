@@ -27,7 +27,7 @@ static chlorophyteOreConvertion as P.FXGenerator = P.FXGenerator("chlorophyteOre
     })
     .regi();
 
-<cotBlock:chlorophyteOre>.onRandomTick = function(world as IWorld, pos, state){
+<cotBlock:chlorophyte_ore>.onRandomTick = function(world as IWorld, pos, state){
     var rand1 = /**world.random.nextDouble();/*/V.randDouble(0.0,1.0,world);/**/
     if(rand1*rand1*rand1*256>pos.y)return;
     var range = [-1 as int, 0, 1] as int[];
@@ -43,7 +43,7 @@ static chlorophyteOreConvertion as P.FXGenerator = P.FXGenerator("chlorophyteOre
                 var block2 = world.getBlock(M.shiftBlockPos(pos,-i,-j,-k));
                 var w = "water";
                 var l = "lava";
-                var o = "contenttweaker:chlorophyteore";
+                var o = "contenttweaker:chlorophyte_ore";
                 if(i*i+j*j+k*k==0)continue;
                 if(M.checkBlock(block1,w)&&!M.checkBlock(block2,l))
                     flag = flag | 1;
@@ -78,7 +78,7 @@ static chlorophyteOreConvertion as P.FXGenerator = P.FXGenerator("chlorophyteOre
         for i in poses{
             var pos2 = M.shiftBlockPos(list[n],i[0],i[1],i[2]);
             if(list has pos2)continue;
-            if(M.checkBlock(world.getBlock(pos2),"contenttweaker:chlorophyteore")){
+            if(M.checkBlock(world.getBlock(pos2),"contenttweaker:chlorophyte_ore")){
                 list+=pos2;
             }
         }
@@ -95,11 +95,11 @@ static chlorophyteOreConvertion as P.FXGenerator = P.FXGenerator("chlorophyteOre
     chlorophyteOreConvertion.create(world,V.asData(V.fromBlockPos(pos2)));
     world.catenation().sleep(13).run(function(w,c){
         if(!M.checkBlock(world.getBlock(pos2),"minecraft:mossy_cobblestone"))return;
-        w.setBlockState((<contenttweaker:chlorophyteore> as IBlock).definition.defaultState,pos2);
+        w.setBlockState((<contenttweaker:chlorophyte_ore> as IBlock).definition.defaultState,pos2);
     }).start();
 };
-var itemOre=<contenttweaker:chlorophyteore>;
-var preFix = "jei.description.chlorophyteore.";
+var itemOre=<contenttweaker:chlorophyte_ore>;
+var preFix = "jei.description.chlorophyte_ore.";
 var keys = [
     "introduction",
     "liquid",

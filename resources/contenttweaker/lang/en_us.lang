@@ -74,7 +74,7 @@ crt.smeltry_head.name=The Brain Of Smeltry
 crt.smeltry_head.tip=Used for Smeltry Crafting. Don't use it elsewhere.
 
 fluid.molten_essence=Molten Essence
-fluid.bot_mana=Mana
+fluid.bot_mana=Liquid Mana
 description.crt.tooltip.mithril.trymelting=Try melting it!
 description.crt.slime.spawnerworkingcondition1=Spawners containing Slimes can only work in slime chunks, y<40.
 description.crt.slime.spawnerworkingcondition2=While Powered Spawner (EIO) works everywhere.
@@ -175,8 +175,12 @@ jei.description.salis_mundus=Due to technical problems, the description above ca
 quests.ch3.oremult.title=Orb and ores
 quests.ch3.oremult.des=You can use the Blood Orb to increase the yield of metal ingots.
 
-tile.chlorophyteOre.name=Chlorophyte Ore
-jei.description.chlorophyteore.introduction=Yes, this is the Chlorophyte Ore. By putting it deep underground, under certain circumstances,  it converts neighboring (26 blocks) Mossy Cobblestones into the ore.
-jei.description.chlorophyteore.liquid=It's the wonder of the life and terra, and requires the irrigation of water and lava. However, these two liquids have their effect canceled out if they are on the opposite side of the ore.
-jei.description.chlorophyteore.connection=When the ores are connected together, they grow faster. However, if an ore has two neighboring ores on opposite sides, it stops growing since it's too crowded.
-jei.description.chlorophyteore.light=Chlorophyte Ores can't grow under intense light, but they still need to [[[see]]] the sun. 
+tile.chlorophyte_ore.name=Chlorophyte Ore
+jei.description.chlorophyte_ore.introduction=Yes, this is the Chlorophyte Ore. By putting it deep underground, under certain circumstances,  it converts neighboring (26 blocks) Mossy Cobblestones into the ore.
+jei.description.chlorophyte_ore.liquid=It's the wonder of the life and terra, and requires the irrigation of water and lava. However, these two liquids have their effect canceled out if they are on the opposite side of the ore.
+jei.description.chlorophyte_ore.connection=When the ores are connected together, they grow faster. However, if an ore has two neighboring ores on opposite sides, it stops growing since it's too crowded.
+jei.description.chlorophyte_ore.light=Chlorophyte Ores can't grow under intense light, but they still need to [[[see]]] the sun. 
+
+fluid.bot_elf=Elfium
+item.contenttweaker.chlorophyte_ingot.name=Chlorophyte Ingot
+fluid.molten_choloryphyte=Molten Chlorophyte

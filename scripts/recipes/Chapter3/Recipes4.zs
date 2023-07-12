@@ -11,84 +11,6 @@ recipes.remove(<extrautils2:decorativeglass:4>);
 T.te.compress(<calculator:smalltanzanite>,<calculator:largetanzanite>);
 T.cc.scientific(<calculator:shardtanzanite>,[<calculator:largetanzanite>,<calculator:smalltanzanite>]);
 T.tic.casting(<extrautils2:decorativeglass:4>,<extrautils2:decorativeglass:5>,<liquid:glowstone>*1000,3000,true,true);
-if(true){
-    T.ava.shaped(<mysticalagriculture:prudentium_apple>*12, Mp.read("
-        _________;
-        _________;
-        _@@#$#@@_;
-        _@%&$&%@_;
-        _*$*~*$*_;
-        _@%&$&%@_;
-        _@@#$#@@_;
-        _________;
-        _________;
-        ",{
-        "@":<minecraft:golden_apple>,
-        "#":null,
-        "$":null,
-        "%":null,
-        "&":null,
-        "*":null,
-        "~":null
-    }));
-    T.ava.shaped(<mysticalagriculture:prudentium_apple>*12, Mp.read("
-        _________;
-        _________;
-        _@@#$#@@_;
-        _@%&$&%@_;
-        _*$*~*$*_;
-        _@%&$&%@_;
-        _@@#$#@@_;
-        _________;
-        _________;
-        ",{
-        "@":<minecraft:golden_apple>,
-        "#":<mysticalagriculture:dye_essence>,
-        "$":<extrautils2:magicapple>,
-        "%":<mysticalagriculture:inferium_apple>,
-        "&":null,
-        "*":null,
-        "~":null
-    }));
-    T.ava.shaped(<mysticalagriculture:prudentium_apple>*12, Mp.read("
-        _________;
-        _________;
-        _@@#$#@@_;
-        _@%&$&%@_;
-        _*$*~*$*_;
-        _@%&$&%@_;
-        _@@#$#@@_;
-        _________;
-        _________;
-        ",{
-        "@":<minecraft:golden_apple>,
-        "#":<mysticalagriculture:dye_essence>,
-        "$":null,
-        "%":null,
-        "&":null,
-        "*":null,
-        "~":null
-    }));
-    T.ava.shaped(<mysticalagriculture:prudentium_apple>*12, Mp.read("
-        _________;
-        _________;
-        _@@#$#@@_;
-        _@%&$&%@_;
-        _*$*~*$*_;
-        _@%&$&%@_;
-        _@@#$#@@_;
-        _________;
-        _________;
-        ",{
-        "@":<minecraft:golden_apple>,
-        "#":<mysticalagriculture:dye_essence>,
-        "$":<extrautils2:magicapple>,
-        "%":<mysticalagriculture:inferium_apple>,
-        "&":<mysticalagriculture:fire_essence>,
-        "*":null,
-        "~":null
-    }));
-}
 T.ava.shaped(<mysticalagriculture:prudentium_apple>*12, Mp.read("
     _________;
     _________;
@@ -126,9 +48,11 @@ T.ie.press(<mysticalagriculture:crafting:22>,<mysticalagriculture:crafting:39>*5
     <tconstruct:cast>.withTag({PartType: "tconstruct:tool_rod"})
 );
 T.tic.casting(<mysticalagriculture:crafting:29>,<mysticalagriculture:crafting:28>,<liquid:soularium>*144,3000);
+/*
 recipes.addShaped(<minecraft:quartz>,Mp.read("AAA;ABA;AAA;",{
     "A":<mysticalagriculture:nether_essence>,"B":<appliedenergistics2:material>
-}));
+}));*/
+T.tic.casting(<botania:quartz:5>,<botania:quartz:1>,<liquid:molten_chloroyphyte>*144,300);
 //orb3, though it requires some of the tier 3 seeds
 Agg.addRecipe(<bloodmagic:blood_orb>.withTag({orb: "bloodmagic:magician"}),Mp.read("@#$%&*~", {
         "@":<bloodmagic:blood_orb>.withTag({orb: "bloodmagic:apprentice"})*3,
@@ -286,17 +210,60 @@ T.ava.shaped(<mysticalagriculture:glowstone_seeds>*3, Mp.read("
     "*":<extrautils2:decorativeglass:4>,
     "~":<thaumcraft:alumentum>
 }));
-//TODO: Knight Slime
-//TODO: Liquid Elf
+//Knight Slime
+T.eio.vat(<liquid:blueslime>, <liquid:bot_mana>, 1.0f,[
+        <tconstruct:large_plate>.withTag({Material: "blueslime"}) % 20,
+        <tconstruct:pan_head>.withTag({Material: "blueslime"}) % 7.5,
+        <tconstruct:tough_binding>.withTag({Material: "blueslime"}) % 7.5,
+        <tconstruct:materials:10> % 2
+    ],[
+        <mysticalagriculture:slime_essence> %20,
+        <mysticalagriculture:knightslime_essence> %30,
+        <mysticalagriculture:slime_seeds> %200,
+        <mysticalagriculture:knightslime_seeds> %1000
+    ]);
+recipes.remove(<tconstruct:soil:5>);
+T.tic.casting(<tconstruct:slime_sapling>,<minecraft:sapling>,<liquid:blueslime>*144,900);
+T.ie.mix(<liquid:purpleslime>*250,[<tconstruct:edible:4>],<liquid:blueslime>*250);
+T.tic.casting(<tconstruct:ingots:3>,<mysticalagriculture:crafting:32>,<liquid:purpleslime>*250,900);
+T.ava.shaped(<mysticalagriculture:knightslime_seeds>*2,Mp.read("
+    @___#____;
+    _@@#_____;
+    _@$#_%&__;
+    _*~@#1#__;
+    233454332;
+    __#1#@~*_;
+    __&%_#$@_;
+    _____#@@_;
+    ____#___@;
+    ",{
+    "@":<contenttweaker:shard_balanced>,
+    "1":<mysticalagriculture:crafting:19>,
+    "2":<tconstruct:bow_limb>.withTag({Material: "knightslime"}),
+    "#":<thaumcraft:salis_mundus>,
+    "3":<tconstruct:bow_string>.withTag({Material: "slimevine_blue"}),
+    "$":<appliedenergistics2:material:7>,
+    "4":<tconstruct:large_sword_blade>.withTag({Material: "knightslime"}),
+    "%":<tconstruct:arrow_head>.withTag({Material: "knightslime"}),
+    "5":<tconstruct:rapier>.withTag({"TinkerData": {"Materials": ["knightslime", "knightslime", "knightslime"]}}),
+    "&":<tconstruct:shuriken>.withTag({"TinkerData": {"Materials": ["knightslime", "knightslime", "knightslime", "knightslime"]}}),
+    "*":<tconstruct:broad_axe_head>.withTag({Material: "knightslime"}),
+    "~":<tconstruct:scythe_head>.withTag({Material: "knightslime"})
+}));
+//Liquid Elf
+T.ie.mix(<liquid:bot_elf>*100,[
+    <thaumcraft:salis_mundus>, <mysticalagriculture:knightslime_essence>,
+    <thaumcraft:alumentum>, <extrautils2:ingredients:3>
+],<liquid:bot_mana>*1000);
 //Elf portal
 //Cholorophyte
-T.eio.vat(<liquid:molten_choloryphyte>, <liquid:emerald>, 1.0f/9, [<mysticalagriculture:nature_seeds>%160],[<contenttweaker:shard_terra>%9]);
-T.tic.casting(<contenttweaker:chlorophyteore>,<thermalfoundation:ore:6>,<liquid:molten_choloryphyte>*144,900,true,true);
-T.tic.melting(<liquid:molten_choloryphyte>*16,<contenttweaker:chlorophyteore>);
-T.tic.casting(<botania:pylon:1>,<botania:pylon>,<liquid:molten_choloryphyte>*1440,900,true,true);
-T.tic.casting(<contenttweaker:cholorophyte_ingot>,<tconstruct:cast_custom>,<liquid:molten_choloryphyte>*144,80,false);
-T.tic.melting(<liquid:molten_choloryphyte>*144,<contenttweaker:cholorophyte_ingot>);
-T.tic.casting(<botania:livingwood:5>,<botania:livingwood>,<liquid:molten_choloryphyte>*144,900,true,true);
+T.eio.vat(<liquid:molten_chloroyphyte>, <liquid:emerald>, 1.0f/9, [<mysticalagriculture:nature_seeds>%160],[<contenttweaker:shard_terra>%9]);
+T.tic.casting(<contenttweaker:chlorophyte_ore>,<thermalfoundation:ore:6>,<liquid:molten_chloroyphyte>*144,900,true,true);
+T.tic.melting(<liquid:molten_chloroyphyte>*16,<contenttweaker:chlorophyte_ore>);
+T.tic.casting(<botania:pylon:1>,<botania:pylon>,<liquid:molten_chloroyphyte>*1440,900,true,true);
+T.tic.casting(<contenttweaker:chlorophyte_ingot>,<tconstruct:cast_custom>,<liquid:molten_chloroyphyte>*144,80,false);
+T.tic.melting(<liquid:molten_chloroyphyte>*144,<contenttweaker:chlorophyte_ingot>);
+T.tic.casting(<botania:livingwood:5>,<botania:livingwood>,<liquid:molten_chloroyphyte>*144,900,true,true);
 
 T.tic.casting(<botania:manaresource:7>,<botania:manaresource>,<liquid:bot_elf>*1440,900);
 T.tic.casting(<botania:manaresource:8>,<botania:manaresource:23>,<liquid:bot_elf>*1440,900);
@@ -344,6 +311,22 @@ T.ava.shaped(<botania:alfheimportal>,Mp.read("
     "9":<appliedenergistics2:controller>,
     "~":<botania:manatablet>.withTag({mana: 130000})
 }));
+//Trading basic
+var outputs = [<botania:dreamwood>,<botania:manaresource:7>,<botania:manaresource:8>,<botania:manaresource:9>,<botania:storage:2>,<botania:storage:4>,<botania:quartz:5>,<botania:elfglass>,<botania_tweaks:dire_crafty_crate>]as IItemStack[];
+for i in outputs{
+    mods.botania.ElvenTrade.removeRecipe(i);
+}
+T.bot.trade([<botania:dreamwood>],[<botania:livingwood>]);
+T.bot.trade([<botania:manaresource>*2],[<botania:manaresource:7>]);
+T.bot.trade([<botania:manaresource:1>],[<botania:manaresource:8>]);
+T.bot.trade([<botania:manaresource:2>],[<botania:manaresource:9>]);
+T.bot.trade([<botania:quartz:5>],[<minecraft:quartz>]);
+//TODO: change some casting into TE Fluid transport / embers press
+//Wither
+T.embers.stamp(<thermalexpansion:augment:369>,<liquid:bot_elf>*250,[
+    <tconstruct:materials:14>,<thermalfoundation:upgrade>
+]);
+T.tic.casting(<minecraft:skull:1>,<minecraft:skull>,<liquid:potion>.withTag({Potion:"cofhcore:wither4"})*250,900);
 /*
     史莱姆骑士：
         离魂匕首 -> 史莱姆灵魂碎片 -> 史莱姆精华
