@@ -13,40 +13,22 @@ events.onPlayerInteractBlock(function(event as crafttweaker.event.PlayerInteract
     val player = event.player;
     val world = player.world;
     val pos = event.position;
+    val offHandItem = player.getItemInSlot(IEntityEquipmentSlot.offhand());
     if (world.remote) return;
     if (
         <thaumicwands:item_wand>.matches(event.item) && 
-        (<appliedenergistics2:material:52> * 10).matches(player.getItemInSlot(IEntityEquipmentSlot.offhand())) &&
+        <appliedenergistics2:material:52>.matches(offHandItem) &&
         <blockstate:avaritia:extreme_crafting_table>.matches(event.blockState)
     ) {
         event.cancel();
         var data as IData = event.block.data;
-        var patterns as [[IItemStack]] = [] as [[IItemStack]];
+        var inputs as [IItemStack] = [] as [IItemStack];
         var result as IData = data.memberGet("Result");
         if (isNull(result)) return;
-        player.getItemInSlot(IEntityEquipmentSlot.offhand()).mutable().shrink(10);
-        for x in 0 .. 9 {
-            var line as [IItemStack] = [] as [IItemStack];
-            for y in 0 .. 9 {
-                var itemInSlotData as IData = data.memberGet("Craft" ~ (x * 9 + y));
-                var itemInSlot as IItemStack = isNull(itemInSlotData) ? <botania:manaresource:11> : itemInSlotData.asStack().withAmount(1);
-                line += itemInSlot;
-            }
-            patterns += line;
-        }
-        var qualifiedPatterns as [[IItemStack]] = [] as [[IItemStack]];
-        for line in patterns {
-            var lastElement as IMutableItemStack = null;
-            var qualifiedLine as [IItemStack] = [] as [IItemStack];
-            for element in line {
-                if (element.matches(lastElement)) {
-                    lastElement.grow(1);
-                } else {
-                    lastElement = element.mutable();
-                    qualifiedLine += lastElement;
-                }
-            }
-            qualifiedPatterns += qualifiedLine;
+        for i in 0 .. 81 {
+            var itemInSlotData as IData = data.memberGet("Craft" ~ i);
+            var itemInSlot as IItemStack = isNull(itemInSlotData) ? <botania:manaresource:11> : itemInSlotData.asStack().withAmount(1);
+            inputs += itemInSlot;
         }
         var mark as IItemStack = <minecraft:paper>;
         var generateMark as bool = false;
@@ -56,9 +38,7 @@ events.onPlayerInteractBlock(function(event as crafttweaker.event.PlayerInteract
             val upStacks = upTile.data.InventoryStacks;
             if (upStacks.length == 1) {
                 mark = upStacks[0].asStack();
-                if (mark.amount >= 9) {
-                    generateMark = true;
-                }
+                generateMark = true;
             }
         }
         var markCustomName as string = "";
@@ -70,37 +50,60 @@ events.onPlayerInteractBlock(function(event as crafttweaker.event.PlayerInteract
                 markCustomName ~= alphabet[random.nextInt(26)];
             }
         }
-        var totalPattern as IData = [] as IData;
-        for i, pattern in qualifiedPatterns {
-            var patternData = IData.createEmptyMutableDataMap();
-            var patternInputData as IData = [] as IData;
-            for item in pattern {
-                patternInputData = patternInputData.update([D.fromStack(item)]);
+        var qualifiedInputs as [IItemStack] = [] as [IItemStack];
+        var lastElement as IMutableItemStack = null;
+        for element in inputs {
+            if (element.matches(lastElement)) {
+                lastElement.grow(1);
+            } else {
+                lastElement = element.mutable();
+                qualifiedInputs += lastElement;
             }
-            patternData.memberSet("in", patternInputData);
-            patternData.memberSet("crafting", 0 as byte);
-            patternData.memberSet("substitute", 0 as byte);
-            var markData as IData = [D.fromStack(mark.withAmount(1).withDisplayName(markCustomName ~ (i + 1)))] as IData;
-            patternData.memberSet("out", markData as IData);
-            totalPattern = totalPattern.deepUpdate(markData, 1);
-            player.give(<appliedenergistics2:encoded_pattern>.withTag(patternData));
         }
-        var totalPatternData = IData.createEmptyMutableDataMap();
-        totalPatternData.memberSet("in", totalPattern);
-        totalPatternData.memberSet("crafting", 0 as byte);
-        totalPatternData.memberSet("substitute", 0 as byte);
-        totalPatternData.memberSet("out", [result] as IData);
-        player.give(<appliedenergistics2:encoded_pattern>.withTag(totalPatternData));
-        if (generateMark) {
-            if (mark.amount == 9) {
+        var patterns as [[IItemStack]] = [] as [[IItemStack]];
+        var patternOutputs as [IItemStack] = [] as [IItemStack];
+        var currentPattern as [IItemStack] = [] as [IItemStack];
+        for i, element in qualifiedInputs {
+            val isLast as bool = (i == (qualifiedInputs.length - 1));
+            currentPattern += element;
+            if (currentPattern.length == 9 || isLast){
+                patterns += currentPattern;
+                val output as IItemStack = isLast ? result.asStack() : mark.withAmount(1).withDisplayName(markCustomName ~ (patterns.length));
+                patternOutputs += output;
+                currentPattern = [output] as [IItemStack];
+            }
+        }
+        val patternCount as int = patterns.length;
+        val markCount as int = patternCount - 1;
+        if (offHandItem.amount < patternCount) return;
+        offHandItem.mutable().shrink(patternCount);
+        for i, pattern in patterns {
+            player.give(encodePattern(pattern, patternOutputs[i]));
+        }
+        if (generateMark && mark.amount >= markCount && markCount != 0) {
+            if (mark.amount == markCount) {
                 world.setBlockState(<blockstate:minecraft:air>, upPos);
             } else {
-                world.setBlockState(world.getBlockState(upPos), {InventoryStacks: [D.fromStack(mark.withAmount(mark.amount - 9))]}, upPos);
+                world.setBlockState(world.getBlockState(upPos), {InventoryStacks: [D.fromStack(mark.withAmount(mark.amount - markCount))]}, upPos);
             }
-            for i in 0 .. 9 {
+            for i in 0 .. markCount {
                 player.give(mark.withAmount(1).withDisplayName(markCustomName ~ (i + 1)));
             }
         }
     }
 });
+
+function encodePattern(ins as [IItemStack], out as IItemStack) as IItemStack {
+    var patternData = IData.createEmptyMutableDataMap();
+    var patternInputData as IData = [] as IData;
+    for item in ins {
+        patternInputData = patternInputData.update([D.fromStack(item)]);
+    }
+    patternData.memberSet("in", patternInputData);
+    patternData.memberSet("crafting", 0 as byte);
+    patternData.memberSet("substitute", 0 as byte);
+    var markData as IData = [D.fromStack(out)] as IData;
+    patternData.memberSet("out", markData as IData);
+    return <appliedenergistics2:encoded_pattern>.withTag(patternData);
+}
 
