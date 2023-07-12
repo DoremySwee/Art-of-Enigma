@@ -9,6 +9,22 @@ import scripts.advanced.libs.Data as D;
 
 static alphabet as string = "abcdefghijklmnopqrstuvwxyz";
 
+static wand as IItemStack = <thaumicwands:item_wand>;
+static pattern as IItemStack = <appliedenergistics2:material:52>;
+static table as IItemStack = <avaritia:extreme_crafting_table>;
+
+static noResult as string = game.localize("crt.chat.auto_pattern.no_result");
+static noMark as string = game.localize("crt.chat.auto_pattern.no_mark");
+static insufficientMark as string = game.localize("crt.chat.auto_pattern.insufficient_mark");
+static insufficientPattern as string = game.localize("crt.chat.auto_pattern.insufficient_pattern");
+
+mods.jei.JEI.addDescription([wand,pattern,table],[
+    game.localize("jei.description.auto_pattern.intro"),
+    game.localize("jei.description.auto_pattern.mark"),
+    game.localize("jei.description.auto_pattern.structure1")~wand.displayName~game.localize("jei.description.auto_pattern.structure2"),
+    game.localize("jei.description.auto_pattern.output")
+]);
+
 events.onPlayerInteractBlock(function(event as crafttweaker.event.PlayerInteractBlockEvent){
     val player = event.player;
     val world = player.world;
@@ -16,15 +32,18 @@ events.onPlayerInteractBlock(function(event as crafttweaker.event.PlayerInteract
     val offHandItem = player.getItemInSlot(IEntityEquipmentSlot.offhand());
     if (world.remote) return;
     if (
-        <thaumicwands:item_wand>.matches(event.item) && 
-        <appliedenergistics2:material:52>.matches(offHandItem) &&
+        wand.matches(event.item) && 
+        pattern.matches(offHandItem) &&
         <blockstate:avaritia:extreme_crafting_table>.matches(event.blockState)
     ) {
         event.cancel();
         var data as IData = event.block.data;
         var inputs as [IItemStack] = [] as [IItemStack];
         var result as IData = data.memberGet("Result");
-        if (isNull(result)) return;
+        if (isNull(result)){
+            player.sendChat(noResult);
+            result = D.fromStack(pattern);
+        }
         for i in 0 .. 81 {
             var itemInSlotData as IData = data.memberGet("Craft" ~ i);
             var itemInSlot as IItemStack = isNull(itemInSlotData) ? <botania:manaresource:11> : itemInSlotData.asStack().withAmount(1);
@@ -36,7 +55,7 @@ events.onPlayerInteractBlock(function(event as crafttweaker.event.PlayerInteract
         val upTile = world.getBlock(upPos);
         if (upTile.definition.id == "draconicevolution:placed_item") {
             val upStacks = upTile.data.InventoryStacks;
-            if (upStacks.length == 1) {
+            if (upStacks.length > 0) {
                 mark = upStacks[0].asStack();
                 generateMark = true;
             }
@@ -45,10 +64,7 @@ events.onPlayerInteractBlock(function(event as crafttweaker.event.PlayerInteract
         if (mark.hasDisplayName) {
             markCustomName = mark.displayName;
         } else {
-            val random = world.random;
-            for i in 0 .. 5 {
-                markCustomName ~= alphabet[random.nextInt(26)];
-            }
+            markCustomName = result.asStack().displayName;
         }
         var qualifiedInputs as [IItemStack] = [] as [IItemStack];
         var lastElement as IMutableItemStack = null;
@@ -75,7 +91,10 @@ events.onPlayerInteractBlock(function(event as crafttweaker.event.PlayerInteract
         }
         val patternCount as int = patterns.length;
         val markCount as int = patternCount - 1;
-        if (offHandItem.amount < patternCount) return;
+        if (offHandItem.amount < patternCount){
+            player.sendChat(insufficientPattern);
+            return;
+        }
         offHandItem.mutable().shrink(patternCount);
         for i, pattern in patterns {
             player.give(encodePattern(pattern, patternOutputs[i]));
@@ -89,6 +108,16 @@ events.onPlayerInteractBlock(function(event as crafttweaker.event.PlayerInteract
             for i in 0 .. markCount {
                 player.give(mark.withAmount(1).withDisplayName(markCustomName ~ (i + 1)));
             }
+        }
+        else if(markCount==0){
+        }
+        else if(!generateMark){
+            player.sendChat(noMark);
+            return;
+        }
+        else if(mark.amount < markCount){
+            player.sendChat(insufficientMark);
+            return;
         }
     }
 });
