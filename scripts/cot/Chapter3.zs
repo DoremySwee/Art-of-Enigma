@@ -12,11 +12,16 @@ CotLib.createFluid("bot_mana","BB9999FF",{
     flowingLocation:CotLib.lightFlow
 });
 CotLib.createBlock("chlorophyte_ore",{"lightValue":5});
-CotLib.createItem("chlorophyte_ingot");
+CotLib.createItem("chlorophyte_ingot");/*
 CotLib.createFluid("molten_chlorophyte","E077FF77",{
     density:1000,luminosity:15,
-    stillLocation:CotLib.moltStill,
-    flowingLocation:CotLib.moltFlow
+    stillLocation:CotLib.potionStill,
+    flowingLocation:CotLib.potionFlow
+});*/
+CotLib.createFluid("molten_chlorophyte","E0FFFFFF",{
+    density:1000,luminosity:15,
+    stillLocation:"contenttweaker:fluids/chlorohpyte_still",
+    flowingLocation:"contenttweaker:fluids/chlorohpyte_flow"
 });
 CotLib.createFluid("bot_elf","77FF99FF",{
     density:1,luminosity:15,
