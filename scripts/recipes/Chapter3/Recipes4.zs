@@ -316,11 +316,11 @@ var outputs = [<botania:dreamwood>,<botania:manaresource:7>,<botania:manaresourc
 for i in outputs{
     mods.botania.ElvenTrade.removeRecipe(i);
 }
-T.bot.trade([<botania:dreamwood>],[<botania:livingwood>]);
+T.bot.trade([<botania:livingwood>],[<botania:dreamwood>]);
 T.bot.trade([<botania:manaresource>*2],[<botania:manaresource:7>]);
 T.bot.trade([<botania:manaresource:1>],[<botania:manaresource:8>]);
 T.bot.trade([<botania:manaresource:2>],[<botania:manaresource:9>]);
-T.bot.trade([<botania:quartz:5>],[<minecraft:quartz>]);
+T.bot.trade([<minecraft:quartz>],[<botania:quartz:5>]);
 //TODO: change some casting into TE Fluid transport / embers press
 //Wither
 T.embers.stamp(<thermalexpansion:augment:369>,<liquid:bot_elf>*250,[
