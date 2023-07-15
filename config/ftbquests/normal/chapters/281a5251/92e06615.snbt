@@ -1,6 +1,9 @@
 {
 	x: -9.0d,
 	y: -9.0d,
+	text: [
+		"{quests.ch2.coal.des}"
+	],
 	hide_dependency_lines: true,
 	dependencies: [
 		"c5aea2e5"

@@ -61,17 +61,18 @@ description.crt.tooltip.dupMana= Can be duplicated through ManaInfusion.
 description.crt.tooltip.twigwand= Check its last recipe.
 
 info.crt.endoFlameRes.exceed=number of endoflame has exceeded maximum(8) in this chunk.
+crt.smeltry_head.name=The Brain Of Smeltry
+crt.smeltry_head.tip=Used for Smeltry Crafting. Don't use it elsewhere.
 
 quests.ch2.portalCancel.title= About Nether Portal
 quests.ch2.portalCancel.des= The portal is banned.
+quests.ch2.coal.des=Coal blocks can be obtained in agglomeration.
 quests.ch2.cacoon.des=There are recipes for pumkins, you don't need to plant them. Seeds can be obtained from grass.
 quests.ch2.netherrock.des=Use the AE2 Inscriber.
 quests.ch2.glowstoneDust.title= Glow stone Production
 quests.ch2.glowstoneDust.des= You can turn this item back into glow stone.
 
 description.crt.tooltip.haste=Eat for Haste II
-crt.smeltry_head.name=The Brain Of Smeltry
-crt.smeltry_head.tip=Used for Smeltry Crafting. Don't use it elsewhere.
 
 fluid.molten_essence=Molten Essence
 fluid.bot_mana=Liquid Mana

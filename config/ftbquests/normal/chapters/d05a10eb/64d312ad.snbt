@@ -2,7 +2,8 @@
 	x: 5.5d,
 	y: -3.5d,
 	text: [
-		"{quests.ch1.sparkCheck.des}"
+		"{quests.ch1.sparkCheck.des}",
+		"{quests.ch1.pureDaisy.craft2}"
 	],
 	dependencies: [
 		"3635e1e2"

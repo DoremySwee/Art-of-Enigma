@@ -66,6 +66,7 @@ crt.smeltry_head.tip=用于制作冶炼炉控制器。别把它用在其他地�
 
 quests.ch2.portalCancel.title= 关于下界传送门
 quests.ch2.portalCancel.des= 下界传送门无法正常建造。
+quests.ch2.coal.des= 煤炭块可以在凝聚合成中获取。
 quests.ch2.cacoon.des=南瓜可合成，你无需种植。
 quests.ch2.netherrock.des=用AE2压印器以复制。
 quests.ch2.glowstoneDust.title= 萤石生产

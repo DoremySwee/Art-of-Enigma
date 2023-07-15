@@ -5,10 +5,10 @@
 		"c67fbe7a"
 	],
 	tasks: [{
-		uid: "54a51454",
+		uid: "7015ea09",
 		type: "item",
 		items: [{
-			item: "contenttweaker:chlorophyteore"
+			item: "contenttweaker:chlorophyte_ore"
 		}]
 	}]
 }

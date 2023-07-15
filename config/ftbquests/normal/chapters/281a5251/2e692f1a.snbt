@@ -2,7 +2,8 @@
 	x: -9.0d,
 	y: -10.0d,
 	text: [
-		"{quests.ch2.portalCancel.des}"
+		"{quests.ch2.portalCancel.des}",
+		"{quests.ch2.coal.des}"
 	],
 	hide_dependency_lines: true,
 	dependencies: [
