@@ -183,7 +183,7 @@ jei.description.chlorophyte_ore.light=Chlorophyte Ores can't grow under intense 
 
 fluid.bot_elf=Elfium
 item.contenttweaker.chlorophyte_ingot.name=Chlorophyte Ingot
-fluid.molten_choloryphyte=Molten Chlorophyte
+fluid.molten_chlorophyte=Molten Chlorophyte
 
 crt.chat.auto_pattern.no_result=[Auto Pattern Generation] [ERROR] The recipe has no result! Empty Pattern will be automatically encoded as the final product, remember to rewrite it!
 crt.chat.auto_pattern.no_mark=[Auto Pattern Generation] [ERROR] Sufficient marking item must be placed (@Draconic Evolution) on the crafting table!

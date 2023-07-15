@@ -183,7 +183,7 @@ jei.description.chlorophyte_ore.light=叶绿不会在太亮的地方生长，但
 
 fluid.bot_elf=精灵精华
 item.contenttweaker.chlorophyte_ingot.name=叶绿锭
-fluid.molten_choloryphyte=熔融叶绿
+fluid.molten_chlorophyte=熔融叶绿
 
 crt.chat.auto_pattern.no_result=【样板自动生成器】 [ERROR] 该合成表没有成品！将尝试以【空白样板】作为最终成品，记得手动修改！
 crt.chat.auto_pattern.no_mark=【样板自动生成器】 [ERROR] 你需要在合成台上方摆放足量标记物（龙之研究）！
