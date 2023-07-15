@@ -49,12 +49,12 @@ function tanfR(x as double)as double{
 function sin(x as double)as double{return sinf(x);}
 function cos(x as double)as double{return cosf(x);}
 function tan(x as double)as double{return tanf(x);}
-function cot(x as double)as double{return (x%180==90)?0:(1/tanf(x));}
-function sec(x as double)as double{return 1/cosf(x);}
-function cosec(x as double)as double{return 1/sinf(x);}
-function asin(x as double)as double{return Math.asin(x)/PIE*180;}
+function cot(x as double)as double{return (cosf(x)==0)?0.0:(1.0/tanf(x));}
+function sec(x as double)as double{return 1.0/cosf(x);}
+function cosec(x as double)as double{return 1.0/sinf(x);}
+function asin(x as double)as double{return Math.asin(x)/PIE*180.0;}
 function acos(x as double)as double{return 90.0-asin(x);}
-function atan(x as double)as double{return Math.atan(x)/PIE*180;}
+function atan(x as double)as double{return Math.atan(x)/PIE*180.0;}
 function atan2(y as double, x as double)as double{
     var t = atan(y/x);
     return (x<0) ? (t+180) :t;
@@ -63,9 +63,9 @@ function atan2(y as double, x as double)as double{
 function sinR(x as double)as double{return sinfR(x);}
 function cosR(x as double)as double{return cosfR(x);}
 function tanR(x as double)as double{return tanfR(x);}
-function cotR(x as double)as double{return (x%180==90)?0:(1/tanfR(x));}
-function secR(x as double)as double{return 1/cosfR(x);}
-function cosecR(x as double)as double{return 1/sinfR(x);}
+function cotR(x as double)as double{return (cosfR(x)==0)?0.0:(1.0/tanfR(x));}
+function secR(x as double)as double{return 1.0/cosfR(x);}
+function cosecR(x as double)as double{return 1.0/sinfR(x);}
 function asinR(x as double)as double{return Math.asin(x);}
 function acosR(x as double)as double{return PIE-asinR(x);}
 function atanR(x as double)as double{return Math.atan(x);}
