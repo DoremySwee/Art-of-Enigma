@@ -52,7 +52,7 @@ T.tic.casting(<mysticalagriculture:crafting:29>,<mysticalagriculture:crafting:28
 recipes.addShaped(<minecraft:quartz>,Mp.read("AAA;ABA;AAA;",{
     "A":<mysticalagriculture:nether_essence>,"B":<appliedenergistics2:material>
 }));*/
-T.tic.casting(<botania:quartz:5>,<botania:quartz:1>,<liquid:molten_chloroyphyte>*144,300);
+T.tic.casting(<botania:quartz:5>,<botania:quartz:1>,<liquid:molten_chlorophyte>*144,300);
 //orb3, though it requires some of the tier 3 seeds
 Agg.addRecipe(<bloodmagic:blood_orb>.withTag({orb: "bloodmagic:magician"}),Mp.read("@#$%&*~", {
         "@":<bloodmagic:blood_orb>.withTag({orb: "bloodmagic:apprentice"})*3,
@@ -257,13 +257,13 @@ T.ie.mix(<liquid:bot_elf>*100,[
 ],<liquid:bot_mana>*1000);
 //Elf portal
 //Cholorophyte
-T.eio.vat(<liquid:molten_chloroyphyte>, <liquid:emerald>, 1.0f/9, [<mysticalagriculture:nature_seeds>%160],[<contenttweaker:shard_terra>%9]);
-T.tic.casting(<contenttweaker:chlorophyte_ore>,<thermalfoundation:ore:6>,<liquid:molten_chloroyphyte>*144,900,true,true);
-T.tic.melting(<liquid:molten_chloroyphyte>*16,<contenttweaker:chlorophyte_ore>);
-T.tic.casting(<botania:pylon:1>,<botania:pylon>,<liquid:molten_chloroyphyte>*1440,900,true,true);
-T.tic.casting(<contenttweaker:chlorophyte_ingot>,<tconstruct:cast_custom>,<liquid:molten_chloroyphyte>*144,80,false);
-T.tic.melting(<liquid:molten_chloroyphyte>*144,<contenttweaker:chlorophyte_ingot>);
-T.tic.casting(<botania:livingwood:5>,<botania:livingwood>,<liquid:molten_chloroyphyte>*144,900,true,true);
+T.eio.vat(<liquid:molten_chlorophyte>, <liquid:emerald>, 1.0f/9, [<mysticalagriculture:nature_seeds>%160],[<contenttweaker:shard_terra>%9]);
+T.tic.casting(<contenttweaker:chlorophyte_ore>,<thermalfoundation:ore:6>,<liquid:molten_chlorophyte>*144,900,true,true);
+T.tic.melting(<liquid:molten_chlorophyte>*16,<contenttweaker:chlorophyte_ore>);
+T.tic.casting(<botania:pylon:1>,<botania:pylon>,<liquid:molten_chlorophyte>*1440,900,true,true);
+T.tic.casting(<contenttweaker:chlorophyte_ingot>,<tconstruct:cast_custom>,<liquid:molten_chlorophyte>*144,80,false);
+T.tic.melting(<liquid:molten_chlorophyte>*144,<contenttweaker:chlorophyte_ingot>);
+T.tic.casting(<botania:livingwood:5>,<botania:livingwood>,<liquid:molten_chlorophyte>*144,900,true,true);
 
 T.tic.casting(<botania:manaresource:7>,<botania:manaresource>,<liquid:bot_elf>*1440,900);
 T.tic.casting(<botania:manaresource:8>,<botania:manaresource:23>,<liquid:bot_elf>*1440,900);
