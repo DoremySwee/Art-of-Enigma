@@ -12,7 +12,9 @@ CotLib.createFluid("bot_mana","BB9999FF",{
     flowingLocation:CotLib.lightFlow
 });
 CotLib.createBlock("chlorophyte_ore",{"lightValue":5});
-CotLib.createItem("chlorophyte_ingot");/*
+CotLib.createItem("chlorophyte_ingot");
+CotLib.createItem("pattern_wand");
+/*
 CotLib.createFluid("molten_chlorophyte","E077FF77",{
     density:1000,luminosity:15,
     stillLocation:CotLib.potionStill,

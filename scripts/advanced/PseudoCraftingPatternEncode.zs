@@ -9,7 +9,7 @@ import scripts.advanced.libs.Data as D;
 
 static alphabet as string = "abcdefghijklmnopqrstuvwxyz";
 
-static wand as IItemStack = <thaumicwands:item_wand>;
+static wand as IItemStack = <contenttweaker:pattern_wand>;
 static pattern as IItemStack = <appliedenergistics2:material:52>;
 static table as IItemStack = <avaritia:extreme_crafting_table>;
 
@@ -17,6 +17,27 @@ static noResult as string = game.localize("crt.chat.auto_pattern.no_result");
 static noMark as string = game.localize("crt.chat.auto_pattern.no_mark");
 static insufficientMark as string = game.localize("crt.chat.auto_pattern.insufficient_mark");
 static insufficientPattern as string = game.localize("crt.chat.auto_pattern.insufficient_pattern");
+
+scripts.recipes.libs.Transcript.ava.shaped(wand,scripts.recipes.libs.Mapping.read("
+    ______@__;
+    ___#_@$@_;
+    ___#@$%$@;
+    _##&#@$@_;
+    *~~#1#@__;
+    ~_~_#&##_;
+    ~~*~~#___;
+    ~_~_~#___;
+    *~~~*____;
+    ",{
+    "@":<mysticalagriculture:certus_quartz_essence>,
+    "1":<appliedenergistics2:nether_quartz_wrench>,
+    "#":<appliedenergistics2:certus_quartz_wrench>,
+    "$":<appliedenergistics2:encoded_pattern>,
+    "%":<mysticalagriculture:redstone_essence>,
+    "&":<mysticalagriculture:sky_stone_essence>,
+    "*":<mysticalagriculture:glowstone_essence>,
+    "~":<avaritia:extreme_crafting_table>
+}));
 
 mods.jei.JEI.addDescription([wand,pattern,table],[
     game.localize("jei.description.auto_pattern.intro"),

@@ -185,11 +185,12 @@ jei.description.chlorophyte_ore.light=Chlorophyte Ores can't grow under intense 
 fluid.bot_elf=Elfium
 item.contenttweaker.chlorophyte_ingot.name=Chlorophyte Ingot
 fluid.molten_chlorophyte=Molten Chlorophyte
+item.contenttweaker.pattern_wand.name=Pattern Encoder
 
-crt.chat.auto_pattern.no_result=[Auto Pattern Generation] [ERROR] The recipe has no result! Empty Pattern will be automatically encoded as the final product, remember to rewrite it!
-crt.chat.auto_pattern.no_mark=[Auto Pattern Generation] [ERROR] Sufficient marking item must be placed (@Draconic Evolution) on the crafting table!
-crt.chat.auto_pattern.insufficient_mark=[Auto Pattern Generation] [ERROR] There aren't enough marking items! Marking items are not generated. If you are massively generating the patterns for the same recipe, ignore this message.
-crt.chat.auto_pattern.insufficient_pattern=[Auto Pattern Generation] [ERROR] You don't have enough patterns on your left hand!
+crt.chat.auto_pattern.no_result=[Pattern Encoder] [ERROR] The recipe has no result! Empty Pattern will be automatically encoded as the final product, remember to rewrite it!
+crt.chat.auto_pattern.no_mark=[Pattern Encoder] [ERROR] Sufficient marking item must be placed (@Draconic Evolution) on the crafting table!
+crt.chat.auto_pattern.insufficient_mark=[Pattern Encoder] [ERROR] There aren't enough marking items! Marking items are not generated. If you are massively generating the patterns for the same recipe, ignore this message.
+crt.chat.auto_pattern.insufficient_pattern=[Pattern Encoder] [ERROR] You don't have enough patterns on your left hand!
 
 jei.description.auto_pattern.intro=Have you seen those 9x9 recipes? Yes, lots of them need to be automated. With this set of tools, patterns can be automatically generated.
 jei.description.auto_pattern.mark=You need to select an item as "mid product", which should be cheap. You are also suggested to use one item as "mid product" from the beginning.

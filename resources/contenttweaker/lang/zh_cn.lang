@@ -185,11 +185,12 @@ jei.description.chlorophyte_ore.light=叶绿不会在太亮的地方生长，但
 fluid.bot_elf=精灵精华
 item.contenttweaker.chlorophyte_ingot.name=叶绿锭
 fluid.molten_chlorophyte=熔融叶绿
+item.contenttweaker.pattern_wand.name=样板编码器
 
-crt.chat.auto_pattern.no_result=【样板自动生成器】 [ERROR] 该合成表没有成品！将尝试以【空白样板】作为最终成品，记得手动修改！
-crt.chat.auto_pattern.no_mark=【样板自动生成器】 [ERROR] 你需要在合成台上方摆放足量标记物（龙之研究）！
-crt.chat.auto_pattern.insufficient_mark=【样板自动生成器】 [ERROR] 标记物数量不足！重命名标记物未生成。如果你在批量制作同一样板，可忽略这条消息。
-crt.chat.auto_pattern.insufficient_pattern=【样板自动生成器】 [ERROR] 副手没有足够空白样板！
+crt.chat.auto_pattern.no_result=【样板编码器】 [ERROR] 该合成表没有成品！将尝试以【空白样板】作为最终成品，记得手动修改！
+crt.chat.auto_pattern.no_mark=【样板编码器】 [ERROR] 你需要在合成台上方摆放足量标记物（龙之研究）！
+crt.chat.auto_pattern.insufficient_mark=【样板编码器】 [ERROR] 标记物数量不足！重命名标记物未生成。如果你在批量制作同一样板，可忽略这条消息。
+crt.chat.auto_pattern.insufficient_pattern=【样板编码器】 [ERROR] 副手没有足够空白样板！
 
 jei.description.auto_pattern.intro=你看到那些9x9合成表了吗？是的，它们很多都需要被自动化。不过，使用这一套物品，可以很方便地自动生成编码样板！
 jei.description.auto_pattern.mark=你需要选择一种物品作为“中间成品”，最好是非常便宜的，并且你最好从始至终都使用同一种“中间成品”。此外，你也可以手动重命名这些中间物品。
