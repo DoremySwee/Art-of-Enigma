@@ -284,17 +284,18 @@ static ae2 as AE2 = AE2();
 static ae as AE2 = AE2();
 zenClass DE{
     zenConstructor(){}
-    function infuse(output as It, input as It, inputs as In[], energy as long, tier as int = 0){
-        var tierReal = moretweaker.draconicevolution.FusionCrafting.BASIC;
+    function fuse(output as It, input as It, inputs as In[], energy as long, tier as int = 0){
+        var tierReal = moretweaker.draconicevolution.FusionCrafting.BASIC as int;
         var map = {
-            1:moretweaker.draconicevolution.FusionCrafting.WYVERN,
-            2:moretweaker.draconicevolution.FusionCrafting.DRACONIC,
-            3:moretweaker.draconicevolution.FusionCrafting.CHAOTIC
-        } as int[int];
-        moretweaker.draconicevolution.FusionCrafting.add(output,input,tier,energy,inputs);
+            ""~1:moretweaker.draconicevolution.FusionCrafting.WYVERN,
+            ""~2:moretweaker.draconicevolution.FusionCrafting.DRACONIC,
+            ""~3:moretweaker.draconicevolution.FusionCrafting.CHAOTIC
+        } as IData;
+        tierReal = (map has (""~tier)) ? map.memberGet(""~tier).asInt() : tierReal;
+        moretweaker.draconicevolution.FusionCrafting.add(output,input,tierReal,energy,inputs);
     }
-    function infusion(output as It, input as It, inputs as In[], energy as long, tier as int = 0){
-        infuse(output, input, inputs, energy, tier);
+    function fusion(output as It, input as It, inputs as In[], energy as long, tier as int = 0){
+        fuse(output, input, inputs, energy, tier);
     }
 }
 static de as DE = DE();

@@ -5,6 +5,10 @@ import scripts.recipes.libs.Mapping as Mp;
 import scripts.recipes.libs.Misc as M;
 import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
+//TODO: change some casting into TE Fluid transport / embers press
+//TODO: Make Essence More Useful
+//TODO: Flying
+Agg.removeDefaultRecipe();
 //seeds' materials
 var seed3 = <mysticalagriculture:crafting:19>;
 recipes.remove(<extrautils2:decorativeglass:4>);
@@ -271,6 +275,11 @@ T.tic.casting(<botania:manaresource:9>,<botania:manaresource:2>,<liquid:bot_elf>
 
 T.bot.rune(<contenttweaker:wand_cap_manasteel_inert>,Mp.read1d("BAAAAAA",{"B":<contenttweaker:wand_cap_iron>,"A":<mysticalagriculture:manasteel_essence>}), 6000);
 T.tic.casting(<contenttweaker:wand_cap_manasteel>, <contenttweaker:wand_cap_manasteel_inert>, <liquid:bot_mana>*1440,900);
+mods.thaumcraft.ArcaneWorkbench.removeRecipe(<thaumcraft:fabric>);
+T.tc.shaped(<thaumcraft:fabric>,Mp.read("ACA;CBC;ACA;",{
+    "A":<mysticalagriculture:crafting:23>,"B":<thermalfoundation:rockwool:12>,
+    "C":<tconstruct:bow_string>.withTag({Material: "slimevine_blue"})
+}),4);
 
 T.ava.shaped(<botania:alfheimportal>,Mp.read("
     @@@@#@@@@;
@@ -321,29 +330,163 @@ T.bot.trade([<botania:manaresource>*2],[<botania:manaresource:7>]);
 T.bot.trade([<botania:manaresource:1>],[<botania:manaresource:8>]);
 T.bot.trade([<botania:manaresource:2>],[<botania:manaresource:9>]);
 T.bot.trade([<minecraft:quartz>],[<botania:quartz:5>]);
-//TODO: change some casting into TE Fluid transport / embers press
+
 //Wither
 T.embers.stamp(<thermalexpansion:augment:369>,<liquid:bot_elf>*250,[
     <tconstruct:materials:14>,<thermalfoundation:upgrade>
 ]);
 T.tic.casting(<minecraft:skull:1>,<minecraft:skull>,<liquid:potion>.withTag({Potion:"cofhcore:wither4"})*250,900);
-/*
-    史莱姆骑士：
-        离魂匕首 -> 史莱姆灵魂碎片 -> 史莱姆精华
-        液态魔力 + 史莱姆精华 -> 液态蓝色史莱姆 -> 蓝色史莱姆树苗 （使用熔岩史莱姆泥土种植）
-        液态蓝色史莱姆 + 熔岩史莱姆球 -> 液态紫色史莱姆
-        下级精华锭➗下级精华 = 基础精华锭
-        基础精华锭 + 液态紫色史莱姆 -> 骑士史莱姆锭
-    精灵门：
+recipes.remove(<extrautils2:ingredients:5>);
+recipes.addShaped(<extrautils2:ingredients:5>,Mp.read("BAB;ABA;BAB;",{
+    "A":<extrautils2:ingredients:3>,"B":<extrautils2:unstableingots>
+}));
 
-/*
-    IE搅拌： 液态魔力 [史莱姆骑士精华] 世界盐 源动之焰 月球之尘  ->  液态精灵（cot）
-    液态精灵 -> 【升级：炼金术反应釜】-> 凋零III -> 浇筑骷髅头得凋零头 -> 凋灵
+//Spatial Pylon & Avaritia Compresser
+recipes.remove(<appliedenergistics2:quantum_ring>);
+recipes.remove(<appliedenergistics2:quantum_link>);
+recipes.remove(<appliedenergistics2:material:9>);
+T.tic.casting(<appliedenergistics2:material:9>,<botania:manaresource:1>,<liquid:bot_elf>*576,900);
+val matrix = <appliedenergistics2:matrix_frame>;
+recipes.remove(<appliedenergistics2:material:32>);
+recipes.remove(<appliedenergistics2:material:33>);
+recipes.remove(<appliedenergistics2:material:34>);
+T.ava.shaped(<appliedenergistics2:material:32>,Mp.read("
+    _________;
+    ___@_@___;
+    __#$%$#__;
+    _@$&*&$@_;
+    __%*~*%__;
+    _@$&*&$@_;
+    __#$%$#__;
+    ___@_@___;
+    _________;
+    ",{
+    "@":<appliedenergistics2:material:1>,
+    "#":<mysticalagriculture:certus_quartz_essence>,
+    "$":<minecraft:quartz>,
+    "%":/*<appliedenergistics2:sky_stone_block>*/<astralsorcery:itemcraftingcomponent:1>,
+    "&":<mysticalagriculture:nether_quartz_essence>,
+    "*":<mysticalagriculture:sky_stone_essence>,
+    "~":<appliedenergistics2:material:9>
+}));
+Agg.addRecipe(<avaritia:neutronium_compressor>,[
+    <thermalexpansion:machine:5>.withTag({"Level": 1 as byte}),
+    <appliedenergistics2:material:32>,<avaritia:extreme_crafting_table>
+],30000000,0xCCCCCC,0xCCCCFF,matrix,matrix,matrix,matrix,matrix,matrix);
 
-    *ban 原本交易
-    魔力钢锭 + 液态精灵 -> 源质钢锭 -> 2*魔力钢锭
-    魔力钻石 + 液态精灵 -> 龙石 -> 魔力钻石
-    魔力尘 + 液态精灵 -> 精灵尘 -> 魔力珍珠     *ban 泰拉钢锭
+//AstralSorcery Materials & Draconic Fusion
+M.removeGrind(<astralsorcery:itemcraftingcomponent:2>,<astralsorcery:itemcraftingcomponent:1>,<astralsorcery:blockcustomore:1>);
+for i in 0 to 3{
+    var j = ([9,7,8]as int[])[i];
+    Agg.addRecipe(<astralsorcery:itemcraftingcomponent>.definition.makeStack(i),[
+        <calculator:largetanzanite>,<extrautils2:ingredients:5>,<mysticalagriculture:manasteel_essence>,
+        <mysticalagriculture:sky_stone_essence>,<appliedenergistics2:material:47>,<minecraft:nether_star>,
+        <botania:manaresource>.definition.makeStack(j)
+    ],3000000,0xFFCCDD,0xCCCCFF,<botania:miniisland>,<botania:starfield>,<botania:enchanter>);
+}
+recipes.remove(<draconicevolution:crafting_injector>);
+recipes.remove(<draconicevolution:fusion_crafting_core>);
+T.ava.shaped(<draconicevolution:crafting_injector>*8,Mp.read("
+    @#$$%$$$$;
+    $&#@*%&~$;
+    $*1#2@~%%;
+    #@33#1@3$;
+    $3#*4*#3$;
+    $3@1#33@#;
+    %%~@2#1*$;
+    $~&%*@#&$;
+    $$$$%$$#@;
+    ",{
+    "@":<astralsorcery:itemcraftingcomponent>,
+    "1":<botania:runealtar>,
+    "2":<botania:spawnermover>,
+    "#":<astralsorcery:itemcraftingcomponent:1>,
+    "3":<mysticalagriculture:crafting:32>,
+    "$":<minecraft:quartz_block>,
+    "4":<calculator:flawlesscalculator>.withTag({"0": {}, slot4: "Energy Module", "1": {}, slot3: "Storage", "2": {}, slot2: "Crafting", "3": {}, slot1: "Dynamic", "4": {}, slot0: "Flawless"}),
+    "%":<astralsorcery:itemcraftingcomponent:2>,
+    "&":<botania:alchemycatalyst>,
+    "*":<appliedenergistics2:material:22>,
+    "~":<appliedenergistics2:material:38>
+}));
+T.ava.shaped(<draconicevolution:fusion_crafting_core>,Mp.read("
+    @##$%%%%%;
+    @&$**~~&#;
+    @~$1~1$$#;
+    @~1$~$12$;
+    @3~~4~~2@;
+    $31$~$1~@;
+    #$$1~1$~@;
+    #&~~55$&@;
+    %%%%%$##@;
+    ",{
+    "@":<mysticalagriculture:crafting:32>,
+    "1":<draconicevolution:crafting_injector>,
+    "2":<mysticalagriculture:certus_quartz_essence>,
+    "#":<appliedenergistics2:molecular_assembler>,
+    "3":<mysticalagriculture:nether_quartz_essence>,
+    "$":<astralsorcery:itemcraftingcomponent:2>,
+    "4":<botania:sparkupgrade:1>,
+    "%":<minecraft:quartz_block>,
+    "5":<mysticalagriculture:glowstone_essence>,
+    "&":<astralsorcery:itemcraftingcomponent>,
+    "*":<mysticalagriculture:redstone_essence>,
+    "~":<astralsorcery:itemcraftingcomponent:1>
+}));
+T.de.fusion(<mysticalagriculture:crafting:3>,<bloodmagic:blood_orb>.withTag({orb: "bloodmagic:weak"}),
+Mp.read("@#$%&@*~123@4567@890`!^", {
+    "@":<mysticalagriculture:crafting:2>,
+    "`":<botania:manaresource:8>,
+    "!":<botania:manaresource:7>,
+    "#":<mysticalagriculture:nether_quartz_essence>,
+    "$":<mysticalagriculture:glowstone_essence>,
+    "%":<mysticalagriculture:redstone_essence>,
+    "&":<mysticalagriculture:knightslime_essence>,
+    "*":<mysticalagriculture:manasteel_essence>,
+    "0":<botania:manaresource:9>,
+    "1":<mysticalagriculture:sky_stone_essence>,
+    "2":<tconstruct:seared_tank:1>.withTag({FluidName: "bot_mana", Amount: 4000}),
+    "3":<tconstruct:seared_tank:1>.withTag({FluidName: "bot_elf", Amount: 4000}),
+    "4":<tconstruct:seared_tank:1>.withTag({FluidName: "molten_chlorophyte", Amount: 4000}),
+    "5":<tconstruct:seared_tank:1>.withTag({FluidName: "molten_essence", Amount: 4000}),
+    "6":<tconstruct:seared_tank:1>.withTag({FluidName: "xu_evil_metal", Amount: 4000}),
+    "7":<botania:starfield>,
+    "8":<astralsorcery:itemcraftingcomponent:1>,
+    "9":<astralsorcery:itemcraftingcomponent:2>,
+    "~":<mysticalagriculture:certus_quartz_essence>,
+    "^":<botania:manaresource:12>
+})[0],10000000);
+T.de.fusion(<botania:pylon:2>,<botania:pylon:1>,Mp.read("#$%&*~123456789", {
+    "#":<tconstruct:seared_tank:1>.withTag({FluidName: "bot_elf", Amount: 4000}),
+    "$":<botania:manaresource:8>,
+    "%":<botania:manaresource:9>,
+    "&":<botania:manaresource:7>,
+    "*":<botania:elementiumhelm>,
+    "1":<botania:elementiumlegs>,
+    "2":<botania:elementiumboots>,
+    "3":<botania:elementiumpick>,
+    "4":<botania:elementiumshovel>,
+    "5":<botania:elementiumaxe>,
+    "6":<botania:elementiumsword>,
+    "7":<botania:elementiumshears>,
+    "8":<botania:openbucket>,
+    "9":<botania:pixiering>,
+    "~":<botania:elementiumchest>
+})[0],10000000);
+
+//Gaia
+recipes.addShaped(<botania:manaresource:14>,Mp.read("@#$;%&*;~12;",{
+    "@":<astralsorcery:itemcraftingcomponent>,
+    "1":<botania:manaresource:9>,
+    "2":<astralsorcery:itemcraftingcomponent:2>,
+    "#":<botania:manaresource:8>,
+    "$":<astralsorcery:itemcraftingcomponent:1>,
+    "%":<botania:manaresource:7>,
+    "&":<appliedenergistics2:material:9>,
+    "*":<contenttweaker:chlorophyte_ingot>,
+    "~":<bloodmagic:sacrificial_dagger>.withTag({sacrifice: 0 as byte})
+}));
+/*
     液态精灵 + 魔力珍珠 -> 福鲁伊克斯珍珠 -> 空间塔 -> 矩阵框架 -> 水晶矩阵 & 中子态素压缩机 -> 奇点
 
     下界之星 + 魔力物品 + 陨石精华 + 月之石（ban钻石版合成表，修改产物数量为1）-> 星辉材料

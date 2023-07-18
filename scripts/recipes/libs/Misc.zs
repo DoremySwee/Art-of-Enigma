@@ -79,3 +79,13 @@ function orb(level as int)as IIngredient{
     }
     return result;
 }
+function removeGrind(dust as IItemStack, ingot as IItemStack, ore as IItemStack){
+    recipes.removeShapeless(dust,[ingot],true);
+    recipes.removeShapeless(dust,[ore],true);
+    mods.bloodmagic.AlchemyTable.removeRecipe([ore,<bloodmagic:cutting_fluid>]);
+    mods.immersiveengineering.Crusher.removeRecipesForInput(ore);
+    mods.immersiveengineering.Crusher.removeRecipesForInput(ingot);
+    mods.thermalexpansion.Pulverizer.removeRecipe(ore);
+    mods.thermalexpansion.Pulverizer.removeRecipe(ingot);
+    mods.enderio.SagMill.removeRecipe(ore);
+}
