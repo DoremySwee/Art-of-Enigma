@@ -1,6 +1,6 @@
 {
-	x: 4.0d,
-	y: -4.0d,
+	x: 1.0d,
+	y: -2.0d,
 	dependencies: [
 		"225f4a65"
 	],
@@ -9,6 +9,13 @@
 		type: "item",
 		items: [{
 			item: "botania:pylon 1 2"
+		}]
+	},
+	{
+		uid: "6f850ed8",
+		type: "item",
+		items: [{
+			item: "botania:manaresource 1 14"
 		}]
 	}]
 }
