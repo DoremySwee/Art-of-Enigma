@@ -2,13 +2,13 @@
 	x: -23.5d,
 	y: -6.0d,
 	dependencies: [
-		"7987961c"
+		"57bafefc"
 	],
 	tasks: [{
-		uid: "9cecd165",
+		uid: "5bc23866",
 		type: "item",
 		items: [{
-			item: "embers:crystal_ember"
+			item: "mysticalagriculture:tier1_inferium_seeds"
 		}]
 	}]
 }

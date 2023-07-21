@@ -1,0 +1,40 @@
+{
+	title: "125000mana?",
+	x: -19.0d,
+	y: -8.0d,
+	text: [
+		"{quests.ch3.bot_mana1.help}"
+	],
+	hide_dependency_lines: true,
+	dependencies: [
+		"dc931fdf"
+	],
+	tasks: [{
+		uid: "07c98189",
+		type: "item",
+		items: [{
+			ForgeCaps: {
+				"astralsorcery:cap_item_amulet_holder": {}
+			},
+			id: "botania:manatablet",
+			tag: {}
+		}],
+		count: 4L,
+		ignore_damage: true
+	},
+	{
+		uid: "8faa73db",
+		type: "item",
+		items: [{
+			ForgeCaps: {
+				"astralsorcery:cap_item_amulet_holder": {}
+			},
+			id: "botania:manatablet",
+			tag: {
+				mana: 125000
+			}
+		}],
+		ignore_damage: true,
+		ignore_nbt: 1b
+	}]
+}

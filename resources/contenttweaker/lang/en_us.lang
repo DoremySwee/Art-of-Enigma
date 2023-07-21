@@ -92,6 +92,7 @@ quests.ch3.bot_mana1.help=First store a pool of mana, and cut its IO. What if yo
 quests.ch3.bot_mana2.help=The Terrablade can use/provide 100mana. Well, you can also try mana spreader and mana splitter.
 quests.ch3.liquid.help= [P2P Tunnel - Fluid] can divide fluids into stacks of equal/similar amount.
 quests.ch3.spatial=[Matrix Frame] is the block working as celling, floor, and the walls of the [AE2 spatial cell].
+quests.ch3.checkRecipe=Remember to check the useage of the items in [Square] quests. Also, check the usage of [essences]!
 
 description.crt.manatab.has=Has
 description.crt.manatab.inf= Infinite

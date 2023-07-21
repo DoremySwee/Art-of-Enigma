@@ -1,0 +1,36 @@
+{
+	x: -22.5d,
+	y: -15.0d,
+	shape: "square",
+	dependencies: [
+		"12f0b909"
+	],
+	tasks: [{
+		uid: "8f15a214",
+		type: "item",
+		items: [{
+			item: "enderio:item_alloy_ingot"
+		}]
+	},
+	{
+		uid: "2ca9e838",
+		type: "item",
+		items: [{
+			item: "immersiveengineering:metal_device1 1 13"
+		}]
+	},
+	{
+		uid: "9894b193",
+		type: "item",
+		items: [{
+			item: "mysticalagriculture:tier1_inferium_seeds"
+		}]
+	},
+	{
+		uid: "e5700d1a",
+		type: "item",
+		items: [{
+			item: "embers:geo_separator"
+		}]
+	}]
+}

@@ -92,6 +92,7 @@ quests.ch3.bot_mana1.help=先存好1池子的魔力，拆除所有输入输出�
 quests.ch3.bot_mana2.help=泰拉之刃可以发出100mana的魔力脉冲。当然，你也可以试试魔力发射器和魔力分配器。
 quests.ch3.liquid.help=流体P2P可以均分流体。
 quests.ch3.spatial=【矩阵框架】是AE2空间元件的墙壁、地板和天花板。
+quests.ch3.checkRecipe=对于正方形的任务，请查看对应物品可以合成什么哦~ 此外，每做出一种 [精华]，你也记得要看看！
 
 description.crt.manatab.has=含：
 description.crt.manatab.inf=∞

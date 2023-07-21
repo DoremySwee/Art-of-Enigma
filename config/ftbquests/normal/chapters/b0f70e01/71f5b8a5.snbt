@@ -1,0 +1,17 @@
+{
+	x: -32.0d,
+	y: -7.5d,
+	text: [
+		"{quests.ch3.checkRecipe}"
+	],
+	dependencies: [
+		"410786df",
+		"cdec4ce3"
+	],
+	size: 2.0d,
+	tasks: [{
+		uid: "c4a9e1dc",
+		type: "checkmark",
+		icon: "thermalfoundation:material 1 264"
+	}]
+}

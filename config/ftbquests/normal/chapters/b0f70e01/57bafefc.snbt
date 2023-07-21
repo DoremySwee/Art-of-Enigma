@@ -5,8 +5,7 @@
 		"{quests.ch3.mana.help}"
 	],
 	dependencies: [
-		"b039bca5",
-		"3406af25"
+		"7987961c"
 	],
 	tasks: [{
 		uid: "cf180bfa",

@@ -1,21 +1,19 @@
 {
-	x: -14.5d,
-	y: -15.0d,
+	x: -17.5d,
+	y: -14.0d,
 	dependencies: [
-		"eac9c587"
+		"4ee14f31"
 	],
 	tasks: [{
-		uid: "802ffed5",
+		uid: "285beeb9",
 		type: "item",
 		items: [{
 			ForgeCaps: {
 				"astralsorcery:cap_item_amulet_holder": {}
 			},
-			id: "bloodmagic:blood_orb",
-			tag: {
-				orb: "bloodmagic:apprentice"
-			}
+			id: "mysticalagriculture:soulium_dagger"
 		}],
+		ignore_damage: true,
 		ignore_nbt: 1b
 	}]
 }

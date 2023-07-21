@@ -1,12 +1,13 @@
 {
 	title: "1mb?",
-	x: -23.5d,
-	y: 7.0d,
+	x: -15.5d,
+	y: 0.5d,
 	text: [
 		"{quests.ch3.liquid.help}"
 	],
+	hide_dependency_lines: true,
 	dependencies: [
-		"4a3a5673"
+		"854e069d"
 	],
 	tasks: [{
 		uid: "e22b5fe8",

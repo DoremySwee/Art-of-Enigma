@@ -1,0 +1,31 @@
+{
+	x: -15.5d,
+	y: -14.0d,
+	dependencies: [
+		"8abc9fe1",
+		"168a552d"
+	],
+	tasks: [{
+		uid: "53c66862",
+		type: "item",
+		items: [{
+			item: "mysticalagriculture:knightslime_seeds"
+		}]
+	},
+	{
+		uid: "82e2816d",
+		type: "item",
+		items: [{
+			ForgeCaps: {
+				"astralsorcery:cap_item_amulet_holder": {}
+			},
+			id: "forge:bucketfilled",
+			tag: {
+				FluidName: "bot_elf",
+				Amount: 1000
+			}
+		}],
+		ignore_damage: true,
+		ignore_nbt: 1b
+	}]
+}

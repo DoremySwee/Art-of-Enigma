@@ -1,12 +1,13 @@
 {
 	title: "125000mana?",
-	x: -23.5d,
-	y: 5.5d,
+	x: -14.0d,
+	y: 0.5d,
 	text: [
 		"{quests.ch3.bot_mana1.help}"
 	],
+	hide_dependency_lines: true,
 	dependencies: [
-		"4a3a5673"
+		"1feea721"
 	],
 	tasks: [{
 		uid: "3c5ac642",

@@ -1,23 +1,11 @@
 {
-	x: -19.5d,
+	x: -21.5d,
 	y: -14.0d,
 	dependencies: [
-		"ac8c5c8a"
+		"35346b30"
 	],
 	tasks: [{
-		uid: "d20a40c9",
-		type: "item",
-		items: [{
-			id: "minecraft:spawn_egg",
-			tag: {
-				EntityTag: {
-					id: "minecraft:villager"
-				}
-			}
-		}]
-	},
-	{
-		uid: "7cd9e727",
+		uid: "88883c8e",
 		type: "item",
 		items: [{
 			ForgeCaps: {
@@ -29,21 +17,33 @@
 		ignore_nbt: 1b
 	},
 	{
-		uid: "3814ba64",
+		uid: "9396aec9",
 		type: "item",
 		items: [{
 			item: "minecraft:mob_spawner"
 		}]
 	},
 	{
-		uid: "13306a47",
+		uid: "a2e081db",
 		type: "item",
 		items: [{
 			item: "botania:spawnerclaw"
 		}]
 	},
 	{
-		uid: "e93c7821",
+		uid: "f4c72f02",
+		type: "item",
+		items: [{
+			id: "minecraft:spawn_egg",
+			tag: {
+				EntityTag: {
+					id: "minecraft:villager"
+				}
+			}
+		}]
+	},
+	{
+		uid: "cf67e815",
 		type: "item",
 		items: [{
 			id: "minecraft:spawn_egg",
@@ -52,6 +52,13 @@
 					id: "minecraft:blaze"
 				}
 			}
+		}]
+	},
+	{
+		uid: "26ed4bf1",
+		type: "item",
+		items: [{
+			item: "botania_tweaks:dire_crafty_crate"
 		}]
 	}]
 }

@@ -5,48 +5,6 @@
 		"25fc2fd5"
 	],
 	tasks: [{
-		uid: "ed646ada",
-		type: "item",
-		items: [{
-			ForgeCaps: {
-				"astralsorcery:cap_item_amulet_holder": {}
-			},
-			id: "forge:bucketfilled",
-			tag: {
-				FluidName: "cryotheum",
-				Amount: 1000
-			}
-		}],
-		ignore_damage: true,
-		ignore_nbt: 1b
-	},
-	{
-		uid: "4a6c1754",
-		type: "item",
-		items: [{
-			ForgeCaps: {
-				"astralsorcery:cap_item_amulet_holder": {}
-			},
-			id: "minecraft:water_bucket"
-		}],
-		ignore_damage: true,
-		ignore_nbt: 1b
-	},
-	{
-		uid: "290e4f53",
-		type: "item",
-		items: [{
-			item: "tconstruct:materials 1 16"
-		}]
-	},
-	{
-		uid: "69c9ccac",
-		type: "item",
-		items: [{
-			item: "minecraft:ice"
-		}]
-	},
-	{
 		uid: "f5c7724e",
 		type: "item",
 		items: [{

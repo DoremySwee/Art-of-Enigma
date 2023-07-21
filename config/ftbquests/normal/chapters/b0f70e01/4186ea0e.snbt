@@ -1,17 +1,10 @@
 {
 	x: -13.5d,
-	y: -5.0d,
+	y: -6.0d,
 	dependencies: [
 		"25fc2fd5"
 	],
 	tasks: [{
-		uid: "681a16ec",
-		type: "item",
-		items: [{
-			item: "botania:grassseeds 1 1"
-		}]
-	},
-	{
 		uid: "42c0eba6",
 		type: "item",
 		items: [{

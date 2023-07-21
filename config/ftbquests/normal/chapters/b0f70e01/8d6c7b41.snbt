@@ -2,13 +2,13 @@
 	x: -13.5d,
 	y: -16.0d,
 	dependencies: [
-		"6d2b29b3"
+		"4cc382a6"
 	],
 	tasks: [{
-		uid: "4b15f818",
+		uid: "fb784da2",
 		type: "item",
 		items: [{
-			item: "bloodmagic:blood_rune"
+			item: "contenttweaker:pattern_wand"
 		}]
 	}]
 }

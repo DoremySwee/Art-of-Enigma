@@ -1,14 +1,14 @@
 {
-	x: -22.0d,
-	y: -5.0d,
+	x: -21.0d,
+	y: -7.0d,
 	dependencies: [
 		"57bafefc"
 	],
 	tasks: [{
-		uid: "c852c0d8",
+		uid: "2a39c823",
 		type: "item",
 		items: [{
-			item: "bloodmagic:soul_forge"
+			item: "enderio:item_alloy_ingot"
 		}]
 	}]
 }
