@@ -1,7 +1,7 @@
 {
 	icon: "mysticalagriculture:ice_seeds",
-	x: -7.5d,
-	y: 3.5d,
+	x: -6.5d,
+	y: -0.5d,
 	text: [
 		"{quests.ch3.ice.help}"
 	],

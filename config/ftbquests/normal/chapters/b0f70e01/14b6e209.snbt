@@ -1,6 +1,6 @@
 {
-	x: -1.5d,
-	y: -6.0d,
+	x: 3.0d,
+	y: -3.5d,
 	dependencies: [
 		"0850792b"
 	],
@@ -11,5 +11,12 @@
 			item: "draconicevolution:crafting_injector"
 		}],
 		count: 26L
+	},
+	{
+		uid: "b690cf25",
+		type: "item",
+		items: [{
+			item: "draconicevolution:fusion_crafting_core"
+		}]
 	}]
 }

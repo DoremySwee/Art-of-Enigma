@@ -1,13 +1,14 @@
 {
 	title: "{quests.ch3.oremult.title}",
-	x: -9.0d,
-	y: 4.5d,
+	x: -7.4d,
+	y: 4.9d,
 	text: [
 		"{quests.ch3.oremult.des}"
 	],
 	dependencies: [
 		"02a784c8"
 	],
+	size: 0.7d,
 	tasks: [{
 		uid: "b68c4cfa",
 		type: "checkmark",

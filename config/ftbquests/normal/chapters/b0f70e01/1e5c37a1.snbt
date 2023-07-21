@@ -1,7 +1,7 @@
 {
 	title: "125000mana?",
 	x: -14.0d,
-	y: 0.5d,
+	y: 0.0d,
 	text: [
 		"{quests.ch3.bot_mana1.help}"
 	],

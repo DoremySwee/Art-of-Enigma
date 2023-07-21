@@ -1,6 +1,6 @@
 {
-	x: -19.0d,
-	y: -5.0d,
+	x: -18.5d,
+	y: -4.0d,
 	text: [
 		"{quests.ch3.lifeessence.help}"
 	],

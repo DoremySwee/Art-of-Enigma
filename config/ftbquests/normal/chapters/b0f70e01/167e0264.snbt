@@ -1,14 +1,22 @@
 {
-	x: -14.5d,
-	y: -13.0d,
+	x: -13.5d,
+	y: -14.0d,
 	dependencies: [
 		"8fd7cd05"
 	],
 	tasks: [{
-		uid: "3bc71f4f",
+		uid: "bc19870e",
 		type: "item",
 		items: [{
-			item: "mysticalagriculture:nether_quartz_seeds"
+			item: "draconicevolution:crafting_injector"
+		}],
+		count: 26L
+	},
+	{
+		uid: "b5808e29",
+		type: "item",
+		items: [{
+			item: "draconicevolution:fusion_crafting_core"
 		}]
 	}]
 }

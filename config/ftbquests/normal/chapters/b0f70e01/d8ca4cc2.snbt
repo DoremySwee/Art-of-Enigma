@@ -2,10 +2,7 @@
 	x: -12.5d,
 	y: -8.0d,
 	dependencies: [
-		"4186ea0e",
-		"6ee1689b",
-		"c67fbe7a",
-		"f88637f9",
+		"25fc2fd5",
 		"5da4da03"
 	],
 	hide: true,
