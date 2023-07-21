@@ -1,5 +1,15 @@
 {
 	title: "{chapters.ch2.title}",
+	icon: {
+		ForgeCaps: {
+			"astralsorcery:cap_item_amulet_holder": {}
+		},
+		id: "forge:bucketfilled",
+		tag: {
+			FluidName: "mana",
+			Amount: 1000
+		}
+	},
 	description: [
 		"{chapters.ch2.subtitle}"
 	],

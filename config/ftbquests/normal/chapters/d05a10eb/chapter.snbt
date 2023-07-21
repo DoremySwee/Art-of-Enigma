@@ -1,5 +1,6 @@
 {
 	title: "{chapters.ch1.title}",
+	icon: "botania:terraplate",
 	description: [
 		"{chapters.ch1.subtitle}"
 	],

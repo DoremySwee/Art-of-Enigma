@@ -1,5 +1,6 @@
 {
 	title: "{chapters.ch3.title}",
+	icon: "mysticalagriculture:crafting 1 3",
 	description: [
 		"{chapters.ch3.subtitle}"
 	],
