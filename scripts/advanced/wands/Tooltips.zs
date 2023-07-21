@@ -1,3 +1,4 @@
+#loader crafttweaker reloadableevents
 #priority 10000
 import scripts.advanced.wands.WandRegistering as WR;
 import scripts.recipes.libs.Aspects as A;
@@ -13,7 +14,8 @@ import crafttweaker.data.IData;
     var vis as double=(0.0+(0+WR.getVis(item.tag)*100))/100;
     var rodName as string=item.tag.rod.asString();
     if(!(WR.rodsData has rodName))return "";
-    var cap as int=WR.rodsData.deepGet(rodName~".capacity").asInt();
+    var rodData = WR.rodsData.deepGet(rodName);
+    var cap as int=rodData.deepGet("capacity").asInt();
     var p as string="";
     if(0+vis>cap)p="§r§o§d";
     else if(vis>0.75*cap)p="§r§o§9";
@@ -22,6 +24,9 @@ import crafttweaker.data.IData;
     else if(vis>0.15*cap)p="§r§o§e";
     else if(vis>0.99)p="§r§o§c";
     else p="§r§o§4";
+    if(rodData has "botRodData"){
+        return p~vis~"/"~cap~".00§r  §o§d("~rodData.deepGet("botRodData.capacity").asInt()~".00)§r";
+    }
     return p~vis~"/"~cap~".00";
 });
 
@@ -42,3 +47,16 @@ import crafttweaker.data.IData;
         "§r§o§f-"~discounts[4]~"  "~
         "§r§o§7-"~discounts[5];
 });
+
+for t,data in WR.rodsData.asMap(){
+    var item as IItemStack = itemUtils.getItem(data.itemId.asString());
+    if(data has "botRodData"){
+        item.addTooltip(game.localize("description.crt.tooltip.tcwands.botrod"));
+    }
+}
+for t,data in WR.capsData.asMap(){
+    var item as IItemStack = itemUtils.getItem(data.itemId.asString());
+    if(data has "botCapData"){
+        item.addTooltip(game.localize("description.crt.tooltip.tcwands.botcap"));
+    }
+}

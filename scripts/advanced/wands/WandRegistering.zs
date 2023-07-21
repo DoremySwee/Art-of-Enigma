@@ -17,7 +17,7 @@ static rodsData as IData={
         "craftCost":3,
         "craftAspects":{},
         "botRodData":{
-            "capcity":20
+            "capacity":20
         }
     },
     "dreamwood":{
@@ -26,7 +26,7 @@ static rodsData as IData={
         "craftCost":10,
         "craftAspects":{},
         "botRodData":{
-            "capcity":80
+            "capacity":80
         }
     }
 };
