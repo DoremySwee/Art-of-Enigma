@@ -21,6 +21,7 @@ for item in dups{
 }
 var dups2 = [
     <botania:pool:2>,
+    <botania:spreader>,
     <appliedenergistics2:part:31>,
     <appliedenergistics2:part:220>,
     <appliedenergistics2:part:240>,

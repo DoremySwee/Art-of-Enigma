@@ -48,3 +48,4 @@ T.tic.melt(<liquid:redstone>*1000,<mysticalagriculture:redstone_essence>,1);
 //recipes.removeByRecipeName("mysticalagriculture:redstone");
 T.tc.shapeless(<minecraft:redstone>*64,[<mysticalagriculture:redstone_essence>],10);
 T.tc.shapeless(<minecraft:glowstone>*64,[<mysticalagriculture:glowstone_essence>],10);
+recipes.addShapeless(<botania:spreader:2>, [<botania:spreader>, <botania:dreamwood>]);
