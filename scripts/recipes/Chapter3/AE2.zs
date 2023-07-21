@@ -31,7 +31,7 @@ for i in AE2.items{
             t=t/3 as int;
         }
         m[2][2]=m0[2];
-        recipes.addShaped(i*4,m);
+        recipes.addShaped(i*16,m);
     }
 }
 recipes.remove(<appliedenergistics2:creative_energy_cell>);
