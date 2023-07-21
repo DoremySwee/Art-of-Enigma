@@ -2,8 +2,8 @@ chapters.ch1.title=万物伊始
 chapters.ch1.subtitle=“山人自有妙计”
 chapters.ch2.title=七彩合金
 chapters.ch2.subtitle=“怕你做少了悟不出来怎么做自动化”
-chapters.ch3.title=???
-chapters.ch3.subtitle=“还没做”
+chapters.ch3.title=精密仪器
+chapters.ch3.subtitle=“”
 
 
 quests.DifficultySelection.title= 難易度選択
@@ -82,9 +82,16 @@ description.crt.slime.spawnerworkingcondition2=但是电动刷怪笼无此限制
 description.crt.slime.spawnerworkingcondition3=粘球草接收刷怪笼产出的史莱姆。
 tile.botania:flower.irisotos.name=彩虹莲
 
+quests.ch3.oremult.title=矿物增产
+quests.ch3.oremult.des=可以用气血宝珠增产矿物
 quests.ch3.lifeessence.help=从流体精练机获取你的第一批生命源质，导入祭坛~
 quests.ch3.geosep.help=融化注魔秘银锭可以获取元始魔力。
-quests.ch3.mana.help= 元始魔力可以转换出注魔秘银、青金石块等物品。详情请百科。
+quests.ch3.mana.help=元始魔力可以转换出注魔秘银、青金石块等物品。详情请百科。
+quests.ch3.ice.help=试试把极寒凛冰浇在水上！
+quests.ch3.bot_mana1.help=先存好1池子的魔力，拆除所有输入输出，将多个石板【同时】丢上去，会发生什么呢？
+quests.ch3.bot_mana2.help=泰拉之刃可以发出100mana的魔力脉冲。当然，你也可以试试魔力发射器和魔力分配器。
+quests.ch3.liquid.help=流体P2P可以均分流体。
+quests.ch3.spatial=【矩阵框架】是AE2空间元件的墙壁、地板和天花板。
 
 description.crt.manatab.has=含：
 description.crt.manatab.inf=∞
@@ -175,8 +182,6 @@ description.crt.tooltip.shard_double_slab_sandstone=双层沙石台阶
 description.crt.tooltip.shard_double_slab_stone=双层石台阶
 jei.description.salis_mundus=由于技术原因，上段文字无法删除。实际上，用3种不同水晶合成世界盐的配方已经被删除了。
 
-quests.ch3.oremult.title=矿物增产
-quests.ch3.oremult.des=可以用气血宝珠增产矿物
 
 tile.chlorophyte_ore.name=叶绿矿
 jei.description.chlorophyte_ore.introduction=是的，这是叶绿矿。将它种植在地底深处，在特定条件下，它会把周围 (26格) 的苔石转换为叶绿矿。

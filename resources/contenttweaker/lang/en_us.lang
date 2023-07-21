@@ -2,8 +2,8 @@ chapters.ch1.title=Sky of beginning
 chapters.ch1.subtitle=A high starting point, or a low starting point?
 chapters.ch2.title=Coloured alloy
 chapters.ch2.subtitle=Reasonable recipes
-chapters.ch3.title=ch3
-chapters.ch3.subtitle=unreached
+chapters.ch3.title=Precision
+chapters.ch3.subtitle=""
 
 
 quests.DifficultySelection.title= Select a Difficulty For This Chapter
@@ -82,9 +82,16 @@ description.crt.slime.spawnerworkingcondition2=While Powered Spawner (EIO) works
 description.crt.slime.spawnerworkingcondition3=Narslimmus accepts slimes from spawners.
 tile.botania:flower.irisotos.name=Irisotos
 
+quests.ch3.oremult.title=Orb and ores
+quests.ch3.oremult.des=You can use the Blood Orb to increase the yield of metal ingots.
 quests.ch3.lifeessence.help= Obtain your very first life essence from the thermal refiner, and transport them into the altar.
 quests.ch3.geosep.help= Try Melting Mithril Ingot.
 quests.ch3.mana.help= LapisBlock and Mithril stuffs can be obtained from Primal Charm. Check wiki for more information.
+quests.ch3.ice.help=Try putting Cryotheum on water!
+quests.ch3.bot_mana1.help=First store a pool of mana, and cut its IO. What if you throw several tablets onto it simultaneously?
+quests.ch3.bot_mana2.help=The Terrablade can use/provide 100mana. Well, you can also try mana spreader and mana splitter.
+quests.ch3.liquid.help= [P2P Tunnel - Fluid] can divide fluids into stacks of equal/similar amount.
+quests.ch3.spatial=[Matrix Frame] is the block working as celling, floor, and the walls of the [AE2 spatial cell].
 
 description.crt.manatab.has=Has
 description.crt.manatab.inf= Infinite
@@ -175,8 +182,6 @@ description.crt.tooltip.shard_double_slab_sandstone= Double Sandstone Slab
 description.crt.tooltip.shard_double_slab_stone Double Stone Slab
 jei.description.salis_mundus=Due to technical problems, the description above cannot be deleted. However, the crafting table recipe for Salis Mundus has been deleted.
 
-quests.ch3.oremult.title=Orb and ores
-quests.ch3.oremult.des=You can use the Blood Orb to increase the yield of metal ingots.
 
 tile.chlorophyte_ore.name=Chlorophyte Ore
 jei.description.chlorophyte_ore.introduction=Yes, this is the Chlorophyte Ore. By putting it deep underground, under certain circumstances,  it converts neighboring (26 blocks) Mossy Cobblestones into the ore.
