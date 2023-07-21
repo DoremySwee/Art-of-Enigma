@@ -2,6 +2,9 @@
 	icon: "mysticalagriculture:ice_seeds",
 	x: -7.5d,
 	y: 3.5d,
+	text: [
+		"{quests.ch3.ice.help}"
+	],
 	dependencies: [
 		"854e069d"
 	],

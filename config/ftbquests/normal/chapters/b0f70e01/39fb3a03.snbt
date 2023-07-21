@@ -2,6 +2,9 @@
 	icon: "thermalfoundation:material 1 264",
 	x: -20.5d,
 	y: 1.0d,
+	text: [
+		"{quests.ch3.mana.help}"
+	],
 	dependencies: [
 		"4a3a5673"
 	],

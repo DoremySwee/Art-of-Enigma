@@ -1,6 +1,10 @@
 {
+	title: "1mana?",
 	x: -22.0d,
 	y: 5.5d,
+	text: [
+		"{quests.ch3.bot_mana2.help}"
+	],
 	dependencies: [
 		"1e5c37a1"
 	],

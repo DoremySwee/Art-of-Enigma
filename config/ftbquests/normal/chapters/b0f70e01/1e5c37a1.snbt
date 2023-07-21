@@ -1,29 +1,14 @@
 {
+	title: "125000mana?",
 	x: -23.5d,
 	y: 5.5d,
+	text: [
+		"{quests.ch3.bot_mana1.help}"
+	],
 	dependencies: [
 		"4a3a5673"
 	],
 	tasks: [{
-		uid: "7687fd78",
-		type: "item",
-		items: [{
-			ForgeCaps: {
-				"astralsorcery:cap_item_amulet_holder": {}
-			},
-			id: "botania:poolminecart"
-		}],
-		ignore_damage: true,
-		ignore_nbt: 1b
-	},
-	{
-		uid: "0be738ec",
-		type: "item",
-		items: [{
-			item: "botania:pump"
-		}]
-	},
-	{
 		uid: "3c5ac642",
 		type: "item",
 		items: [{
@@ -53,5 +38,19 @@
 		}],
 		ignore_damage: true,
 		ignore_nbt: 1b
+	},
+	{
+		uid: "5c764e95",
+		type: "item",
+		items: [{
+			item: "appliedenergistics2:part 1 320"
+		}]
+	},
+	{
+		uid: "47efe92b",
+		type: "item",
+		items: [{
+			item: "appliedenergistics2:interface"
+		}]
 	}]
 }

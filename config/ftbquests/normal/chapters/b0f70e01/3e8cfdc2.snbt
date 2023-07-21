@@ -1,6 +1,9 @@
 {
 	x: 4.0d,
 	y: 3.5d,
+	text: [
+		"{quests.ch3.spatial}"
+	],
 	dependencies: [
 		"a3a9e293"
 	],
