@@ -176,10 +176,19 @@ T.bot.altar(<mysticalagriculture:crafting:10>,botMysticFlowers,500000);
 
 
 //post salisMundus & blue Slime
-recipes.remove(<thaumcraft:salis_mundus>);
+recipes.remove(<thaumcraft:salis_mundus>);/*
 T.ie.mixer(<liquid:bot_mana>*144, [
 	<botania:manatablet>.withTag({mana: 400000}),<thaumcraft:salis_mundus>
-], <liquid:mana>*16, 2048);
+], <liquid:mana>*16, 2048);*/
+T.eio.vat(<liquid:bot_mana>, <liquid:mana>, 0.25f, [
+	<mysticalagriculture:manasteel_essence>%20,
+	<botania:manatablet>.withTag({mana: 100000})%40,
+	<botania:manatablet>.withTag({mana: 375000})%60,
+	<botania:manatablet>.withTag({mana: 225000})%60,
+	<botania:manatablet>.withTag({mana: 204800})%100
+],[
+	<thaumcraft:salis_mundus>%100
+]);
 //note that slime turns blue when getting into liquid mana, done in 2C3MiscReloadable.zs
 recipes.remove(<tconstruct:soil:2>);
 T.ava.shaped(<tconstruct:materials:10>*4,Mp.read(

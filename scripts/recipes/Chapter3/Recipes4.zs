@@ -258,10 +258,10 @@ T.ava.shaped(<mysticalagriculture:knightslime_seeds>*2,Mp.read("
 T.ie.mix(<liquid:bot_elf>*100,[
     <thaumcraft:salis_mundus>, <mysticalagriculture:knightslime_essence>,
     <thaumcraft:alumentum>, <extrautils2:ingredients:3>
-],<liquid:bot_mana>*1000);
+],<liquid:bot_mana>*100);
 //Elf portal
 //Cholorophyte
-T.eio.vat(<liquid:molten_chlorophyte>, <liquid:emerald>, 1.0f/9, [<mysticalagriculture:nature_seeds>%160],[<contenttweaker:shard_terra>%9]);
+T.eio.vat(<liquid:molten_chlorophyte>, <liquid:emerald>, 1.0f/9, [<mysticalagriculture:nature_seeds>%160],[<contenttweaker:shard_terra>%9,<thaumcraft:salis_mundus>%36]);
 T.tic.casting(<contenttweaker:chlorophyte_ore>,<thermalfoundation:ore:6>,<liquid:molten_chlorophyte>*144,900,true,true);
 T.tic.melting(<liquid:molten_chlorophyte>*16,<contenttweaker:chlorophyte_ore>);
 T.tic.casting(<botania:pylon:1>,<botania:pylon>,<liquid:molten_chlorophyte>*1440,900,true,true);
@@ -382,7 +382,9 @@ for i in 0 to 3{
         <calculator:largetanzanite>,<extrautils2:ingredients:5>,<mysticalagriculture:manasteel_essence>,
         <mysticalagriculture:sky_stone_essence>,<appliedenergistics2:material:47>,<minecraft:nether_star>,
         <botania:manaresource>.definition.makeStack(j)
-    ],3000000,0xFFCCDD,0xCCCCFF,<botania:miniisland>,<botania:starfield>,<botania:enchanter>);
+    ],3000000,0xFFCCDD,0xCCCCFF,
+    <botania:miniisland>,<botania:starfield>,<botania:enchanter>,
+    <botania:miniisland>,<botania:starfield>,<botania:enchanter>);
 }
 recipes.remove(<draconicevolution:crafting_injector>);
 recipes.remove(<draconicevolution:fusion_crafting_core>);
