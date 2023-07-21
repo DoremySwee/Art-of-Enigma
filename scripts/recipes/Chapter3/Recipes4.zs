@@ -488,6 +488,10 @@ recipes.addShaped(<botania:manaresource:14>,Mp.read("@#$;%&*;~12;",{
     "*":<minecraft:nether_star>,//<contenttweaker:chlorophyte_ingot>,
     "~":<bloodmagic:sacrificial_dagger>.withTag({sacrifice: 0 as byte})
 }));
+
+<entity:minecraft:wither>.removeDrop(<mysticalagriculture:crafting:4>);
+<entity:minecraft:wither>.addDrop(<contenttweaker:division_sigil>);
+
 /*
     液态精灵 + 魔力珍珠 -> 福鲁伊克斯珍珠 -> 空间塔 -> 矩阵框架 -> 水晶矩阵 & 中子态素压缩机 -> 奇点
 
