@@ -33,6 +33,6 @@ backups/
 .vscode/
 Code/
 config/InvTweaks/InvTweaks.cfg
-config/jei/worldSettings.cfg
+config/jei
 config/worldedit/worldedit.properties
 config/splash.properties
