@@ -253,7 +253,7 @@ T.ava.shaped(<extrautils2:resonator>,Mp.read(
 
 Resonator.remove(<extrautils2:decorativesolid:3>);
 Resonator.remove(<extrautils2:decorativesolid:7>);
-Resonator.remove(<extrautils2:ingredients:3>);
+//Resonator.remove(<extrautils2:ingredients:3>);
 Resonator.remove(<extrautils2:ingredients:4>);
 Resonator.remove(<extrautils2:ingredients:9>);
 Resonator.remove(<extrautils2:ingredients:13>);
