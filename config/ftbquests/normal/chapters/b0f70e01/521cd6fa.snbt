@@ -1,0 +1,16 @@
+{
+	title: "{quests.ch3.oremult.title}",
+	x: -9.0d,
+	y: 4.5d,
+	text: [
+		"{quests.ch3.oremult.des}"
+	],
+	dependencies: [
+		"02a784c8"
+	],
+	tasks: [{
+		uid: "b68c4cfa",
+		type: "checkmark",
+		icon: "minecraft:gold_ingot"
+	}]
+}

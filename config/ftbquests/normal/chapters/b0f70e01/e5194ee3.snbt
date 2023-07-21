@@ -1,0 +1,15 @@
+{
+	x: -16.5d,
+	y: 4.0d,
+	dependencies: [
+		"d5867400",
+		"7cb1eee2"
+	],
+	tasks: [{
+		uid: "32190245",
+		type: "item",
+		items: [{
+			item: "bloodmagic:altar"
+		}]
+	}]
+}

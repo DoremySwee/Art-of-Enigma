@@ -1,0 +1,22 @@
+{
+	icon: "extrautils2:decorativesolidwood 1 1",
+	x: -15.5d,
+	y: 2.0d,
+	dependencies: [
+		"d5867400"
+	],
+	tasks: [{
+		uid: "483f8e8d",
+		type: "item",
+		items: [{
+			item: "extrautils2:decorativesolidwood 1 1"
+		}]
+	},
+	{
+		uid: "53b785eb",
+		type: "item",
+		items: [{
+			item: "extrautils2:simpledecorative"
+		}]
+	}]
+}

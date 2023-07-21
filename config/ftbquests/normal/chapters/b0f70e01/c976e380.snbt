@@ -1,0 +1,14 @@
+{
+	x: -3.5d,
+	y: 5.0d,
+	dependencies: [
+		"b4b4a609"
+	],
+	tasks: [{
+		uid: "54b7af41",
+		type: "item",
+		items: [{
+			item: "contenttweaker:shard_balanced"
+		}]
+	}]
+}

@@ -1,0 +1,14 @@
+{
+	x: -20.5d,
+	y: 4.0d,
+	dependencies: [
+		"c882ef20"
+	],
+	tasks: [{
+		uid: "01469364",
+		type: "item",
+		items: [{
+			item: "bloodmagic:soul_forge"
+		}]
+	}]
+}

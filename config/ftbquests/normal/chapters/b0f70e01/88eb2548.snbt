@@ -1,0 +1,14 @@
+{
+	x: -2.5d,
+	y: 0.5d,
+	dependencies: [
+		"40ab4b00"
+	],
+	tasks: [{
+		uid: "91ae1da0",
+		type: "item",
+		items: [{
+			item: "mysticalagriculture:slime_seeds"
+		}]
+	}]
+}

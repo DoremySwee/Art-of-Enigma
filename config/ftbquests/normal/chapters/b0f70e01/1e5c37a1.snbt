@@ -1,0 +1,57 @@
+{
+	x: -23.5d,
+	y: 5.5d,
+	dependencies: [
+		"4a3a5673"
+	],
+	tasks: [{
+		uid: "7687fd78",
+		type: "item",
+		items: [{
+			ForgeCaps: {
+				"astralsorcery:cap_item_amulet_holder": {}
+			},
+			id: "botania:poolminecart"
+		}],
+		ignore_damage: true,
+		ignore_nbt: 1b
+	},
+	{
+		uid: "0be738ec",
+		type: "item",
+		items: [{
+			item: "botania:pump"
+		}]
+	},
+	{
+		uid: "3c5ac642",
+		type: "item",
+		items: [{
+			ForgeCaps: {
+				"astralsorcery:cap_item_amulet_holder": {}
+			},
+			id: "botania:manatablet",
+			tag: {}
+		}],
+		count: 4L,
+		ignore_damage: true
+	},
+	{
+		uid: "2bd4371e",
+		type: "item",
+		items: [{
+			ForgeCaps: {
+				"astralsorcery:cap_item_amulet_holder": {
+					AS_Amulet_HolderLeast: -5975520166030973950L,
+					AS_Amulet_HolderMost: 7941611358549129122L
+				}
+			},
+			id: "botania:manatablet",
+			tag: {
+				mana: 125000
+			}
+		}],
+		ignore_damage: true,
+		ignore_nbt: 1b
+	}]
+}

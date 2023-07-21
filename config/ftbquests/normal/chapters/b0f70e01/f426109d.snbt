@@ -1,0 +1,27 @@
+{
+	x: -12.5d,
+	y: 7.0d,
+	dependencies: [
+		"5477cfbd"
+	],
+	tasks: [{
+		uid: "3fa8679f",
+		type: "item",
+		items: [{
+			ForgeCaps: {
+				"astralsorcery:cap_item_amulet_holder": {}
+			},
+			id: "calculator:calculator",
+			tag: {}
+		}],
+		ignore_damage: true,
+		ignore_nbt: 1b
+	},
+	{
+		uid: "04c7c137",
+		type: "item",
+		items: [{
+			item: "calculator:atomiccalculator"
+		}]
+	}]
+}

@@ -1,0 +1,14 @@
+{
+	x: -1.0d,
+	y: 3.5d,
+	dependencies: [
+		"ce26f251"
+	],
+	tasks: [{
+		uid: "37e4e35c",
+		type: "item",
+		items: [{
+			item: "mysticalagriculture:manasteel_seeds"
+		}]
+	}]
+}

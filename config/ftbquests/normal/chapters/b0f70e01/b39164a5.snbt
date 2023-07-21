@@ -1,12 +1,12 @@
 {
-	x: -0.5d,
-	y: -9.0d,
+	x: 0.5d,
+	y: 5.0d,
 	dependencies: [
-		"ea55bc83",
-		"da1dd73a"
+		"6ca80cdd",
+		"a7040f0e"
 	],
 	tasks: [{
-		uid: "9491c9fb",
+		uid: "4d9bdb08",
 		type: "item",
 		items: [{
 			item: "contenttweaker:pattern_wand"

@@ -1,0 +1,16 @@
+{
+	x: 7.0d,
+	y: 1.0d,
+	shape: "hexagon",
+	dependencies: [
+		"a9f67529"
+	],
+	size: 2.0d,
+	tasks: [{
+		uid: "50754a90",
+		type: "item",
+		items: [{
+			item: "mysticalagriculture:crafting 1 3"
+		}]
+	}]
+}

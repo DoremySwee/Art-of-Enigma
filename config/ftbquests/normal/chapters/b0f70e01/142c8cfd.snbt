@@ -1,0 +1,17 @@
+{
+	x: -20.5d,
+	y: 2.0d,
+	text: [
+		"{quests.ch3.geosep.help}"
+	],
+	dependencies: [
+		"c882ef20"
+	],
+	tasks: [{
+		uid: "7d5cbd1b",
+		type: "item",
+		items: [{
+			item: "embers:geo_separator"
+		}]
+	}]
+}

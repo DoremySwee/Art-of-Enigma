@@ -1,0 +1,33 @@
+{
+	x: -6.5d,
+	y: 6.0d,
+	dependencies: [
+		"d782072d"
+	],
+	tasks: [{
+		uid: "125b5919",
+		type: "item",
+		items: [{
+			item: "thaumcraft:arcane_workbench"
+		}]
+	},
+	{
+		uid: "072f4ba3",
+		type: "item",
+		items: [{
+			ForgeCaps: {
+				"astralsorcery:cap_item_amulet_holder": {
+					AS_Amulet_HolderLeast: -5975520166030973950L,
+					AS_Amulet_HolderMost: 7941611358549129122L
+				}
+			},
+			id: "thaumicwands:item_wand",
+			tag: {
+				cap: "iron",
+				rod: "wood"
+			}
+		}],
+		ignore_damage: true,
+		ignore_nbt: 1b
+	}]
+}

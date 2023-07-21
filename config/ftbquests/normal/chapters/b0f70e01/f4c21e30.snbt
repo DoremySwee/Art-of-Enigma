@@ -1,0 +1,14 @@
+{
+	x: -10.5d,
+	y: 3.0d,
+	dependencies: [
+		"e5b27726"
+	],
+	tasks: [{
+		uid: "eaeadb7c",
+		type: "item",
+		items: [{
+			item: "minecraft:brown_mushroom"
+		}]
+	}]
+}

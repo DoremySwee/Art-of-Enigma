@@ -1,0 +1,19 @@
+{
+	x: -17.5d,
+	y: 6.0d,
+	dependencies: [
+		"d0dba723"
+	],
+	tasks: [{
+		uid: "a755f2c0",
+		type: "item",
+		items: [{
+			id: "minecraft:spawn_egg",
+			tag: {
+				EntityTag: {
+					id: "minecraft:blaze"
+				}
+			}
+		}]
+	}]
+}

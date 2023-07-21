@@ -1,0 +1,14 @@
+{
+	x: -4.5d,
+	y: 0.5d,
+	dependencies: [
+		"020c4743"
+	],
+	tasks: [{
+		uid: "b6a96603",
+		type: "item",
+		items: [{
+			item: "mysticalagriculture:nether_seeds"
+		}]
+	}]
+}

@@ -1,0 +1,14 @@
+{
+	x: -7.0d,
+	y: -0.5d,
+	dependencies: [
+		"ff2942ff"
+	],
+	tasks: [{
+		uid: "25b6b5a3",
+		type: "item",
+		items: [{
+			item: "thermalfoundation:fertilizer"
+		}]
+	}]
+}

@@ -1,0 +1,14 @@
+{
+	x: -16.5d,
+	y: 6.0d,
+	dependencies: [
+		"f07ddc72"
+	],
+	tasks: [{
+		uid: "c3b3ae58",
+		type: "item",
+		items: [{
+			item: "minecraft:mob_spawner"
+		}]
+	}]
+}

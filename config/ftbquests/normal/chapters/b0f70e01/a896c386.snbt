@@ -1,11 +1,12 @@
 {
-	x: -9.5d,
-	y: -6.0d,
+	icon: "mysticalagriculture:ice_seeds",
+	x: -7.5d,
+	y: 3.5d,
 	dependencies: [
-		"25fc2fd5"
+		"854e069d"
 	],
 	tasks: [{
-		uid: "ed646ada",
+		uid: "647f3031",
 		type: "item",
 		items: [{
 			ForgeCaps: {
@@ -21,7 +22,7 @@
 		ignore_nbt: 1b
 	},
 	{
-		uid: "4a6c1754",
+		uid: "4e599b9b",
 		type: "item",
 		items: [{
 			ForgeCaps: {
@@ -33,21 +34,21 @@
 		ignore_nbt: 1b
 	},
 	{
-		uid: "290e4f53",
+		uid: "45330fe1",
 		type: "item",
 		items: [{
 			item: "tconstruct:materials 1 16"
 		}]
 	},
 	{
-		uid: "69c9ccac",
+		uid: "e6f04016",
 		type: "item",
 		items: [{
 			item: "minecraft:ice"
 		}]
 	},
 	{
-		uid: "f5c7724e",
+		uid: "b1b30fab",
 		type: "item",
 		items: [{
 			item: "mysticalagriculture:ice_seeds"

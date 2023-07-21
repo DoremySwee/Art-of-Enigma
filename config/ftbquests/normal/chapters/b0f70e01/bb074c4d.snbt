@@ -1,0 +1,14 @@
+{
+	x: -14.0d,
+	y: 6.0d,
+	dependencies: [
+		"5477cfbd"
+	],
+	tasks: [{
+		uid: "cafd8988",
+		type: "item",
+		items: [{
+			item: "extrautils2:ingredients 1 8"
+		}]
+	}]
+}

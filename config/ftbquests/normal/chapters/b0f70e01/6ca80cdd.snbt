@@ -1,0 +1,21 @@
+{
+	x: 0.5d,
+	y: 3.5d,
+	dependencies: [
+		"ffaf8db6"
+	],
+	tasks: [{
+		uid: "771620e1",
+		type: "item",
+		items: [{
+			item: "mysticalagriculture:certus_quartz_seeds"
+		}]
+	},
+	{
+		uid: "504c95b3",
+		type: "item",
+		items: [{
+			item: "mysticalagriculture:sky_stone_seeds"
+		}]
+	}]
+}

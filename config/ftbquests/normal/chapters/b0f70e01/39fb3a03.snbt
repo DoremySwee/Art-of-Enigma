@@ -1,0 +1,59 @@
+{
+	icon: "thermalfoundation:material 1 264",
+	x: -20.5d,
+	y: 1.0d,
+	dependencies: [
+		"4a3a5673"
+	],
+	tasks: [{
+		uid: "0a5de05f",
+		type: "item",
+		items: [{
+			ForgeCaps: {
+				"astralsorcery:cap_item_amulet_holder": {}
+			},
+			id: "forge:bucketfilled",
+			tag: {
+				FluidName: "mana",
+				Amount: 1000
+			}
+		}],
+		ignore_damage: true,
+		ignore_nbt: 1b
+	},
+	{
+		uid: "db28d127",
+		type: "item",
+		items: [{
+			item: "thermalfoundation:storage 1 8"
+		}]
+	},
+	{
+		uid: "da8dd5a9",
+		type: "item",
+		items: [{
+			item: "thermalfoundation:ore 1 8"
+		}]
+	},
+	{
+		uid: "5ef9a5a3",
+		type: "item",
+		items: [{
+			item: "minecraft:lapis_block"
+		}]
+	},
+	{
+		uid: "0ec8b6a1",
+		type: "item",
+		items: [{
+			item: "thermalfoundation:glass 1 8"
+		}]
+	},
+	{
+		uid: "d67559df",
+		type: "item",
+		items: [{
+			item: "thermalfoundation:material 1 264"
+		}]
+	}]
+}

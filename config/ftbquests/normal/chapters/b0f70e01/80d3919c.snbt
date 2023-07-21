@@ -1,0 +1,14 @@
+{
+	x: -10.5d,
+	y: 1.0d,
+	dependencies: [
+		"41cf12d3"
+	],
+	tasks: [{
+		uid: "a904fae3",
+		type: "item",
+		items: [{
+			item: "minecraft:sapling 1 2"
+		}]
+	}]
+}

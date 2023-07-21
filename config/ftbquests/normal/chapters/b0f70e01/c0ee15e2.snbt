@@ -1,0 +1,21 @@
+{
+	x: -19.0d,
+	y: 3.0d,
+	dependencies: [
+		"c882ef20"
+	],
+	tasks: [{
+		uid: "d49f3724",
+		type: "item",
+		items: [{
+			item: "mysticalagriculture:crafting 1 33"
+		}]
+	},
+	{
+		uid: "629f0efa",
+		type: "item",
+		items: [{
+			item: "mysticalagriculture:tier1_inferium_seeds"
+		}]
+	}]
+}

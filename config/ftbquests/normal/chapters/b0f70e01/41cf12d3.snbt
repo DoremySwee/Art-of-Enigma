@@ -1,0 +1,14 @@
+{
+	x: -9.5d,
+	y: 1.5d,
+	dependencies: [
+		"854e069d"
+	],
+	tasks: [{
+		uid: "5b9feeb6",
+		type: "item",
+		items: [{
+			item: "mysticalagriculture:wood_seeds"
+		}]
+	}]
+}

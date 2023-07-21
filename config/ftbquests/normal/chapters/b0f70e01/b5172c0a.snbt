@@ -1,0 +1,14 @@
+{
+	x: -4.5d,
+	y: 6.0d,
+	dependencies: [
+		"69b95ee5"
+	],
+	tasks: [{
+		uid: "dcef0e6c",
+		type: "item",
+		items: [{
+			item: "contenttweaker:wand_rod_livingwood"
+		}]
+	}]
+}

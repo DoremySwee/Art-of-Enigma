@@ -1,0 +1,19 @@
+{
+	x: -16.5d,
+	y: 7.0d,
+	dependencies: [
+		"d0dba723"
+	],
+	tasks: [{
+		uid: "f22d20c6",
+		type: "item",
+		items: [{
+			id: "minecraft:spawn_egg",
+			tag: {
+				EntityTag: {
+					id: "minecraft:villager"
+				}
+			}
+		}]
+	}]
+}

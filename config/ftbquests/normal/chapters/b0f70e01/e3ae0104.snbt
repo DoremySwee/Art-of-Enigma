@@ -1,0 +1,21 @@
+{
+	x: 2.0d,
+	y: 0.5d,
+	dependencies: [
+		"87c56713"
+	],
+	tasks: [{
+		uid: "5c9dce01",
+		type: "item",
+		items: [{
+			item: "botania:alfheimportal"
+		}]
+	},
+	{
+		uid: "6f67ee77",
+		type: "item",
+		items: [{
+			item: "minecraft:skull 1 1"
+		}]
+	}]
+}
