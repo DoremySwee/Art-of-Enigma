@@ -485,7 +485,7 @@ recipes.addShaped(<botania:manaresource:14>,Mp.read("@#$;%&*;~12;",{
     "$":<astralsorcery:itemcraftingcomponent:1>,
     "%":<botania:manaresource:7>,
     "&":<appliedenergistics2:material:9>,
-    "*":<contenttweaker:chlorophyte_ingot>,
+    "*":<minecraft:nether_star>,//<contenttweaker:chlorophyte_ingot>,
     "~":<bloodmagic:sacrificial_dagger>.withTag({sacrifice: 0 as byte})
 }));
 /*

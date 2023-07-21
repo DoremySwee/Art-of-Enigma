@@ -114,7 +114,7 @@ for i in 0 to 5{
 }
 T.tic.casting(<mysticalagriculture:crafting:33>,<thermalfoundation:material:136>,<liquid:molten_essence>*144,600);
 T.embers.melt([<liquid:molten_essence>*144],<mysticalagriculture:crafting>);
-T.tic.melt(<liquid:molten_essence>*144,<mysticalagriculture:crafting>,500);
+//T.tic.melt(<liquid:molten_essence>*144,<mysticalagriculture:crafting>,500);
 recipes.remove(<mysticalagriculture:inferium_apple>);
 
 //TE Machines & invar upgrade
