@@ -217,3 +217,9 @@ T.tic.casting(<botania:spawnermover>,
     <liquid:lifeessence>*3000,3000);
 T.bm.altar(<botania:spawnerclaw>,<botania:spawnermover>,10086);
 recipes.remove(<botania:spawnerclaw>);
+
+//Fixes 20230724
+recipes.addShaped(<mysticalagriculture:tinkering_table>,Mp.read("AAA;B_B;B_B;",{"A":<tconstruct:seared:3>,"B":<mysticalagriculture:crafting:33>}));
+recipes.remove(<enderio:item_material:22>);
+T.tic.casting(<enderio:item_travel_staff>,<enderio:item_xp_transfer>,<liquid:molten_essence>*144,900);
+recipes.addShaped(<enderio:block_travel_anchor>,Mp.read("ABA;BCB;ABA;",{"A":<enderio:block_alloy:9>,"B":<enderio:item_material:20>,"C":<mysticalagriculture:crafting:33>}));

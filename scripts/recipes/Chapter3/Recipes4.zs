@@ -490,6 +490,7 @@ recipes.addShaped(<botania:manaresource:14>,Mp.read("@#$;%&*;~12;",{
 }));
 
 <entity:minecraft:wither>.removeDrop(<mysticalagriculture:crafting:4>);
+<entity:minecraft:wither>.removeDrop(<contenttweaker:division_sigil>);
 <entity:minecraft:wither>.addDrop(<contenttweaker:division_sigil>);
 
 /*

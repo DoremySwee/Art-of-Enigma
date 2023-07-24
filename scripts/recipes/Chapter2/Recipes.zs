@@ -124,7 +124,7 @@ if(true){
     //AE2
     for i in 11 to 14{
         var d = <appliedenergistics2:part>.definition;
-        T.tic.casting(d.makeStack(i*20),d.makeStack(i*20+1),<liquid:water>,10);
+        T.tic.casting(d.makeStack(i*20+1),d.makeStack(i*20),<liquid:water>,10);
     }
 }
 
