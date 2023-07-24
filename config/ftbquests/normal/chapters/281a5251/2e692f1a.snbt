@@ -68,5 +68,11 @@
 		type: "item",
 		item: "extrautils2:compressedcobblestone 1 2",
 		count: 2
+	},
+	{
+		uid: "ccd53652",
+		type: "item",
+		item: "minecraft:redstone_block",
+		count: 7
 	}]
 }
