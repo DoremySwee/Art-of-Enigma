@@ -27,4 +27,8 @@ events.onPlayerInteractBlock(function(event as crafttweaker.event.PlayerInteract
     else for r in result{
         M.shout(r);
     }
+});*
+events.onPlayerInteractBlock(function(event as crafttweaker.event.PlayerInteractBlockEvent){
+    event.player.canFly=true;
+    M.shout("AAA");
 });*/
