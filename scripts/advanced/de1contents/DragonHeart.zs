@@ -17,6 +17,7 @@ import scripts.advanced.libs.Vector3D as V;
 import scripts.advanced.libs.Misc as M;
 
 <draconicevolution:dragon_heart>.maxStackSize=1;
+static shoutEntityId as bool = false;
 
 events.onExplosionDetonate(function(event as crafttweaker.event.ExplosionDetonateEvent){
     for i in event.affectedEntities{
@@ -59,7 +60,15 @@ events.onWorldTick(function(event as crafttweaker.event.WorldTickEvent){
                 }
             }
         }
-        if(heart.definition.id!="draconicevolution:dragonheartitem")continue;
+        var id = heart.definition.id;
+        if(heart.definition.id!="draconicevolution:dragonheartitem"){
+            if(shoutEntityId){
+                if(id.contains("burst"))continue;
+                if(id.contains("spark"))continue;
+                M.shout(id);
+            }
+            continue;
+        }
         
         if(heart.nbt has "ForgeData" && heart.nbt.ForgeData has "dragonHeartCraftData"){
             var data as IData=heart.nbt.ForgeData.dragonHeartCraftData;
