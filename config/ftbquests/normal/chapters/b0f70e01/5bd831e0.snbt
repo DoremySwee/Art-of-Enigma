@@ -1,0 +1,31 @@
+{
+	x: -31.5d,
+	y: -12.0d,
+	dependencies: [
+		"670810be"
+	],
+	hide: true,
+	tasks: [{
+		uid: "038d98ce",
+		type: "item",
+		items: [{
+			ForgeCaps: {
+				"astralsorcery:cap_item_amulet_holder": {}
+			},
+			id: "enderio:item_travel_staff",
+			tag: {
+				enderio.darksteel.upgrade.energyUpgrade: {
+					level: 0
+				}
+			}
+		}],
+		ignore_nbt: 1b
+	},
+	{
+		uid: "57f45c54",
+		type: "item",
+		items: [{
+			item: "enderio:block_travel_anchor"
+		}]
+	}]
+}
