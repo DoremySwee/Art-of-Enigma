@@ -8,7 +8,6 @@ events.onCustomReward(function(event as CustomRewardEvent) {
     if (event.reward.hasTag("flying")) {
         val player = event.player;
         player.update({PlayerPersisted: {Flying: true}});
-        NetworkHandler.sendTo("enableFlying", player);
     }
 });
 
