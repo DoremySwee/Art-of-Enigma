@@ -50,6 +50,13 @@ quests.ch1.beforeEverything.des0=This modpack is suitable for players fammiliar 
 quests.ch1.beforeEverything.des1=The beginning parts of the modpack includes some puzzles, while the rest parts were intended to include lots of automations.
 quests.ch1.beforeEverything.des2=Carefully Read the Quest Descriptions and ToolTips !!!!!!
 
+quests.ch1.manaHelp.des=Try shooting at the agglomeration plate with your terrablade?
+quests.ch1.crateHelp2.title=How to add items into the crafting crate?
+quests.ch1.crateHelp2.des=A small ME network including an input bus and a storage bus may work as a hopper / pipe.
+quests.ch1.crateHelp3.title=How to create empty slot in the crate?
+quests.ch1.crateHelp3.des=You can extract items out of the crate. Well, if you've got crafting placeholder, then you needn't worry.
+quests.ch1.push.des=It's impossible for you to harvest Cobblestones... Well, why not push them to the centre of the island?
+
 description.crt.aggWithLava=Do agglomeration with lava block, in the place of air as jei shows. Lava returns as product.
 description.crt.tooltip.flower.waterCraft=Agglomerate with water in the place of air in JEI. Water Block consumes.
 description.crt.tooltip.flower.endoRestrict=Only 8 enfoflames per chunk is allowed.
