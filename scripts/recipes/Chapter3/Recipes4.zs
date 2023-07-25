@@ -6,8 +6,6 @@ import scripts.recipes.libs.Misc as M;
 import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
 //TODO: change some casting into TE Fluid transport / embers press
-//TODO: Make Essence More Useful
-//TODO: Flying
 Agg.removeDefaultRecipe();
 //seeds' materials
 var seed3 = <mysticalagriculture:crafting:19>;

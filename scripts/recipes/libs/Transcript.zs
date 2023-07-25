@@ -300,7 +300,6 @@ zenClass DE{
 }
 static de as DE = DE();
 zenClass EIO{
-    //TODO
     //WARNING: Cannot delete recipe through enderTweaker. It must be done through config.
     zenConstructor(){}
     function alloy(output as It, inputs as In[], energy as int = 10000, xp as float =0.0f){
