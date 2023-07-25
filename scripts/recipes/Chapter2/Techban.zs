@@ -91,3 +91,33 @@ for i in d {
     recipes.removeShapeless(i);
     mods.avaritia.ExtremeCrafting.remove(i);
 }
+
+var bluePrintResults = [
+    <immersiveengineering:bullet:2>.withTag({bullet: "buckshot"}),
+    <immersiveengineering:bullet:2>.withTag({bullet: "silver"}),
+    <immersiveengineering:bullet:2>.withTag({bullet: "armor_piercing"}),
+    <immersiveengineering:bullet:2>.withTag({bullet: "casull"}),
+    <immersiveengineering:bullet:2>.withTag({bullet: "crystalwill"}),
+    <immersiveengineering:bullet:2>.withTag({bullet: "terrasteel"}),
+    <immersiveengineering:bullet:2>.withTag({bullet: "wolfpack"}),
+    <immersiveengineering:bullet:2>.withTag({flareColour: 13381126, bullet: "flare"}),
+    <immersiveengineering:bullet:2>.withTag({bullet: "potion"}),
+    <immersiveengineering:bullet:2>.withTag({bullet: "dragonsbreath"}),
+    <immersiveengineering:bullet:2>.withTag({bullet: "he"}),
+    <immersiveengineering:mold:7>,
+    <immersiveengineering:mold:6>,
+    <immersiveengineering:mold:5>,
+    <immersiveengineering:mold:4>,
+    <immersiveengineering:mold:3>,
+    <immersiveengineering:mold:2>,
+    <immersiveengineering:mold:1>,
+    <immersiveengineering:mold>,
+    <immersiveengineering:material:26>,
+    <immersiveengineering:material:9>,
+    <immersiveengineering:graphite_electrode>,
+    <immersiveengineering:material:8>,
+    <immersiveengineering:material:27>
+] as IItemStack[];
+for i in bluePrintResults{
+    mods.immersiveengineering.Blueprint.removeRecipe(i);
+}
