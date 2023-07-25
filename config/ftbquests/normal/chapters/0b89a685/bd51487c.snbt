@@ -10,6 +10,7 @@
 		type: "item",
 		items: [{
 			item: "minecraft:repeating_command_block"
-		}]
+		}],
+		only_from_crafting: true
 	}]
 }

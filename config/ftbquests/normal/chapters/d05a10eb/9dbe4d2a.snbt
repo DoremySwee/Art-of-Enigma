@@ -1,0 +1,15 @@
+{
+	x: 20.5d,
+	y: 9.0d,
+	dependencies: [
+		"6f795a51"
+	],
+	tasks: [{
+		uid: "879f4443",
+		type: "item",
+		items: [{
+			item: "botania:spark"
+		}],
+		count: 64L
+	}]
+}

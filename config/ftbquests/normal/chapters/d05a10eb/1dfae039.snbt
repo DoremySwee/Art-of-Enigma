@@ -1,0 +1,19 @@
+{
+	x: 17.5d,
+	y: 8.0d,
+	dependencies: [
+		"c12e755b"
+	],
+	tasks: [{
+		uid: "a064331c",
+		type: "item",
+		items: [{
+			ForgeCaps: {
+				"astralsorcery:cap_item_amulet_holder": {}
+			},
+			id: "betterbuilderswands:wandstone"
+		}],
+		ignore_damage: true,
+		ignore_nbt: 1b
+	}]
+}

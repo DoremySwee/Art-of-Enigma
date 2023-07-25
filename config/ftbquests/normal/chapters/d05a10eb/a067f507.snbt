@@ -1,0 +1,23 @@
+{
+	title: "{quests.ch1.peace.title}",
+	x: -3.0d,
+	y: 7.5d,
+	text: [
+		"{quests.ch1.peace.des}"
+	],
+	dependencies: [
+		"0b4c79c1"
+	],
+	tasks: [{
+		uid: "c8cc2bb2",
+		type: "checkmark",
+		icon: {
+			id: "minecraft:spawn_egg",
+			tag: {
+				EntityTag: {
+					id: "minecraft:creeper"
+				}
+			}
+		}
+	}]
+}

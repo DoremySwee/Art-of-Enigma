@@ -1,0 +1,14 @@
+{
+	x: 14.5d,
+	y: 9.0d,
+	dependencies: [
+		"ada17b0c"
+	],
+	tasks: [{
+		uid: "ac5b9cba",
+		type: "item",
+		items: [{
+			item: "botania:opencrate 1 1"
+		}]
+	}]
+}

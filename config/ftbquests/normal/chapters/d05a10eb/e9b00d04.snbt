@@ -1,0 +1,30 @@
+{
+	title: "{quests.DifficultySelection.titCasual}",
+	icon: "botania:pylon",
+	x: -5.5d,
+	y: 9.0d,
+	text: [
+		"{quests.DifficultySelection.desCasual}"
+	],
+	dependencies: [
+		"3eb5f017",
+		"a5eb188c"
+	],
+	size: 2.0d,
+	tasks: [{
+		uid: "84e10768",
+		type: "checkmark"
+	}],
+	rewards: [{
+		uid: "d8744a75",
+		type: "command",
+		auto: "invisible",
+		command: "/ftbquests change_progress reset singleplayer 1ac33ae6"
+	},
+	{
+		uid: "6bc0f8ad",
+		type: "command",
+		auto: "invisible",
+		command: "/ftbquests change_progress reset singleplayer 6a9d3990"
+	}]
+}

@@ -10,7 +10,8 @@
 	],
 	dependencies: [
 		"353ab882",
-		"6da9c0b1"
+		"6da9c0b1",
+		"8cdff89e"
 	],
 	hide: true,
 	dependency_requirement: "one_completed",
@@ -29,5 +30,11 @@
 		team_reward: true,
 		auto: "invisible",
 		command: "/ftbquests change_progress complete singleplayer f2084455"
+	},
+	{
+		uid: "9369ad6c",
+		type: "command",
+		auto: "invisible",
+		command: "/ftbquests change_progress complete singleplayer 949d83d4"
 	}]
 }

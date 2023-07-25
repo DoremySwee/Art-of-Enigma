@@ -1,0 +1,16 @@
+{
+	x: 23.5d,
+	y: 9.0d,
+	shape: "hexagon",
+	dependencies: [
+		"9dbe4d2a"
+	],
+	tasks: [{
+		uid: "8d78e742",
+		type: "item",
+		items: [{
+			item: "botania:terraplate"
+		}],
+		count: 2L
+	}]
+}

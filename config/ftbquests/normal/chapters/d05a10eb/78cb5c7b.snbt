@@ -1,0 +1,23 @@
+{
+	x: 0.0d,
+	y: 10.5d,
+	text: [
+		"{quests.ch1.sapl.des}"
+	],
+	dependencies: [
+		"0b4c79c1"
+	],
+	tasks: [{
+		uid: "56effa8b",
+		type: "item",
+		items: [{
+			item: "minecraft:sapling"
+		}]
+	}],
+	rewards: [{
+		uid: "bcd86cb4",
+		type: "item",
+		item: "minecraft:cobblestone",
+		count: 3
+	}]
+}

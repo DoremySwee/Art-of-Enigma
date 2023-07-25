@@ -1,0 +1,30 @@
+{
+	x: 12.5d,
+	y: 9.0d,
+	dependencies: [
+		"b4b7afa0"
+	],
+	tasks: [{
+		uid: "84f83782",
+		type: "item",
+		items: [{
+			item: "botania:pool"
+		}]
+	}],
+	rewards: [{
+		uid: "e741aee7",
+		type: "item",
+		item: "botania:pool"
+	},
+	{
+		uid: "a81c1567",
+		type: "item",
+		item: "minecraft:log",
+		count: 6
+	},
+	{
+		uid: "a2f74622",
+		type: "item",
+		item: "botania:blacklotus 1 1"
+	}]
+}

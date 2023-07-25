@@ -1,0 +1,16 @@
+{
+	title: "{quests.ch1.crateHelp3.title}",
+	x: 16.0d,
+	y: 7.5d,
+	text: [
+		"{quests.ch1.crateHelp3.des}"
+	],
+	dependencies: [
+		"4847a45b"
+	],
+	tasks: [{
+		uid: "bd86b71b",
+		type: "checkmark",
+		icon: "botania:manaresource 1 11"
+	}]
+}

@@ -1,0 +1,46 @@
+{
+	x: -3.0d,
+	y: 10.5d,
+	text: [
+		"{quests.ch1.dup0.des}"
+	],
+	dependencies: [
+		"0b4c79c1"
+	],
+	tasks: [{
+		uid: "6fe38895",
+		type: "item",
+		items: [{
+			item: "appliedenergistics2:part 1 31"
+		}]
+	},
+	{
+		uid: "f8fa3d8f",
+		type: "item",
+		items: [{
+			item: "appliedenergistics2:part 1 240"
+		}]
+	},
+	{
+		uid: "38c333d5",
+		type: "item",
+		items: [{
+			item: "appliedenergistics2:part 1 260"
+		}]
+	},
+	{
+		uid: "d84074f2",
+		type: "item",
+		items: [{
+			item: "appliedenergistics2:part 1 220"
+		}]
+	},
+	{
+		uid: "c4102dde",
+		type: "item",
+		items: [{
+			item: "appliedenergistics2:creative_energy_cell"
+		}],
+		count: 8L
+	}]
+}

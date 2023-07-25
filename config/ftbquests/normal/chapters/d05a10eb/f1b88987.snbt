@@ -1,0 +1,15 @@
+{
+	x: 6.0d,
+	y: 7.5d,
+	dependencies: [
+		"bfdef283"
+	],
+	tasks: [{
+		uid: "cb951acb",
+		type: "item",
+		items: [{
+			item: "botania:quartztypemana"
+		}],
+		count: 8L
+	}]
+}

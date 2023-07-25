@@ -1,0 +1,26 @@
+{
+	x: 7.5d,
+	y: 9.0d,
+	dependencies: [
+		"ef7fbe0b"
+	],
+	tasks: [{
+		uid: "de2954b0",
+		type: "item",
+		items: [{
+			item: "minecraft:furnace"
+		}]
+	}],
+	rewards: [{
+		uid: "c7f185f3",
+		type: "item",
+		item: "minecraft:cobblestone",
+		count: 64
+	},
+	{
+		uid: "b4f9e962",
+		type: "item",
+		item: "minecraft:stone_slab",
+		count: 31
+	}]
+}

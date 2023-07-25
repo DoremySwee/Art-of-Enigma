@@ -1,0 +1,18 @@
+{
+	x: 1.5d,
+	y: 9.0d,
+	text: [
+		"{quests.ch1.push.des}"
+	],
+	dependencies: [
+		"78cb5c7b",
+		"81c68060"
+	],
+	tasks: [{
+		uid: "b0719d47",
+		type: "item",
+		items: [{
+			item: "minecraft:gravel"
+		}]
+	}]
+}

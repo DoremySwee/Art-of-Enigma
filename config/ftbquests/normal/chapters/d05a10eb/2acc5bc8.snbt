@@ -1,0 +1,66 @@
+{
+	x: 22.0d,
+	y: 9.0d,
+	dependencies: [
+		"9dbe4d2a"
+	],
+	tasks: [{
+		uid: "df04b743",
+		type: "item",
+		items: [{
+			item: "appliedenergistics2:part 1 260"
+		}],
+		count: 8L
+	},
+	{
+		uid: "a55ab366",
+		type: "item",
+		items: [{
+			item: "appliedenergistics2:part 1 240"
+		}],
+		count: 8L
+	},
+	{
+		uid: "3c7190e1",
+		type: "item",
+		items: [{
+			item: "appliedenergistics2:part 1 220"
+		}],
+		count: 8L
+	},
+	{
+		uid: "94ddd54f",
+		type: "item",
+		items: [{
+			item: "appliedenergistics2:part 1 31"
+		}],
+		count: 8L
+	},
+	{
+		uid: "d18839ba",
+		type: "item",
+		items: [{
+			id: "botania:specialflower",
+			tag: {
+				type: "endoflame"
+			}
+		}],
+		count: 8L
+	},
+	{
+		uid: "a891f303",
+		type: "item",
+		items: [{
+			item: "botania:pool 1 2"
+		}],
+		count: 8L
+	},
+	{
+		uid: "239e2a84",
+		type: "item",
+		items: [{
+			item: "botania:spreader"
+		}],
+		count: 8L
+	}]
+}

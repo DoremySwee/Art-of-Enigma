@@ -77,8 +77,16 @@
 		uid: "791a624e",
 		type: "custom",
 		title: "{quests.ch3.flying_reward}",
+		icon: {
+			ForgeCaps: {
+				"astralsorcery:cap_item_amulet_holder": {}
+			},
+			id: "extrautils2:angelring",
+			Damage: 1s
+		},
 		tags: [
 			"flying"
-		]
+		],
+		auto: "enabled"
 	}]
 }

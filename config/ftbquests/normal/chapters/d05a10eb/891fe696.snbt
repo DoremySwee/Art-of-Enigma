@@ -1,0 +1,28 @@
+{
+	x: 3.0d,
+	y: 10.5d,
+	dependencies: [
+		"c5d9a290"
+	],
+	tasks: [{
+		uid: "807dd7b8",
+		type: "item",
+		items: [{
+			item: "minecraft:sand"
+		}]
+	},
+	{
+		uid: "8124d0d9",
+		type: "item",
+		items: [{
+			item: "minecraft:deadbush"
+		}]
+	},
+	{
+		uid: "430a804e",
+		type: "item",
+		items: [{
+			item: "minecraft:stick"
+		}]
+	}]
+}

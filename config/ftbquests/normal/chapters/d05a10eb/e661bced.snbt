@@ -1,0 +1,16 @@
+{
+	title: "{quests.ch1.crateHelp2.title}",
+	x: 13.0d,
+	y: 7.5d,
+	text: [
+		"{quests.ch1.crateHelp2.des}"
+	],
+	dependencies: [
+		"4847a45b"
+	],
+	tasks: [{
+		uid: "23d726b3",
+		type: "checkmark",
+		icon: "appliedenergistics2:part 1 220"
+	}]
+}

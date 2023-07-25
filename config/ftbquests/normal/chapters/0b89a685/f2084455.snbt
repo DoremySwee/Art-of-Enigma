@@ -12,6 +12,7 @@
 		items: [{
 			item: "minecraft:repeating_command_block"
 		}],
-		consume_items: true
+		consume_items: true,
+		only_from_crafting: true
 	}]
 }

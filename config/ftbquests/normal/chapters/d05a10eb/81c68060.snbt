@@ -1,0 +1,34 @@
+{
+	x: 0.0d,
+	y: 7.5d,
+	text: [
+		"{quests.ch1.dup0.des}"
+	],
+	dependencies: [
+		"0b4c79c1"
+	],
+	tasks: [{
+		uid: "36e72d19",
+		type: "item",
+		items: [{
+			item: "minecraft:piston"
+		}],
+		count: 8L
+	},
+	{
+		uid: "1acc2e23",
+		type: "item",
+		items: [{
+			item: "minecraft:sticky_piston"
+		}],
+		count: 8L
+	},
+	{
+		uid: "62e3d57b",
+		type: "item",
+		items: [{
+			item: "minecraft:lever"
+		}],
+		count: 8L
+	}]
+}

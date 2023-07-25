@@ -34,5 +34,11 @@
 		team_reward: true,
 		auto: "invisible",
 		command: "/ftbquests change_progress complete singleplayer 6a9d3990"
+	},
+	{
+		uid: "2ee16b0d",
+		type: "command",
+		auto: "invisible",
+		command: "/ftbquests change_progress complete singleplayer a5eb188c"
 	}]
 }

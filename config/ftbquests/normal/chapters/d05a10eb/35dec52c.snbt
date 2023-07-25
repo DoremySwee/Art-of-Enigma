@@ -1,0 +1,26 @@
+{
+	title: "{quests.ch1.crateHelp.title}",
+	x: 13.0d,
+	y: 10.5d,
+	text: [
+		"{quests.ch1.crateHelp.des}"
+	],
+	dependencies: [
+		"4847a45b"
+	],
+	tasks: [{
+		uid: "fbd29d16",
+		type: "item",
+		items: [{
+			ForgeCaps: {
+				"astralsorcery:cap_item_amulet_holder": {}
+			},
+			id: "botania:twigwand",
+			tag: {
+				color1: 0,
+				color2: 0
+			}
+		}],
+		ignore_nbt: 1b
+	}]
+}
