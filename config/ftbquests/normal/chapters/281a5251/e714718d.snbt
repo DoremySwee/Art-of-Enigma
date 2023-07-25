@@ -3,9 +3,11 @@
 	y: -7.0d,
 	hide_dependency_lines: true,
 	dependencies: [
-		"c5aea2e5"
+		"c5aea2e5",
+		"5f0ab269"
 	],
 	hide: true,
+	dependency_requirement: "one_completed",
 	tasks: [{
 		uid: "0c5ddaa5",
 		type: "item",
