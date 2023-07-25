@@ -72,5 +72,13 @@
 		uid: "6fc23e42",
 		type: "item",
 		item: "appliedenergistics2:material 1 19"
+	},
+	{
+		uid: "791a624e",
+		type: "custom",
+		title: "{quests.ch3.flying_reward}",
+		tags: [
+			"flying"
+		]
 	}]
 }

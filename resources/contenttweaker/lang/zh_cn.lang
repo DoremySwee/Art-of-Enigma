@@ -95,6 +95,7 @@ quests.ch3.bot_mana2.help=泰拉之刃可以发出100mana的魔力脉冲。当�
 quests.ch3.liquid.help=流体P2P可以均分流体。
 quests.ch3.spatial=【矩阵框架】是AE2空间元件的墙壁、地板和天花板。
 quests.ch3.checkRecipe=对于正方形的任务，请查看对应物品可以合成什么哦~ 此外，每做出一种 [精华]，你也记得要看看！
+quests.ch3.flying_reward=永久飞行能力
 
 description.crt.manatab.has=含：
 description.crt.manatab.inf=∞
