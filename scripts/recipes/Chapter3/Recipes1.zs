@@ -72,7 +72,7 @@ var map1 = {
 } as IIngredient[string];
 recipes.addShaped(<embers:tinker_hammer>,Mp.read("dbd;d1d;_1_;",map1));
 recipes.addShaped(<embers:stamper>,Mp.read("S2S;G3G;SFS;",map1));
-recipes.addShaped(table, Mp.read("444;5F5,5_5",map1));
+recipes.addShaped(table, Mp.read("444;5F5;5_5",map1));
 recipes.addShaped(<embers:block_furnace>,Mp.read("S6S;s7s;&8&;",map1));
 recipes.addShaped(<embers:stamper_base>,Mp.read("-_-;s-s;BTB;",map1));
 recipes.addShaped(<embers:mixer>,Mp.read("&9&;0G0;~R~;",map1));
