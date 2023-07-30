@@ -40,6 +40,7 @@ import scripts.advanced.libs.Data as D;
     };
 
 IBotaniaFXHelper.setWispFXDistanceLimit(false);
+IBotaniaFXHelper.setWispFXDistanceLimit(false);
 IBotaniaFXHelper.setSparkleFXNoClip(true);
 
 function executeCommand(s as string){
@@ -122,6 +123,8 @@ function getIntRGB(color as int)as int[]{
     return [R,G,B]as int[];
 }
 
+static counter as int[] = [0] as int[];
+
 function createBotFX(data as IData){
     var c as double[]= (data has "color")?(getDoubleRGB(data.memberGet("color").asInt())):(getDoubleRGB(data.memberGet("c").asInt()));
     var p as double[]= V.readFromData(data);
@@ -129,6 +132,7 @@ function createBotFX(data as IData){
     var r = data.memberGet("r");
     var a = 0.2*data.memberGet("a").asDouble();
     IBotaniaFXHelper.wispFX(p[0],p[1],p[2],c[0],c[1],c[2],r,v[0],v[1],v[2],a);
+    counter[0]=counter[0]+1;
 }/*
 function createBotSparkle(data as IData){
     var c as double[]= getDoubleRGB(data.memberGet("color").asInt());
@@ -142,6 +146,7 @@ function createFX(data as IData)as void{
     var typeD = D.get(data,"type");
     if(isNull(typeD)) createBotFX(data);
     else{
+        counter[0]=counter[0]+1;
         var type as string= typeD.asString();
         if(DE_PARTICLE_TYPES has type){
             var p as double[] = V.readFromData(data);

@@ -13,7 +13,10 @@ import crafttweaker.world.IWorld;
 // Vectors are represented by double[] with length 3
 // All trigonometric functions use degree
 static PIE as double = 3.1415927;
-
+//Int
+function floor(x as double)as int{
+    return Math.floor(x)as int;
+}
 // Fast trigonometric
 static sinfans as double[]=[]as double[];
 for i in 0 to 900{
@@ -106,7 +109,7 @@ static VZ as double[]    =[0.0,0.0,1.0]as double[];
 
 // Basic Data Operations
 function isVector3D(x as double[])as bool{
-    return x.length==3;
+    return !isNull(x)&&x.length==3;
 }
 function copy(x as double[])as double[]{
     if(isVector3D(x))return [x[0],x[1],x[2]];
@@ -118,23 +121,23 @@ function isZero(x as double[])as bool{
 }
 
 //Convertion: Data
-function readFromData(data as IData, keyPrefix as string="", cap as bool=false)as double[]{
+function readFromData(data as IData, keyPrefix as string="", cap as bool=false, suffix as string="")as double[]{
     var keys as string[]= cap?["X","Y","Z"]:["x","y","z"];
     var t = copy(V000);
     for i in 0 to 3{
-        var d = Data.get(data, keyPrefix~keys[i]);
+        var d = Data.get(data, keyPrefix~keys[i]~suffix);
         if(!isNull(d)){
             t[i]=d.asDouble();
         }
     }
     return t;
 }
-function asData(pos as double[], keyPrefix as string="", cap as bool=false)as IData{
+function asData(pos as double[], keyPrefix as string="", cap as bool=false, suffix as string="")as IData{
     if(!isVector3D(pos))return {};
     var keys as string[]= cap?["X","Y","Z"]:["x","y","z"];
     var d = IData.createEmptyMutableDataMap();
     for i in 0 to 3{
-        d=d.deepSet((pos[i])as IData,keyPrefix~keys[i]);
+        d=d.deepSet((pos[i])as IData,keyPrefix~keys[i]~suffix);
     }
     //print(d);
     return d;
