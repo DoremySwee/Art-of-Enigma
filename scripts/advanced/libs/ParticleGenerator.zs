@@ -92,7 +92,7 @@ zenClass FXGenerator{
                 objects[dim]=t;
             }
         });
-        events.onWorldSave(function(event as mods.zenutils.WorldSaveEvent) {
+        events.onWorldSave(function(event as mods.zenutils.event.WorldSaveEvent) {
             val world = event.world;
             if (!world.remote) {
                 val object as [IData] = objects[world.dimension];
@@ -103,7 +103,7 @@ zenClass FXGenerator{
                 }
             }
         });
-        events.onWorldLoad(function(event as mods.zenutils.WorldLoadEvent) {
+        events.onWorldLoad(function(event as mods.zenutils.event.WorldLoadEvent) {
             val world = event.world;
             if (!world.remote) {
                 val object as IData = world.getCustomWorldData().memberGet(serializeKey);
@@ -112,7 +112,7 @@ zenClass FXGenerator{
                 }
             }
         });
-        events.onWorldUnload(function(event as mods.zenutils.WorldUnloadEvent) {
+        events.onWorldUnload(function(event as mods.zenutils.event.WorldUnloadEvent) {
             val world = event.world;
             if (!world.remote) {
                 objects[world.dimension] = [] as [IData];
