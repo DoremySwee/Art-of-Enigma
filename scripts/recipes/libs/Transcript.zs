@@ -422,7 +422,7 @@ zenClass TC{
     static research as string= "FIRSTSTEPS";
     function getId()as string{
         var ans = id~(recipeNum[0]);
-        print(ans);
+        //print(ans);
         recipeNum[0] = recipeNum[0] + 1;
         return ans;
     }
