@@ -9,7 +9,7 @@ import crafttweaker.mods.ILoadedMods;
 import crafttweaker.mods.IMod;
 
 val AE2=loadedMods["appliedenergistics2"] as IMod;
-val m0 = [<botania:livingrock>,<appliedenergistics2:material>,<appliedenergistics2:material:7>|<enderio:item_alloy_ingot:9>] as IIngredient[];
+val m0 = [<botania:livingrock>|<enderio:item_alloy_ingot:9>,<appliedenergistics2:material>,<appliedenergistics2:material:7>] as IIngredient[];
 var c=0 as int;
 val blackList = ["facade","material","seed","_quartz_","paint_ball","pattern","crank","grindstone","inscriber","spatial"] as string[];
 /*
