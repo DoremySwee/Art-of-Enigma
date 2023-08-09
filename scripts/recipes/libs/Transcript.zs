@@ -426,14 +426,26 @@ zenClass TC{
         recipeNum[0] = recipeNum[0] + 1;
         return ans;
     }
-    function shaped(output as It, inputs as In[][], vis as int=0){
+    function shaped(output as It, inputs as In[][]){
+        var aspects as ASt[] = [];
+        mods.thaumcraft.ArcaneWorkbench.registerShapedRecipe(getId(),research,0,aspects,output,inputs);
+    }
+    function shaped(output as It, inputs as In[][], vis as int){
         var aspects as ASt[] = [];
         mods.thaumcraft.ArcaneWorkbench.registerShapedRecipe(getId(),research,vis,aspects,output,inputs);
     }
-    function shaped(output as It, inputs as In[][], vis as int, aspects as ASt[], research as string = "FIRSTSTEPS"){
+    function shaped(output as It, inputs as In[][], vis as int, aspects as ASt[]){
+        mods.thaumcraft.ArcaneWorkbench.registerShapedRecipe(getId(),"FIRSTSTEPS",vis,aspects,output,inputs);
+    }
+    function shaped(output as It, inputs as In[][], vis as int, aspects as int[]){
+        mods.thaumcraft.ArcaneWorkbench.registerShapedRecipe(getId(),"FIRSTSTEPS",vis,
+            scripts.recipes.libs.Aspects.aspect6(aspects),
+            output,inputs);
+    }
+    function shaped(output as It, inputs as In[][], vis as int, aspects as ASt[], research as string){
         mods.thaumcraft.ArcaneWorkbench.registerShapedRecipe(getId(),research,vis,aspects,output,inputs);
     }
-    function shaped(output as It, inputs as In[][], vis as int, aspects as int[], research as string = "FIRSTSTEPS"){
+    function shaped(output as It, inputs as In[][], vis as int, aspects as int[], research as string){
         mods.thaumcraft.ArcaneWorkbench.registerShapedRecipe(getId(),research,vis,
             scripts.recipes.libs.Aspects.aspect6(aspects),
             output,inputs);
