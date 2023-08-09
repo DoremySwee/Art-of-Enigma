@@ -68,7 +68,7 @@ zenClass FXGenerator{
         events.onClientTick(function(event as crafttweaker.event.ClientTickEvent){
             if(isNull(client.player)){
                 for dim, data in objects{
-                    objects[dim]={}as IData;
+                    objects[dim]=[]as IData;
                 }
             }
         });
