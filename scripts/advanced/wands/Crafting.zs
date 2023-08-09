@@ -12,7 +12,8 @@ import thaumcraft.aspect.CTAspectStack;
 
 import mods.jei.JEI;
 import mods.ctutils.utils.Math;
-import mods.thaumcraft.ArcaneWorkbench as AWB;
+
+import scripts.recipes.libs.Transcript as T;
 
 //Clearing the original caps
 if(true){
@@ -86,11 +87,12 @@ if(true){
             if(vis<1){
                 recipes.addShaped(w,ingredients);
             }
-            else{
+            else{/*
                 AWB.registerShapedRecipe(
                     "Art_of_Enigma_WandCraft"~i,
                     FS,vis,A.aspects6(aspects),w,ingredients
-                );
+                );*/
+                T.tc.addShaped(w,ingredients,vis,A.aspects6(aspects));
             }
         }
     }
