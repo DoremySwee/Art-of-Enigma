@@ -22,13 +22,10 @@ zenClass FXGenerator{
     var ticking as [function(IWorld, IData)IData] = [];
     var renderClient as function(IPlayer, IData)void = null;
     var renderRegistered as bool= false;
-    //var objects as [IData][int] = {};
+    var objects as [IData][int] = {};
     zenConstructor(nameIn as string){
         ticking = [];
         name = nameIn;
-    }
-    function getKey()as string{
-        return "doremySweeDanmukuDesign.bulletData."~name;
     }
     function addTick(f as function(IWorld, IData)IData)as FXGenerator{
         ticking+=f;
@@ -67,36 +64,30 @@ zenClass FXGenerator{
                 var data=buffer.readData();
                 renderClient(player,data);
             });
-        }/*
+        }
         events.onClientTick(function(event as crafttweaker.event.ClientTickEvent){
             if(isNull(client.player)){
                 for dim, data in objects{
                     objects[dim]={}as IData;
                 }
             }
-        });*/
+        });
         events.onWorldTick(function(event as crafttweaker.event.WorldTickEvent){
             var world = event.world;
             var dim = world.getDimension();
-            if(event.phase!="START")return;
-            if(event.side=="SERVER"){
-                var t = [] as IData;
-                var key = this.getKey();
-                var data = world.getCustomWorldData().deepGet(key);
-                if(isNull(data))return;
-                var list = data.asList();
-                if(isNull(list))return;
-                for o in list{
+            if(event.phase!="START"||event.side!="SERVER")return;
+            if(objects has dim){
+                var t as [IData] = [] as [IData];
+                if(isNull(objects[dim])/* || (objects[dim].asMap().key.length==0)*/)return;
+                for i,o in objects[dim]{
                     if(!o.memberGet("removed").asBool()){
-                        t=t+[this.tick(world,o)];
+                        t+=this.tick(world,o);
                     }
                     else{
+                        //M.shout("removed!");
                     }
                 }
-                var map = D.set(world.getCustomWorldData(),t as IData,key);
-                world.updateCustomWorldData(map);
-            }
-            else{
+                objects[dim]=t;
             }
         });
         return this;
@@ -118,10 +109,12 @@ zenClass FXGenerator{
     function create(world as IWorld, data as IData){
         var dim = world.getDimension();
         var d as IData=defaultData+data;
-        var key = getKey();
-        var dat0 = D.set({}as IData, [d], key);
-        //print(dat0);
-        world.updateCustomWorldData(world.getCustomWorldData().deepUpdate(dat0,mods.zenutils.DataUpdateOperation.MERGE));
+        if(objects has dim && !isNull(objects[dim])){
+            objects[dim] = objects[dim] + d;
+        }
+        else{
+            objects[dim] = [d]as [IData];
+        }
     }
     function copy(name as string)as FXGenerator{
         var result = FXGenerator(name).setDefaultData(defaultData);
