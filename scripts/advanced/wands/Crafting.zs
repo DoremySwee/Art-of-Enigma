@@ -1,3 +1,4 @@
+#loader crafttweaker reloadableevents
 #priority 10000
 import scripts.advanced.libs.Data as D;
 import scripts.recipes.libs.Aspects as A;
@@ -8,10 +9,12 @@ import mods.thaumicwands.WandRods;
 
 import crafttweaker.data.IData;
 import crafttweaker.item.IItemStack;
+import crafttweaker.item.IIngredient;
 import thaumcraft.aspect.CTAspectStack;
 
 import mods.jei.JEI;
 import mods.ctutils.utils.Math;
+import mods.thaumcraft.ArcaneWorkbench as AWB;
 
 import scripts.recipes.libs.Transcript as T;
 
@@ -76,10 +79,10 @@ if(true){
                 aspects[i]=((Math.tanh(aspects1[i]*aspects2[i])*64.5)as int);
             }
 
-            var r as IItemStack = itemUtils.getItem(rod.itemId.asString());
-            var c as IItemStack = itemUtils.getItem(cap.itemId.asString());
-            var w as IItemStack =  <thaumicwands:item_wand>.withTag({"cap": capName, "rod": rodName});
-            var ingredients as IItemStack[][]=[
+            var r = itemUtils.getItem(rod.itemId.asString());
+            var c = itemUtils.getItem(cap.itemId.asString());
+            var w = <thaumicwands:item_wand>.withTag({"cap": capName, "rod": rodName});
+            var ingredients as IIngredient[][]=[
                 [null,null,c],
                 [null,r,null],
                 [c,null,null]
@@ -92,7 +95,7 @@ if(true){
                     "Art_of_Enigma_WandCraft"~i,
                     FS,vis,A.aspects6(aspects),w,ingredients
                 );*/
-                T.tc.addShaped(w,ingredients,vis,A.aspects6(aspects));
+                T.tc.shaped(w,ingredients,vis,aspects);
             }
         }
     }
