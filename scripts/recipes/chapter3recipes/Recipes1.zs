@@ -100,7 +100,7 @@ recipes.addShaped(<embers:ember_receiver>,Mp.read("b$b;%#%;b$b",map1));
 recipes.addShaped(<embers:ember_emitter>,Mp.read("b*b;*^*;b#b",map1));
 
 //Mystical Agriculture
-for i in 0 to 5{
+for i in 1 to 5{
     var bt=<mysticalagriculture:storage>.definition.makeStack(i);
     var b=<mysticalagriculture:ingot_storage>.definition.makeStack(i+1);
     var t=<mysticalagriculture:crafting>.definition.makeStack(i+33);
@@ -222,6 +222,6 @@ recipes.remove(<botania:spawnerclaw>);
 recipes.remove(<enderio:item_material:22>);
 recipes.remove(<enderio:item_travel_staff>);
 recipes.remove(<enderio:block_travel_anchor>);
-recipes.addShaped(<mysticalagriculture:tinkering_table>,Mp.read("AAA;B_B;B_B;",{"A":<tconstruct:seared:3>,"B":<mysticalagriculture:crafting:33>}));
+//recipes.addShaped(<mysticalagriculture:tinkering_table>,Mp.read("AAA;B_B;B_B;",{"A":<tconstruct:seared:3>,"B":<mysticalagriculture:crafting:33>}));
 T.tic.casting(<enderio:item_travel_staff>,<enderio:item_xp_transfer>,<liquid:molten_essence>*144,900);
 recipes.addShaped(<enderio:block_travel_anchor>,Mp.read("ABA;BCB;ABA;",{"A":<enderio:block_alloy:9>,"B":<enderio:item_material:20>,"C":<mysticalagriculture:crafting:33>}));

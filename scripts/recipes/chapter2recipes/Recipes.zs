@@ -41,7 +41,7 @@ if(true){
     Agg.addRecipe(<minecraft:blaze_powder>,[rs,cc,<minecraft:flint>,<botania:spark>,<botania:specialflower>.withTag({type: "endoflame"})],
         17000,0xCC2222,0xFFAA44,lvav,mm,nr,nr,lvav,mm);
 
-    T.ae2.inscribe(nr,[cs,nr,nr]);
+    T.ae2.inscribe(nr,[cs,nr,nr],false);
 
     var FeOre=<minecraft:iron_ore>;
     Agg.addRecipe(gr,[<botania:livingrock>],10000,0xFF8800,0xCC6666,
@@ -314,7 +314,7 @@ if(true){
     T.tic.casting(l2[1],l2[0],<liquid:tree_oil>*68);
     T.tic.casting(l2[2],l2[1],<liquid:syrup>*68);
     T.tic.melting(<liquid:resin>*144,<ore:logWood>, 0);
-    recipes.addShaped(l2[3],Mp.read("AAA;ABA;AAA;",{
+    recipes.addShaped(l2[3]*8,Mp.read("AAA;ABA;AAA;",{
         "A":l2[2],"B":<thermalfoundation:material:832>
     }));
     mods.thermalexpansion.Transposer.removeFillRecipe(l2[2],<liquid:seed_oil>);
@@ -420,3 +420,6 @@ if(true){
     recipes.remove(<minecraft:tnt>);
     recipes.remove(<tconstruct:throwball:1>);
 }
+
+//Fix:
+mods.appliedenergistics2.Inscriber.addRecipe(<minecraft:bone>,<minecraft:dye:15>,false,<minecraft:dye:15>,<minecraft:dye:15>);
