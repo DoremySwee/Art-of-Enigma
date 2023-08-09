@@ -220,19 +220,13 @@ import mods.zenutils.UUID;
         .addTick(function(world as IWorld, data as IData)as IData{
             if(data.life.asInt()<=data.phaseSwitch.asInt()) return data;
             var t0 = (data.life.asInt() - data.phaseSwitch.asInt());
-            var t1 = 1.0*V.sinf(((t0<45)?t0:45)as double);
+            var t1 = 1.0*V.sinf(((t0<90)?t0:90)as double);
             var ang = V.add(V.readFromData(data,"t"),V.scale(V.readFromData(data,"w"),t1));
             var o = V.readFromData(data,"",false,"0");
             var A = V.add(o,V.eulaAng(V.readFromData(data,"Ad"),ang));
             var B = V.add(o,V.eulaAng(V.readFromData(data,"Bd"),ang));
-            //print("A"~V.display(A));
-            //print("B"~V.display(B));
-            return data + {"colli":true,"color":data.color2} + V.asData(A,"A") + V.asData(B,"B") + V.asData(ang,"t");
-            return data;
-        })/*
-        .addTick(function(world as IWorld, data as IData)as IData{
-            return data + V.asData(V.readFromData(data,"A"),"AL") + V.asData(V.readFromData(data,"B"),"BL");
-        })*/
+            return data + {"colli":true,"color":data.color2,"particleVelocityCeof":0.0} + V.asData(A,"A") + V.asData(B,"B") + V.asData(ang,"t");
+        })
         .regi();
 //Attack
     events.onWorldTick(function(event as crafttweaker.event.WorldTickEvent){
@@ -261,7 +255,7 @@ import mods.zenutils.UUID;
                 //M.shout(time);
                 var diff as string= difficulty;
                 if(mode=="Rotating1"){
-                    var omegaR=1.3*({"Ultra":1.3, "Lunatic":1.0, "Hard":0.8, "Normal":0.6, "Easy":0.4}as double[string])[diff]as double;
+                    var omegaR=0.9*({"Ultra":1.3, "Lunatic":1.0, "Hard":0.8, "Normal":0.6, "Easy":0.4}as double[string])[diff]as double;
                     var omegaX=(0.6+0.2*V.sinfR(1.0*(time0/(300 as long))*163))*omegaR;
                     var omegaY=(1.0+0.6*V.sinfR(1.0*(time0/(300 as long))*173))*omegaR;
                     var omegaZ=(0.5+0.3*V.sinfR(1.0*(time0/(300 as long))*183))*omegaR;
