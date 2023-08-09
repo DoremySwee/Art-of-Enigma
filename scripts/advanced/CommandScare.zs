@@ -7,7 +7,7 @@ import crafttweaker.player.IPlayer;
 import crafttweaker.world.IWorld;
 import crafttweaker.data.IData;
 static whiteList as string[] = [
-    "say","tellraw","forge","ftbquests","crafttweaker"
+    "say","tellraw","forge","ftbquests","crafttweaker","backup","trashcan","shutdown"
 ] as string[];
 static messages as string[] = [
     "You feel an evil presence watching you",
@@ -108,6 +108,7 @@ events.onCommand(function(event as CommandEvent){
         val player as IPlayer=event.commandSender;
         var rand as int=player.world.random.nextInt(messages.length);
         var message as string=messages[rand];
+        if(scripts.Config.alpha)player.sendChat("You used command:"~event.command.name~"\nIf you want it to be added to the whiteList, inform the author.");
         M.executeCommand("tellraw "+
             /*p.displayName*/"@a" +
             " [{\"text\":\"" + message +
