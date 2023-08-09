@@ -1,76 +1,38 @@
 #loader crafttweaker reloadableevents
 #priority 10000
-import crafttweaker.mods.IMod;
-import crafttweaker.mods.ILoadedMods;
-val ae2=loadedMods["appliedenergistics2"] as IMod;
-var str as string = "\n";
-for i in ae2.items{
-    if(i.definition.id.indexOf("facade")>-1){
-        continue;}
-    if(i.definition.id.indexOf("material")>-1){
-        continue;}        
-    if(i.definition.id.indexOf("seed")>-1){
-        continue;}
-    if(i.definition.id.indexOf("_quartz_")>-1){
-        continue;}
-    if(i.definition.id.indexOf("paint_ball")>-1){
-        continue;}
-    if(i.definition.id.indexOf("pattern")>-1){
-        continue;}
-    if(i.definition.id.indexOf("crank")>-1){
-        continue;}
-    if(i.definition.id.indexOf("grindstone")>-1){
-        continue;}
-    if(i.definition.id.indexOf("inscriber")>-1){
-        continue;}
-    if(i.ores.length<1){
-        str=str~i.commandString~",\n";
-    }
-}
-print(str);
+import crafttweaker.item.IItemStack;
 
 static AE2Items as IItemStack[] = [
     <appliedenergistics2:chest>,
-    <appliedenergistics2:sky_stone_small_brick>,
-    <appliedenergistics2:sky_stone_brick_stairs>,
     <appliedenergistics2:crafting_storage_64k>,
     <appliedenergistics2:condenser>,
-    <appliedenergistics2:sky_stone_small_brick_stairs>,
     <appliedenergistics2:energy_acceptor>,
     <appliedenergistics2:wireless_terminal>,
-    <appliedenergistics2:wireless_terminal>.withTag({internalMaxPower: 1600000.0, internalCurrentPower: 1600000.0}),
-    <appliedenergistics2:quartz_pillar_slab>,
+    //<appliedenergistics2:wireless_terminal>.withTag({internalMaxPower: 1600000.0, internalCurrentPower: 1600000.0}),
     <appliedenergistics2:color_applicator>,
-    <appliedenergistics2:color_applicator>.withTag({internalMaxPower: 20000.0, internalCurrentPower: 20000.0}),
+    //<appliedenergistics2:color_applicator>.withTag({internalMaxPower: 20000.0, internalCurrentPower: 20000.0}),
     <appliedenergistics2:interface>,
-    <appliedenergistics2:spatial_storage_cell_16_cubed>,
     <appliedenergistics2:fluid_storage_cell_16k>,
     <appliedenergistics2:cell_workbench>,
     <appliedenergistics2:light_detector>,
     <appliedenergistics2:storage_cell_16k>,
-    <appliedenergistics2:quartz_pillar>,
     <appliedenergistics2:biometric_card>,
     <appliedenergistics2:energy_cell>,
-    <appliedenergistics2:energy_cell>.withTag({internalMaxPower: 200000.0, internalCurrentPower: 200000.0}),
+    //<appliedenergistics2:energy_cell>.withTag({internalMaxPower: 200000.0, internalCurrentPower: 200000.0}),
     <appliedenergistics2:quartz_growth_accelerator>,
     <appliedenergistics2:crafting_accelerator>,
     <appliedenergistics2:entropy_manipulator>,
-    <appliedenergistics2:entropy_manipulator>.withTag({internalMaxPower: 200000.0, internalCurrentPower: 200000.0}),
-    <appliedenergistics2:spatial_storage_cell_2_cubed>,
+    //<appliedenergistics2:entropy_manipulator>.withTag({internalMaxPower: 200000.0, internalCurrentPower: 200000.0}),
     <appliedenergistics2:crafting_storage_16k>,
-    <appliedenergistics2:fluix_block>,
-    <appliedenergistics2:quartz_slab>,
-    <appliedenergistics2:spatial_io_port>,
+    //<appliedenergistics2:fluix_block>,
     <appliedenergistics2:creative_energy_cell>,
     <appliedenergistics2:quartz_vibrant_glass>,
     <appliedenergistics2:quantum_ring>,
     <appliedenergistics2:quartz_block>,
     <appliedenergistics2:crafting_monitor>,
-    <appliedenergistics2:sky_stone_slab>,
-    <appliedenergistics2:fluix_stairs>,
     <appliedenergistics2:quartz_glass>,
     <appliedenergistics2:charged_staff>,
-    <appliedenergistics2:charged_staff>.withTag({internalMaxPower: 8000.0, internalCurrentPower: 8000.0}),
+    //<appliedenergistics2:charged_staff>.withTag({internalMaxPower: 8000.0, internalCurrentPower: 8000.0}),
     <appliedenergistics2:fluid_interface>,
     <appliedenergistics2:molecular_assembler>,
     <appliedenergistics2:vibration_chamber>,
@@ -80,39 +42,29 @@ static AE2Items as IItemStack[] = [
     <appliedenergistics2:fluid_storage_cell_64k>,
     <appliedenergistics2:quantum_link>,
     <appliedenergistics2:storage_cell_1k>,
-    <appliedenergistics2:smooth_sky_stone_stairs>,
     <appliedenergistics2:dense_energy_cell>,
-    <appliedenergistics2:dense_energy_cell>.withTag({internalMaxPower: 1600000.0, internalCurrentPower: 1600000.0}),
+    //<appliedenergistics2:dense_energy_cell>.withTag({internalMaxPower: 1600000.0, internalCurrentPower: 1600000.0}),
     <appliedenergistics2:tiny_tnt>,
     <appliedenergistics2:io_port>,
-    <appliedenergistics2:smooth_sky_stone_slab>,
     <appliedenergistics2:network_tool>,
     <appliedenergistics2:smooth_sky_stone_chest>,
     <appliedenergistics2:quartz_fixture>,
-    <appliedenergistics2:sky_stone_brick>,
     <appliedenergistics2:charger>,
     <appliedenergistics2:portable_cell>,
-    <appliedenergistics2:portable_cell>.withTag({internalMaxPower: 20000.0, internalCurrentPower: 20000.0}),
+    //<appliedenergistics2:portable_cell>.withTag({internalMaxPower: 20000.0, internalCurrentPower: 20000.0}),
     <appliedenergistics2:view_cell>,
-    <appliedenergistics2:sky_stone_stairs>,
     <appliedenergistics2:memory_card>,
     <appliedenergistics2:security_station>,
-    <appliedenergistics2:quartz_pillar_stairs>,
-    <appliedenergistics2:fluix_slab>,
-    <appliedenergistics2:smooth_sky_stone_block>,
+    //<appliedenergistics2:smooth_sky_stone_block>,
     <appliedenergistics2:sky_compass>,
     <appliedenergistics2:sky_stone_block>,
     <appliedenergistics2:storage_cell_64k>,
-    <appliedenergistics2:spatial_pylon>,
-    <appliedenergistics2:sky_stone_brick_slab>,
     <appliedenergistics2:crafting_unit>,
     <appliedenergistics2:crafting_storage_1k>,
     <appliedenergistics2:wireless_access_point>,
-    <appliedenergistics2:quartz_stairs>,
     <appliedenergistics2:controller>,
     <appliedenergistics2:crafting_storage_4k>,
     <appliedenergistics2:fluid_storage_cell_4k>,
-    <appliedenergistics2:sky_stone_small_brick_slab>,
     <appliedenergistics2:part:300>,
     <appliedenergistics2:part:120>,
     <appliedenergistics2:part:20>,
@@ -231,8 +183,7 @@ static AE2Items as IItemStack[] = [
     <appliedenergistics2:part:380>,
     <appliedenergistics2:part:80>,
     <appliedenergistics2:matter_cannon>,
-    <appliedenergistics2:matter_cannon>.withTag({internalMaxPower: 200000.0, internalCurrentPower: 200000.0}),
+    //<appliedenergistics2:matter_cannon>.withTag({internalMaxPower: 200000.0, internalCurrentPower: 200000.0}),
     <appliedenergistics2:fluid_storage_cell_1k>,
-    <appliedenergistics2:sky_stone_chest>,
-    <appliedenergistics2:spatial_storage_cell_128_cubed>
+    //<appliedenergistics2:sky_stone_chest>
 ] as IItemStack[];
