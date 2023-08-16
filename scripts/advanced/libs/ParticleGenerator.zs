@@ -19,6 +19,7 @@ import mods.zenutils.IByteBuf;
 mods.randomtweaker.botania.IBotaniaFXHelper.setWispFXDistanceLimit(false);
 zenClass FXGenerator{
     var name as string;
+    var serializeKey as string;
     var ticking as [function(IWorld, IData)IData] = [];
     var renderClient as function(IPlayer, IData)void = null;
     var renderRegistered as bool= false;
@@ -26,6 +27,7 @@ zenClass FXGenerator{
     zenConstructor(nameIn as string){
         ticking = [];
         name = nameIn;
+        serializeKey = "doremySweeDanmukuBulletData_" ~ nameIn;
     }
     function addTick(f as function(IWorld, IData)IData)as FXGenerator{
         ticking+=f;
@@ -90,6 +92,32 @@ zenClass FXGenerator{
                 objects[dim]=t;
             }
         });
+        events.onWorldSave(function(event as mods.zenutils.event.WorldSaveEvent) {
+            val world = event.world;
+            if (!world.remote) {
+                val object as [IData] = objects[world.dimension];
+                if (!isNull(object)) {
+                    val data as IData = IData.createEmptyMutableDataMap();
+                    data.memberSet(serializeKey, IData.createDataList(object));
+                    world.updateCustomWorldData(data);
+                }
+            }
+        });
+        events.onWorldLoad(function(event as mods.zenutils.event.WorldLoadEvent) {
+            val world = event.world;
+            if (!world.remote) {
+                val object as IData = world.getCustomWorldData().memberGet(serializeKey);
+                if (!isNull(object)) {
+                    objects[world.dimension] = object.asList();
+                }
+            }
+        });
+        events.onWorldUnload(function(event as mods.zenutils.event.WorldUnloadEvent) {
+            val world = event.world;
+            if (!world.remote) {
+                objects[world.dimension] = [] as [IData];
+            }
+        });
         return this;
     }
     var defaultData as IData= {
@@ -111,9 +139,8 @@ zenClass FXGenerator{
         var d as IData=defaultData+data;
         if(objects has dim && !isNull(objects[dim])){
             objects[dim] = objects[dim] + d;
-        }
-        else{
-            objects[dim] = [d]as [IData];
+        } else {
+            objects[dim] = [d] as [IData];
         }
     }
     function copy(name as string)as FXGenerator{
