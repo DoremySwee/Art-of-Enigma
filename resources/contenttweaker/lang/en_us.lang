@@ -215,3 +215,5 @@ jei.description.auto_pattern.mark=You need to select an item as "mid product", w
 jei.description.auto_pattern.structure1=Place the avaritia crafting table, fill the recipe in, place (@Draconic Evolution) the "mid products" on the table. With empty patterns in your left hand, right click the table with
 jei.description.auto_pattern.structure2=, the encoding is done.
 jei.description.auto_pattern.output=You will get the renamed "mid products", and the encoded patterns connected by these "mid products"
+
+description.crt.tooltip.clearnbt=Clear its NBT through shapeless crafting before being processed into other items.
