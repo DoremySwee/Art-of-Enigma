@@ -2,7 +2,7 @@
 	x: 9.0d,
 	y: 10.0d,
 	text: [
-		"{quests.ch1.boneMeal.des}"
+		""
 	],
 	dependencies: [
 		"b4b7afa0"
@@ -18,5 +18,15 @@
 		}],
 		ignore_damage: true,
 		ignore_nbt: 1b
+	}],
+	rewards: [{
+		uid: "bd683c8a",
+		type: "item",
+		item: {
+			ForgeCaps: {
+				"astralsorcery:cap_item_amulet_holder": {}
+			},
+			id: "minecraft:iron_pickaxe"
+		}
 	}]
 }

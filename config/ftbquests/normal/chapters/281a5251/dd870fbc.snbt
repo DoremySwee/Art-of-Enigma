@@ -1,0 +1,12 @@
+{
+	x: -4.0d,
+	y: 4.5d,
+	dependencies: [
+		"6f46402c"
+	],
+	tasks: [{
+		uid: "7bf5c179",
+		type: "checkmark",
+		icon: "immersiveengineering:metal_multiblock 1 9"
+	}]
+}

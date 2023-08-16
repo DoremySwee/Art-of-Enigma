@@ -1,5 +1,4 @@
 #reloadable
-#debug
 import crafttweaker.entity.IEntityEquipmentSlot;
 import crafttweaker.item.IItemStack;
 import crafttweaker.item.IMutableItemStack;

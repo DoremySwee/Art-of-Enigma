@@ -106,6 +106,7 @@ $ expand IData $ matches(data as IData)as bool{
     return matches(this,data);
 }
 
+/*
 //Example
     var data = {
         "a":[{"b":114},{"b":514}]
@@ -115,7 +116,7 @@ $ expand IData $ matches(data as IData)as bool{
     print(data);
     print(get(data,"a[last].b.a.[0].b"));
     print( matches({"a":114,"b":[{"x":1},{"x":2}]},{"b":[{"x":2}]}));  //true
-
+*/
 
 
 

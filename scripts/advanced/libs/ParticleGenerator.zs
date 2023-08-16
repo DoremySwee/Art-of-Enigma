@@ -66,14 +66,14 @@ zenClass FXGenerator{
                 var data=buffer.readData();
                 renderClient(player,data);
             });
-        }/*
+        }
         events.onClientTick(function(event as crafttweaker.event.ClientTickEvent){
             if(isNull(client.player)){
                 for dim, data in objects{
-                    objects[dim]={}as IData;
+                    objects[dim]=[]as [IData];
                 }
             }
-        });*/
+        });
         events.onWorldTick(function(event as crafttweaker.event.WorldTickEvent){
             var world = event.world;
             var dim = world.getDimension();
@@ -137,7 +137,7 @@ zenClass FXGenerator{
     function create(world as IWorld, data as IData){
         var dim = world.getDimension();
         var d as IData=defaultData+data;
-        if(objects has dim){
+        if(objects has dim && !isNull(objects[dim])){
             objects[dim] = objects[dim] + d;
         } else {
             objects[dim] = [d] as [IData];

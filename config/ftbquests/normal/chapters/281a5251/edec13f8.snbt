@@ -1,0 +1,23 @@
+{
+	x: -10.0d,
+	y: -0.5d,
+	hide_dependency_lines: true,
+	dependencies: [
+		"5f0ab269"
+	],
+	hide: true,
+	tasks: [{
+		uid: "23519266",
+		type: "item",
+		items: [{
+			item: "minecraft:coal_block"
+		}]
+	}],
+	rewards: [{
+		uid: "a1772b39",
+		type: "item",
+		team_reward: true,
+		item: "minecraft:log",
+		count: 64
+	}]
+}

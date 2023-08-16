@@ -1,0 +1,28 @@
+{
+	x: -8.0d,
+	y: -1.5d,
+	dependencies: [
+		"9a6eb4a3"
+	],
+	tasks: [{
+		uid: "5f7b1a40",
+		type: "item",
+		items: [{
+			id: "botania:specialflower",
+			tag: {
+				type: "exoflame"
+			}
+		}]
+	},
+	{
+		uid: "62ab779b",
+		type: "item",
+		items: [{
+			ForgeCaps: {
+				"astralsorcery:cap_item_amulet_holder": {}
+			},
+			id: "botania:craftpattern"
+		}],
+		ignore_nbt: 1b
+	}]
+}

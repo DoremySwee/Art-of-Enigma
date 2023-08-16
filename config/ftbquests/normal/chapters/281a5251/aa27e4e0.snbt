@@ -1,0 +1,17 @@
+{
+	title: "{quests.ch2.portalCancel.title}",
+	x: -10.0d,
+	y: -1.5d,
+	text: [
+		"{quests.ch2.portalCancel.des}"
+	],
+	hide_dependency_lines: true,
+	dependencies: [
+		"cde6c2df"
+	],
+	tasks: [{
+		uid: "a64e87d1",
+		type: "checkmark",
+		icon: "minecraft:nether_star"
+	}]
+}

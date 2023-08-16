@@ -1,0 +1,21 @@
+{
+	x: -9.0d,
+	y: 2.5d,
+	dependencies: [
+		"20044076",
+		"1509676f"
+	],
+	hide: true,
+	tasks: [{
+		uid: "2498499e",
+		type: "item",
+		items: [{
+			item: "minecraft:slime_ball"
+		}]
+	}],
+	rewards: [{
+		uid: "b86efdd5",
+		type: "item",
+		item: "minecraft:slime_ball"
+	}]
+}

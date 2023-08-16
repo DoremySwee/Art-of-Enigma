@@ -1,0 +1,38 @@
+{
+	x: -6.0d,
+	y: 4.5d,
+	dependencies: [
+		"d8993aa3"
+	],
+	tasks: [{
+		uid: "68499a9a",
+		type: "item",
+		items: [{
+			item: "minecraft:iron_ingot"
+		}],
+		count: 256L,
+		consume_items: true
+	},
+	{
+		uid: "f2eeda30",
+		type: "item",
+		items: [{
+			item: "thermalfoundation:material 1 133"
+		}],
+		count: 128L
+	}],
+	rewards: [{
+		uid: "9bb3c0a1",
+		type: "item",
+		team_reward: true,
+		item: "thermalfoundation:material",
+		count: 256
+	},
+	{
+		uid: "a5ec200e",
+		type: "item",
+		team_reward: true,
+		item: "thermalfoundation:material 1 69",
+		count: 128
+	}]
+}

@@ -21,42 +21,49 @@
 	rewards: [{
 		uid: "81276b57",
 		type: "item",
+		team_reward: true,
 		item: "extrautils2:compresseddirt 1 1",
 		count: 3
 	},
 	{
 		uid: "0ab46e8b",
 		type: "item",
+		team_reward: true,
 		item: "tconstruct:seared 1 3",
-		count: 64
+		count: 192
 	},
 	{
 		uid: "574e75b3",
 		type: "item",
+		team_reward: true,
 		item: "tconstruct:materials",
-		count: 192
+		count: 256
 	},
 	{
 		uid: "4fee5671",
 		type: "item",
+		team_reward: true,
 		item: "tconstruct:seared_tank 1 1",
 		count: 64
 	},
 	{
 		uid: "c9f4bd19",
 		type: "item",
+		team_reward: true,
 		item: "tconstruct:seared_tank",
 		count: 64
 	},
 	{
 		uid: "f6fc0f79",
 		type: "item",
+		team_reward: true,
 		item: "tconstruct:seared_tank 1 2",
 		count: 64
 	},
 	{
 		uid: "b8bc3afd",
 		type: "item",
+		team_reward: true,
 		item: "tconstruct:smeltery_io",
 		count: 10
 	}]

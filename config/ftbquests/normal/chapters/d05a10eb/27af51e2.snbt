@@ -14,12 +14,14 @@
 	rewards: [{
 		uid: "c7f185f3",
 		type: "item",
+		team_reward: true,
 		item: "minecraft:cobblestone",
 		count: 64
 	},
 	{
 		uid: "b4f9e962",
 		type: "item",
+		team_reward: true,
 		item: "minecraft:stone_slab",
 		count: 31
 	}]

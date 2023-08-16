@@ -23,12 +23,14 @@
 	rewards: [{
 		uid: "a3ee0e05",
 		type: "item",
+		team_reward: true,
 		item: "minecraft:sapling",
 		count: 4
 	},
 	{
 		uid: "7e2ebf46",
 		type: "item",
+		team_reward: true,
 		item: "minecraft:cobblestone",
 		count: 2
 	}]

@@ -215,3 +215,5 @@ jei.description.auto_pattern.mark=你需要选择一种物品作为“中间成�
 jei.description.auto_pattern.structure1=放下终极工作台，摆好配方。再在上面放置“中间成品”，副手持空白样板，主手持 
 jei.description.auto_pattern.structure2= 右键，即可完成配方的制作。
 jei.description.auto_pattern.output=你将获得重命名后的”中间成品“，以及通过它们连接起来的几个样板。
+
+description.crt.tooltip.clearnbt=经过无序合成简化nbt后，参与其它合成。

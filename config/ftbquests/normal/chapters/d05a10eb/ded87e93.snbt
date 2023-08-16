@@ -23,6 +23,7 @@
 	rewards: [{
 		uid: "83fc97be",
 		type: "item",
+		team_reward: true,
 		item: "botania:pool",
 		count: 2
 	}]

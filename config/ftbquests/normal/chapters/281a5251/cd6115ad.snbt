@@ -1,0 +1,27 @@
+{
+	x: 3.0d,
+	y: 2.0d,
+	shape: "hexagon",
+	dependencies: [
+		"922e78f6",
+		"274fa182",
+		"8d87560a",
+		"995c2873"
+	],
+	tasks: [{
+		uid: "2e156213",
+		type: "item",
+		items: [{
+			ForgeCaps: {
+				"astralsorcery:cap_item_amulet_holder": {}
+			},
+			id: "forge:bucketfilled",
+			tag: {
+				FluidName: "mana",
+				Amount: 1000
+			}
+		}],
+		ignore_damage: true,
+		ignore_nbt: 1b
+	}]
+}

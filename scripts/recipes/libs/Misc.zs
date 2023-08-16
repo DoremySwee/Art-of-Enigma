@@ -63,7 +63,7 @@ function reuse(ins as IIngredient)as IIngredient{
     return temporaryLore(ins,"§a§o"~game.localize("description.crt.reuse")~"§r").reuse();
 }
 function consume(ins as IIngredient)as IIngredient{
-    return temporaryLore(ins,"§a§o"~game.localize("description.crt.consume")~"§r");
+    return temporaryLore(ins,"§a§o"~game.localize("description.crt.consume")~"§r").noReturn();
 }
 function orb(level as int)as IIngredient{
     var orbs as IIngredient[]=[
@@ -78,6 +78,16 @@ function orb(level as int)as IIngredient{
         result=result|orbs[i];
     }
     return result;
+}
+function orb1(level as int)as IIngredient{
+    var orbs as IIngredient[]=[
+        <bloodmagic:blood_orb>.withTag({"orb": "bloodmagic:weak"}),
+        <bloodmagic:blood_orb>.withTag({"orb": "bloodmagic:apprentice"}),
+        <bloodmagic:blood_orb>.withTag({"orb": "bloodmagic:magician"}),
+        <bloodmagic:blood_orb>.withTag({"orb": "bloodmagic:master"}),
+        <bloodmagic:blood_orb>.withTag({"orb": "bloodmagic:archmage"})
+    ];
+    return orbs[level- 1]|orbs[level- 1];
 }
 function removeGrind(dust as IItemStack, ingot as IItemStack, ore as IItemStack){
     recipes.removeShapeless(dust,[ingot],true);

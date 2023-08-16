@@ -26,6 +26,7 @@
 	rewards: [{
 		uid: "aabcd393",
 		type: "item",
+		team_reward: true,
 		item: "minecraft:cobblestone"
 	}]
 }

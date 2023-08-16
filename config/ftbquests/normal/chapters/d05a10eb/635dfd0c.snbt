@@ -18,7 +18,7 @@
 	rewards: [{
 		uid: "3b78f0e2",
 		type: "item",
-		item: "minecraft:cobblestone",
-		only_one: true
+		team_reward: true,
+		item: "minecraft:cobblestone"
 	}]
 }

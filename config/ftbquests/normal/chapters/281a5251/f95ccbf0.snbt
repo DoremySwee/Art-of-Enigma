@@ -1,0 +1,21 @@
+{
+	x: -5.0d,
+	y: 6.0d,
+	dependencies: [
+		"2eb94827"
+	],
+	tasks: [{
+		uid: "58d78c7c",
+		type: "item",
+		items: [{
+			item: "botanicbonsai:botanic_bonsai_pot"
+		}]
+	},
+	{
+		uid: "61f3d4c0",
+		type: "item",
+		items: [{
+			item: "botanicbonsai:bonsai_pot_manager"
+		}]
+	}]
+}

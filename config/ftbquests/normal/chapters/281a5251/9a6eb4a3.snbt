@@ -1,0 +1,19 @@
+{
+	x: -8.0d,
+	y: -0.5d,
+	dependencies: [
+		"0ad3b074"
+	],
+	tasks: [{
+		uid: "dc2e284a",
+		type: "item",
+		items: [{
+			item: "minecraft:redstone"
+		}]
+	}],
+	rewards: [{
+		uid: "bd854f4b",
+		type: "item",
+		item: "minecraft:redstone_block"
+	}]
+}

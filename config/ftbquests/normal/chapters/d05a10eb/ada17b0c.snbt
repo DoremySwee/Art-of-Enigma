@@ -14,6 +14,7 @@
 	rewards: [{
 		uid: "e741aee7",
 		type: "item",
+		team_reward: true,
 		item: "botania:pool"
 	},
 	{
@@ -25,6 +26,7 @@
 	{
 		uid: "a2f74622",
 		type: "item",
+		team_reward: true,
 		item: "botania:blacklotus 1 1"
 	}]
 }

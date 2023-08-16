@@ -14,30 +14,34 @@
 	rewards: [{
 		uid: "49448bc4",
 		type: "item",
-		item: "botania:blacklotus 1 1",
-		only_one: true
+		team_reward: true,
+		item: "botania:blacklotus 1 1"
 	},
 	{
 		uid: "efdb2d9c",
 		type: "item",
+		team_reward: true,
 		item: "minecraft:stone_slab",
 		count: 31
 	},
 	{
 		uid: "94c0e852",
 		type: "item",
+		team_reward: true,
 		item: "minecraft:sapling",
 		count: 32
 	},
 	{
 		uid: "cd11c064",
 		type: "item",
+		team_reward: true,
 		item: "botania:pool",
 		count: 2
 	},
 	{
 		uid: "137c66f0",
 		type: "item",
+		team_reward: true,
 		item: "minecraft:log",
 		count: 6
 	}]

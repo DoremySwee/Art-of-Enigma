@@ -1,0 +1,17 @@
+{
+	x: -7.0d,
+	y: 5.5d,
+	dependencies: [
+		"afdbb911"
+	],
+	tasks: [{
+		uid: "c9cb9749",
+		type: "item",
+		items: [{
+			id: "botania:specialflower",
+			tag: {
+				type: "solegnolia"
+			}
+		}]
+	}]
+}

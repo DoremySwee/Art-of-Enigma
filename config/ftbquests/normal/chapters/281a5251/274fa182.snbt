@@ -1,0 +1,18 @@
+{
+	x: 2.0d,
+	y: 0.5d,
+	hide_dependency_lines: true,
+	dependencies: [
+		"d4dc606b"
+	],
+	tasks: [{
+		uid: "4b1a3a24",
+		type: "item",
+		items: [{
+			id: "botania:specialflower",
+			tag: {
+				type: "spectrolus"
+			}
+		}]
+	}]
+}

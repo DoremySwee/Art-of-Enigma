@@ -1,0 +1,21 @@
+{
+	x: -10.0d,
+	y: 2.5d,
+	dependencies: [
+		"13db1415"
+	],
+	tasks: [{
+		uid: "93dc4204",
+		type: "item",
+		items: [{
+			item: "tconstruct:casting"
+		}]
+	},
+	{
+		uid: "cdf5507c",
+		type: "item",
+		items: [{
+			item: "tconstruct:faucet"
+		}]
+	}]
+}

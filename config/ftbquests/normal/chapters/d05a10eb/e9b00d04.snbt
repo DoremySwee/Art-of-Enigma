@@ -10,7 +10,9 @@
 		"3eb5f017",
 		"a5eb188c"
 	],
+	hide: true,
 	size: 2.0d,
+	optional: true,
 	tasks: [{
 		uid: "84e10768",
 		type: "checkmark"

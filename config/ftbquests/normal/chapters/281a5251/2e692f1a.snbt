@@ -29,12 +29,14 @@
 	rewards: [{
 		uid: "127c0adf",
 		type: "item",
+		team_reward: true,
 		item: "botania:cocoon",
 		count: 4
 	},
 	{
 		uid: "4e52c28c",
 		type: "item",
+		team_reward: true,
 		item: {
 			id: "minecraft:enchanted_book",
 			tag: {
@@ -48,6 +50,7 @@
 	{
 		uid: "78ccc015",
 		type: "item",
+		team_reward: true,
 		item: {
 			id: "minecraft:enchanted_book",
 			tag: {
@@ -66,12 +69,14 @@
 	{
 		uid: "25d11118",
 		type: "item",
+		team_reward: true,
 		item: "extrautils2:compressedcobblestone 1 2",
-		count: 2
+		count: 4
 	},
 	{
 		uid: "ccd53652",
 		type: "item",
+		team_reward: true,
 		item: "minecraft:redstone_block",
 		count: 7
 	}]

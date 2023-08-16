@@ -62,5 +62,33 @@
 			item: "botania:spreader"
 		}],
 		count: 8L
+	},
+	{
+		uid: "0b0d99bc",
+		type: "item",
+		items: [{
+			item: "botania:sparkupgrade"
+		}]
+	},
+	{
+		uid: "62960df2",
+		type: "item",
+		items: [{
+			item: "botania:sparkupgrade 1 1"
+		}]
+	},
+	{
+		uid: "ee9a4c67",
+		type: "item",
+		items: [{
+			item: "botania:sparkupgrade 1 2"
+		}]
+	},
+	{
+		uid: "7c022cdd",
+		type: "item",
+		items: [{
+			item: "botania:sparkupgrade 1 3"
+		}]
 	}]
 }

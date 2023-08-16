@@ -1,0 +1,20 @@
+{
+	x: -9.0d,
+	y: -1.5d,
+	hide_dependency_lines: true,
+	dependencies: [
+		"1509676f"
+	],
+	tasks: [{
+		uid: "e8371bb5",
+		type: "item",
+		items: [{
+			ForgeCaps: {
+				"astralsorcery:cap_item_amulet_holder": {}
+			},
+			id: "minecraft:mushroom_stew"
+		}],
+		ignore_damage: true,
+		ignore_nbt: 1b
+	}]
+}

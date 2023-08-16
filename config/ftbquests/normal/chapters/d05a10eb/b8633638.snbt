@@ -19,18 +19,21 @@
 	rewards: [{
 		uid: "d512f97d",
 		type: "item",
+		team_reward: true,
 		item: "minecraft:sapling",
 		count: 64
 	},
 	{
 		uid: "c013699d",
 		type: "item",
+		team_reward: true,
 		item: "minecraft:cobblestone",
 		count: 64
 	},
 	{
 		uid: "bf5c9029",
 		type: "item",
+		team_reward: true,
 		item: "minecraft:stone_slab",
 		count: 31
 	}]

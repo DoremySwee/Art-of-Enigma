@@ -16,6 +16,7 @@
 	rewards: [{
 		uid: "a349f6ff",
 		type: "item",
+		team_reward: true,
 		item: {
 			id: "botania:floatingspecialflower",
 			tag: {

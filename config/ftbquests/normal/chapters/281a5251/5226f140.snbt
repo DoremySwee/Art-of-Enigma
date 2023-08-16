@@ -26,12 +26,14 @@
 	rewards: [{
 		uid: "eed97440",
 		type: "item",
+		team_reward: true,
 		item: "thermalfoundation:material",
 		count: 256
 	},
 	{
 		uid: "db9b2812",
 		type: "item",
+		team_reward: true,
 		item: "thermalfoundation:material 1 69",
 		count: 128
 	}]

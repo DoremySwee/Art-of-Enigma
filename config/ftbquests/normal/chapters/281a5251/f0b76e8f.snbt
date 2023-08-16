@@ -16,18 +16,21 @@
 	rewards: [{
 		uid: "b742b898",
 		type: "item",
+		team_reward: true,
 		item: "tconstruct:seared_tank",
 		count: 64
 	},
 	{
 		uid: "5b334998",
 		type: "item",
+		team_reward: true,
 		item: "tconstruct:seared_tank 1 1",
 		count: 54
 	},
 	{
 		uid: "2925f420",
 		type: "item",
+		team_reward: true,
 		item: "tconstruct:seared_tank 1 2",
 		count: 64
 	}]

@@ -17,6 +17,7 @@
 	rewards: [{
 		uid: "1f00711d",
 		type: "item",
+		team_reward: true,
 		item: "extrautils2:compressedcobblestone 1 2",
 		count: 10
 	},

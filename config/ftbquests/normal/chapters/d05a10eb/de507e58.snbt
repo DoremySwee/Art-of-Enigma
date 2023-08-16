@@ -14,9 +14,9 @@
 	rewards: [{
 		uid: "284b2a87",
 		type: "item",
+		team_reward: true,
 		item: "minecraft:sapling",
-		count: 64,
-		only_one: true
+		count: 64
 	},
 	{
 		uid: "79b37595",

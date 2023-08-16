@@ -1,0 +1,38 @@
+{
+	x: -4.0d,
+	y: 2.5d,
+	dependencies: [
+		"99736f0e",
+		"1b8b8d00"
+	],
+	tasks: [{
+		uid: "3eb72cd3",
+		type: "item",
+		items: [{
+			item: "enderio:block_simple_sag_mill"
+		}]
+	}],
+	rewards: [{
+		uid: "b7260801",
+		type: "item",
+		team_reward: true,
+		item: {
+			id: "thermalexpansion:machine",
+			tag: {
+				RSControl: 0b,
+				Facing: 3b,
+				Energy: 0,
+				SideCache: [B;
+					3b,
+					1b,
+					2b,
+					2b,
+					2b,
+					2b
+				],
+				Level: 0b
+			},
+			Damage: 3s
+		}
+	}]
+}

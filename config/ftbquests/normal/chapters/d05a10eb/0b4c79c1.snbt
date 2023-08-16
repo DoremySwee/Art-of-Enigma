@@ -7,6 +7,7 @@
 	dependencies: [
 		"e9b00d04"
 	],
+	hide: true,
 	tasks: [{
 		uid: "0e688aa7",
 		type: "item",
@@ -18,5 +19,20 @@
 		}],
 		ignore_damage: true,
 		ignore_nbt: 1b
+	}],
+	rewards: [{
+		uid: "1710f540",
+		type: "item",
+		item: {
+			ForgeCaps: {
+				"astralsorcery:cap_item_amulet_holder": {}
+			},
+			id: "botania:lexicon",
+			tag: {
+				knowledge.minecraft: 1b,
+				knowledge.alfheim: 1b,
+				knowledge.relic: 1b
+			}
+		}
 	}]
 }
