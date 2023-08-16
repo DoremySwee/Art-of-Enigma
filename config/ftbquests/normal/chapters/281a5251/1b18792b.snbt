@@ -1,6 +1,6 @@
 {
 	x: -8.0d,
-	y: -3.0d,
+	y: -4.0d,
 	shape: "pentagon",
 	text: [
 		"{quests.ch2.cacoon.des}"
@@ -20,6 +20,7 @@
 	rewards: [{
 		uid: "b7d3d4a0",
 		type: "item",
+		team_reward: true,
 		item: {
 			id: "minecraft:enchanted_book",
 			tag: {
@@ -33,6 +34,7 @@
 	{
 		uid: "c6198638",
 		type: "item",
+		team_reward: true,
 		item: {
 			id: "minecraft:enchanted_book",
 			tag: {
@@ -46,6 +48,7 @@
 	{
 		uid: "d8870ab2",
 		type: "item",
+		team_reward: true,
 		item: "botania:cocoon",
 		count: 4
 	}]

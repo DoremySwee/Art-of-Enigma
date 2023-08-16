@@ -1,0 +1,23 @@
+{
+	x: 1.5d,
+	y: 2.5d,
+	dependencies: [
+		"d4dc606b"
+	],
+	tasks: [{
+		uid: "0f979068",
+		type: "item",
+		items: [{
+			ForgeCaps: {
+				"astralsorcery:cap_item_amulet_holder": {}
+			},
+			id: "forge:bucketfilled",
+			tag: {
+				FluidName: "aerotheum",
+				Amount: 1000
+			}
+		}],
+		ignore_damage: true,
+		ignore_nbt: 1b
+	}]
+}

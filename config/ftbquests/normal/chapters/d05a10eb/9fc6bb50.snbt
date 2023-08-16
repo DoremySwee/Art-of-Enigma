@@ -15,12 +15,14 @@
 	rewards: [{
 		uid: "43c1c5e4",
 		type: "item",
+		team_reward: true,
 		item: "botania:pool",
 		count: 2
 	},
 	{
 		uid: "b2466f63",
 		type: "item",
+		team_reward: true,
 		item: "minecraft:sapling",
 		count: 32
 	}]

@@ -1,0 +1,24 @@
+{
+	x: 0.0d,
+	y: 3.5d,
+	dependencies: [
+		"fa0e6cda",
+		"d4dc606b"
+	],
+	tasks: [{
+		uid: "1040ee13",
+		type: "item",
+		items: [{
+			ForgeCaps: {
+				"astralsorcery:cap_item_amulet_holder": {}
+			},
+			id: "forge:bucketfilled",
+			tag: {
+				FluidName: "pyrotheum",
+				Amount: 1000
+			}
+		}],
+		ignore_damage: true,
+		ignore_nbt: 1b
+	}]
+}

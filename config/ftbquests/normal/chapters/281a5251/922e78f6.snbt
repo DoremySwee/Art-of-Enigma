@@ -1,0 +1,30 @@
+{
+	x: 1.5d,
+	y: 1.5d,
+	dependencies: [
+		"d4dc606b"
+	],
+	tasks: [{
+		uid: "5e1f32ef",
+		type: "item",
+		items: [{
+			item: "thermalfoundation:material 1 1025"
+		}]
+	},
+	{
+		uid: "12075264",
+		type: "item",
+		items: [{
+			ForgeCaps: {
+				"astralsorcery:cap_item_amulet_holder": {}
+			},
+			id: "forge:bucketfilled",
+			tag: {
+				FluidName: "cryotheum",
+				Amount: 1000
+			}
+		}],
+		ignore_damage: true,
+		ignore_nbt: 1b
+	}]
+}

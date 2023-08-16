@@ -1,0 +1,15 @@
+{
+	x: -7.0d,
+	y: -1.5d,
+	hide_dependency_lines: true,
+	dependencies: [
+		"1509676f"
+	],
+	tasks: [{
+		uid: "448f6d7e",
+		type: "item",
+		items: [{
+			item: "minecraft:egg"
+		}]
+	}]
+}

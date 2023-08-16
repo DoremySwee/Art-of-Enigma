@@ -1,13 +1,16 @@
 {
 	x: -32.0d,
-	y: -7.5d,
+	y: -8.0d,
+	shape: "square",
 	text: [
 		"{quests.ch3.checkRecipe}"
 	],
 	dependencies: [
 		"410786df",
+		"8d87560a",
 		"cdec4ce3"
 	],
+	dependency_requirement: "one_completed",
 	size: 2.0d,
 	tasks: [{
 		uid: "c4a9e1dc",

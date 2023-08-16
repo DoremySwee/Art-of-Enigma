@@ -1,0 +1,36 @@
+{
+	x: -6.0d,
+	y: 3.5d,
+	dependencies: [
+		"afdbb911"
+	],
+	tasks: [{
+		uid: "fb586e3d",
+		type: "item",
+		items: [{
+			item: "immersiveengineering:stone_decoration 1 10"
+		}],
+		count: 8L
+	},
+	{
+		uid: "85c85ffd",
+		type: "item",
+		items: [{
+			item: "appliedenergistics2:grindstone"
+		}]
+	},
+	{
+		uid: "07822ba3",
+		type: "item",
+		items: [{
+			item: "appliedenergistics2:crank"
+		}]
+	},
+	{
+		uid: "6a6d869f",
+		type: "item",
+		items: [{
+			item: "thermalfoundation:material 1 162"
+		}]
+	}]
+}

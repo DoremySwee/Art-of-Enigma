@@ -17,6 +17,7 @@
 	rewards: [{
 		uid: "bcd86cb4",
 		type: "item",
+		team_reward: true,
 		item: "minecraft:cobblestone",
 		count: 3
 	}]

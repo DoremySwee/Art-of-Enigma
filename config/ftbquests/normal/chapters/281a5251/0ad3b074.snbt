@@ -1,0 +1,23 @@
+{
+	x: -9.0d,
+	y: -0.5d,
+	dependencies: [
+		"edec13f8"
+	],
+	tasks: [{
+		uid: "47ce8439",
+		type: "item",
+		items: [{
+			item: "minecraft:coal_block"
+		}],
+		count: 6L
+	},
+	{
+		uid: "031626c3",
+		type: "item",
+		items: [{
+			item: "minecraft:gunpowder"
+		}],
+		count: 6L
+	}]
+}

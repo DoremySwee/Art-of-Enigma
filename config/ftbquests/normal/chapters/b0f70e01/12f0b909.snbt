@@ -12,6 +12,7 @@
 	],
 	hide: true,
 	size: 2.0d,
+	optional: true,
 	tasks: [{
 		uid: "24507bcf",
 		type: "checkmark"

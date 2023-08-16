@@ -19,6 +19,7 @@
 	rewards: [{
 		uid: "d3dbbfac",
 		type: "item",
+		team_reward: true,
 		item: "minecraft:cobblestone",
 		count: 64
 	}]

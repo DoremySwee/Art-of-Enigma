@@ -1,0 +1,14 @@
+{
+	x: -9.0d,
+	y: 1.5d,
+	dependencies: [
+		"10901bdf"
+	],
+	tasks: [{
+		uid: "0c01eb45",
+		type: "item",
+		items: [{
+			item: "minecraft:fish"
+		}]
+	}]
+}

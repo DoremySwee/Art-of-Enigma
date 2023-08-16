@@ -18,6 +18,7 @@
 	rewards: [{
 		uid: "f4e70212",
 		type: "item",
+		team_reward: true,
 		item: "immersiveengineering:stone_decoration 1 1",
 		count: 108
 	},

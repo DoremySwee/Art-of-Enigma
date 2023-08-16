@@ -29,12 +29,14 @@
 	rewards: [{
 		uid: "fde7b73d",
 		type: "item",
+		team_reward: true,
 		item: "botania:blacklotus 1 1",
 		count: 2
 	},
 	{
 		uid: "16151f81",
 		type: "item",
+		team_reward: true,
 		item: "botania:pool",
 		count: 2
 	},

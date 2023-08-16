@@ -20,6 +20,7 @@
 	rewards: [{
 		uid: "335c5c2a",
 		type: "item",
+		team_reward: false,
 		item: "minecraft:sapling",
 		count: 16
 	}]

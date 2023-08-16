@@ -1,6 +1,6 @@
 {
 	x: -4.0d,
-	y: -3.0d,
+	y: -4.0d,
 	dependencies: [
 		"dde09bc4"
 	],
@@ -28,16 +28,19 @@
 	rewards: [{
 		uid: "e4d2d042",
 		type: "choice",
+		team_reward: true,
 		table: 0
 	},
 	{
 		uid: "2583a0cc",
 		type: "choice",
+		team_reward: true,
 		table: 0
 	},
 	{
 		uid: "214f4890",
 		type: "item",
+		team_reward: true,
 		item: {
 			ForgeCaps: {
 				"astralsorcery:cap_item_amulet_holder": {}

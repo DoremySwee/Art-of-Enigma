@@ -11,16 +11,19 @@
 	rewards: [{
 		uid: "389e6d75",
 		type: "choice",
+		team_reward: true,
 		table: 0
 	},
 	{
 		uid: "23a74d39",
 		type: "choice",
+		team_reward: true,
 		table: 0
 	},
 	{
 		uid: "39d5acdd",
 		type: "choice",
+		team_reward: true,
 		table: 0
 	}]
 }

@@ -1,0 +1,52 @@
+{
+	x: -5.0d,
+	y: -1.0d,
+	dependencies: [
+		"17f235c9",
+		"4ad09fe7"
+	],
+	tasks: [{
+		uid: "fd84d8f4",
+		type: "item",
+		items: [{
+			id: "minecraft:spawn_egg",
+			tag: {
+				EntityTag: {
+					id: "minecraft:creeper"
+				}
+			}
+		}]
+	},
+	{
+		uid: "3ea05014",
+		type: "item",
+		items: [{
+			id: "minecraft:spawn_egg",
+			tag: {
+				EntityTag: {
+					id: "minecraft:skeleton"
+				}
+			}
+		}]
+	},
+	{
+		uid: "eff7fb51",
+		type: "item",
+		items: [{
+			ForgeCaps: {
+				Parent: {
+					data: "record",
+					id: "ore"
+				}
+			},
+			id: "itemfilters:filter",
+			tag: {
+				display: {
+					Name: "Any record"
+				}
+			}
+		}],
+		ignore_damage: true,
+		ignore_nbt: 1b
+	}]
+}

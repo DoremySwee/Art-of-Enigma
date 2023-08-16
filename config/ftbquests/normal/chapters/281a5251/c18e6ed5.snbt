@@ -16,6 +16,7 @@
 	rewards: [{
 		uid: "3cdf9ea2",
 		type: "item",
+		team_reward: true,
 		item: "minecraft:log",
 		count: 64
 	},

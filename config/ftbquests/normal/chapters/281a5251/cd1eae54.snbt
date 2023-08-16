@@ -16,12 +16,14 @@
 	rewards: [{
 		uid: "e6f59065",
 		type: "item",
+		team_reward: true,
 		item: "minecraft:log",
 		count: 64
 	},
 	{
 		uid: "b2bdd123",
 		type: "item",
+		team_reward: true,
 		item: "minecraft:redstone_block",
 		count: 4
 	}]

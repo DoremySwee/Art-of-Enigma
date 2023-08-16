@@ -20,6 +20,7 @@
 	rewards: [{
 		uid: "95a4c03f",
 		type: "item",
+		team_reward: true,
 		item: {
 			ForgeCaps: {
 				"astralsorcery:cap_item_amulet_holder": {}

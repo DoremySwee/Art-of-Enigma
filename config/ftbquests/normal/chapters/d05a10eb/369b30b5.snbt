@@ -20,13 +20,25 @@
 	rewards: [{
 		uid: "3e1cab61",
 		type: "item",
+		team_reward: true,
 		item: "minecraft:sapling",
 		count: 64
 	},
 	{
 		uid: "8b91909e",
 		type: "item",
+		team_reward: true,
 		item: "minecraft:cobblestone",
 		count: 64
+	},
+	{
+		uid: "73b104df",
+		type: "item",
+		item: {
+			ForgeCaps: {
+				"astralsorcery:cap_item_amulet_holder": {}
+			},
+			id: "minecraft:iron_pickaxe"
+		}
 	}]
 }

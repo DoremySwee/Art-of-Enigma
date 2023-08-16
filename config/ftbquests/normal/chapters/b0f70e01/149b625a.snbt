@@ -56,21 +56,25 @@
 	{
 		uid: "bb3bec84",
 		type: "item",
+		team_reward: true,
 		item: "appliedenergistics2:material 1 13"
 	},
 	{
 		uid: "4f98f91c",
 		type: "item",
+		team_reward: true,
 		item: "appliedenergistics2:material 1 14"
 	},
 	{
 		uid: "dc63cef9",
 		type: "item",
+		team_reward: true,
 		item: "appliedenergistics2:material 1 15"
 	},
 	{
 		uid: "6fc23e42",
 		type: "item",
+		team_reward: true,
 		item: "appliedenergistics2:material 1 19"
 	},
 	{

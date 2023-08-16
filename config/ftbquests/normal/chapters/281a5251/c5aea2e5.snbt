@@ -2,7 +2,7 @@
 	title: "{quests.DifficultySelection.titExpert}",
 	icon: "botania:pylon 1 1",
 	x: -13.0d,
-	y: -6.0d,
+	y: -5.0d,
 	text: [
 		"{quests.DifficultySelection.desExpert}"
 	],
@@ -12,6 +12,7 @@
 	],
 	hide: true,
 	size: 2.0d,
+	optional: true,
 	tasks: [{
 		uid: "8e083883",
 		type: "checkmark"

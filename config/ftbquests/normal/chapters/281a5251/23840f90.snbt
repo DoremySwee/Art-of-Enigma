@@ -1,6 +1,6 @@
 {
 	x: 2.0d,
-	y: -5.0d,
+	y: -5.5d,
 	dependencies: [
 		"4c4ac24f",
 		"9ac493f6"
@@ -16,6 +16,7 @@
 	rewards: [{
 		uid: "e59c990e",
 		type: "item",
+		team_reward: true,
 		item: "enderio:item_basic_capacitor 1 4"
 	}]
 }

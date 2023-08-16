@@ -14,6 +14,7 @@
 	rewards: [{
 		uid: "e5201813",
 		type: "item",
+		team_reward: true,
 		item: "botania:pool 1 2",
 		count: 5
 	}]

@@ -2,7 +2,7 @@
 	title: "{quests.DifficultySelection.titCasual}",
 	icon: "botania:pylon",
 	x: -13.0d,
-	y: -2.0d,
+	y: 0.0d,
 	text: [
 		"{quests.DifficultySelection.desCasual}"
 	],
@@ -10,7 +10,9 @@
 		"949d83d4",
 		"f71006bb"
 	],
+	hide: true,
 	size: 2.0d,
+	optional: true,
 	tasks: [{
 		uid: "eca16be4",
 		type: "checkmark"

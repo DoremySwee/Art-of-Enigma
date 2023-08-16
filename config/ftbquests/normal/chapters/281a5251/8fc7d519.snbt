@@ -16,12 +16,14 @@
 	rewards: [{
 		uid: "289e2ca0",
 		type: "item",
+		team_reward: true,
 		item: "extrautils2:compressedcobblestone 1 2",
 		count: 3
 	},
 	{
 		uid: "ec456087",
 		type: "item",
+		team_reward: true,
 		item: "extrautils2:compresseddirt 1 1"
 	}]
 }
