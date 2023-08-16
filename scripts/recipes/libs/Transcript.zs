@@ -397,6 +397,15 @@ zenClass ExU{
     function resonator(output as It, input as It, energy as int){
         mods.extrautils2.Resonator.add(output, input, energy);
     }
+    function enchant(output as It, inputs as In[], energy as int, time as int){
+        val enchanter as extrautilities2.Tweaker.IMachine = extrautilities2.Tweaker.IMachineRegistry.getMachine("extrautils2:enchanter");
+        enchanter.addRecipe(
+            {"input":inputs[0],"input_lapis":inputs[1]}, {"output":output}, energy, time
+        );
+    }
+    function enchanter(output as It, inputs as In[], energy as int, time as int){
+        enchant(output, inputs, energy, time);
+    }
 }
 static exu as ExU = ExU();
 zenClass CC{

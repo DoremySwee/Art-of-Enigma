@@ -9,7 +9,7 @@ import crafttweaker.mods.ILoadedMods;
 import crafttweaker.mods.IMod;
 
 val AE2=loadedMods["appliedenergistics2"] as IMod;
-val m0 = [<botania:livingrock>|<enderio:item_alloy_ingot:9>,<appliedenergistics2:material>,<appliedenergistics2:material:7>] as IIngredient[];
+val m0 = [/*<botania:livingrock>|*/<enderio:item_alloy_ingot:9>,<appliedenergistics2:material>,<appliedenergistics2:material:7>] as IIngredient[];
 var c=0 as int;
 val blackList = ["facade","material","seed","_quartz_","paint_ball","pattern","crank","grindstone","inscriber","spatial"] as string[];
 /*
@@ -46,19 +46,19 @@ for i in scripts.recipes.chapter3.AE2ItemList.AE2Items{
 }
 recipes.remove(<appliedenergistics2:creative_energy_cell>);
 recipes.remove(<appliedenergistics2:matrix_frame>);
-recipes.addShaped(<appliedenergistics2:material:28>,[
+recipes.addShaped(<appliedenergistics2:material:28>*16,[
     [m0[2],<minecraft:redstone>,null],
     [m0[1],m0[0],null],
     [null,null,null]]);
-recipes.addShaped(<appliedenergistics2:material:25>,[
+recipes.addShaped(<appliedenergistics2:material:25>*16,[
     [m0[0],<minecraft:redstone>,null],
     [m0[1],m0[2],null],
     [null,null,null]]);
-recipes.addShaped(<appliedenergistics2:material:52>,[
+recipes.addShaped(<appliedenergistics2:material:52>*16,[
     [m0[1],<minecraft:redstone>,null],
     [m0[0],m0[2],null],
     [null,null,null]]);
-recipes.addShaped(<appliedenergistics2:material:42>,[
+recipes.addShaped(<appliedenergistics2:material:42>*16,[
     [m0[1],<minecraft:redstone>,null],
     [m0[2],m0[0],null],
     [null,null,null]]);

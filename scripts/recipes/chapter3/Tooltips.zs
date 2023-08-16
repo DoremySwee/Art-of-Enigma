@@ -24,7 +24,8 @@ function getItemsInCell(data as IData)as string[]{
         var itemData as IData=data.memberGet(index);
         var item as IItemStack=itemUtils.getItem(itemData.id,itemData.Damage);
         if(itemData has "tag")item=item.withTag(itemData.tag);
-        var temp as string="§b"~itemData.Count~"§r * "~item.displayName;
+        var count = (itemData has "Cnt") ? itemData.Cnt : itemData.Count;
+        var temp as string="§b"~count~"§r * "~item.displayName;
         ans=ans+temp;
     }
     return ans;

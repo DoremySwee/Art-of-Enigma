@@ -98,6 +98,7 @@ if (true) {
     for i in MetalA {
         for j in MetalB {
             T.tic.alloy(<liquid:construction_alloy>*7,[i*5,j*2]);
+            T.tic.alloy(<liquid:construction_alloy>*70000,[i*50000,j*20000]);
         }
     }
     for i in Basic {
@@ -111,6 +112,9 @@ if (true) {
         for j in Bio{
             T.tic.alloy(i*2,[i*1,j*1]);
         }
+    }
+    for j in Bio{
+        T.tic.alloy(<liquid:lava>*10000,[j*10000,<liquid:pyrotheum>*1]);
     }
     for i in Bio {
         for j in MetalA {

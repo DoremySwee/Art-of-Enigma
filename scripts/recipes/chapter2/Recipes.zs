@@ -36,9 +36,9 @@ if(true){
     var lvav=<liquid:lava>;
     Agg.addRecipe(<minecraft:string>*4,[<minecraft:gunpowder>,coal*2,rs*4],5000,0x804040,0xCC0000,
         <extrautils2:compressedgravel>,ro,<minecraft:redstone_torch>,nr,co,<minecraft:torch>);
-    Agg.addRecipe(<minecraft:blaze_powder>,[rs,cc,<minecraft:flint>,<botania:spark>,<botania:specialflower>.withTag({type: "endoflame"})],
+    Agg.addRecipe(<minecraft:blaze_powder>*3,[rs,cc,<minecraft:flint>,<botania:spark>,<botania:specialflower>.withTag({type: "endoflame"})],
         13000,0xAA0000,0xFF9922,mm,nr,cb,lvav,mm,gr);
-    Agg.addRecipe(<minecraft:blaze_powder>,[rs,cc,<minecraft:flint>,<botania:spark>,<botania:specialflower>.withTag({type: "endoflame"})],
+    Agg.addRecipe(<minecraft:blaze_powder>*3,[rs,cc,<minecraft:flint>,<botania:spark>,<botania:specialflower>.withTag({type: "endoflame"})],
         17000,0xCC2222,0xFFAA44,lvav,mm,nr,nr,lvav,mm);
 
     T.ae2.inscribe(nr,[cs,nr,nr],false);
@@ -388,7 +388,11 @@ if(true){
 if(true){
     mods.botania.Orechid.removeOre(<ore:oreMithril>);
     M.dup(M.flower("clayconia"),false);
+    M.dup(<botania:floatingspecialflower>.withTag({type: "clayconia"}),false);
     recipes.addShapeless(M.flower("clayconia")*2,[M.flower("clayconia"),<appliedenergistics2:material:7>]);
+    recipes.addShapeless(<botania:floatingspecialflower>.withTag({type: "clayconia"})*2,
+        [<botania:floatingspecialflower>.withTag({type: "clayconia"}),<appliedenergistics2:material:7>]);
+    
     recipes.remove(<extrautils2:user>);
     recipes.remove(<extrautils2:miner>);
     recipes.remove(<extrautils2:scanner>);
@@ -414,7 +418,7 @@ if(true){
     recipes.addShapeless(<botania:lens:4>,[<botania:lens>,<thermalfoundation:material:136>]);
 }
 //Some unused designs
-if(true){
+if(false){
     //Explosion ban
     recipes.remove(<appliedenergistics2:tiny_tnt>);
     recipes.remove(<minecraft:tnt>);
