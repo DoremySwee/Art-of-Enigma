@@ -11,14 +11,19 @@ import mods.embers.Stamper;
 var brick = <embers:brick_caminite>;
 var gearMith = <thermalfoundation:material:264>;
 
+//Fix: Spider Egg
+    recipes.remove(<minecraft:web>);
+    recipes.addShaped(<minecraft:web>,Mp.read("A_A;_B_;A_A;",{"A":<minecraft:string>,"B":<mysticalagriculture:crafting:23>}));
+    T.ae2.inscribe(<minecraft:spawn_egg>.withTag({EntityTag: {id: "minecraft:spider"}}),[<minecraft:egg>,<minecraft:web>,<minecraft:web>]);
+
 furnace.remove(brick);
 recipes.remove(<embers:dawnstone_anvil>);
 recipes.remove(<embers:ember_bore>);
 recipes.remove(<embers:archaic_light>);
 
-T.tic.casting(<embers:blend_caminite>, <thermalfoundation:material:72>, <liquid:molten_essence>*144, 144);
+T.tic.casting(<embers:blend_caminite>, <thermalfoundation:material:72>, <liquid:clay>*144, 144);
 T.tic.casting(brick, <embers:blend_caminite>, <liquid:glass>*144, 600);
-T.tic.casting(<embers:crystal_ember>, <tconstruct:cast_custom:1>, <liquid:pyrotheum>*16, 288, false);
+T.tic.casting(<embers:crystal_ember>, <tconstruct:cast_custom:1>, <liquid:pyrotheum>*4, 288, false);
 
 Agg.addRecipe(<minecraft:snowball>,[<appliedenergistics2:paint_ball:23>],300000,0x0000FF,0x8888FF,
     <thermalfoundation:glass:2>,<thermalfoundation:storage:8>,<minecraft:lapis_block>,
@@ -28,7 +33,7 @@ Agg.addRecipe(gearMith,[<thermalfoundation:material:288>],500000,0x444466,0x8888
     <minecraft:hopper>,<thermalfoundation:storage:8>,<minecraft:lapis_block>,
     <minecraft:hopper>,<thermalfoundation:storage:2>,<minecraft:lapis_ore>
 );
-T.embers.melter([<liquid:silver>*144,<liquid:mana>],<thermalfoundation:material:136>);
+T.embers.melter([<liquid:silver>*128,<liquid:mana>*16],<thermalfoundation:material:136>);
 <thermalfoundation:material:136>.addTooltip(format.yellow(format.italic(game.localize("description.crt.tooltip.mithril.trymelting"))));
 
 var table = <mysticalagriculture:tinkering_table>;
@@ -150,9 +155,17 @@ recipes.addShaped(<thermalfoundation:upgrade>,Mp.read("PCP;RGR;PCP;",{
     "P":<tconstruct:large_plate>.withTag({Material: "silver"}),"C":capacitor,
     "G":gearMith,"R":<thermalfoundation:material:2048>
 }));
-T.tic.casting(<extrautils2:machine>.withTag({Type: "extrautils2:enchanter"}),
+
+var temp0 = <thermalexpansion:machine:3>.withTag({Level: 1 as byte});
+T.tic.casting(<extrautils2:machine>.withTag({Type: "extrautils2:enchanter"}),temp0,<liquid:xpjuice>*2000, 6000, true, true);
+recipes.addShapeless(temp0,[temp0]);
+temp0.addTooltip(format.aqua(format.italic(game.localize("description.crt.tooltip.clearnbt"))));
+
+/*/
+T.te.fill(<extrautils2:machine>.withTag({Type: "extrautils2:enchanter"}),
     <thermalexpansion:machine:3>.withTag({Level: 1 as byte}),
     <liquid:xpjuice>*2000, 6000);
+*/
 
 var frame=<enderio:item_material:1>;
 recipes.addShaped(frame,Mp.read("PSR;UXU;RSP;",{
@@ -193,7 +206,7 @@ for i in 0 to 3{
 //BloodMagic
 T.tic.casting(<bloodmagic:soul_forge>,<embers:block_furnace>,<liquid:blood>*10000,10000,true,true);
 recipes.remove(<bloodmagic:soul_snare>);
-recipes.addShaped(<bloodmagic:soul_snare>,Mp.read("SIS;ICI;SIS;",{
+recipes.addShaped(<bloodmagic:soul_snare>*8,Mp.read("SIS;ICI;SIS;",{
     "S":<botania:manaresource:16>,"I":<mysticalagriculture:crafting:33>,"C":<enderio:item_basic_capacitor>
 }));
 recipes.addShaped(<bloodmagic:altar>,Mp.read("AaA;BbB;CcC;",{
@@ -204,9 +217,9 @@ Agg.addRecipe(<minecraft:spawn_egg>.withTag({EntityTag: {id: "minecraft:blaze"}}
     [<minecraft:egg>],3000000,0xFFFF77,0xFFFF00,
     <liquid:mana>,<botania:blazeblock>,<liquid:pyrotheum>,
     <liquid:mana>,<minecraft:obsidian>,<liquid:lava>);
-mods.tconstruct.Melting.addEntityMelting(<entity:minecraft:blaze>,<liquid:pyrotheum>);
+mods.tconstruct.Melting.addEntityMelting(<entity:minecraft:blaze>,<liquid:pyrotheum>*4);
 recipes.remove(<bloodmagic:alchemy_table>);
-T.te.refinery(<liquid:lifeessence>, <liquid:blood>*666, 400);
+T.te.refinery(<liquid:lifeessence>*44, <liquid:blood>*666, 400);
 recipes.remove(<bloodmagic:sacrificial_dagger>);
 T.bm.altar(<bloodmagic:sacrificial_dagger>,<botania:manasteelsword>,144);
 recipes.addShaped(<enderio:item_broken_spawner>,

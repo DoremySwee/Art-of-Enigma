@@ -42,7 +42,7 @@ var temp0 = <immersiveengineering:material:4>;
 var temp1 = [temp0,temp0,temp0,temp0,temp0,temp0,temp0,temp0,temp0] as IIngredient[];
 T.ava.shaped(<minecraft:wool>*64, [temp1,temp1,temp1,temp1,temp1,temp1,temp1,temp1,temp1]);
 recipes.remove(<extrautils2:suncrystal:250>);
-T.ava.shaped(<extrautils2:suncrystal:250>,Mp.read(
+T.ava.shaped(<extrautils2:suncrystal:250>*8,Mp.read(
 	"	____@____;
 		__#_$_#__;
 		_#@%&%@#_;
@@ -245,7 +245,8 @@ T.ava.shaped(<extrautils2:resonator>,Mp.read(
 		#$%@&@%*#;
 		@#@@#@@#@;",
 	{
-		"%":<enderio:block_alloy:0>,"2":M.consume(<bloodmagic:blood_orb:0>.withTag({orb: "bloodmagic:weak"})),
+		"%":<enderio:block_alloy:0>,//"2":M.consume(<bloodmagic:blood_orb:0>.withTag({orb: "bloodmagic:weak"})),
+		"2":M.consume(M.orb1(1)),
 		"&":<thermalfoundation:storage_alloy:2>,"$":<thermalfoundation:storage_alloy:3>,"*":<thermalfoundation:storage_alloy:4>,
 		"1":<thermalfoundation:storage_alloy:1>,"@":<minecraft:redstone_block:0>,"#":<minecraft:obsidian:0>,"~":<extrautils2:suncrystal:0>
 	}
@@ -297,9 +298,9 @@ T.ava.shaped(<bloodmagic:blood_orb>.withTag({orb: "bloodmagic:apprentice"}),Mp.r
 	"	@#$$%$$&@;
 		&$$**~$$#;
 		$$12341$$;
-		$~56162*$;
+		$~5A162*$;
 		%*31713*%;
-		$*26168~$;
+		$*261A8~$;
 		$$19321$$;
 		#$$~**$$&;
 		@&$$%$$#@;",
@@ -308,7 +309,10 @@ T.ava.shaped(<bloodmagic:blood_orb>.withTag({orb: "bloodmagic:apprentice"}),Mp.r
 		"%":<tconstruct:seared_tank:1> .withTag({FluidName: "emerald", Amount: 3333}),
 		"@":<minecraft:potion:0> .withTag({Potion: "minecraft:strong_leaping"}),
 		"&":<minecraft:potion:0> .withTag({Potion: "minecraft:strong_poison"}),
-		"6":M.consume(<bloodmagic:blood_orb:0>.withTag({orb: "bloodmagic:weak"})),
+		//"6":M.consume(<bloodmagic:blood_orb:0>.withTag({orb: "bloodmagic:weak"})),
+		//"A":M.reuse(<bloodmagic:blood_orb:0>.withTag({orb: "bloodmagic:weak"})),
+		"6":M.consume(M.orb1(1)),
+		"A":M.reuse(M.orb1(1)),
 		"#":<minecraft:potion:0> .withTag({Potion: "cofhcore:luck2"}),
 		"~":<botania:manatablet:0> .withTag({mana: 375000}),
 		"*":<botania:manatablet:0> .withTag({mana: 125000}),
@@ -324,7 +328,8 @@ T.ava.shaped(<bloodmagic:blood_orb>.withTag({orb: "bloodmagic:apprentice"}),Mp.r
 recipes.addShaped(<thaumcraft:arcane_workbench>,Mp.read("BAB;AOA;BAB;",{
 	"A":<minecraft:crafting_table>,
 	"B":<avaritia:extreme_crafting_table>,
-	"O":M.reuse(M.orb(2))
+	//"O":M.reuse(M.orb(2))
+	"O":M.consume(M.orb(2))
 }));
 <ore:blockEmerald>.remove(<chisel:emerald:10>);
 Resonator.add(<chisel:emerald:10>,<minecraft:emerald_block>,2100);
