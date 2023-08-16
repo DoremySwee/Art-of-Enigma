@@ -21,7 +21,7 @@ events.onBlockPlace(function(event as BlockPlaceEvent){
                 if(!isNull(t)) num=t.asInt();
                 num+=1;
                 world.updateCustomWorldData(world.getCustomWorldData().deepSet(num as IData, dataKey~"."~uuid));
-                if(num%10==0){
+                if(num%100==0){
                     world.setBlockState(<blockstate:minecraft:air>, pos);
                     var e as crafttweaker.entity.IEntityAgeable=
                         <entity:minecraft:mooshroom>.createEntity(world);
