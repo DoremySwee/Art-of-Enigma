@@ -262,9 +262,11 @@ T.ie.mix(<liquid:bot_elf>*100,[
 T.eio.vat(<liquid:molten_chlorophyte>, <liquid:emerald>, 1.0f/9, [<mysticalagriculture:nature_seeds>%160],[<contenttweaker:shard_terra>%9,<thaumcraft:salis_mundus>%36]);
 T.tic.casting(<contenttweaker:chlorophyte_ore>,<thermalfoundation:ore:6>,<liquid:molten_chlorophyte>*144,900,true,true);
 T.tic.melting(<liquid:molten_chlorophyte>*16,<contenttweaker:chlorophyte_ore>);
+    T.te.magama(<liquid:molten_chlorophyte>*16,<contenttweaker:chlorophyte_ore>);
 T.tic.casting(<botania:pylon:1>,<botania:pylon>,<liquid:molten_chlorophyte>*1440,900,true,true);
 T.tic.casting(<contenttweaker:chlorophyte_ingot>,<tconstruct:cast_custom>,<liquid:molten_chlorophyte>*144,80,false);
 T.tic.melting(<liquid:molten_chlorophyte>*144,<contenttweaker:chlorophyte_ingot>);
+    T.te.magama(<liquid:molten_chlorophyte>*144,<contenttweaker:chlorophyte_ingot>);
 T.tic.casting(<botania:livingwood:5>,<botania:livingwood>,<liquid:molten_chlorophyte>*144,900,true,true);
 
 T.tic.casting(<botania:manaresource:7>,<botania:manaresource>,<liquid:bot_elf>*1440,900);

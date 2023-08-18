@@ -221,7 +221,20 @@ mods.tconstruct.Casting.removeBasinRecipe(<tconstruct:firewood>);
 T.tic.casting(<tconstruct:firewood>,<calculator:tanzaniteplanks>,<liquid:pyrotheum>*1296,1000,true,true);
 
 //Calculators
-T.ava.shaped(<calculator:calculator>,Mp.read(
+val add0 = <contenttweaker:calc_sigil_addition>;
+val div0 = <contenttweaker:calc_sigil_division>;
+val calc0 = <calculator:calculator>;
+val calc1 = <calculator:scientificcalculator>;
+val calc2 = <calculator:atomiccalculator>;
+val calc3 = <calculator:flawlesscalculator>;
+mods.calculator.atomic.removeRecipe(calc1);
+recipes.addShapeless(add0,[calc0]);
+recipes.addShapeless(div0,[calc1]);
+recipes.addShapeless(calc0,[add0]);
+recipes.addShapeless(calc1,[div0]);
+T.cc.basic(calc2,[add0,add0]);
+T.cc.atomic(<calculator:flawlesscalculator>.withTag({"0": {}}),[add0,div0,add0]);
+T.ava.shaped(add0,Mp.read(
     "	___@#@___;
 		___$#$___;
 		___$%$___;
@@ -232,15 +245,14 @@ T.ava.shaped(<calculator:calculator>,Mp.read(
 		___$#$___;
 		___@#@___;",
     {
+		"%":<extrautils2:ingredients:6>,
 		"#":<appliedenergistics2:material:22>,
 		"$":<appliedenergistics2:material:23>,
 		"@":<appliedenergistics2:material:24>,
-		"%":<extrautils2:ingredients:6>,
 		"&":<appliedenergistics2:material:47>
 	}
 ));
-mods.calculator.atomic.removeRecipe(<calculator:scientificcalculator>);
-T.ava.shaped(<calculator:scientificcalculator>,Mp.read(
+T.ava.shaped(div0,Mp.read(
     "	_________;
 		__@#$%&__;
 		_*@#~%&*_;
@@ -251,29 +263,27 @@ T.ava.shaped(<calculator:scientificcalculator>,Mp.read(
 		__78$90__;
 		_________;",
     {
-		"9":<appliedenergistics2:material:10>,
-		"0":<minecraft:gold_ingot:0>,
-		"5":M.reuse(<appliedenergistics2:material:13>),
-		"~":<calculator:calculator:0>,
-		"#":<appliedenergistics2:material:20>,
-		"$":<extrautils2:ingredients:6>,
-		"&":<appliedenergistics2:material:18>,
-		"3":M.reuse(<appliedenergistics2:material:19>),
+		"~":add0,
 		"7":<minecraft:diamond:0>,
-		"1":<appliedenergistics2:material:36>,
-		"2":M.reuse(<appliedenergistics2:material:14>),
-		"4":<appliedenergistics2:material:47>,
+		"0":<minecraft:gold_ingot:0>,
+		"$":<extrautils2:ingredients:6>,
 		"8":<appliedenergistics2:material:5>,
-		"6":M.reuse(<appliedenergistics2:material:15>),
+		"9":<appliedenergistics2:material:10>,
+		"#":<appliedenergistics2:material:20>,
+		"&":<appliedenergistics2:material:18>,
+		"1":<appliedenergistics2:material:36>,
+		"4":<appliedenergistics2:material:47>,
 		"`":<appliedenergistics2:material:37>,
 		"%":<appliedenergistics2:material:16>,
 		"*":<appliedenergistics2:material:38>,
-		"@":<appliedenergistics2:material:17>
+		"@":<appliedenergistics2:material:17>,
+		"5":M.reuse(<appliedenergistics2:material:13>),
+		"2":M.reuse(<appliedenergistics2:material:14>),
+		"6":M.reuse(<appliedenergistics2:material:15>),
+		"3":M.reuse(<appliedenergistics2:material:19>)
 	}
 ));
-T.cc.basic(<calculator:atomiccalculator>,[<calculator:calculator>,<calculator:calculator>]);
-T.cc.atomic(<calculator:flawlesscalculator>.withTag({"0": {}}),[<calculator:calculator>,<calculator:scientificcalculator>,<calculator:calculator>]);
-T.ava.shaped(<calculator:dockingstation>,Mp.read(
+T.ava.shaped(<calculator:dockingstation>*4,Mp.read(
     "	_________;
 		_@#@$@#@_;
 		_#@%&%@#_;
@@ -284,18 +294,18 @@ T.ava.shaped(<calculator:dockingstation>,Mp.read(
 		_#@#$#@#_;
 		_________;",
     {
+		"@":<thermalfoundation:glass:8>,
+		"&":<appliedenergistics2:part:220>,
+		"#":<extrautils2:decorativesolid:3>,
 		"~":<appliedenergistics2:material:22>,
 		"%":<appliedenergistics2:material:23>,
-		"5":<calculator:atomiccalculator:0>,
-		"&":<appliedenergistics2:part:220>,
 		"*":<appliedenergistics2:material:24>,
-		"2":<calculator:calculator:0>,
+		"$":<appliedenergistics2:interface:0>,
 		"3":<appliedenergistics2:creative_energy_cell:0>,
-		"#":<extrautils2:decorativesolid:3>,
-		"1":<calculator:flawlesscalculator:0>,
-		"@":<thermalfoundation:glass:8>,
-		"4":<calculator:scientificcalculator:0>,
-		"$":<appliedenergistics2:interface:0>
+		"2":M.reuse(calc0),
+		"4":M.reuse(calc1),
+		"5":M.reuse(calc2),
+		"1":M.reuse(calc3)
 	}
 ));
 T.cc.scientific(<minecraft:nether_wart>,[

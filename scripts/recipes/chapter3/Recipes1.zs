@@ -150,7 +150,7 @@ recipes.addShaped(<thermalexpansion:device:4>,Mp.read("IGI;C4C;I@I",map2));
 //EIO & ExU Enchanter
 var capacitor = <enderio:item_basic_capacitor>;
 recipes.remove(capacitor);
-T.tic.casting(capacitor, <appliedenergistics2:material:5>, <liquid:electrical_steel>*576, 300);
+T.tic.casting(capacitor, <appliedenergistics2:material:5>, <liquid:electrical_steel>*288, 300);
 recipes.addShaped(<thermalfoundation:upgrade>,Mp.read("PCP;RGR;PCP;",{
     "P":<tconstruct:large_plate>.withTag({Material: "silver"}),"C":capacitor,
     "G":gearMith,"R":<thermalfoundation:material:2048>
@@ -233,8 +233,3 @@ recipes.remove(<botania:spawnerclaw>);
 
 //Fixes 20230724
 recipes.remove(<enderio:item_material:22>);
-recipes.remove(<enderio:item_travel_staff>);
-recipes.remove(<enderio:block_travel_anchor>);
-//recipes.addShaped(<mysticalagriculture:tinkering_table>,Mp.read("AAA;B_B;B_B;",{"A":<tconstruct:seared:3>,"B":<mysticalagriculture:crafting:33>}));
-T.tic.casting(<enderio:item_travel_staff>,<enderio:item_xp_transfer>,<liquid:molten_essence>*144,900);
-recipes.addShaped(<enderio:block_travel_anchor>,Mp.read("ABA;BCB;ABA;",{"A":<enderio:block_alloy:9>,"B":<enderio:item_material:20>,"C":<mysticalagriculture:crafting:33>}));

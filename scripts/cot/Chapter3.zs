@@ -30,3 +30,8 @@ CotLib.createFluid("bot_elf","77FF99FF",{
     stillLocation:CotLib.lightStill,
     flowingLocation:CotLib.lightFlow
 });
+
+CotLib.createItem("calc_sigil_addition");
+CotLib.createItem("calc_sigil_subtraction");
+CotLib.createItem("calc_sigil_multiplication");
+CotLib.createItem("calc_sigil_division");

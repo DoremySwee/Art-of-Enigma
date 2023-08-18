@@ -253,7 +253,9 @@ if(true){
     mods.thermalexpansion.Pulverizer.removeRecipe(<minecraft:coal>);
     mods.thermalexpansion.Pulverizer.removeRecipe(<minecraft:coal_ore>);
     T.tic.melting(<liquid:coal>*144, coalDust, 0);
+    T.te.magama(<liquid:coal>*144, coalDust, 10);
     T.tic.melting(<liquid:glowstone> * 1, <minecraft:torch>, 0);
+    T.te.magama(<liquid:glowstone> * 1, <minecraft:torch>, 10);
 
     recipes.addShaped(<enderio:block_simple_alloy_smelter>,Mp.read("DMD;MPM;ICi;",{
         "D":<enderio:item_material:38>,"M":t2,"P":t3,"I":t4,"i":t5,"C":t6
@@ -314,6 +316,9 @@ if(true){
     T.tic.casting(l2[1],l2[0],<liquid:tree_oil>*68);
     T.tic.casting(l2[2],l2[1],<liquid:syrup>*68);
     T.tic.melting(<liquid:resin>*144,<ore:logWood>, 0);
+    for log in <ore:logWood>.items{
+        T.te.magama(<liquid:resin>*144,log, 10);
+    }
     recipes.addShaped(l2[3]*8,Mp.read("AAA;ABA;AAA;",{
         "A":l2[2],"B":<thermalfoundation:material:832>
     }));
@@ -369,6 +374,7 @@ if(true){
     }
     T.te.fill(<thermalfoundation:material:2049>, <minecraft:snowball>, <liquid:xpjuice> * 1, 20);
     T.tic.melting(<liquid:cryotheum>*1,<thermalfoundation:material:2049>, 0);
+    T.te.magama(<liquid:cryotheum>*1,<thermalfoundation:material:2049>, 10);
 
     
     var wools = [] as IIngredient[];
