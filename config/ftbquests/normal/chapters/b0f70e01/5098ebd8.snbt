@@ -1,0 +1,56 @@
+{
+	x: -31.5d,
+	y: -11.5d,
+	dependencies: [
+		"670810be"
+	],
+	tasks: [{
+		uid: "db7f1bed",
+		type: "item",
+		items: [{
+			id: "botania:specialflower",
+			tag: {
+				type: "rannuncarpus"
+			}
+		}]
+	},
+	{
+		uid: "53855410",
+		type: "item",
+		items: [{
+			ForgeCaps: {
+				"astralsorcery:cap_item_amulet_holder": {}
+			},
+			id: "botania:lens",
+			tag: {},
+			Damage: 12s
+		}],
+		ignore_nbt: 1b
+	},
+	{
+		uid: "bbb06416",
+		type: "item",
+		items: [{
+			ForgeCaps: {
+				"astralsorcery:cap_item_amulet_holder": {}
+			},
+			id: "botania:lens",
+			tag: {},
+			Damage: 13s
+		}],
+		ignore_nbt: 1b
+	},
+	{
+		uid: "41a20e4a",
+		type: "item",
+		items: [{
+			ForgeCaps: {
+				"astralsorcery:cap_item_amulet_holder": {}
+			},
+			id: "botania:lens",
+			tag: {},
+			Damage: 18s
+		}],
+		ignore_nbt: 1b
+	}]
+}

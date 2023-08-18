@@ -1,8 +1,12 @@
 {
 	x: -32.0d,
 	y: -10.0d,
+	hide_dependency_lines: true,
 	dependencies: [
+		"12f0b909",
+		"4a3a5673",
 		"3dc53c67",
+		"7987961c",
 		"0d7773db",
 		"4b8c3cb9"
 	],
