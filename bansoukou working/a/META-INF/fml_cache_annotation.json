@@ -1,0 +1,886 @@
+{
+  "quaternary/botaniatweaks/BotaniaTweaks": {
+    "name": "quaternary/botaniatweaks/BotaniaTweaks",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/minecraftforge/fml/common/Mod;",
+        "target": "quaternary/botaniatweaks/BotaniaTweaks",
+        "values": {
+          "acceptedMinecraftVersions": {
+            "value": "[1.12.2]"
+          },
+          "dependencies": {
+            "value": "required-before:botania;after:modtweaker;after:jei@[4.15.0,);"
+          },
+          "guiFactory": {
+            "value": "quaternary.botaniatweaks.modules.shared.config.BotaniaTweaksGuiFactory"
+          },
+          "modid": {
+            "value": "botania_tweaks"
+          },
+          "name": {
+            "value": "Botania Tweaks"
+          },
+          "version": {
+            "value": "1.9.1"
+          }
+        }
+      },
+      {
+        "type": "FIELD",
+        "name": "Lnet/minecraftforge/fml/common/SidedProxy;",
+        "target": "PROXY",
+        "values": {
+          "clientSide": {
+            "value": "quaternary.botaniatweaks.modules.shared.proxy.ClientProxy"
+          },
+          "serverSide": {
+            "value": "quaternary.botaniatweaks.modules.shared.proxy.ServerProxy"
+          }
+        }
+      },
+      {
+        "type": "FIELD",
+        "name": "Lnet/minecraftforge/fml/common/registry/GameRegistry$ItemStackHolder;",
+        "target": "ICON",
+        "value": {
+          "value": "botania_tweaks:compressed_tiny_potato_8"
+        }
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/Mod$EventHandler;",
+        "target": "preinit(Lnet/minecraftforge/fml/common/event/FMLPreInitializationEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/Mod$EventHandler;",
+        "target": "init(Lnet/minecraftforge/fml/common/event/FMLInitializationEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/Mod$EventHandler;",
+        "target": "postinit(Lnet/minecraftforge/fml/common/event/FMLPostInitializationEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/Mod$EventHandler;",
+        "target": "loadComplete(Lnet/minecraftforge/fml/common/event/FMLLoadCompleteEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/Mod$EventHandler;",
+        "target": "serverStarting(Lnet/minecraftforge/fml/common/event/FMLServerStartingEvent;)V"
+      }
+    ]
+  },
+  "quaternary/botaniatweaks/asm/BotaniaTweakerPlugin": {
+    "name": "quaternary/botaniatweaks/asm/BotaniaTweakerPlugin",
+    "interfaces": [
+      "net/minecraftforge/fml/relauncher/IFMLLoadingPlugin"
+    ],
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/minecraftforge/fml/relauncher/IFMLLoadingPlugin$Name;",
+        "target": "quaternary/botaniatweaks/asm/BotaniaTweakerPlugin",
+        "value": {
+          "value": "Botania Tweaks Core"
+        }
+      },
+      {
+        "type": "CLASS",
+        "name": "Lnet/minecraftforge/fml/relauncher/IFMLLoadingPlugin$TransformerExclusions;",
+        "target": "quaternary/botaniatweaks/asm/BotaniaTweakerPlugin",
+        "value": {
+          "values": [
+            "quaternary.botaniatweaks.asm",
+            "quaternary.botaniatweaks.modules.shared.lib"
+          ]
+        }
+      },
+      {
+        "type": "CLASS",
+        "name": "Lnet/minecraftforge/fml/relauncher/IFMLLoadingPlugin$MCVersion;",
+        "target": "quaternary/botaniatweaks/asm/BotaniaTweakerPlugin",
+        "value": {
+          "value": "1.12.2"
+        }
+      },
+      {
+        "type": "CLASS",
+        "name": "Lnet/minecraftforge/fml/relauncher/IFMLLoadingPlugin$SortingIndex;",
+        "target": "quaternary/botaniatweaks/asm/BotaniaTweakerPlugin",
+        "value": {
+          "type": "INT",
+          "value": "1337"
+        }
+      }
+    ]
+  },
+  "quaternary/botaniatweaks/asm/BotaniaTweakerTransformer": {
+    "name": "quaternary/botaniatweaks/asm/BotaniaTweakerTransformer",
+    "interfaces": [
+      "net/minecraft/launchwrapper/IClassTransformer",
+      "org/objectweb/asm/Opcodes"
+    ]
+  },
+  "quaternary/botaniatweaks/asm/tweaks/Tweak": {
+    "name": "quaternary/botaniatweaks/asm/tweaks/Tweak",
+    "interfaces": [
+      "org/objectweb/asm/Opcodes"
+    ]
+  },
+  "quaternary/botaniatweaks/modules/avaritia/ModuleAvaritia": {
+    "name": "quaternary/botaniatweaks/modules/avaritia/ModuleAvaritia",
+    "interfaces": [
+      "quaternary/botaniatweaks/modules/IModule"
+    ]
+  },
+  "quaternary/botaniatweaks/modules/avaritia/ModuleAvaritia$ClientEvents": {
+    "name": "quaternary/botaniatweaks/modules/avaritia/ModuleAvaritia$ClientEvents",
+    "annotations": [
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "models(Lnet/minecraftforge/client/event/ModelRegistryEvent;)V"
+      }
+    ]
+  },
+  "quaternary/botaniatweaks/modules/avaritia/ModuleAvaritia$CommonEvents": {
+    "name": "quaternary/botaniatweaks/modules/avaritia/ModuleAvaritia$CommonEvents",
+    "annotations": [
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "blocks(Lnet/minecraftforge/event/RegistryEvent$Register;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "items(Lnet/minecraftforge/event/RegistryEvent$Register;)V"
+      }
+    ]
+  },
+  "quaternary/botaniatweaks/modules/botania/ModuleBotania": {
+    "name": "quaternary/botaniatweaks/modules/botania/ModuleBotania",
+    "interfaces": [
+      "quaternary/botaniatweaks/modules/IModule"
+    ]
+  },
+  "quaternary/botaniatweaks/modules/botania/ModuleBotania$ClientEvents": {
+    "name": "quaternary/botaniatweaks/modules/botania/ModuleBotania$ClientEvents",
+    "annotations": [
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "models(Lnet/minecraftforge/client/event/ModelRegistryEvent;)V"
+      }
+    ]
+  },
+  "quaternary/botaniatweaks/modules/botania/ModuleBotania$CommonEvents": {
+    "name": "quaternary/botaniatweaks/modules/botania/ModuleBotania$CommonEvents",
+    "annotations": [
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "blocks(Lnet/minecraftforge/event/RegistryEvent$Register;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "items(Lnet/minecraftforge/event/RegistryEvent$Register;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "recipes(Lnet/minecraftforge/event/RegistryEvent$Register;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "missingItemMappings(Lnet/minecraftforge/event/RegistryEvent$MissingMappings;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "missingRecipeMappings(Lnet/minecraftforge/event/RegistryEvent$MissingMappings;)V"
+      }
+    ]
+  },
+  "quaternary/botaniatweaks/modules/botania/advancement/FlowerGeneratedManaCriterionTrigger": {
+    "name": "quaternary/botaniatweaks/modules/botania/advancement/FlowerGeneratedManaCriterionTrigger",
+    "interfaces": [
+      "net/minecraft/advancements/ICriterionTrigger"
+    ]
+  },
+  "quaternary/botaniatweaks/modules/botania/advancement/TotalGeneratedManaCriterionTrigger": {
+    "name": "quaternary/botaniatweaks/modules/botania/advancement/TotalGeneratedManaCriterionTrigger",
+    "interfaces": [
+      "net/minecraft/advancements/ICriterionTrigger"
+    ]
+  },
+  "quaternary/botaniatweaks/modules/botania/block/BlockCompressedTinyPotato": {
+    "name": "quaternary/botaniatweaks/modules/botania/block/BlockCompressedTinyPotato",
+    "interfaces": [
+      "vazkii/botania/api/lexicon/ILexiconable"
+    ]
+  },
+  "quaternary/botaniatweaks/modules/botania/block/BlockCustomAgglomerationPlate": {
+    "name": "quaternary/botaniatweaks/modules/botania/block/BlockCustomAgglomerationPlate",
+    "interfaces": [
+      "vazkii/botania/api/lexicon/ILexiconable",
+      "quaternary/botaniatweaks/modules/botania/misc/IBotaniaTweaked"
+    ]
+  },
+  "quaternary/botaniatweaks/modules/botania/block/BlockCustomOpenCrate": {
+    "name": "quaternary/botaniatweaks/modules/botania/block/BlockCustomOpenCrate",
+    "interfaces": [
+      "quaternary/botaniatweaks/modules/botania/misc/IBotaniaTweaked"
+    ]
+  },
+  "quaternary/botaniatweaks/modules/botania/block/BlockNerfedManaFluxfield": {
+    "name": "quaternary/botaniatweaks/modules/botania/block/BlockNerfedManaFluxfield",
+    "interfaces": [
+      "vazkii/botania/api/lexicon/ILexiconable",
+      "quaternary/botaniatweaks/modules/botania/misc/IBotaniaTweaked"
+    ],
+    "annotations": [
+      {
+        "type": "FIELD",
+        "name": "Lnet/minecraftforge/common/capabilities/CapabilityInject;",
+        "target": "ENERGY_CAP",
+        "value": {
+          "type": "CLASS",
+          "value": "Lnet/minecraftforge/energy/IEnergyStorage;"
+        }
+      }
+    ]
+  },
+  "quaternary/botaniatweaks/modules/botania/block/BlockPottedTinyPotato": {
+    "name": "quaternary/botaniatweaks/modules/botania/block/BlockPottedTinyPotato",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/minecraftforge/fml/common/Mod$EventBusSubscriber;",
+        "target": "quaternary/botaniatweaks/modules/botania/block/BlockPottedTinyPotato",
+        "values": {
+          "modid": {
+            "value": "botania_tweaks"
+          }
+        }
+      }
+    ]
+  },
+  "quaternary/botaniatweaks/modules/botania/handler/AutoCorporeaSparkPlaceBlockHandler": {
+    "name": "quaternary/botaniatweaks/modules/botania/handler/AutoCorporeaSparkPlaceBlockHandler",
+    "annotations": [
+      {
+        "type": "FIELD",
+        "name": "Lnet/minecraftforge/common/capabilities/CapabilityInject;",
+        "target": "ITEM_HANDLER_CAP",
+        "value": {
+          "type": "CLASS",
+          "value": "Lnet/minecraftforge/items/IItemHandler;"
+        }
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "handlePlace(Lnet/minecraftforge/event/world/BlockEvent$PlaceEvent;)V"
+      }
+    ]
+  },
+  "quaternary/botaniatweaks/modules/botania/handler/ManagenStatisticsAdvancementWorldTickHandler": {
+    "name": "quaternary/botaniatweaks/modules/botania/handler/ManagenStatisticsAdvancementWorldTickHandler",
+    "annotations": [
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "update(Lnet/minecraftforge/fml/common/gameevent/TickEvent$WorldTickEvent;)V"
+      }
+    ]
+  },
+  "quaternary/botaniatweaks/modules/botania/handler/NonGOGWaterBowlHandler": {
+    "name": "quaternary/botaniatweaks/modules/botania/handler/NonGOGWaterBowlHandler",
+    "annotations": [
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "onPlayerInteract(Lnet/minecraftforge/event/entity/player/PlayerInteractEvent$RightClickBlock;)V"
+      }
+    ]
+  },
+  "quaternary/botaniatweaks/modules/botania/handler/PotatoRightClickHandler": {
+    "name": "quaternary/botaniatweaks/modules/botania/handler/PotatoRightClickHandler",
+    "annotations": [
+      {
+        "type": "FIELD",
+        "name": "Lnet/minecraftforge/fml/common/registry/GameRegistry$ObjectHolder;",
+        "target": "POTTED_TATER",
+        "value": {
+          "value": "botania_tweaks:potted_tiny_potato"
+        }
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "rightClick(Lnet/minecraftforge/event/entity/player/PlayerInteractEvent$RightClickBlock;)V"
+      }
+    ]
+  },
+  "quaternary/botaniatweaks/modules/botania/handler/SheepEatAltGrassJoinWorldHandler": {
+    "name": "quaternary/botaniatweaks/modules/botania/handler/SheepEatAltGrassJoinWorldHandler",
+    "annotations": [
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "joinWorld(Lnet/minecraftforge/event/entity/EntityJoinWorldEvent;)V"
+      }
+    ]
+  },
+  "quaternary/botaniatweaks/modules/botania/handler/TNTDuplicatorDetectionWorldTickHander": {
+    "name": "quaternary/botaniatweaks/modules/botania/handler/TNTDuplicatorDetectionWorldTickHander",
+    "annotations": [
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "update(Lnet/minecraftforge/fml/common/gameevent/TickEvent$WorldTickEvent;)V"
+      }
+    ]
+  },
+  "quaternary/botaniatweaks/modules/botania/handler/TooltipHandler": {
+    "name": "quaternary/botaniatweaks/modules/botania/handler/TooltipHandler",
+    "annotations": [
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "handleTooltip(Lnet/minecraftforge/event/entity/player/ItemTooltipEvent;)V"
+      }
+    ]
+  },
+  "quaternary/botaniatweaks/modules/botania/lexi/PageCustomTerrasteel": {
+    "name": "quaternary/botaniatweaks/modules/botania/lexi/PageCustomTerrasteel",
+    "annotations": [
+      {
+        "type": "FIELD",
+        "name": "Lnet/minecraftforge/fml/common/registry/GameRegistry$ItemStackHolder;",
+        "target": "terraPlate",
+        "value": {
+          "value": "botania:terraplate"
+        }
+      }
+    ]
+  },
+  "quaternary/botaniatweaks/modules/botania/misc/BehaviorEnderAirDispenser": {
+    "name": "quaternary/botaniatweaks/modules/botania/misc/BehaviorEnderAirDispenser",
+    "interfaces": [
+      "net/minecraft/dispenser/IBehaviorDispenseItem"
+    ]
+  },
+  "quaternary/botaniatweaks/modules/botania/misc/EntityAIEatAltGrass": {
+    "name": "quaternary/botaniatweaks/modules/botania/misc/EntityAIEatAltGrass",
+    "annotations": [
+      {
+        "type": "FIELD",
+        "name": "Lnet/minecraftforge/fml/common/registry/GameRegistry$ObjectHolder;",
+        "target": "ALT_GRASS",
+        "value": {
+          "value": "botania:altgrass"
+        }
+      }
+    ]
+  },
+  "quaternary/botaniatweaks/modules/botania/net/PacketAdvancedCrateFX": {
+    "name": "quaternary/botaniatweaks/modules/botania/net/PacketAdvancedCrateFX",
+    "interfaces": [
+      "net/minecraftforge/fml/common/network/simpleimpl/IMessage"
+    ]
+  },
+  "quaternary/botaniatweaks/modules/botania/net/PacketAdvancedCrateFX$Response": {
+    "name": "quaternary/botaniatweaks/modules/botania/net/PacketAdvancedCrateFX$Response",
+    "interfaces": [
+      "net/minecraftforge/fml/common/network/simpleimpl/IMessageHandler"
+    ]
+  },
+  "quaternary/botaniatweaks/modules/botania/net/PacketCustomTerraPlate": {
+    "name": "quaternary/botaniatweaks/modules/botania/net/PacketCustomTerraPlate",
+    "interfaces": [
+      "net/minecraftforge/fml/common/network/simpleimpl/IMessage"
+    ]
+  },
+  "quaternary/botaniatweaks/modules/botania/net/PacketCustomTerraPlate$Response": {
+    "name": "quaternary/botaniatweaks/modules/botania/net/PacketCustomTerraPlate$Response",
+    "interfaces": [
+      "net/minecraftforge/fml/common/network/simpleimpl/IMessageHandler"
+    ]
+  },
+  "quaternary/botaniatweaks/modules/botania/tile/TileCompressedTinyPotato": {
+    "name": "quaternary/botaniatweaks/modules/botania/tile/TileCompressedTinyPotato",
+    "interfaces": [
+      "net/minecraft/util/ITickable"
+    ]
+  },
+  "quaternary/botaniatweaks/modules/botania/tile/TileCustomAgglomerationPlate": {
+    "name": "quaternary/botaniatweaks/modules/botania/tile/TileCustomAgglomerationPlate",
+    "interfaces": [
+      "vazkii/botania/api/mana/spark/ISparkAttachable",
+      "net/minecraft/util/ITickable"
+    ]
+  },
+  "quaternary/botaniatweaks/modules/botania/tile/TileCustomCraftyCrate": {
+    "name": "quaternary/botaniatweaks/modules/botania/tile/TileCustomCraftyCrate",
+    "interfaces": [
+      "vazkii/botania/api/mana/IManaReceiver"
+    ]
+  },
+  "quaternary/botaniatweaks/modules/botania/tile/TileNerfedManaFluxfield": {
+    "name": "quaternary/botaniatweaks/modules/botania/tile/TileNerfedManaFluxfield",
+    "interfaces": [
+      "vazkii/botania/api/mana/IManaReceiver",
+      "net/minecraft/util/ITickable"
+    ],
+    "annotations": [
+      {
+        "type": "FIELD",
+        "name": "Lnet/minecraftforge/common/capabilities/CapabilityInject;",
+        "target": "ENERGY_CAP",
+        "value": {
+          "type": "CLASS",
+          "value": "Lnet/minecraftforge/energy/IEnergyStorage;"
+        }
+      }
+    ]
+  },
+  "quaternary/botaniatweaks/modules/botania/tile/TileNerfedManaFluxfield$EnergyHandler": {
+    "name": "quaternary/botaniatweaks/modules/botania/tile/TileNerfedManaFluxfield$EnergyHandler",
+    "interfaces": [
+      "net/minecraftforge/energy/IEnergyStorage"
+    ]
+  },
+  "quaternary/botaniatweaks/modules/crafttweaker/CTAgglomeration": {
+    "name": "quaternary/botaniatweaks/modules/crafttweaker/CTAgglomeration",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lstanhebben/zenscript/annotations/ZenClass;",
+        "target": "quaternary/botaniatweaks/modules/crafttweaker/CTAgglomeration",
+        "value": {
+          "value": "mods.botaniatweaks.Agglomeration"
+        }
+      },
+      {
+        "type": "CLASS",
+        "name": "Lcrafttweaker/annotations/ZenRegister;",
+        "target": "quaternary/botaniatweaks/modules/crafttweaker/CTAgglomeration"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lstanhebben/zenscript/annotations/ZenMethod;",
+        "target": "removeDefaultRecipe()V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lstanhebben/zenscript/annotations/ZenMethod;",
+        "target": "addRecipe(Lcrafttweaker/api/item/IItemStack;[Lcrafttweaker/api/item/IIngredient;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Lcrafttweaker/api/item/IIngredient;Lcrafttweaker/api/item/IIngredient;Lcrafttweaker/api/item/IIngredient;Lcrafttweaker/api/item/IIngredient;Lcrafttweaker/api/item/IIngredient;Lcrafttweaker/api/item/IIngredient;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lstanhebben/zenscript/annotations/ZenMethod;",
+        "target": "removeRecipe(Lcrafttweaker/api/item/IItemStack;[Lcrafttweaker/api/item/IIngredient;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Lcrafttweaker/api/item/IIngredient;Lcrafttweaker/api/item/IIngredient;Lcrafttweaker/api/item/IIngredient;Lcrafttweaker/api/item/IIngredient;Lcrafttweaker/api/item/IIngredient;Lcrafttweaker/api/item/IIngredient;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lstanhebben/zenscript/annotations/ZenMethod;",
+        "target": "addRecipe(Lcrafttweaker/api/item/IItemStack;[Lcrafttweaker/api/item/IIngredient;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Lquaternary/botaniatweaks/modules/crafttweaker/CTAgglomeration$CTAgglomerationMultiblock;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lstanhebben/zenscript/annotations/ZenMethod;",
+        "target": "removeRecipe(Lcrafttweaker/api/item/IItemStack;[Lcrafttweaker/api/item/IIngredient;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Lquaternary/botaniatweaks/modules/crafttweaker/CTAgglomeration$CTAgglomerationMultiblock;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lstanhebben/zenscript/annotations/ZenMethod;",
+        "target": "addRecipe(Lquaternary/botaniatweaks/modules/crafttweaker/CTAgglomeration$CTAgglomerationRecipe;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lstanhebben/zenscript/annotations/ZenMethod;",
+        "target": "removeRecipe(Lquaternary/botaniatweaks/modules/crafttweaker/CTAgglomeration$CTAgglomerationRecipe;)V"
+      }
+    ]
+  },
+  "quaternary/botaniatweaks/modules/crafttweaker/CTAgglomeration$AddAction": {
+    "name": "quaternary/botaniatweaks/modules/crafttweaker/CTAgglomeration$AddAction",
+    "interfaces": [
+      "crafttweaker/IAction"
+    ]
+  },
+  "quaternary/botaniatweaks/modules/crafttweaker/CTAgglomeration$CTAgglomerationMultiblock": {
+    "name": "quaternary/botaniatweaks/modules/crafttweaker/CTAgglomeration$CTAgglomerationMultiblock",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lstanhebben/zenscript/annotations/ZenClass;",
+        "target": "quaternary/botaniatweaks/modules/crafttweaker/CTAgglomeration$CTAgglomerationMultiblock",
+        "value": {
+          "value": "mods.botaniatweaks.AgglomerationMultiblock"
+        }
+      },
+      {
+        "type": "CLASS",
+        "name": "Lcrafttweaker/annotations/ZenRegister;",
+        "target": "quaternary/botaniatweaks/modules/crafttweaker/CTAgglomeration$CTAgglomerationMultiblock"
+      },
+      {
+        "type": "FIELD",
+        "name": "Lstanhebben/zenscript/annotations/ZenProperty;",
+        "target": "center"
+      },
+      {
+        "type": "FIELD",
+        "name": "Lstanhebben/zenscript/annotations/ZenProperty;",
+        "target": "edge"
+      },
+      {
+        "type": "FIELD",
+        "name": "Lstanhebben/zenscript/annotations/ZenProperty;",
+        "target": "corner"
+      },
+      {
+        "type": "FIELD",
+        "name": "Lstanhebben/zenscript/annotations/ZenProperty;",
+        "target": "centerReplace"
+      },
+      {
+        "type": "FIELD",
+        "name": "Lstanhebben/zenscript/annotations/ZenProperty;",
+        "target": "edgeReplace"
+      },
+      {
+        "type": "FIELD",
+        "name": "Lstanhebben/zenscript/annotations/ZenProperty;",
+        "target": "cornerReplace"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lstanhebben/zenscript/annotations/ZenMethod;",
+        "target": "create()Lquaternary/botaniatweaks/modules/crafttweaker/CTAgglomeration$CTAgglomerationMultiblock;"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lstanhebben/zenscript/annotations/ZenMethod;",
+        "target": "center(Lcrafttweaker/api/item/IIngredient;)Lquaternary/botaniatweaks/modules/crafttweaker/CTAgglomeration$CTAgglomerationMultiblock;"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lstanhebben/zenscript/annotations/ZenMethod;",
+        "target": "edge(Lcrafttweaker/api/item/IIngredient;)Lquaternary/botaniatweaks/modules/crafttweaker/CTAgglomeration$CTAgglomerationMultiblock;"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lstanhebben/zenscript/annotations/ZenMethod;",
+        "target": "corner(Lcrafttweaker/api/item/IIngredient;)Lquaternary/botaniatweaks/modules/crafttweaker/CTAgglomeration$CTAgglomerationMultiblock;"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lstanhebben/zenscript/annotations/ZenMethod;",
+        "target": "all(Lcrafttweaker/api/item/IIngredient;)Lquaternary/botaniatweaks/modules/crafttweaker/CTAgglomeration$CTAgglomerationMultiblock;"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lstanhebben/zenscript/annotations/ZenMethod;",
+        "target": "checker(Lcrafttweaker/api/item/IIngredient;Lcrafttweaker/api/item/IIngredient;)Lquaternary/botaniatweaks/modules/crafttweaker/CTAgglomeration$CTAgglomerationMultiblock;"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lstanhebben/zenscript/annotations/ZenMethod;",
+        "target": "centerReplace(Lcrafttweaker/api/item/IIngredient;)Lquaternary/botaniatweaks/modules/crafttweaker/CTAgglomeration$CTAgglomerationMultiblock;"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lstanhebben/zenscript/annotations/ZenMethod;",
+        "target": "edgeReplace(Lcrafttweaker/api/item/IIngredient;)Lquaternary/botaniatweaks/modules/crafttweaker/CTAgglomeration$CTAgglomerationMultiblock;"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lstanhebben/zenscript/annotations/ZenMethod;",
+        "target": "cornerReplace(Lcrafttweaker/api/item/IIngredient;)Lquaternary/botaniatweaks/modules/crafttweaker/CTAgglomeration$CTAgglomerationMultiblock;"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lstanhebben/zenscript/annotations/ZenMethod;",
+        "target": "allReplace(Lcrafttweaker/api/item/IIngredient;)Lquaternary/botaniatweaks/modules/crafttweaker/CTAgglomeration$CTAgglomerationMultiblock;"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lstanhebben/zenscript/annotations/ZenMethod;",
+        "target": "checkerReplace(Lcrafttweaker/api/item/IIngredient;Lcrafttweaker/api/item/IIngredient;)Lquaternary/botaniatweaks/modules/crafttweaker/CTAgglomeration$CTAgglomerationMultiblock;"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lstanhebben/zenscript/annotations/ZenMethod;",
+        "target": "consumeCenter()Lquaternary/botaniatweaks/modules/crafttweaker/CTAgglomeration$CTAgglomerationMultiblock;"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lstanhebben/zenscript/annotations/ZenMethod;",
+        "target": "consumeEdge()Lquaternary/botaniatweaks/modules/crafttweaker/CTAgglomeration$CTAgglomerationMultiblock;"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lstanhebben/zenscript/annotations/ZenMethod;",
+        "target": "consumeCorner()Lquaternary/botaniatweaks/modules/crafttweaker/CTAgglomeration$CTAgglomerationMultiblock;"
+      }
+    ]
+  },
+  "quaternary/botaniatweaks/modules/crafttweaker/CTAgglomeration$CTAgglomerationRecipe": {
+    "name": "quaternary/botaniatweaks/modules/crafttweaker/CTAgglomeration$CTAgglomerationRecipe",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lstanhebben/zenscript/annotations/ZenClass;",
+        "target": "quaternary/botaniatweaks/modules/crafttweaker/CTAgglomeration$CTAgglomerationRecipe",
+        "value": {
+          "value": "mods.botaniatweaks.AgglomerationRecipe"
+        }
+      },
+      {
+        "type": "CLASS",
+        "name": "Lcrafttweaker/annotations/ZenRegister;",
+        "target": "quaternary/botaniatweaks/modules/crafttweaker/CTAgglomeration$CTAgglomerationRecipe"
+      },
+      {
+        "type": "FIELD",
+        "name": "Lstanhebben/zenscript/annotations/ZenProperty;",
+        "target": "output"
+      },
+      {
+        "type": "FIELD",
+        "name": "Lstanhebben/zenscript/annotations/ZenProperty;",
+        "target": "inputs"
+      },
+      {
+        "type": "FIELD",
+        "name": "Lstanhebben/zenscript/annotations/ZenProperty;",
+        "target": "manaCost"
+      },
+      {
+        "type": "FIELD",
+        "name": "Lstanhebben/zenscript/annotations/ZenProperty;",
+        "target": "color1"
+      },
+      {
+        "type": "FIELD",
+        "name": "Lstanhebben/zenscript/annotations/ZenProperty;",
+        "target": "color2"
+      },
+      {
+        "type": "FIELD",
+        "name": "Lstanhebben/zenscript/annotations/ZenProperty;",
+        "target": "multiblock"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lstanhebben/zenscript/annotations/ZenMethod;",
+        "target": "create()Lquaternary/botaniatweaks/modules/crafttweaker/CTAgglomeration$CTAgglomerationRecipe;"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lstanhebben/zenscript/annotations/ZenMethod;",
+        "target": "output(Lcrafttweaker/api/item/IItemStack;)Lquaternary/botaniatweaks/modules/crafttweaker/CTAgglomeration$CTAgglomerationRecipe;"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lstanhebben/zenscript/annotations/ZenMethod;",
+        "target": "inputs([Lcrafttweaker/api/item/IIngredient;)Lquaternary/botaniatweaks/modules/crafttweaker/CTAgglomeration$CTAgglomerationRecipe;"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lstanhebben/zenscript/annotations/ZenMethod;",
+        "target": "manaCost(I)Lquaternary/botaniatweaks/modules/crafttweaker/CTAgglomeration$CTAgglomerationRecipe;"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lstanhebben/zenscript/annotations/ZenMethod;",
+        "target": "color1(I)Lquaternary/botaniatweaks/modules/crafttweaker/CTAgglomeration$CTAgglomerationRecipe;"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lstanhebben/zenscript/annotations/ZenMethod;",
+        "target": "color2(I)Lquaternary/botaniatweaks/modules/crafttweaker/CTAgglomeration$CTAgglomerationRecipe;"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lstanhebben/zenscript/annotations/ZenMethod;",
+        "target": "multiblock(Lquaternary/botaniatweaks/modules/crafttweaker/CTAgglomeration$CTAgglomerationMultiblock;)Lquaternary/botaniatweaks/modules/crafttweaker/CTAgglomeration$CTAgglomerationRecipe;"
+      }
+    ]
+  },
+  "quaternary/botaniatweaks/modules/crafttweaker/CTAgglomeration$RemoveAction": {
+    "name": "quaternary/botaniatweaks/modules/crafttweaker/CTAgglomeration$RemoveAction",
+    "interfaces": [
+      "crafttweaker/IAction"
+    ]
+  },
+  "quaternary/botaniatweaks/modules/crafttweaker/CTAgglomerationPage": {
+    "name": "quaternary/botaniatweaks/modules/crafttweaker/CTAgglomerationPage",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lstanhebben/zenscript/annotations/ZenClass;",
+        "target": "quaternary/botaniatweaks/modules/crafttweaker/CTAgglomerationPage",
+        "value": {
+          "value": "mods.botaniatweaks.AgglomerationPage"
+        }
+      },
+      {
+        "type": "CLASS",
+        "name": "Lcrafttweaker/annotations/ZenRegister;",
+        "target": "quaternary/botaniatweaks/modules/crafttweaker/CTAgglomerationPage"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lstanhebben/zenscript/annotations/ZenMethod;",
+        "target": "add(Ljava/lang/String;Ljava/lang/String;ILquaternary/botaniatweaks/modules/crafttweaker/CTAgglomeration$CTAgglomerationRecipe;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lstanhebben/zenscript/annotations/ZenMethod;",
+        "target": "add(Ljava/lang/String;Ljava/lang/String;ILcrafttweaker/api/item/IItemStack;[Lcrafttweaker/api/item/IIngredient;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Lcrafttweaker/api/item/IIngredient;Lcrafttweaker/api/item/IIngredient;Lcrafttweaker/api/item/IIngredient;Lcrafttweaker/api/item/IIngredient;Lcrafttweaker/api/item/IIngredient;Lcrafttweaker/api/item/IIngredient;)V"
+      }
+    ]
+  },
+  "quaternary/botaniatweaks/modules/crafttweaker/CTAgglomerationPage$AddAction": {
+    "name": "quaternary/botaniatweaks/modules/crafttweaker/CTAgglomerationPage$AddAction",
+    "interfaces": [
+      "crafttweaker/IAction"
+    ]
+  },
+  "quaternary/botaniatweaks/modules/crafttweaker/ModuleCrafttweaker": {
+    "name": "quaternary/botaniatweaks/modules/crafttweaker/ModuleCrafttweaker",
+    "interfaces": [
+      "quaternary/botaniatweaks/modules/IModule"
+    ]
+  },
+  "quaternary/botaniatweaks/modules/dynamictrees/ModuleDynamicTrees": {
+    "name": "quaternary/botaniatweaks/modules/dynamictrees/ModuleDynamicTrees",
+    "interfaces": [
+      "quaternary/botaniatweaks/modules/IModule"
+    ]
+  },
+  "quaternary/botaniatweaks/modules/extendedcrafting/ModuleExtendedCrafting": {
+    "name": "quaternary/botaniatweaks/modules/extendedcrafting/ModuleExtendedCrafting",
+    "interfaces": [
+      "quaternary/botaniatweaks/modules/IModule"
+    ]
+  },
+  "quaternary/botaniatweaks/modules/extendedcrafting/ModuleExtendedCrafting$ClientEvents": {
+    "name": "quaternary/botaniatweaks/modules/extendedcrafting/ModuleExtendedCrafting$ClientEvents",
+    "annotations": [
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "models(Lnet/minecraftforge/client/event/ModelRegistryEvent;)V"
+      }
+    ]
+  },
+  "quaternary/botaniatweaks/modules/extendedcrafting/ModuleExtendedCrafting$CommonEvents": {
+    "name": "quaternary/botaniatweaks/modules/extendedcrafting/ModuleExtendedCrafting$CommonEvents",
+    "annotations": [
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "blocks(Lnet/minecraftforge/event/RegistryEvent$Register;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "items(Lnet/minecraftforge/event/RegistryEvent$Register;)V"
+      }
+    ]
+  },
+  "quaternary/botaniatweaks/modules/jei/BotaniaTweaksJeiPlugin": {
+    "name": "quaternary/botaniatweaks/modules/jei/BotaniaTweaksJeiPlugin",
+    "interfaces": [
+      "mezz/jei/api/IModPlugin"
+    ],
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lmezz/jei/api/JEIPlugin;",
+        "target": "quaternary/botaniatweaks/modules/jei/BotaniaTweaksJeiPlugin"
+      }
+    ]
+  },
+  "quaternary/botaniatweaks/modules/jei/ModuleJei": {
+    "name": "quaternary/botaniatweaks/modules/jei/ModuleJei",
+    "interfaces": [
+      "quaternary/botaniatweaks/modules/IModule"
+    ]
+  },
+  "quaternary/botaniatweaks/modules/jei/RecipeCategoryCustomAgglomeration": {
+    "name": "quaternary/botaniatweaks/modules/jei/RecipeCategoryCustomAgglomeration",
+    "interfaces": [
+      "mezz/jei/api/recipe/IRecipeCategory"
+    ]
+  },
+  "quaternary/botaniatweaks/modules/jei/RecipeWrapperAgglomeration": {
+    "name": "quaternary/botaniatweaks/modules/jei/RecipeWrapperAgglomeration",
+    "interfaces": [
+      "mezz/jei/api/recipe/IRecipeWrapper"
+    ]
+  },
+  "quaternary/botaniatweaks/modules/jei/package-info": {
+    "name": "quaternary/botaniatweaks/modules/jei/package-info",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lmcp/MethodsReturnNonnullByDefault;",
+        "target": "quaternary/botaniatweaks/modules/jei/package-info"
+      }
+    ]
+  },
+  "quaternary/botaniatweaks/modules/shared/block/BlockCompatCrate": {
+    "name": "quaternary/botaniatweaks/modules/shared/block/BlockCompatCrate",
+    "interfaces": [
+      "vazkii/botania/api/wand/IWandHUD",
+      "vazkii/botania/api/wand/IWandable",
+      "vazkii/botania/api/lexicon/ILexiconable"
+    ]
+  },
+  "quaternary/botaniatweaks/modules/shared/config/BotaniaTweaksConfig": {
+    "name": "quaternary/botaniatweaks/modules/shared/config/BotaniaTweaksConfig",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/minecraftforge/fml/common/Mod$EventBusSubscriber;",
+        "target": "quaternary/botaniatweaks/modules/shared/config/BotaniaTweaksConfig",
+        "values": {
+          "modid": {
+            "value": "botania_tweaks"
+          }
+        }
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "configChanged(Lnet/minecraftforge/fml/client/event/ConfigChangedEvent;)V"
+      }
+    ]
+  },
+  "quaternary/botaniatweaks/modules/shared/config/BotaniaTweaksGuiFactory": {
+    "name": "quaternary/botaniatweaks/modules/shared/config/BotaniaTweaksGuiFactory",
+    "interfaces": [
+      "net/minecraftforge/fml/client/IModGuiFactory"
+    ]
+  },
+  "quaternary/botaniatweaks/modules/shared/lexi/DoubleCompatLexiconEntry": {
+    "name": "quaternary/botaniatweaks/modules/shared/lexi/DoubleCompatLexiconEntry",
+    "interfaces": [
+      "vazkii/botania/api/lexicon/IAddonEntry"
+    ]
+  }
+}

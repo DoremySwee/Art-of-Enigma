@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+FMLCorePluginContainsFMLMod: true
+FMLAT: botania_tweaks_at.cfg
+FMLCorePlugin: quaternary.botaniatweaks.asm.BotaniaTweakerPlugin
+
