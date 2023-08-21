@@ -22,7 +22,7 @@ recipes.addShaped(<thermalexpansion:augment:128>,Mp.read("_PR;PGP;RP_;",{
 
 <tconstruct:bolt_core:0>.addTooltip(game.localize("jei.description.bolt_core"));
 T.ae.inscribe(<minecraft:spawn_egg>.withTag({EntityTag: {id: "minecraft:rabbit"}}),[
-    <mminecraft:egg>,<minecraft:rabbit_foot>,<minecraft:rabbit_foot>
+    <minecraft:egg>,<minecraft:rabbit_foot>,<minecraft:rabbit_foot>
 ]);
 T.exu.enchant(<minecraft:spawn_egg>.withTag({EntityTag: {id: "minecraft:zombie_villager"}}),[
     <minecraft:spawn_egg>.withTag({EntityTag: {id: "minecraft:zombie"}}),
