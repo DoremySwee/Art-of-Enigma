@@ -169,7 +169,7 @@ T.ava.shaped(<mysticalagriculture:water_seeds>*4,Mp.read(
 		"g":<chisel:waterstone:5>,"2":<chisel:waterstone:3>,"9":<chisel:waterstone:9>,"m":<chisel:waterstone:7>
 	}
 ));
-T.ava.shaped(<mysticalagriculture:ice_seeds>,Mp.read(
+T.ava.shaped(<mysticalagriculture:ice_seeds>*8,Mp.read(
 	"	@#$%&%A#@;
 		#@~123~@#;
 		4~56789~0;
@@ -182,7 +182,7 @@ T.ava.shaped(<mysticalagriculture:ice_seeds>,Mp.read(
 	{
 		"x":<chisel:ice1:13>,"&":<chisel:ice1:11>,"n":<chisel:ice:15>,"A":<chisel:ice1:6>,
 		"@":<forge:bucketfilled:0> .withTag({FluidName: "cryotheum", Amount: 1000}),
-		"#":<tconstruct:bolt_core:0> .withTag({TinkerData: {Materials: ["ice", "iron"]}}),
+		"#":<tconstruct:bolt_core:0> .withTag({TinkerData: {Materials: ["ice", "electrical_steel"]}}),
 		"h":<chisel:ice:6>,"k":<minecraft:ice:0>,"r":<chisel:ice:11>,"l":<chisel:icepillar:6>,
 		"q":<chisel:ice:8>,"y":<chisel:ice:13>,"8":<chisel:ice1:4>,"`":<chisel:ice:3>,
 		"~":<minecraft:snow:0>,"^":<chisel:icepillar:4>,"i":<chisel:ice:5>,"1":<chisel:ice1:8>,
@@ -328,8 +328,8 @@ T.ava.shaped(<bloodmagic:blood_orb>.withTag({orb: "bloodmagic:apprentice"}),Mp.r
 recipes.addShaped(<thaumcraft:arcane_workbench>,Mp.read("BAB;AOA;BAB;",{
 	"A":<minecraft:crafting_table>,
 	"B":<avaritia:extreme_crafting_table>,
-	//"O":M.reuse(M.orb(2))
-	"O":M.consume(M.orb(2))
+	"O":M.reuse(M.orb(2))
+	//"O":M.consume(M.orb(2))
 }));
 <ore:blockEmerald>.remove(<chisel:emerald:10>);
 Resonator.add(<chisel:emerald:10>,<minecraft:emerald_block>,2100);
@@ -345,7 +345,8 @@ T.ava.shaped(<thermalfoundation:fertilizer>*8,Mp.read(
 		___@___@_;
 		_________;",
 	{
-		"#":<thermalfoundation:material:819>,
+		//"#":<thermalfoundation:material:819>,
+		"#":<mysticalagriculture:nature_essence>,
 		"$":<mysticalagriculture:crafting:6>,
 		"@":<mysticalagriculture:water_essence:0>,
 		"%":<appliedenergistics2:paint_ball:20>

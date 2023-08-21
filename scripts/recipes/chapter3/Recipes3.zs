@@ -5,7 +5,7 @@ import scripts.recipes.libs.Mapping as Mp;
 import scripts.recipes.libs.Misc as M;
 import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
-T.ava.shaped(<extrautils2:decorativesolid:3>*2,Mp.read(
+T.ava.shaped(<extrautils2:decorativesolid:3>*8,Mp.read(
     "	_________;
 		_________;
 		__@#$%&__;

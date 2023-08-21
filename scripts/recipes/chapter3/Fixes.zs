@@ -19,3 +19,15 @@ recipes.addShaped(<thermalexpansion:augment:128>,Mp.read("_PR;PGP;RP_;",{
     "P":<thermalfoundation:material:354>,"R":<minecraft:redstone>,
     "G":<tconstruct:tough_tool_rod>.withTag({Material: "electrum"})
 }));
+
+<tconstruct:bolt_core:0>.addTooltip(game.localize("jei.description.bolt_core"));
+T.ae.inscribe(<minecraft:spawn_egg>.withTag({EntityTag: {id: "minecraft:rabbit"}}),[
+    <mminecraft:egg>,<minecraft:rabbit_foot>,<minecraft:rabbit_foot>
+]);
+T.exu.enchant(<minecraft:spawn_egg>.withTag({EntityTag: {id: "minecraft:zombie_villager"}}),[
+    <minecraft:spawn_egg>.withTag({EntityTag: {id: "minecraft:zombie"}}),
+   <chisel:emerald:10> 
+],9000,200);
+T.tic.casting(<botania:waterbowl>.withTag({Fluid: {FluidName: "water", Amount: 1000}}),
+    <minecraft:bowl>,<liquid:water>*1000,1
+);
