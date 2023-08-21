@@ -194,6 +194,7 @@ description.crt.tooltip.shard_double_slab_stone=双层石台阶
 jei.description.salis_mundus=由于技术原因，上段文字无法删除。实际上，用3种不同水晶合成世界盐的配方已经被删除了。
 
 
+tile.contenttweaker.chlorophyte_ore.name=叶绿矿
 tile.chlorophyte_ore.name=叶绿矿
 jei.description.chlorophyte_ore.introduction=是的，这是叶绿矿。将它种植在地底深处，在特定条件下，它会把周围 (26格) 的苔石转换为叶绿矿。
 jei.description.chlorophyte_ore.liquid=叶绿是大地与植物的奇迹，需要水与岩浆的滋养。不过，如果在它周围水与岩浆在叶绿矿完全相反的两侧，便相互抵消相当于不存在了。
@@ -217,3 +218,10 @@ jei.description.auto_pattern.structure2= 右键，即可完成配方的制作。
 jei.description.auto_pattern.output=你将获得重命名后的”中间成品“，以及通过它们连接起来的几个样板。
 
 description.crt.tooltip.clearnbt=经过无序合成简化nbt后，参与其它合成。
+
+item.contenttweaker.calc_sigil_addition.name=加法徽章
+item.contenttweaker.calc_sigil_subtraction.name=减法徽章
+item.contenttweaker.calc_sigil_multiplication.name=乘法徽章
+item.contenttweaker.calc_sigil_division.name=除法徽章
+
+jei.description.bolt_core=由于未知原因，有的弩箭核心无法制作。

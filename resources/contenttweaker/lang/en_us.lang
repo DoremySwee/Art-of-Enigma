@@ -194,6 +194,7 @@ description.crt.tooltip.shard_double_slab_stone Double Stone Slab
 jei.description.salis_mundus=Due to technical problems, the description above cannot be deleted. However, the crafting table recipe for Salis Mundus has been deleted.
 
 
+tile.contenttweaker.chlorophyte_ore.name=Chlorophyte Ore
 tile.chlorophyte_ore.name=Chlorophyte Ore
 jei.description.chlorophyte_ore.introduction=Yes, this is the Chlorophyte Ore. By putting it deep underground, under certain circumstances,  it converts neighboring (26 blocks) Mossy Cobblestones into the ore.
 jei.description.chlorophyte_ore.liquid=It's the wonder of the life and terra, and requires the irrigation of water and lava. However, these two liquids have their effect canceled out if they are on the opposite side of the ore.
@@ -217,3 +218,10 @@ jei.description.auto_pattern.structure2=, the encoding is done.
 jei.description.auto_pattern.output=You will get the renamed "mid products", and the encoded patterns connected by these "mid products"
 
 description.crt.tooltip.clearnbt=Clear its NBT through shapeless crafting before being processed into other items.
+
+item.contenttweaker.calc_sigil_addition.name=Sigil of Addition
+item.contenttweaker.calc_sigil_subtraction.name=Sigil of Subtraction
+item.contenttweaker.calc_sigil_multiplication.name=Sigil of Multiplication
+item.contenttweaker.calc_sigil_division.name=Sigil of Division
+
+jei.description.bolt_core=Due to unknown reason, some of the bolt core cannot be made.
