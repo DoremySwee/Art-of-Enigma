@@ -11,6 +11,7 @@
 		"4b8c3cb9"
 	],
 	hide: true,
+	dependency_requirement: "one_completed",
 	size: 2.0d,
 	or_tasks: true,
 	tasks: [{
