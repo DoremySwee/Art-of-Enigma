@@ -11,15 +11,6 @@ CotLib.createFluid("bot_mana","BB9999FF",{
     stillLocation:CotLib.lightStill,
     flowingLocation:CotLib.lightFlow
 });
-CotLib.createBlock("chlorophyte_ore",{"lightValue":5});
-CotLib.createItem("chlorophyte_ingot");
-CotLib.createItem("pattern_wand");
-/*
-CotLib.createFluid("molten_chlorophyte","E077FF77",{
-    density:1000,luminosity:15,
-    stillLocation:CotLib.potionStill,
-    flowingLocation:CotLib.potionFlow
-});*/
 CotLib.createFluid("molten_chlorophyte","E0FFFFFF",{
     density:1000,luminosity:15,
     stillLocation:"contenttweaker:fluids/chlorohpyte_still",
@@ -30,6 +21,10 @@ CotLib.createFluid("bot_elf","77FF99FF",{
     stillLocation:CotLib.lightStill,
     flowingLocation:CotLib.lightFlow
 });
+
+CotLib.createBlock("chlorophyte_ore",{"lightValue":5});
+CotLib.createItem("chlorophyte_ingot");
+CotLib.createItem("pattern_wand");
 
 CotLib.createItem("calc_sigil_addition");
 CotLib.createItem("calc_sigil_subtraction");
