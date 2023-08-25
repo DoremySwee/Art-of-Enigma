@@ -30,7 +30,10 @@ T.ava.shaped(<extrautils2:decorativesolid:3>*8,Mp.read(
 	}
 ));
 T.tic.casting(<mysticalagriculture:crafting:1>*4,<mysticalagriculture:inferium_apple>,<liquid:molten_essence>*3072,300);
-T.bot.altar(<mysticalagriculture:tier2_inferium_seeds>*6,Mp.read("@~#~$~%~&~*~;",{
+T.bot.altar(<mysticalagriculture:tier2_inferium_seeds>*6,
+	Mp.read(
+		//"@~#~$~%~&~*~;",
+		"@#$%&*;",{
 		"@":<mysticalagriculture:stone_seeds:0>,
 		"#":<mysticalagriculture:dirt_seeds:0>,
 		"%":<mysticalagriculture:wood_seeds:0>,
@@ -74,7 +77,7 @@ for seed in seedsA{
 	mods.jei.JEI.removeAndHide(seed);
 }
 
-T.ava.shaped(<mysticalagriculture:fire_seeds>*2,Mp.read(
+T.ava.shaped(<mysticalagriculture:fire_seeds>*3,Mp.read(
     "   ___@_____;
 		__@#@____;
 		__$@%@___;
@@ -88,7 +91,7 @@ T.ava.shaped(<mysticalagriculture:fire_seeds>*2,Mp.read(
 		"*":<mysticalagriculture:crafting:18>,
 		"2":<thaumcraft:alumentum:0>,
 		"~":<tconstruct:firewood>,
-		"#":<minecraft:enchanted_book:0> .withTag({StoredEnchantments: [{lvl: 2 as short, id: 20 as short}]}),
+		"#":<minecraft:enchanted_book:0> .withTag({StoredEnchantments: [{lvl: 1 as short, id: 20 as short}]}),
 		"$":<calculator:firediamond:0>,
 		"@":<tconstruct:edible:34>,
 		"&":<calculator:material:6>,
@@ -135,7 +138,7 @@ T.ava.shaped(<mysticalagriculture:nether_seeds>*4,Mp.read(
 		"_":null,
 		"@":<mysticalagriculture:crafting:8>,
 		"*":<chisel:netherrack:3>,
-		"%":<minecraft:enchanted_book:0> .withTag({StoredEnchantments: [{lvl: 4 as short, id: 1 as short}]})
+		"%":<minecraft:enchanted_book:0> .withTag({StoredEnchantments: [{lvl: 2 as short, id: 1 as short}]})
 	}
 ));
 
@@ -191,7 +194,7 @@ T.eio.vat(<liquid:bot_mana>, <liquid:mana>, 0.25f, [
 ]);
 //note that slime turns blue when getting into liquid mana, done in 2C3MiscReloadable.zs
 recipes.remove(<tconstruct:soil:2>);
-T.ava.shaped(<tconstruct:materials:10>*4,Mp.read(
+T.ava.shaped(<tconstruct:materials:10>*16,Mp.read(
     "	____@____;
 		_@__#__@_;
 		__@$#$@__;
@@ -234,7 +237,7 @@ recipes.addShapeless(calc0,[add0]);
 recipes.addShapeless(calc1,[div0]);
 T.cc.basic(calc2,[add0,add0]);
 T.cc.atomic(<calculator:flawlesscalculator>.withTag({"0": {}}),[add0,div0,add0]);
-T.ava.shaped(add0,Mp.read(
+T.ava.shaped(add0*3,Mp.read(
     "	___@#@___;
 		___$#$___;
 		___$%$___;
@@ -252,7 +255,7 @@ T.ava.shaped(add0,Mp.read(
 		"&":<appliedenergistics2:material:47>
 	}
 ));
-T.ava.shaped(div0,Mp.read(
+T.ava.shaped(div0*2,Mp.read(
     "	_________;
 		__@#$%&__;
 		_*@#~%&*_;
@@ -351,7 +354,7 @@ mods.jei.JEI.addDescription(<thaumcraft:salis_mundus>,game.localize("jei.descrip
 
 // Durability Plate
 recipes.remove(<tconstruct:materials:14>);
-T.ava.shaped(<tconstruct:materials:14>,Mp.read(
+T.ava.shaped(<tconstruct:materials:14>*2,Mp.read(
     "	@@@@@@@@@;
 		@#$%&*~1@;
 		@2334335@;

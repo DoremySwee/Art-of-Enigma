@@ -39,7 +39,7 @@ import crafttweaker.item.IItemStack;
 
 //Bot lens
     T.exu.enchant(<botania:lens:12>,[<botania:lens:16>,
-        <minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 2 as short, id: 19 as short}]})],
+        <minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 1 as short, id: 19 as short}]})],
         3000, 1000);
     T.bot.rune(<botania:lens:13>*6,Mp.read("%@%#%$%&%*%~", {
         "@":<minecraft:anvil>,

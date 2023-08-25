@@ -142,7 +142,7 @@ T.ava.shaped(<mysticalagriculture:wood_seeds>*4,Mp.read(
 		"@":<forge:bucketfilled:0> .withTag({FluidName: "tree_oil", Amount: 1000})
 	}
 ));
-T.ava.shaped(<mysticalagriculture:water_seeds>*4,Mp.read(
+T.ava.shaped(<mysticalagriculture:water_seeds>*8,Mp.read(
 	"	@#_$%&_#A;
 		~1_234_15;
 		36#718#63;
@@ -156,7 +156,7 @@ T.ava.shaped(<mysticalagriculture:water_seeds>*4,Mp.read(
 		"1":<botania:specialflower:0> .withTag({type: "hydroangeas"}),
 		"3":<minecraft:potion:0> .withTag({Potion: "minecraft:water"}),
 		"a":<botania:waterbowl:0> .withTag({Fluid: {FluidName: "water", Amount: 1000}}),
-		"%":<minecraft:enchanted_book:0> .withTag({StoredEnchantments: [{lvl: 3 as short, id: 5 as short}]}),
+		"%":<minecraft:enchanted_book:0> .withTag({StoredEnchantments: [{lvl: 1 as short, id: 5 as short}]}),
 		"6":<minecraft:enchanted_book:0> .withTag({StoredEnchantments: [{lvl: 1 as short, id: 6 as short}]}),
 		"!":<chisel:waterstone1:1>,"s":<chisel:waterstone2:0>,"4":<chisel:waterstone1:3>,"l":<chisel:waterstone:15>,
 		"7":<chisel:waterstone:2>,"h":<chisel:waterstone1:5>,"c":<chisel:waterstone:0>,"f":<chisel:waterstone:11>,
@@ -188,7 +188,7 @@ T.ava.shaped(<mysticalagriculture:ice_seeds>*8,Mp.read(
 		"~":<minecraft:snow:0>,"^":<chisel:icepillar:4>,"i":<chisel:ice:5>,"1":<chisel:ice1:8>,
 		"f":<chisel:ice:1>,"p":<chisel:icepillar:2>,"t":<chisel:ice1:0>,"9":<chisel:icepillar:0>,
 		"c":<chisel:ice1:2>,"5":<minecraft:packed_ice:0>,"g":<chisel:ice1:12>,"d":<chisel:ice1:10>,
-		"7":<minecraft:enchanted_book:0> .withTag({StoredEnchantments: [{lvl: 2 as short, id: 9 as short}]}),
+		"7":<minecraft:enchanted_book:0> .withTag({StoredEnchantments: [{lvl: 1 as short, id: 9 as short}]}),
 		"u":<chisel:ice:9>,"2":<mysticalagriculture:crafting:17>,"!":<chisel:ice:2>,"s":<chisel:icepillar:1>,
 		"v":<chisel:ice:12>,"w":<chisel:ice:10>,"o":<chisel:ice:7>,"m":<chisel:ice:14>,
 		"0":<chisel:ice1:3>,"4":<chisel:ice:4>,"3":<chisel:ice1:5>,"a":<chisel:icepillar:5>,
@@ -290,7 +290,7 @@ T.ava.shaped(<extrautils2:ingredients:6>*4,Mp.read(
 	{
 		"~":<minecraft:gold_ingot:0>,"%":<thermalexpansion:augment:128>,
 		"*":<thermalfoundation:storage_alloy:1>,"@":<minecraft:redstone_block:0>,
-		"1":<minecraft:enchanted_book:0> .withTag({"StoredEnchantments": [{"lvl": 2 as short, "id": 32 as short}]}),
+		"1":<minecraft:enchanted_book:0> .withTag({"StoredEnchantments": [{"lvl": 1 as short, "id": 32 as short}]}),
 		"#":<extrautils2:decorativeglass:5>,"&":<thermalfoundation:glass_alloy:1>,"$":<extrautils2:ingredients:9>
 	}
 ));
@@ -334,7 +334,7 @@ recipes.addShaped(<thaumcraft:arcane_workbench>,Mp.read("BAB;AOA;BAB;",{
 <ore:blockEmerald>.remove(<chisel:emerald:10>);
 Resonator.add(<chisel:emerald:10>,<minecraft:emerald_block>,2100);
 
-T.ava.shaped(<thermalfoundation:fertilizer>*8,Mp.read(
+T.ava.shaped(<thermalfoundation:fertilizer>*64,Mp.read(
 	"	_________;
 		_@___@___;
 		__#@_$___;
