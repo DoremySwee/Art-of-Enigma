@@ -8,7 +8,7 @@ events.onPortalSpawn(function (event as crafttweaker.event.PortalSpawnEvent){
 });
 //Leaf drops
 events.onBlockHarvestDrops(function(event as crafttweaker.event.BlockHarvestDropsEvent){
-    if(event.block.definition.id=="minecraft:leaves"){
+    if(event.block.definition.id=="minecraft:leaves" && event.block.meta%4==0){
         event.drops += <minecraft:sapling>.weight(0.3);
         event.drops += <minecraft:golden_apple>.weight(0.005);
     }
