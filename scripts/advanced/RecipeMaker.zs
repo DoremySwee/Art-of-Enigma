@@ -27,7 +27,7 @@ if(scripts.Config.dev){
             print(
                 "Mp.read(\""~pattern~"\", "~Mp.displayMap(map)~")[0]"
             );
-            event.player.sendChat("contents have been listed/mapped in the log!");
+            M.tellAuto(event.player,"contents have been listed/mapped in the log!");
         }
     });
 
@@ -77,7 +77,7 @@ if(scripts.Config.dev){
                     var pattern = Mp.getPattern(inputs,map);
                     print("Mp.read(\"\n    "~pattern~"\","~Mp.displayMap(map)~")");
                 }
-                event.player.sendChat("Recipe has been outputed to crafttweaker.log!");
+                M.tellAuto(event.player,"Recipe has been outputed to crafttweaker.log!");
                 event.cancel();
             }
         }

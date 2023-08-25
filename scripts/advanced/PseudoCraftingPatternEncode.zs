@@ -61,7 +61,7 @@ events.onPlayerInteractBlock(function(event as crafttweaker.event.PlayerInteract
         var inputs as [IItemStack] = [] as [IItemStack];
         var result as IData = data.memberGet("Result");
         if (isNull(result)){
-            player.sendChat(noResult);
+            M.tellAuto(player,noResult);
             result = D.fromStack(pattern);
         }
         for i in 0 .. 81 {
@@ -112,7 +112,7 @@ events.onPlayerInteractBlock(function(event as crafttweaker.event.PlayerInteract
         val patternCount as int = patterns.length;
         val markCount as int = patternCount - 1;
         if (offHandItem.amount < patternCount){
-            player.sendChat(insufficientPattern);
+            M.tellAuto(player,insufficientPattern);
             return;
         }
         offHandItem.mutable().shrink(patternCount);
@@ -132,11 +132,11 @@ events.onPlayerInteractBlock(function(event as crafttweaker.event.PlayerInteract
         else if(markCount==0){
         }
         else if(!generateMark){
-            player.sendChat(noMark);
+            M.tellAuto(player,noMark);
             return;
         }
         else if(mark.amount < markCount){
-            player.sendChat(insufficientMark);
+            M.tellAuto(player,insufficientMark);
             return;
         }
     }

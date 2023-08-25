@@ -54,14 +54,14 @@ events.onPlayerInteractBlock(function(event as crafttweaker.event.PlayerInteract
             &&event.item.definition.id=="contenttweaker:division_sigil"){
             var check as int=checkRitual(world,pos);
             if(check<1){
-                player.sendChat(game.localize("chat.crt.exu1sigil.prepared"));
-                player.sendChat(game.localize("chat.crt.exu1sigil.sacrifice"));
+                M.tellAuto(player,game.localize("chat.crt.exu1sigil.prepared"));
+                M.tellAuto(player,game.localize("chat.crt.exu1sigil.sacrifice"));
             }
             else{
-                if((check&2)>0)player.sendChat(game.localize("chat.crt.exu1sigil.bright"));
-                if((check&4)>0)player.sendChat(game.localize("chat.crt.exu1sigil.dirt"));
-                if((check&8)>0)player.sendChat(game.localize("chat.crt.exu1sigil.wire"));
-                if((check&16)>0)player.sendChat(game.localize("chat.crt.exu1sigil.time"));
+                if((check&2)>0)M.tellAuto(player,game.localize("chat.crt.exu1sigil.bright"));
+                if((check&4)>0)M.tellAuto(player,game.localize("chat.crt.exu1sigil.dirt"));
+                if((check&8)>0)M.tellAuto(player,game.localize("chat.crt.exu1sigil.wire"));
+                if((check&16)>0)M.tellAuto(player,game.localize("chat.crt.exu1sigil.time"));
             }
         }
     }
@@ -97,10 +97,10 @@ events.onEntityLivingDeath(function(event as crafttweaker.event.EntityLivingDeat
                         }
                     }
                     else if(check%2==0){
-                        if((check&2)>0)player.sendChat(game.localize("chat.crt.exu1sigil.bright"));
-                        if((check&4)>0)player.sendChat(game.localize("chat.crt.exu1sigil.dirt"));
-                        if((check&8)>0)player.sendChat(game.localize("chat.crt.exu1sigil.wire"));
-                        if((check&16)>0)player.sendChat(game.localize("chat.crt.exu1sigil.time"));
+                        if((check&2)>0)M.tellAuto(player,game.localize("chat.crt.exu1sigil.bright"));
+                        if((check&4)>0)M.tellAuto(player,game.localize("chat.crt.exu1sigil.dirt"));
+                        if((check&8)>0)M.tellAuto(player,game.localize("chat.crt.exu1sigil.wire"));
+                        if((check&16)>0)M.tellAuto(player,game.localize("chat.crt.exu1sigil.time"));
                     }
                 }
             }

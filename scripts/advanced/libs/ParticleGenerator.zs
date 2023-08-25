@@ -17,6 +17,9 @@ import mods.zenutils.IByteBuf;
 //SpeedUnit: block/s  (ATTENTION!)
 
 mods.randomtweaker.botania.IBotaniaFXHelper.setWispFXDistanceLimit(false);
+function announceColli(player as IPlayer){
+    M.tellAuto(player,"Miss!");
+}
 zenClass FXGenerator{
     var name as string;
     var serializeKey as string;
@@ -168,7 +171,7 @@ zenClass FXGenerator{
 
 function attack(player as IPlayer, damage as double){
     player.attackEntityFrom(<damageSource:MAGIC>,damage);
-    player.sendChat("Miss!");
+    announceColli(player);
 }
 //Abuse of this FXGenerator is not recommended. This may lead to huge lag and networking burdern
 static SingleOrb as FXGenerator = FXGenerator("singleOrb")
@@ -198,7 +201,7 @@ static SingleOrb as FXGenerator = FXGenerator("singleOrb")
         //attack(pl,data.damage.asDouble());
         //attack(pl,1.0/*data.damage.asDouble()*/);
         pl.attackEntityFrom(<damageSource:MAGIC>,data.damage.asDouble());
-        pl.sendChat("Miss!");
+        announceColli(pl);
         return data+{"removed":true};
     })
     .setRender(function(player as IPlayer, data as IData)as void{
@@ -268,7 +271,7 @@ static segment as FXGenerator = FXGenerator("segment")
             if(r<data.size.asDouble() && data.colli.asBool()){
                 //attack(player,data.damage.asDouble());
                 player.attackEntityFrom(<damageSource:MAGIC>,data.damage.asDouble());
-                player.sendChat("Miss!");
+                announceColli(player);
                 f2 = true;
             }
         }

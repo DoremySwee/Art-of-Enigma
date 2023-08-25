@@ -112,7 +112,7 @@ events.onPlayerInteractBlock(function(event as crafttweaker.event.PlayerInteract
             w.setBlockState(w.getBlockState(p),(({}+b.data)as IData).deepUpdate({"CustomData":{"clicked":true}},mods.zenutils.DataUpdateOperation.MERGE),p);
         }
         else{
-            event.player.sendChat(checkStructure(w,p));
+            M.tellAuto(event.player,checkStructure(w,p));
         }
     }
 });

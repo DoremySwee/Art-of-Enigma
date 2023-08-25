@@ -218,7 +218,7 @@ events.onPlayerInteractBlock(function(event as crafttweaker.event.PlayerInteract
     if(event.player.world.remote)return;
     if(!isNull(event.block)&&event.block.definition.id=="minecraft:beacon"&&!isNull(event.item)&&event.item.definition.id=="contenttweaker:division_sigil_activated"){
         for i in checkRitual(event.player.world,event.position){
-            event.player.sendChat(i);
+            M.tellAuto(event.player,i);
         }
     }
 });
@@ -248,7 +248,7 @@ events.onEntityLivingDeath(function(event as crafttweaker.event.EntityLivingDeat
                         if(M.checkBlock(world.getBlock(pos),"minecraft:beacon")){
                             var check as string[]=checkRitual(world,pos);
                             if(check[check.length- 1]==game.localize("chat.crt.exu1sigil2.sacrifice")){
-                                player.sendChat(game.localize("chat.crt.exu1sigil2.start"));
+                                M.tellAuto(player,game.localize("chat.crt.exu1sigil2.start"));
                                 setKill(player,0);
                                 world.performExplosion(null, pos.x, pos.y, pos.z, 5, true, true);
                                 world.performExplosion(null, pos.x+5, pos.y, pos.z, 2, true, true);
@@ -264,7 +264,7 @@ events.onEntityLivingDeath(function(event as crafttweaker.event.EntityLivingDeat
                             }
                             else{
                                 for i in check{
-                                    player.sendChat(i);
+                                    M.tellAuto(player,i);
                                 }
                             }
                             return;
@@ -276,9 +276,9 @@ events.onEntityLivingDeath(function(event as crafttweaker.event.EntityLivingDeat
         else if(entity instanceof IEntityMob){
             if(entity.nbt.ForgeData has tagName && getKill(player)>-1 && world.getDimension()==1){
                 setKill(player,getKill(player)+1);
-                player.sendChat("kill:"~getKill(player));
+                M.tellAuto(player,"kill:"~getKill(player));
                 if(getKill(player)>99){
-                    player.sendChat(game.localize("chat.crt.exu1sigil2.end"));
+                    M.tellAuto(player,game.localize("chat.crt.exu1sigil2.end"));
                     for i in 0 to player.inventorySize{
                         if(!isNull(player.getInventoryStack(i))&&(player.getInventoryStack(i).definition.id=="contenttweaker:division_sigil_activated")){
                             player.replaceItemInInventory(i,<contenttweaker:psu_inver_sigil>);

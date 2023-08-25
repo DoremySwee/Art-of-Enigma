@@ -108,7 +108,7 @@ events.onCommand(function(event as CommandEvent){
         val player as IPlayer=event.commandSender;
         var rand as int=player.world.random.nextInt(messages.length);
         var message as string=messages[rand];
-        if(scripts.Config.alpha)player.sendChat("You used command:"~event.command.name~"\nIf you want it to be added to the whiteList, inform the author.");
+        if(scripts.Config.alpha)M.tellAuto(player,"You used command:"~event.command.name~"\nIf you want it to be added to the whiteList, inform the author.");
         M.executeCommand("tellraw "+
             /*p.displayName*/"@a" +
             " [{\"text\":\"" + message +

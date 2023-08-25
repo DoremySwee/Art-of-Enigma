@@ -14,6 +14,7 @@ import crafttweaker.data.IData;
 import scripts.advanced.libs.Vector3D as V;
 import scripts.advanced.libs.Data as D;
 
+import crafttweaker.text.ITextComponent;
 
 //FX Table
     //{"type":?}
@@ -46,14 +47,71 @@ IBotaniaFXHelper.setSparkleFXNoClip(true);
 function executeCommand(s as string){
     server.commandManager.executeCommandSilent(server,s);
 }
+function isNumber(s as string)as bool{
+    return ["0","1","2","3","4","5","6","7","8","9"] as string[] has s;
+}
+function isAlphabet(s as string)as bool{
+    return [
+        "a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z",
+        "A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"
+    ] as string[] has s;
+}
+function canFromTranslationKey(s as string)as bool{
+    return isNumber(s) || isAlphabet(s) || s=="_" || s==".";
+}
+function translationAutoFix(s as string, index as int=0)as ITextComponent{
+    if(index>=s.length)return ITextComponent.fromString("");
+    var i=index;
+    while(i+1<s.length){
+        i=i+1;
+        if(s[i]=="."){
+            if(i+1>=s.length)break;
+            if(s[i+1]==" ")continue;
+            if(s[i- 1]==" ")continue;
+            if(isNumber(s[i+1]))continue;
+            var l= i - 1;
+            while(l>=index){
+                if(!canFromTranslationKey(s[l])) break;
+                l-=1;
+            }
+            var r= i+1;
+            while(r<s.length){
+                if(!canFromTranslationKey(s[r])) break;
+                r+=1;
+            }
+            var pre = "";
+            var key = "";
+            l+=1;
+            for j in index to l{
+                pre+=s[j];
+            }
+            for j in l to r{
+                key+=s[j];
+            }
+            return ITextComponent.fromString(pre) + ITextComponent.fromTranslation(key) + translationAutoFix(s,r);
+        }
+    }
+    var result = "";
+    for i in index to s.length{
+        result+=s[i];
+    }
+    return ITextComponent.fromString(result);
+}
+//Deprecated, only for test
 function shout(s as string){
     executeCommand("say "~s);
 }
-function say(s as string, world as IWorld, pos as double[], range as double=100){
+function say(s as string, world as IWorld, pos as double[], range as double=100, autoTrans as bool = true){
     for player in world.getAllPlayers(){
         var diff=V.subtract(pos,V.getPos(player));
-        if(V.dot(diff,diff)<range*range)player.sendChat(s);
+        if(V.dot(diff,diff)<range*range)player.sendRichTextStatusMessage(translationAutoFix(s),false);
     }
+}
+function tellAuto(p as IPlayer, s as string){
+    p.sendRichTextStatusMessage(translationAutoFix(s),false);
+}
+function localize(key as string)as ITextComponent{
+    return ITextComponent.fromTranslation(key);
 }
 
 function shiftIBlockPos(a as IBlockPos, x as int, y as int, z as int)as IBlockPos{
