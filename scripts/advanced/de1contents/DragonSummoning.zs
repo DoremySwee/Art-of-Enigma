@@ -44,7 +44,7 @@ events.onWorldTick(function(event as crafttweaker.event.WorldTickEvent){
         world.addWeatherEffect(world.createLightningBolt(
             entity.x, entity.y, entity.z, false));
         world.removeEntity(entity);
-        M.say(game.localize("crt.chat.dragon.deny"),world,[0.0,64.0,0.0]);
+        M.sayOld(game.localize("crt.chat.dragon.deny"),world,[0.0,64.0,0.0]);
     }
 });
 

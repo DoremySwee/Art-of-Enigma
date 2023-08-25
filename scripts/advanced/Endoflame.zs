@@ -36,7 +36,7 @@ events.onBlockNeighborNotify(function(event as BlockNeighborNotifyEvent){
                         }
                     }
                     if(n>8){
-                        M.say(game.localize("info.crt.endoFlameRes.exceed"),w,V.fromIBlockPos(p));
+                        M.sayOld(game.localize("info.crt.endoFlameRes.exceed"),w,V.fromIBlockPos(p));
                         w.destroyBlock(p, true);
                     }
                     else w.updateCustomChunkData({"EndoResV3":{"num":n,"x":x,"y":y,"z":z}}as IData,p);

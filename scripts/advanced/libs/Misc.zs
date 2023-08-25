@@ -101,10 +101,16 @@ function translationAutoFix(s as string, index as int=0)as ITextComponent{
 function shout(s as string){
     executeCommand("say "~s);
 }
-function say(s as string, world as IWorld, pos as double[], range as double=100, autoTrans as bool = true){
+function sayOld(s as string, world as IWorld, pos as double[], range as double=100, autoTrans as bool = true){
     for player in world.getAllPlayers(){
         var diff=V.subtract(pos,V.getPos(player));
         if(V.dot(diff,diff)<range*range)player.sendRichTextStatusMessage(translationAutoFix(s),false);
+    }
+}
+function say(s as ITextComponent, world as IWorld, pos as double[], range as double=100, autoTrans as bool = true){
+    for player in world.getAllPlayers(){
+        var diff=V.subtract(pos,V.getPos(player));
+        if(V.dot(diff,diff)<range*range)player.sendRichTextStatusMessage(s,false);
     }
 }
 function tellAuto(p as IPlayer, s as string){

@@ -78,7 +78,7 @@ function pow(a as int, b as int)as int{
     return t*t;
 }
 function irisotosWork(world as IWorld,pos as IBlockPos){
-    M.say("Hooray!!!! Irisotos is finally working!",world,V.fromBlockPos(pos));
+    M.sayOld("Hooray!!!! Irisotos is finally working!",world,V.fromBlockPos(pos));
 }
 <cotSubTile:irisotos>.onUpdate = function(tile, world, pos) {
     var r as int=IRISOTOS_RADIUS;         //radius

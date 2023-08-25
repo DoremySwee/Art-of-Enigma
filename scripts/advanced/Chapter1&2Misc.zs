@@ -4,7 +4,7 @@ import scripts.advanced.libs.Misc as M;
 //Nether Portal Ban
 events.onPortalSpawn(function (event as crafttweaker.event.PortalSpawnEvent){
     event.cancel();
-    M.say(game.localize("quests.ch2.portalCancel.des"),event.world,V.fromBlockPos(event.position));
+    M.sayOld(game.localize("quests.ch2.portalCancel.des"),event.world,V.fromBlockPos(event.position));
 });
 //Leaf drops
 events.onBlockHarvestDrops(function(event as crafttweaker.event.BlockHarvestDropsEvent){
