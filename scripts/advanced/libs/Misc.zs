@@ -64,11 +64,8 @@ function translationAutoFix(s as string, index as int=0)as ITextComponent{
     var i=index;
     while(i+1<s.length){
         i=i+1;
-        if(s[i]=="."){
-            if(i+1>=s.length)break;
-            if(s[i+1]==" ")continue;
-            if(s[i- 1]==" ")continue;
-            if(isNumber(s[i+1]))continue;
+        if(i+1>=s.length)break;
+        if(s[i]=="."&&canFromTranslationKey(s[i+1])&&canFromTranslationKey(s[i - 1]) && !isNumber(s[i+1])){
             var l= i - 1;
             while(l>=index){
                 if(!canFromTranslationKey(s[l])) break;
@@ -259,4 +256,7 @@ function createFX(data as IData)as void{
         }
         else createBotFX(data);
     }
+}
+function announceColli(player as IPlayer){
+    tellAuto(player,"Miss!");
 }
