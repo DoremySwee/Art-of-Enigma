@@ -28,8 +28,35 @@ events.onEntityLivingUpdate(function(event as crafttweaker.event.EntityLivingUpd
         }
         if(world.getBlock(pos).fluid.name!="bot_mana")return;
         var newSlime = <entity:tconstruct:blueslime>.createEntity(world);
-        newSlime.updateNBT(entity.nbt);
+        var map as IData = IData.createEmptyMutableDataMap();
+        for key,value in entity.nbt.asMap(){
+            if(["UUIDMost", "UUIDLeast"]as string[] has key)
+                continue;
+            else map.memberSet(key,value);
+        }
+        newSlime.updateNBT(map);
+        world.removeEntity(entity);
         world.spawnEntity(newSlime);
     }
 });
 <forge:bucketfilled>.withTag({FluidName: "bot_mana", Amount: 1000}).addTooltip(format.aqua(game.localize("description.crt.tooltip.liquid_mana_and_blues_lime")));
+
+val exampleData as IData = {
+    HurtByTimestamp: 0, ForgeData: {}, 
+    Size: 3, Attributes: [{Base: 0.0, Name: "generic.scales"}, {Base: 16.0, Name: "generic.maxHealth"}, {Base: 0.0, Name: "generic.knockbackResistance"}, 
+        {Base: 0.6000000238418579, Name: "generic.movementSpeed"}, {Base: 0.0, Name: "generic.armor"}, {Base: 0.0, Name: "generic.armorToughness"}, 
+        {Base: 1.0, Name: "forge.swimSpeed"}, 
+        {
+            Base: 16.0, Modifiers: [
+                {UUIDMost: -6924578462633410119 as long, UUIDLeast: -7953508581528076340 as long, Amount: -0.027568771103469832, Operation: 1, Name: "Random spawn bonus"}], 
+            Name: "generic.followRange"
+        }
+    ], 
+    Invulnerable: 0 as byte, FallFlying: 0 as byte, PortalCooldown: 0, 
+    AbsorptionAmount: 0.0 as float, FallDistance: 0.0 as float, DeathTime: 0 as short, 
+    HandDropChances: [0.085 as float, 0.085 as float], PersistenceRequired: 0 as byte, Motion: [0.0, 0.0, 0.0], 
+    wasOnGround: 0 as byte, Leashed: 0 as byte, UUIDLeast: -5652745672515542765 as long, Health: 16.0 as float, 
+    LeftHanded: 0 as byte, Air: 300 as short, OnGround: 0 as byte, Dimension: 0, Rotation: [-27.899536 as float, 0.0 as float], 
+    UpdateBlocked: 0 as byte, HandItems: [{}, {}], ArmorDropChances: [0.085 as float, 0.085 as float, 0.085 as float, 0.085 as float], 
+    UUIDMost: 4551034842705972199 as long, Pos: [-1790.5, 63.0, 1308.5], Fire: -1 as short, ArmorItems: [{}, {}, {}, {}], CanPickUpLoot: 0 as byte, HurtTime: 0 as short
+} as IData;
