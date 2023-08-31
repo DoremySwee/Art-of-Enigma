@@ -11,5 +11,21 @@
 		items: [{
 			item: "thaumcraft:arcane_workbench"
 		}]
+	},
+	{
+		uid: "f2432153",
+		type: "item",
+		items: [{
+			ForgeCaps: {
+				"astralsorcery:cap_item_amulet_holder": {}
+			},
+			id: "forge:bucketfilled",
+			tag: {
+				FluidName: "bot_mana",
+				Amount: 1000
+			}
+		}],
+		ignore_damage: true,
+		ignore_nbt: 1b
 	}]
 }
