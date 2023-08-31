@@ -10,7 +10,6 @@ import crafttweaker.world.IWorld;
 import mods.zenutils.PlayerStat;
 import mods.ctutils.utils.Math;
 import crafttweaker.data.IData;
-//Turn slimes blue in liquid bot mana
 events.onEntityLivingUpdate(function(event as crafttweaker.event.EntityLivingUpdateEvent){
     var entity as crafttweaker.entity.IEntity=event.entity;
     var world as IWorld=entity.world;
@@ -18,11 +17,12 @@ events.onEntityLivingUpdate(function(event as crafttweaker.event.EntityLivingUpd
     if(isNull(entity))return;
     if(isNull(entity.definition))return;
     if(isNull(entity.definition.id))return;
+    var pos as IBlockPos = entity.position;
+    if(isNull(world.getBlock(pos))){
+        return;
+    }
+    //Turn slimes blue in liquid bot mana
     if(entity.definition.id=="minecraft:slime"){
-        var pos as IBlockPos = entity.position;
-        if(isNull(world.getBlock(pos))){
-            return;
-        }
         if(isNull(world.getBlock(pos).fluid)){
             return;
         }
@@ -38,8 +38,27 @@ events.onEntityLivingUpdate(function(event as crafttweaker.event.EntityLivingUpd
         world.removeEntity(entity);
         world.spawnEntity(newSlime);
     }
+    //Blue Slime dye vines!
+    if(entity.definition.id=="tconstruct:blueslime"){
+        if(world.getBlock(pos).definition.id=="minecraft:vine"&&
+            entity.motionY>0.06&&entity.motionY<0.15&&
+            !entity.nbt.OnGround.asBool() && !entity.nbt.wasOnGround.asBool()){
+                var dat = entity.nbt.deepGet("ForgeData.SlimeVineTicking");
+                var counter = isNull(dat)?0:dat.asInt();
+                entity.setNBT({"SlimeVineTicking":(counter+1)%8});
+                if(counter==7)world.setBlockState((<tconstruct:slime_vine_blue>as IBlock).definition.getStateFromMeta(world.getBlock(pos).meta),pos);
+        }
+        else{
+            entity.setNBT({"SlimeVineTicking":0});
+        }
+    }
 });
 <forge:bucketfilled>.withTag({FluidName: "bot_mana", Amount: 1000}).addTooltip(format.aqua(game.localize("description.crt.tooltip.liquid_mana_and_blues_lime")));
+var vines as IItemStack[] = [<tconstruct:slime_vine_blue_end>,<tconstruct:slime_vine_blue_mid>, <tconstruct:slime_vine_blue>];
+for vine in vines{
+    vine.addTooltip(game.localize("jei.description.slime_vine"));
+}
+mods.jei.JEI.addDescription(vines,game.localize("jei.description.slime_vine"));
 
 val exampleData as IData = {
     HurtByTimestamp: 0, ForgeData: {}, 
