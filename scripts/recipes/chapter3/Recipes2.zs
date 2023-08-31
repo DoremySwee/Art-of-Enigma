@@ -195,7 +195,7 @@ T.ava.shaped(<mysticalagriculture:ice_seeds>*8,Mp.read(
 		"6":<chisel:ice1:7>,"%":<thermalfoundation:material:2048>,"e":<chisel:ice:0>,
 		"$":<chisel:ice1:9>,"j":<chisel:icepillar:3>,"*":<chisel:ice2:0>,"b":<chisel:ice1:1>
 	}
-));
+));/*
 T.bot.altar(<mysticalagriculture:inferium_apple>,Mp.read("A@B#A$B%A&B*A~B;",{
 	"*":<mysticalagriculture:ice_essence:0>,
 	"@":<mysticalagriculture:stone_essence:0>,
@@ -206,6 +206,16 @@ T.bot.altar(<mysticalagriculture:inferium_apple>,Mp.read("A@B#A$B%A&B*A~B;",{
 	"%":<mysticalagriculture:wood_essence:0>,
 	"A":<forge:bucketfilled>.withTag({FluidName: "molten_essence", Amount: 1000}),
 	"B":<mysticalagriculture:crafting>
+})[0],1000000);*/
+T.bot.altar(<mysticalagriculture:inferium_apple>*4,Mp.read("A~B!C~D!E~F!;",{
+	"~":<extrautils2:magicapple:0>,
+	"A":<mysticalagriculture:ice_essence:0>,
+	"B":<mysticalagriculture:stone_essence:0>,
+	"C":<mysticalagriculture:nature_essence:0>,
+	"D":<mysticalagriculture:dirt_essence:0>,
+	"E":<mysticalagriculture:water_essence:0>,
+	"F":<mysticalagriculture:wood_essence:0>,
+	"!":<forge:bucketfilled>.withTag({FluidName: "molten_essence", Amount: 1000})
 })[0],1000000);
 T.bot.altar(<mysticalagriculture:crafting:6>,[
     <minecraft:melon:0>,<minecraft:sapling:0>,<minecraft:tallgrass:1>,

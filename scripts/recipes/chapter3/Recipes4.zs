@@ -140,7 +140,7 @@ T.bot.rune(<mysticalagriculture:slime_seeds>, Mp.read("@#$%&*~12222", {
     "&":<tconstruct:large_plate>.withTag({Material: "blueslime"}),
     "*":<tconstruct:sign_head>.withTag({Material: "blueslime"}),
     "~":<tconstruct:materials:10>
-})[0],6000000);
+})[0],2000000);
 T.ava.shaped(<mysticalagriculture:nether_quartz_seeds>,Mp.read("
     __@__#$__;
     _%%@_#$_&;

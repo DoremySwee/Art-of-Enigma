@@ -31,3 +31,17 @@ T.exu.enchant(<minecraft:spawn_egg>.withTag({EntityTag: {id: "minecraft:zombie_v
 T.tic.casting(<botania:waterbowl>.withTag({Fluid: {FluidName: "water", Amount: 1000}}),
     <minecraft:bowl>,<liquid:water>*1000,1
 );
+recipes.addShaped(<calculator:material:6>,Mp.read("AAA;AAA;AAA;",{"A":<calculator:firediamond>}));
+recipes.addShaped(<thermalexpansion:tank>.withTag({RSControl: 0 as byte, Level: 0 as byte}),Mp.read(
+    "ABA;BCB;ABA;",{
+        "A":<thermalfoundation:material:163>,
+        "B":<thermalfoundation:glass_alloy:4>,
+        "C":<appliedenergistics2:material:54>
+    }
+));
+recipes.addShaped(<botania:slimebottle>,Mp.read("ABA;ACA;_A_;",{
+    "A":<tconstruct:nuggets:3>,
+    "B":<mysticalagriculture:chunk:11>,
+    "C":<botania:managlass>
+}));
+T.tic.casting(<tconstruct:slime_sapling:1>,<tconstruct:slime_sapling>,<liquid:purpleslime>*1296,1000);

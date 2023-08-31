@@ -29,7 +29,7 @@ T.ava.shaped(<extrautils2:decorativesolid:3>*8,Mp.read(
 		"@":<chisel:diamond:11>
 	}
 ));
-T.tic.casting(<mysticalagriculture:crafting:1>*4,<mysticalagriculture:inferium_apple>,<liquid:molten_essence>*3072,300);
+T.tic.casting(<mysticalagriculture:crafting:1>,<mysticalagriculture:inferium_apple>,<liquid:molten_essence>*3072,300);
 T.bot.altar(<mysticalagriculture:tier2_inferium_seeds>*6,
 	Mp.read(
 		//"@~#~$~%~&~*~;",
