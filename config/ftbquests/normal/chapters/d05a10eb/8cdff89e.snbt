@@ -12,5 +12,15 @@
 			item: "botania:terraplate"
 		}],
 		count: 2L
+	}],
+	rewards: [{
+		uid: "56c3c278",
+		type: "item",
+		item: {
+			id: "botania:floatingspecialflower",
+			tag: {
+				type: "clayconia"
+			}
+		}
 	}]
 }
