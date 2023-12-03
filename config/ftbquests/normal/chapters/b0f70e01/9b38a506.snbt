@@ -1,0 +1,17 @@
+{
+	x: -17.5d,
+	y: -6.0d,
+	dependencies: [
+		"6752ac13"
+	],
+	tasks: [{
+		uid: "145e08f1",
+		type: "item",
+		items: [{
+			id: "tconstruct:sword_blade",
+			tag: {
+				Material: "xu_enchanted_metal"
+			}
+		}]
+	}]
+}
