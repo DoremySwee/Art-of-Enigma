@@ -124,6 +124,7 @@ item.wand.elementium.cap=源质杖端
 item.contenttweaker.wand_cap_iron.name=铁杖端
 item.contenttweaker.wand_cap_manasteel.name=魔钢杖端
 item.contenttweaker.wand_cap_wand_cap_manasteel_inert.name=休眠魔钢杖端
+item.contenttweaker.wand_cap_manasteel_inert.name=休眠魔钢杖端
 item.contenttweaker.wand_cap_elementium.name=源质杖端
 item.contenttweaker.wand_cap_elementium_inert.name=休眠源质杖端
 item.contenttweaker.wand_rod_livingwood.name=活木杖芯

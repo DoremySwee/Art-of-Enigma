@@ -124,6 +124,7 @@ item.wand.elementium.cap=Elementium Cap
 item.contenttweaker.wand_cap_iron.name=Iron Cap
 item.contenttweaker.wand_cap_manasteel.name=Manasteel Cap
 item.contenttweaker.wand_cap_wand_cap_manasteel_inert.name=Inert Manasteel Cap
+item.contenttweaker.wand_cap_manasteel_inert.name=Inert Manasteel Cap
 item.contenttweaker.wand_cap_elementium.name=Elementium Cap
 item.contenttweaker.wand_cap_elementium_inert.name=Inert Elementium Cap
 item.contenttweaker.wand_rod_livingwood.name=Livingwood Rod
