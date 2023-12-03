@@ -40,7 +40,7 @@ T.bot.rune(<mysticalagriculture:tier3_inferium_seeds>*4,Mp.read("@#@$@%@&", {
     "%":<mysticalagriculture:dye_seeds>,
     "&":<mysticalagriculture:slime_seeds>
 })[0],500000);
-T.bm.altar(seed3*4, <mysticalagriculture:tier3_inferium_seeds>*4, 32768, 2);
+T.bm.altar(seed3, <mysticalagriculture:tier3_inferium_seeds>, 8192, 2);
 T.cc.scientific(<mysticalagriculture:crafting:32>,[<mysticalagriculture:crafting:33>,<mysticalagriculture:crafting>]);
 recipes.addShapeless(<mysticalagriculture:crafting:39>*9,[<mysticalagriculture:crafting:32>]);
 recipes.addShaped(<mysticalagriculture:crafting:32>,Mp.read("AAA;AAA;AAA;",{
@@ -214,10 +214,10 @@ T.ava.shaped(<mysticalagriculture:glowstone_seeds>*3, Mp.read("
 }));
 //Knight Slime
 T.eio.vat(<liquid:blueslime>, <liquid:bot_mana>, 1.0f,[
-        <tconstruct:large_plate>.withTag({Material: "blueslime"}) % 20,
-        <tconstruct:pan_head>.withTag({Material: "blueslime"}) % 7.5,
-        <tconstruct:tough_binding>.withTag({Material: "blueslime"}) % 7.5,
-        <tconstruct:materials:10> % 2
+        <tconstruct:large_plate>.withTag({Material: "blueslime"}) % 200,
+        <tconstruct:pan_head>.withTag({Material: "blueslime"}) % 75,
+        <tconstruct:tough_binding>.withTag({Material: "blueslime"}) % 75,
+        <tconstruct:materials:10> % 20
     ],[
         <mysticalagriculture:slime_essence> %20,
         <mysticalagriculture:knightslime_essence> %30,
