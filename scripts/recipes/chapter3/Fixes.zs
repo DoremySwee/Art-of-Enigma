@@ -45,3 +45,5 @@ recipes.addShaped(<botania:slimebottle>,Mp.read("ABA;ACA;_A_;",{
     "C":<botania:managlass>
 }));
 T.tic.casting(<tconstruct:slime_sapling:1>,<tconstruct:slime_sapling>,<liquid:purpleslime>*1296,1000);
+
+mods.thermalexpansion.InductionSmelter.removeRecipe(<minecraft:sand>,<astralsorcery:itemcraftingcomponent:2>);
