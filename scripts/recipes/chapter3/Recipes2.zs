@@ -62,7 +62,7 @@ T.ava.shaped(<extrautils2:suncrystal:250>*8,Mp.read(
 	}
 ));
 T.bm.altar(<bloodmagic:slate>,<botania:manatablet>.withTag({mana: 375000}), 576);
-T.ava.shaped(<mysticalagriculture:stone_seeds>*4,Mp.read(
+/*T.ava.shaped(<mysticalagriculture:stone_seeds>*4,Mp.read(
 	"	@##___##$;
 		##%&*~1##;
 		#2345678#;
@@ -88,7 +88,40 @@ T.ava.shaped(<mysticalagriculture:stone_seeds>*4,Mp.read(
 		"4":<mysticalagriculture:crafting:17>,"6":<botania:grassseeds:0>,"A":<bloodmagic:slate>,
 		"l":<chisel:cobblestone:11>,"#":<mysticalagriculture:crafting:0>,"q":<chisel:cobblestone:13>
 	}
-));
+));*/
+recipes.addShaped(<botania:livingrock:2>*8,Mp.read("AAA;ABA;AAA;",{"A":<botania:livingrock:1>,"B":<tconstruct:materials:19>}));
+T.ava.shaped(<mysticalagriculture:stone_seeds>*4,Mp.read("
+    _________;
+    _@##$##%_;
+    _#&*~1&#_;
+    _#2$3$4#_;
+    _$53637$_;
+    _#8$3$9#_;
+    _#&0~`&#_;
+    _!##$##^_;
+    _________;
+    ",{
+    "@":<minecraft:iron_ore>,
+    "`":<minecraft:emerald_ore>,
+    "!":<immersiveengineering:ore:2>,
+    "#":<botania:livingrock:2>,
+    "$":<bloodmagic:slate>,
+    "%":<immersiveengineering:ore:1>,
+    "&":<extrautils2:compressedcobblestone:2>,
+    "*":<minecraft:coal_ore>,
+    "0":<minecraft:redstone_ore>,
+    "1":<embers:ore_silver>,
+    "2":<thermalfoundation:ore:6>,
+    "3":<mysticalagriculture:crafting:17>,
+    "4":<thermalfoundation:ore:1>,
+    "5":<immersiveengineering:ore:4>,
+    "6":<appliedenergistics2:charged_quartz_ore>,
+    "7":<minecraft:diamond_ore>,
+    "8":<minecraft:gold_ore>,
+    "9":<minecraft:lapis_ore>,
+    "~":<botania:specialflower>.withTag({type: "orechid"}),
+    "^":<thermalfoundation:ore>
+}));
 
 
 
