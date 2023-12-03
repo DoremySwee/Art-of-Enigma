@@ -102,13 +102,16 @@ function pipiFX(player as IPlayer){
     }
 }
 events.onCommand(function(event as CommandEvent){
-    if(scripts.Config.dev)return;
+    //if(scripts.Config.dev)return;
     if(whiteList has event.command.name)return;
     if(event.commandSender instanceof IPlayer){
         val player as IPlayer=event.commandSender;
         var rand as int=player.world.random.nextInt(messages.length);
         var message as string=messages[rand];
         if(scripts.Config.alpha)M.tellAuto(player,"You used command:"~event.command.name~"\nIf you want it to be added to the whiteList, inform the author.");
+        var tt="gamemode 0 "~player.displayName;
+        M.executeCommand(tt);
+        print(tt);
         M.executeCommand("tellraw "+
             /*p.displayName*/"@a" +
             " [{\"text\":\"" + message +
@@ -118,5 +121,7 @@ events.onCommand(function(event as CommandEvent){
         //print(V.asData(V.getPos(player)));
         //print(V.asData(V.V000));
         pipiFX(player);
+        
+        M.executeCommand("playsound minecraft:entity.creeper.primed neutral "~player.displayName);
     }
 });
