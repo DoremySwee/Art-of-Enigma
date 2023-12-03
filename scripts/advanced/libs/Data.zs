@@ -118,7 +118,14 @@ $ expand IData $ matches(data as IData)as bool{
     print( matches({"a":114,"b":[{"x":1},{"x":2}]},{"b":[{"x":2}]}));  //true
 */
 
-
+function copyMap(data as IData)as IData{
+    if(isNull(data.asMap()))return {}as IData;
+    var result = IData.createEmptyMutableDataMap();
+    for k,v in data.asMap(){
+        result.memberSet(k,v);
+    }
+    return result;
+}
 
 
 function fromStack(stack as IItemStack)as IData{
