@@ -230,6 +230,7 @@ T.tic.casting(<botania:spawnermover>,
     <liquid:lifeessence>*3000,3000);
 T.bm.altar(<botania:spawnerclaw>,<botania:spawnermover>,10086);
 recipes.remove(<botania:spawnerclaw>);
+recipes.remove(<enderio:block_powered_spawner>);
 T.ae2.inscribe(<enderio:block_powered_spawner>,[<minecraft:mob_spawner>,<enderio:item_material:1>,<enderio:item_material:41>]);
 
 //Fixes 20230724
