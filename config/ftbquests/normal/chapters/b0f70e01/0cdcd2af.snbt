@@ -13,5 +13,12 @@
 				Material: "xu_enchanted_metal"
 			}
 		}]
+	},
+	{
+		uid: "3dcd887a",
+		type: "kill",
+		icon: "minecraft:blaze_rod",
+		entity: "minecraft:blaze",
+		value: 10L
 	}]
 }

@@ -94,3 +94,7 @@ events.onPlayerItemPickup(function(event as crafttweaker.event.PlayerItemPickupE
 <appliedenergistics2:crystal_seed:*>.addAdvancedTooltip(function(item){
     return "§b§o"~getCrystalSeedProgress(item)~"/600§r";
 });
+
+
+<minecraft:mob_spawner>.addTooltip(game.localize("description.crt.tooltip.VanillaSpawner1"));
+<minecraft:mob_spawner>.addTooltip(game.localize("description.crt.tooltip.VanillaSpawner2"));

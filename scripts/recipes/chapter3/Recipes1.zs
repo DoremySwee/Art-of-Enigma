@@ -224,12 +224,13 @@ recipes.remove(<bloodmagic:sacrificial_dagger>);
 T.bm.altar(<bloodmagic:sacrificial_dagger>,<botania:manasteelsword>,144);
 recipes.addShaped(<enderio:item_broken_spawner>,
     Mp.read("AAA;A_A;AAA;",{"A":<enderio:block_dark_iron_bars>}));
-T.tic.casting(<minecraft:mob_spawner>,<enderio:item_broken_spawner>,<liquid:lifeessence>*10000,3000,true,true);
+T.tic.casting(<minecraft:mob_spawner>,<enderio:item_broken_spawner>,<liquid:lifeessence>*4000,3000,true,true);
 T.tic.casting(<botania:spawnermover>,
     <tconstruct:large_plate>.withTag({Material: "xu_enchanted_metal"}),
     <liquid:lifeessence>*3000,3000);
 T.bm.altar(<botania:spawnerclaw>,<botania:spawnermover>,10086);
 recipes.remove(<botania:spawnerclaw>);
+T.ae2.inscribe(<enderio:block_powered_spawner>,[<minecraft:mob_spawner>,<enderio:item_material:1>,<enderio:item_material:41>]);
 
 //Fixes 20230724
 recipes.remove(<enderio:item_material:22>);

@@ -1,0 +1,20 @@
+{
+	x: -17.5d,
+	y: -3.0d,
+	text: [
+		"{quests.ch3.ElectricSpawner}"
+	],
+	dependencies: [
+		"f6c8f8e0"
+	],
+	tasks: [{
+		uid: "cd5d23ee",
+		type: "item",
+		items: [{
+			id: "enderio:block_powered_spawner",
+			tag: {
+				entityId: "minecraft:blaze"
+			}
+		}]
+	}]
+}

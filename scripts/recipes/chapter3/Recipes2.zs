@@ -89,6 +89,7 @@ T.bm.altar(<bloodmagic:slate>,<botania:manatablet>.withTag({mana: 375000}), 576)
 		"l":<chisel:cobblestone:11>,"#":<mysticalagriculture:crafting:0>,"q":<chisel:cobblestone:13>
 	}
 ));*/
+recipes.remove(<botania:livingrock:2>);
 recipes.addShaped(<botania:livingrock:2>*8,Mp.read("AAA;ABA;AAA;",{"A":<botania:livingrock:1>,"B":<tconstruct:materials:19>}));
 T.ava.shaped(<mysticalagriculture:stone_seeds>*4,Mp.read("
     _________;
