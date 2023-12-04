@@ -1,0 +1,14 @@
+{
+	x: 9.5d,
+	y: 4.0d,
+	dependencies: [
+		"3e8cfdc2"
+	],
+	tasks: [{
+		uid: "a3e875ae",
+		type: "item",
+		items: [{
+			item: "chisel:antiblock 1 6"
+		}]
+	}]
+}

@@ -84,3 +84,20 @@ import crafttweaker.item.IItemStack;
     for item in list0{
         mods.thermalexpansion.Crucible.removeRecipe(item);
     }
+
+//Get rid of Dying Lens!
+var dupPattern1="_________;_WWWWWWW_;_WWWWWWW_;_WWWWWWW_;_WWWAWWW_;_WWWWWWW_;_WWWWWWW_;_WWWWWWW_;_________;";
+for i in 0 to 16{
+    var AB = <chisel:antiblock>.definition.makeStack(15-i);
+    var W = <minecraft:wool>.definition.makeStack(i);
+    T.ava.compress(AB,W*8192);
+    T.ava.shaped(W*48,Mp.read(dupPattern1,{
+        "W":<minecraft:wool>, "A": M.reuse(AB)
+    }));
+}
+T.ava.shaped(<botania:livingwood>*48,Mp.read(dupPattern1,{
+    "W":<ore:logWood>, "A": <mysticalagriculture:nature_essence>
+}));
+T.ava.shaped(<botania:livingrock>*48,Mp.read(dupPattern1,{
+    "W":<minecraft:stone>, "A": <mysticalagriculture:nature_essence>
+}));
