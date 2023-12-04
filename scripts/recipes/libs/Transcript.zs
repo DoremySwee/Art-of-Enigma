@@ -42,6 +42,10 @@ zenClass Ava{
         );
         avaritiaRecipeNum[0]=avaritiaRecipeNum[0]+1;
     }
+    function compress(output as It, inputs as In)as void{
+        mods.avaritia.Compressor.add("Art_of_Enigma_AvaRecipe_"~avaritiaRecipeNum[0],
+            output, inputs.amount, inputs*1);
+    }
 }
 static ava as Ava = Ava();
 zenClass Bot{
