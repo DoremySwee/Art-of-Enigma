@@ -2,7 +2,8 @@
 	x: -17.5d,
 	y: 7.0d,
 	text: [
-		"{quests.ch3.ElectricSpawner}"
+		"{quests.ch3.ElectricSpawner1}",
+		"{quests.ch3.ElectricSpawner2}"
 	],
 	dependencies: [
 		"ac4244c2"

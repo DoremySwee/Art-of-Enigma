@@ -104,6 +104,7 @@ quests.ch3.spatial=[Matrix Frame] is the block working as celling, floor, and th
 quests.ch3.checkRecipe=Remember to check the useage of the items in [Square] quests. Also, check the usage of [essences]!
 quests.ch3.flying_reward=Permanent Flying Ability
 quests.ch3.ElectricSpawner=The quest asks you to obtain spawner binded with Blaze
+quests.ch3.ElectricSpawner2=Well, you can't use soul binder to operate the soul inside the broken spawner. What should you do?
 
 description.crt.tooltip.VanillaSpawner1=Vanilla Mob Spawner cannot spawn some entities, especially animals.
 description.crt.tooltip.VanillaSpawner2=Please use Electric Spawner. It's more powerful! 

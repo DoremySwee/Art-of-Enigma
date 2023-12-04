@@ -104,6 +104,7 @@ quests.ch3.spatial=【矩阵框架】是AE2空间元件的墙壁、地板和天�
 quests.ch3.checkRecipe=对于正方形的任务，请查看对应物品可以合成什么哦~ 此外，每做出一种 [精华]，你也记得要看看！
 quests.ch3.flying_reward=永久飞行能力
 quests.ch3.ElectricSpawner=获取有烈焰人灵魂绑定的以上物品
+quests.ch3.ElectricSpawner2=你似乎没法用灵魂绑定器修改破损刷怪笼里面的灵魂……但是总有办法的，不是吗？
 
 description.crt.tooltip.VanillaSpawner1=原版刷怪笼部分生物无法刷新，尤其是动物
 description.crt.tooltip.VanillaSpawner2=快来使用更强大的电动刷怪笼吧！
