@@ -2,9 +2,10 @@
 	x: -6.0d,
 	y: -2.5d,
 	dependencies: [
+		"c6ca6991",
 		"c12e755b",
 		"64d312ad",
-		"c6ca6991"
+		"bb4200ec"
 	],
 	hide: true,
 	dependency_requirement: "one_completed",

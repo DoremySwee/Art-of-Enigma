@@ -2,9 +2,10 @@
 	x: -4.5d,
 	y: -2.5d,
 	dependencies: [
+		"f18d8e26",
 		"ef04cf0a",
 		"8fc7d519",
-		"f18d8e26"
+		"bb4200ec"
 	],
 	hide: true,
 	dependency_requirement: "one_completed",

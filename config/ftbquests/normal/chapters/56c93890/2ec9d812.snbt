@@ -4,7 +4,8 @@
 	dependencies: [
 		"853d1ead",
 		"4ee14f31",
-		"5efc9cc7"
+		"5efc9cc7",
+		"bb4200ec"
 	],
 	hide: true,
 	dependency_requirement: "one_completed",
