@@ -232,3 +232,13 @@ item.contenttweaker.calc_sigil_division.name=除法徽章
 
 jei.description.bolt_core=由于未知原因，有的弩箭核心无法制作。
 jei.description.slime_vine=如果蓝色史莱姆在藤蔓上蹭两下……应该会被刮下来一点东西吧。
+
+description.crt.tooltip.coin=用于交换物品。有冷却时间！
+item.contenttweaker.coin1.name=活石硬币
+item.contenttweaker.coin2.name=魔力代币
+item.contenttweaker.coin3.name=附魔硬币
+item.contenttweaker.coin4.name=玄钢币
+item.contenttweaker.coin5.name=福鲁伊克斯水晶币
+item.contenttweaker.coin6.name=蚀刻太阳晶体币
+item.contenttweaker.coin7.name=六相平衡币
+item.contenttweaker.coin8.name=星尘币
