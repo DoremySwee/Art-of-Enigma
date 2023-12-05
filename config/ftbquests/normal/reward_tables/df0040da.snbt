@@ -1,0 +1,32 @@
+{
+	title: "Coin1",
+	loot_size: 1,
+	rewards: [{
+		item: "minecraft:cobblestone",
+		count: 20
+	},
+	{
+		item: "minecraft:stone",
+		count: 10
+	},
+	{
+		item: "botania:livingrock",
+		count: 5
+	},
+	{
+		item: "minecraft:gravel",
+		count: 20
+	},
+	{
+		item: "minecraft:sand",
+		count: 20
+	},
+	{
+		item: "minecraft:sapling",
+		count: 40
+	},
+	{
+		item: "minecraft:stick",
+		count: 5
+	}]
+}

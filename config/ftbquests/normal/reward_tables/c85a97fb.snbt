@@ -1,0 +1,24 @@
+{
+	title: "Coin4",
+	loot_size: 1,
+	rewards: [{
+		xp: 200,
+		type: "xp"
+	},
+	{
+		item: "minecraft:gravel",
+		count: 300
+	},
+	{
+		item: "minecraft:sand",
+		count: 300
+	},
+	{
+		item: "minecraft:clay_ball",
+		count: 300
+	},
+	{
+		item: "extrautils2:ingredients 1 12",
+		count: 7
+	}]
+}

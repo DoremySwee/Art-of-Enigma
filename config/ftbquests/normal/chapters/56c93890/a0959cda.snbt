@@ -1,0 +1,23 @@
+{
+	x: -6.0d,
+	y: -2.5d,
+	dependencies: [
+		"c12e755b",
+		"64d312ad",
+		"c6ca6991"
+	],
+	hide: true,
+	dependency_requirement: "one_completed",
+	tasks: [{
+		uid: "9868bc93",
+		type: "item",
+		items: [{
+			item: "contenttweaker:coin1"
+		}]
+	}],
+	rewards: [{
+		uid: "420a9858",
+		type: "choice",
+		table: 1
+	}]
+}

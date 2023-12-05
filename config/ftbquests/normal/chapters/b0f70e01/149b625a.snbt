@@ -91,6 +91,6 @@
 		tags: [
 			"flying"
 		],
-		auto: "enabled"
+		auto: "disabled"
 	}]
 }
