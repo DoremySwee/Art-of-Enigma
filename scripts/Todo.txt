@@ -5,7 +5,6 @@ Update Mods:
     Add loliasm universaltweaks
     更新谁来完成合成表热重载
 Simple:
-    ???反作弊发出音效
     重新设计下级/初级精华苹果合成表——太丑了
     把饱和给用CrT脚本替代掉命令方块防止刷屏
 
