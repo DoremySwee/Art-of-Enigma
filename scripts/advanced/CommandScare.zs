@@ -8,7 +8,7 @@ import crafttweaker.world.IWorld;
 import crafttweaker.data.IData;
 import crafttweaker.text.ITextComponent;
 static whiteList as string[] = [
-    "say","tellraw","forge","ftbquests","crafttweaker","backup","trashcan","shutdown","help"
+    "say","tellraw","forge","ftbquests","crafttweaker","backup","trashcan","shutdown","help","playsound"
 ] as string[];
 static messages as string[] = [
     "You feel an evil presence watching you",
@@ -24,6 +24,12 @@ static messages as string[] = [
     "Impending doom approaches...",
     "The ancient spirits of light and dark have been released.",
     "The Moon Lord has been defeated !"
+] as string[];
+static sounds as string[]=[
+    "minecraft:entity.creeper.primed",
+    "minecraft:entity.wither.death",
+    "minecraft:entity.wither.spawn",
+    "minecraft:entity.generic.explode"
 ] as string[];
 static pipi as D.FXGenerator = D.FXGenerator("pipi")
     .addAging(1)
@@ -107,26 +113,17 @@ events.onCommand(function(event as CommandEvent){
     if(whiteList has event.command.name)return;
     if(event.commandSender instanceof IPlayer){
         val player as IPlayer=event.commandSender;
-        var rand as int=player.world.random.nextInt(messages.length);
-        var message as string=messages[rand];
+        var message as string=messages[player.world.random.nextInt(messages.length)];
+        var sound as string=sounds[player.world.random.nextInt(sounds.length)];
         if(scripts.Config.alpha)M.tellAuto(player,"You used command:"~event.command.name~"\nIf you want it to be added to the whiteList, inform the author.");
-        var tt="gamemode 0 "~player.name;
-        if (event.command.name == "gamemode") {
-            event.cancel();
-        }
-        M.executeCommand(tt);
-        print(tt);
+
+        pipiFX(player);
+        M.executeCommand("playsound "~sound~" neutral " ~ player.name ~ " " ~ player.x ~ " " ~ player.y ~ " " ~ player.z);
+        
         val text = ITextComponent.fromString(message);
         text.style.italic = true;
         text.style.bold = true;
         text.style.color = "dark_purple";
         player.sendRichTextStatusMessage(text, false);
-
-        //M.shout(V.display(V.getPos(player)));
-        //print(V.asData(V.getPos(player)));
-        //print(V.asData(V.V000));
-        // pipiFX(player);
-        
-        M.executeCommand("playsound minecraft:entity.creeper.primed neutral " ~ player.name ~ " " ~ player.x ~ " " ~ player.y ~ " " ~ player.z);
     }
 });
