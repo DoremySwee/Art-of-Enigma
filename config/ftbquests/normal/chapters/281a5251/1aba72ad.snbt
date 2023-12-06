@@ -14,9 +14,6 @@
 		uid: "f1db59cf",
 		type: "item",
 		items: [{
-			ForgeCaps: {
-				"astralsorcery:cap_item_amulet_holder": {}
-			},
 			id: "forge:bucketfilled",
 			tag: {
 				FluidName: "potion",
@@ -24,6 +21,9 @@
 				Tag: {
 					Potion: "extrautils2:xu2.greek.fire"
 				}
+			},
+			ForgeCaps: {
+				"astralsorcery:cap_item_amulet_holder": {}
 			}
 		}],
 		ignore_damage: true

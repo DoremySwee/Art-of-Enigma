@@ -33,16 +33,16 @@
 		uid: "eff7fb51",
 		type: "item",
 		items: [{
-			ForgeCaps: {
-				Parent: {
-					data: "record",
-					id: "ore"
-				}
-			},
 			id: "itemfilters:filter",
 			tag: {
 				display: {
 					Name: "Any record"
+				}
+			},
+			ForgeCaps: {
+				Parent: {
+					id: "ore",
+					data: "record"
 				}
 			}
 		}],

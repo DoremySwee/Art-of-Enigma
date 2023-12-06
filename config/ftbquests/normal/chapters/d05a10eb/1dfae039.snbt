@@ -8,10 +8,10 @@
 		uid: "a064331c",
 		type: "item",
 		items: [{
+			id: "betterbuilderswands:wandstone",
 			ForgeCaps: {
 				"astralsorcery:cap_item_amulet_holder": {}
-			},
-			id: "betterbuilderswands:wandstone"
+			}
 		}],
 		ignore_damage: true,
 		ignore_nbt: 1b

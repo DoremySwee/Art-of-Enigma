@@ -13,11 +13,11 @@
 		uid: "3c5ac642",
 		type: "item",
 		items: [{
+			id: "botania:manatablet",
+			tag: {},
 			ForgeCaps: {
 				"astralsorcery:cap_item_amulet_holder": {}
-			},
-			id: "botania:manatablet",
-			tag: {}
+			}
 		}],
 		count: 4L,
 		ignore_damage: true
@@ -26,15 +26,15 @@
 		uid: "2bd4371e",
 		type: "item",
 		items: [{
+			id: "botania:manatablet",
+			tag: {
+				mana: 125000
+			},
 			ForgeCaps: {
 				"astralsorcery:cap_item_amulet_holder": {
 					AS_Amulet_HolderLeast: -5975520166030973950L,
 					AS_Amulet_HolderMost: 7941611358549129122L
 				}
-			},
-			id: "botania:manatablet",
-			tag: {
-				mana: 125000
 			}
 		}],
 		ignore_damage: true,

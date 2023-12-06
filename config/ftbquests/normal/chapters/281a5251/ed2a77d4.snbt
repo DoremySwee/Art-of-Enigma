@@ -18,6 +18,7 @@
 		team_reward: true,
 		item: {
 			id: "thermalexpansion:machine",
+			Damage: 3s,
 			tag: {
 				RSControl: 0b,
 				Facing: 3b,
@@ -31,8 +32,7 @@
 					2b
 				],
 				Level: 0b
-			},
-			Damage: 3s
+			}
 		}
 	}]
 }

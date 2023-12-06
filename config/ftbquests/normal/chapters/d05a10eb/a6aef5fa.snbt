@@ -8,10 +8,10 @@
 		uid: "be1a03de",
 		type: "item",
 		items: [{
+			id: "minecraft:stone_hoe",
 			ForgeCaps: {
 				"astralsorcery:cap_item_amulet_holder": {}
-			},
-			id: "minecraft:stone_hoe"
+			}
 		}],
 		ignore_damage: true,
 		ignore_nbt: 1b
@@ -20,10 +20,10 @@
 		uid: "80e817f4",
 		type: "item",
 		items: [{
+			id: "minecraft:stone_axe",
 			ForgeCaps: {
 				"astralsorcery:cap_item_amulet_holder": {}
-			},
-			id: "minecraft:stone_axe"
+			}
 		}],
 		ignore_damage: true,
 		ignore_nbt: 1b

@@ -8,11 +8,11 @@
 		uid: "3fa8679f",
 		type: "item",
 		items: [{
+			id: "calculator:calculator",
+			tag: {},
 			ForgeCaps: {
 				"astralsorcery:cap_item_amulet_holder": {}
-			},
-			id: "calculator:calculator",
-			tag: {}
+			}
 		}],
 		ignore_damage: true,
 		ignore_nbt: 1b

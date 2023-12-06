@@ -17,13 +17,13 @@
 		uid: "82e2816d",
 		type: "item",
 		items: [{
-			ForgeCaps: {
-				"astralsorcery:cap_item_amulet_holder": {}
-			},
 			id: "forge:bucketfilled",
 			tag: {
 				FluidName: "bot_elf",
 				Amount: 1000
+			},
+			ForgeCaps: {
+				"astralsorcery:cap_item_amulet_holder": {}
 			}
 		}],
 		ignore_damage: true,

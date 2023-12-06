@@ -82,11 +82,11 @@
 		type: "custom",
 		title: "{quests.ch3.flying_reward}",
 		icon: {
+			id: "extrautils2:angelring",
+			Damage: 1s,
 			ForgeCaps: {
 				"astralsorcery:cap_item_amulet_holder": {}
-			},
-			id: "extrautils2:angelring",
-			Damage: 1s
+			}
 		},
 		tags: [
 			"flying"

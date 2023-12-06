@@ -9,13 +9,13 @@
 		uid: "84c6aac1",
 		type: "item",
 		items: [{
-			ForgeCaps: {
-				"astralsorcery:cap_item_amulet_holder": {}
-			},
 			id: "forge:bucketfilled",
 			tag: {
 				FluidName: "cryotheum",
 				Amount: 1000
+			},
+			ForgeCaps: {
+				"astralsorcery:cap_item_amulet_holder": {}
 			}
 		}],
 		ignore_damage: true

@@ -9,11 +9,11 @@
 		uid: "68b7e75c",
 		type: "item",
 		items: [{
+			id: "immersiveengineering:mold",
+			Damage: 1s,
 			ForgeCaps: {
 				"astralsorcery:cap_item_amulet_holder": {}
-			},
-			id: "immersiveengineering:mold",
-			Damage: 1s
+			}
 		}],
 		ignore_nbt: 1b
 	}]

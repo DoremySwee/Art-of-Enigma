@@ -12,10 +12,10 @@
 		uid: "0e688aa7",
 		type: "item",
 		items: [{
+			id: "botania:terrasword",
 			ForgeCaps: {
 				"astralsorcery:cap_item_amulet_holder": {}
-			},
-			id: "botania:terrasword"
+			}
 		}],
 		ignore_damage: true,
 		ignore_nbt: 1b
@@ -24,14 +24,14 @@
 		uid: "1710f540",
 		type: "item",
 		item: {
-			ForgeCaps: {
-				"astralsorcery:cap_item_amulet_holder": {}
-			},
 			id: "botania:lexicon",
 			tag: {
 				knowledge.minecraft: 1b,
 				knowledge.alfheim: 1b,
 				knowledge.relic: 1b
+			},
+			ForgeCaps: {
+				"astralsorcery:cap_item_amulet_holder": {}
 			}
 		}
 	}]

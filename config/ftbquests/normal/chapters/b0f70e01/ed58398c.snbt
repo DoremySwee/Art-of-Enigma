@@ -8,11 +8,11 @@
 		uid: "1c4a6fe1",
 		type: "item",
 		items: [{
+			id: "calculator:calculator",
+			tag: {},
 			ForgeCaps: {
 				"astralsorcery:cap_item_amulet_holder": {}
-			},
-			id: "calculator:calculator",
-			tag: {}
+			}
 		}],
 		ignore_damage: true,
 		ignore_nbt: 1b
@@ -21,11 +21,11 @@
 		uid: "0400e00e",
 		type: "item",
 		items: [{
+			id: "calculator:scientificcalculator",
+			tag: {},
 			ForgeCaps: {
 				"astralsorcery:cap_item_amulet_holder": {}
-			},
-			id: "calculator:scientificcalculator",
-			tag: {}
+			}
 		}],
 		ignore_damage: true,
 		ignore_nbt: 1b
@@ -41,12 +41,12 @@
 		uid: "7f3b0667",
 		type: "item",
 		items: [{
-			ForgeCaps: {
-				"astralsorcery:cap_item_amulet_holder": {}
-			},
 			id: "calculator:flawlesscalculator",
 			tag: {
 				0: {}
+			},
+			ForgeCaps: {
+				"astralsorcery:cap_item_amulet_holder": {}
 			}
 		}],
 		ignore_damage: true,
@@ -62,6 +62,13 @@
 					energy: 0L
 				}
 			}
+		}]
+	},
+	{
+		uid: "d8d40d35",
+		type: "item",
+		items: [{
+			item: "tconstruct:materials 1 14"
 		}]
 	}]
 }

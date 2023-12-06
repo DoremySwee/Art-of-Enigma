@@ -9,14 +9,14 @@
 		uid: "038d98ce",
 		type: "item",
 		items: [{
-			ForgeCaps: {
-				"astralsorcery:cap_item_amulet_holder": {}
-			},
 			id: "enderio:item_travel_staff",
 			tag: {
 				enderio.darksteel.upgrade.energyUpgrade: {
 					level: 0
 				}
+			},
+			ForgeCaps: {
+				"astralsorcery:cap_item_amulet_holder": {}
 			}
 		}],
 		ignore_nbt: 1b

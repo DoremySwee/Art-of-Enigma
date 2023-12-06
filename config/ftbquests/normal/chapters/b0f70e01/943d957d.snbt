@@ -15,9 +15,6 @@
 		uid: "10992dd6",
 		type: "item",
 		items: [{
-			ForgeCaps: {
-				"astralsorcery:cap_item_amulet_holder": {}
-			},
 			id: "calculator:flawlesscalculator",
 			tag: {
 				0: {},
@@ -30,6 +27,9 @@
 				slot1: "Dynamic",
 				4: {},
 				slot0: "Flawless"
+			},
+			ForgeCaps: {
+				"astralsorcery:cap_item_amulet_holder": {}
 			}
 		}],
 		ignore_damage: true,

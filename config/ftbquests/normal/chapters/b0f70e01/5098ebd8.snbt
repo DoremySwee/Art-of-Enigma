@@ -18,12 +18,12 @@
 		uid: "53855410",
 		type: "item",
 		items: [{
+			id: "botania:lens",
+			Damage: 12s,
+			tag: {},
 			ForgeCaps: {
 				"astralsorcery:cap_item_amulet_holder": {}
-			},
-			id: "botania:lens",
-			tag: {},
-			Damage: 12s
+			}
 		}],
 		ignore_nbt: 1b
 	},
@@ -31,12 +31,12 @@
 		uid: "bbb06416",
 		type: "item",
 		items: [{
+			id: "botania:lens",
+			Damage: 13s,
+			tag: {},
 			ForgeCaps: {
 				"astralsorcery:cap_item_amulet_holder": {}
-			},
-			id: "botania:lens",
-			tag: {},
-			Damage: 13s
+			}
 		}],
 		ignore_nbt: 1b
 	},
@@ -44,12 +44,12 @@
 		uid: "41a20e4a",
 		type: "item",
 		items: [{
+			id: "botania:lens",
+			Damage: 18s,
+			tag: {},
 			ForgeCaps: {
 				"astralsorcery:cap_item_amulet_holder": {}
-			},
-			id: "botania:lens",
-			tag: {},
-			Damage: 18s
+			}
 		}],
 		ignore_nbt: 1b
 	}]

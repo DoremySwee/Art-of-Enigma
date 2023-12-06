@@ -25,13 +25,13 @@
 		uid: "37e1939d",
 		type: "item",
 		items: [{
-			ForgeCaps: {
-				"astralsorcery:cap_item_amulet_holder": {}
-			},
 			id: "appliedenergistics2:wireless_terminal",
 			tag: {
 				internalMaxPower: 1600000.0d,
 				internalCurrentPower: 1600000.0d
+			},
+			ForgeCaps: {
+				"astralsorcery:cap_item_amulet_holder": {}
 			}
 		}],
 		ignore_damage: true,
@@ -41,11 +41,11 @@
 		uid: "1b501e4c",
 		type: "item",
 		items: [{
+			id: "appliedenergistics2:storage_cell_64k",
+			tag: {},
 			ForgeCaps: {
 				"astralsorcery:cap_item_amulet_holder": {}
-			},
-			id: "appliedenergistics2:storage_cell_64k",
-			tag: {}
+			}
 		}],
 		ignore_damage: true,
 		ignore_nbt: 1b

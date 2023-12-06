@@ -1,11 +1,11 @@
 {
 	title: "{quests.ch1.beforeEverything.title}",
 	icon: {
+		id: "botania:lexicon",
+		tag: {},
 		ForgeCaps: {
 			"astralsorcery:cap_item_amulet_holder": {}
-		},
-		id: "botania:lexicon",
-		tag: {}
+		}
 	},
 	x: -10.0d,
 	y: 6.0d,

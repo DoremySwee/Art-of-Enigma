@@ -16,16 +16,16 @@
 		uid: "072f4ba3",
 		type: "item",
 		items: [{
+			id: "thaumicwands:item_wand",
+			tag: {
+				cap: "iron",
+				rod: "wood"
+			},
 			ForgeCaps: {
 				"astralsorcery:cap_item_amulet_holder": {
 					AS_Amulet_HolderLeast: -5975520166030973950L,
 					AS_Amulet_HolderMost: 7941611358549129122L
 				}
-			},
-			id: "thaumicwands:item_wand",
-			tag: {
-				cap: "iron",
-				rod: "wood"
 			}
 		}],
 		ignore_damage: true,

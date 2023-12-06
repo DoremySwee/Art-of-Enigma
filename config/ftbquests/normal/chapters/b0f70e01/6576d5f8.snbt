@@ -8,11 +8,11 @@
 		uid: "88883c8e",
 		type: "item",
 		items: [{
+			id: "bloodmagic:sacrificial_dagger",
+			tag: {},
 			ForgeCaps: {
 				"astralsorcery:cap_item_amulet_holder": {}
-			},
-			id: "bloodmagic:sacrificial_dagger",
-			tag: {}
+			}
 		}],
 		ignore_nbt: 1b
 	},

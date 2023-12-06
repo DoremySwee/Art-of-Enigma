@@ -1,0 +1,18 @@
+{
+	x: -16.5d,
+	y: -8.5d,
+	hide_dependency_lines: true,
+	dependencies: [
+		"2e692f1a",
+		"f18d8e26",
+		"8fc7d519"
+	],
+	dependency_requirement: "one_completed",
+	tasks: [{
+		uid: "06485ed3",
+		type: "item",
+		items: [{
+			item: "contenttweaker:coin2"
+		}]
+	}]
+}

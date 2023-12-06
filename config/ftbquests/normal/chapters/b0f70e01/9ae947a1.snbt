@@ -8,11 +8,11 @@
 		uid: "0294acd7",
 		type: "item",
 		items: [{
+			id: "calculator:scientificcalculator",
+			tag: {},
 			ForgeCaps: {
 				"astralsorcery:cap_item_amulet_holder": {}
-			},
-			id: "calculator:scientificcalculator",
-			tag: {}
+			}
 		}],
 		ignore_damage: true,
 		ignore_nbt: 1b
@@ -21,9 +21,6 @@
 		uid: "1de60d60",
 		type: "item",
 		items: [{
-			ForgeCaps: {
-				"astralsorcery:cap_item_amulet_holder": {}
-			},
 			id: "calculator:flawlesscalculator",
 			tag: {
 				0: {},
@@ -36,6 +33,9 @@
 				slot1: "Dynamic",
 				4: {},
 				slot0: "Flawless"
+			},
+			ForgeCaps: {
+				"astralsorcery:cap_item_amulet_holder": {}
 			}
 		}],
 		ignore_damage: true,

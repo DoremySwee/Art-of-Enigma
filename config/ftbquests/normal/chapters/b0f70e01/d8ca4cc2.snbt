@@ -10,12 +10,12 @@
 		uid: "27c87013",
 		type: "item",
 		items: [{
-			ForgeCaps: {
-				"astralsorcery:cap_item_amulet_holder": {}
-			},
 			id: "bloodmagic:blood_orb",
 			tag: {
 				orb: "bloodmagic:apprentice"
+			},
+			ForgeCaps: {
+				"astralsorcery:cap_item_amulet_holder": {}
 			}
 		}],
 		ignore_nbt: 1b

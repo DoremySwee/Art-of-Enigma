@@ -9,13 +9,13 @@
 		uid: "07aeb12b",
 		type: "item",
 		items: [{
-			ForgeCaps: {
-				"astralsorcery:cap_item_amulet_holder": {}
-			},
 			id: "forge:bucketfilled",
 			tag: {
 				FluidName: "petrotheum",
 				Amount: 1000
+			},
+			ForgeCaps: {
+				"astralsorcery:cap_item_amulet_holder": {}
 			}
 		}],
 		ignore_damage: true

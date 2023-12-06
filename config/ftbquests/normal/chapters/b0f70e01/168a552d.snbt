@@ -8,10 +8,10 @@
 		uid: "285beeb9",
 		type: "item",
 		items: [{
+			id: "mysticalagriculture:soulium_dagger",
 			ForgeCaps: {
 				"astralsorcery:cap_item_amulet_holder": {}
-			},
-			id: "mysticalagriculture:soulium_dagger"
+			}
 		}],
 		ignore_damage: true,
 		ignore_nbt: 1b

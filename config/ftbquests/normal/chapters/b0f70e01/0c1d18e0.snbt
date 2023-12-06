@@ -28,10 +28,10 @@
 		uid: "18eb8f87",
 		type: "item",
 		items: [{
+			id: "botania:slimebottle",
 			ForgeCaps: {
 				"astralsorcery:cap_item_amulet_holder": {}
-			},
-			id: "botania:slimebottle"
+			}
 		}],
 		ignore_nbt: 1b
 	}]

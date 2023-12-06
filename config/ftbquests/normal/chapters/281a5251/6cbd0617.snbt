@@ -17,6 +17,7 @@
 		type: "item",
 		items: [{
 			id: "thermalexpansion:machine",
+			Damage: 3s,
 			tag: {
 				RSControl: 0b,
 				Facing: 3b,
@@ -30,19 +31,18 @@
 					2b
 				],
 				Level: 0b
-			},
-			Damage: 3s
+			}
 		}]
 	},
 	{
 		uid: "92db12d7",
 		type: "item",
 		items: [{
+			id: "immersiveengineering:mold",
+			Damage: 1s,
 			ForgeCaps: {
 				"astralsorcery:cap_item_amulet_holder": {}
-			},
-			id: "immersiveengineering:mold",
-			Damage: 1s
+			}
 		}],
 		ignore_nbt: 1b
 	}],
@@ -51,10 +51,10 @@
 		type: "item",
 		team_reward: true,
 		item: {
+			id: "minecraft:record_far",
 			ForgeCaps: {
 				"astralsorcery:cap_item_amulet_holder": {}
-			},
-			id: "minecraft:record_far"
+			}
 		}
 	},
 	{

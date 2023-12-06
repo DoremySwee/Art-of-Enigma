@@ -9,16 +9,16 @@
 		uid: "8811e089",
 		type: "item",
 		items: [{
-			ForgeCaps: {
-				Parent: {
-					data: "record",
-					id: "ore"
-				}
-			},
 			id: "itemfilters:filter",
 			tag: {
 				display: {
 					Name: "Any record"
+				}
+			},
+			ForgeCaps: {
+				Parent: {
+					id: "ore",
+					data: "record"
 				}
 			}
 		}],
@@ -42,10 +42,10 @@
 		type: "item",
 		team_reward: true,
 		item: {
+			id: "minecraft:record_far",
 			ForgeCaps: {
 				"astralsorcery:cap_item_amulet_holder": {}
-			},
-			id: "minecraft:record_far"
+			}
 		}
 	}]
 }

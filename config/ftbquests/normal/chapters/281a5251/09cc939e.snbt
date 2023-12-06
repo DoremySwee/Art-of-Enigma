@@ -9,10 +9,10 @@
 		uid: "74895f3a",
 		type: "item",
 		items: [{
+			id: "botania:craftpattern",
 			ForgeCaps: {
 				"astralsorcery:cap_item_amulet_holder": {}
-			},
-			id: "botania:craftpattern"
+			}
 		}],
 		ignore_nbt: 1b
 	}]

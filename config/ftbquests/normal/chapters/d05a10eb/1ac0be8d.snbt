@@ -9,12 +9,12 @@
 		uid: "79e193c6",
 		type: "item",
 		items: [{
-			ForgeCaps: {
-				"astralsorcery:cap_item_amulet_holder": {}
-			},
 			id: "botania:terrasword",
 			tag: {
 				Unbreakable: 1
+			},
+			ForgeCaps: {
+				"astralsorcery:cap_item_amulet_holder": {}
 			}
 		}],
 		ignore_damage: true,

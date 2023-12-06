@@ -12,13 +12,13 @@
 		uid: "647f3031",
 		type: "item",
 		items: [{
-			ForgeCaps: {
-				"astralsorcery:cap_item_amulet_holder": {}
-			},
 			id: "forge:bucketfilled",
 			tag: {
 				FluidName: "cryotheum",
 				Amount: 1000
+			},
+			ForgeCaps: {
+				"astralsorcery:cap_item_amulet_holder": {}
 			}
 		}],
 		ignore_damage: true,
@@ -28,10 +28,10 @@
 		uid: "4e599b9b",
 		type: "item",
 		items: [{
+			id: "minecraft:water_bucket",
 			ForgeCaps: {
 				"astralsorcery:cap_item_amulet_holder": {}
-			},
-			id: "minecraft:water_bucket"
+			}
 		}],
 		ignore_damage: true,
 		ignore_nbt: 1b

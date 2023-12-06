@@ -8,10 +8,10 @@
 		uid: "0d7cad5f",
 		type: "item",
 		items: [{
+			id: "extrautils2:suncrystal",
 			ForgeCaps: {
 				"astralsorcery:cap_item_amulet_holder": {}
-			},
-			id: "extrautils2:suncrystal"
+			}
 		}],
 		ignore_damage: true,
 		ignore_nbt: 1b
