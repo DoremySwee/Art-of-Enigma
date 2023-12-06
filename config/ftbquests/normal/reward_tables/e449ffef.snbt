@@ -3,98 +3,98 @@
 	loot_size: 1,
 	rewards: [{
 		item: {
+			id: "minecraft:record_13",
 			ForgeCaps: {
 				"astralsorcery:cap_item_amulet_holder": {}
-			},
-			id: "minecraft:record_13"
+			}
 		}
 	},
 	{
 		item: {
+			id: "minecraft:record_cat",
 			ForgeCaps: {
 				"astralsorcery:cap_item_amulet_holder": {}
-			},
-			id: "minecraft:record_cat"
+			}
 		}
 	},
 	{
 		item: {
+			id: "minecraft:record_blocks",
 			ForgeCaps: {
 				"astralsorcery:cap_item_amulet_holder": {}
-			},
-			id: "minecraft:record_blocks"
+			}
 		}
 	},
 	{
 		item: {
+			id: "minecraft:record_chirp",
 			ForgeCaps: {
 				"astralsorcery:cap_item_amulet_holder": {}
-			},
-			id: "minecraft:record_chirp"
+			}
 		}
 	},
 	{
 		item: {
+			id: "minecraft:record_far",
 			ForgeCaps: {
 				"astralsorcery:cap_item_amulet_holder": {}
-			},
-			id: "minecraft:record_far"
+			}
 		}
 	},
 	{
 		item: {
+			id: "minecraft:record_mall",
 			ForgeCaps: {
 				"astralsorcery:cap_item_amulet_holder": {}
-			},
-			id: "minecraft:record_mall"
+			}
 		}
 	},
 	{
 		item: {
+			id: "minecraft:record_mellohi",
 			ForgeCaps: {
 				"astralsorcery:cap_item_amulet_holder": {}
-			},
-			id: "minecraft:record_mellohi"
+			}
 		}
 	},
 	{
 		item: {
+			id: "minecraft:record_stal",
 			ForgeCaps: {
 				"astralsorcery:cap_item_amulet_holder": {}
-			},
-			id: "minecraft:record_stal"
+			}
 		}
 	},
 	{
 		item: {
+			id: "minecraft:record_strad",
 			ForgeCaps: {
 				"astralsorcery:cap_item_amulet_holder": {}
-			},
-			id: "minecraft:record_strad"
+			}
 		}
 	},
 	{
 		item: {
+			id: "minecraft:record_ward",
 			ForgeCaps: {
 				"astralsorcery:cap_item_amulet_holder": {}
-			},
-			id: "minecraft:record_ward"
+			}
 		}
 	},
 	{
 		item: {
+			id: "minecraft:record_11",
 			ForgeCaps: {
 				"astralsorcery:cap_item_amulet_holder": {}
-			},
-			id: "minecraft:record_11"
+			}
 		}
 	},
 	{
 		item: {
+			id: "minecraft:record_wait",
 			ForgeCaps: {
 				"astralsorcery:cap_item_amulet_holder": {}
-			},
-			id: "minecraft:record_wait"
+			}
 		}
 	}]
 }

@@ -3,9 +3,9 @@
 	y: -8.5d,
 	hide_dependency_lines: true,
 	dependencies: [
+		"8fc7d519",
 		"2e692f1a",
-		"f18d8e26",
-		"8fc7d519"
+		"f18d8e26"
 	],
 	dependency_requirement: "one_completed",
 	tasks: [{
