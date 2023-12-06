@@ -261,13 +261,14 @@ function announceColli(player as IPlayer){
     tellAuto(player,"Miss!");
 }
 
-function stringToInt(in as string, starting as int){
+function stringToInt(ins as string, starting as int)as int{
+    
     val map1 = {"1":1,"2":2,"3":3,"4":4,"5":5,"6":6,"7":7,"8":8,"9":9,"0":0}as int[string];
     var i=starting;
     var a=0;
-    while(i<in.length){
-        if(map1 has in[i]){
-            a=a*10+map1[in[i]];
+    while(i<ins.length){
+        if(map1 has ins[i]){
+            a=a*10+map1[ins[i]];
             i+=1;
         }
         else return a;
