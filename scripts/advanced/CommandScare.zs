@@ -109,7 +109,7 @@ function pipiFX(player as IPlayer){
     }
 }
 events.onCommand(function(event as CommandEvent){
-    //if(scripts.Config.dev)return;
+    if(scripts.Config.dev)return;
     if(whiteList has event.command.name)return;
     if(event.commandSender instanceof IPlayer){
         val player as IPlayer=event.commandSender;
