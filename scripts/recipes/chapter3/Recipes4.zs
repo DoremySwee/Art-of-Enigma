@@ -12,7 +12,7 @@ var seed3 = <mysticalagriculture:crafting:19>;
 recipes.remove(<extrautils2:decorativeglass:4>);
 T.te.compress(<calculator:smalltanzanite>,<calculator:largetanzanite>);
 T.cc.scientific(<calculator:shardtanzanite>,[<calculator:largetanzanite>,<calculator:smalltanzanite>]);
-T.tic.casting(<extrautils2:decorativeglass:4>,<extrautils2:decorativeglass:5>,<liquid:glowstone>*1000,3000,true,true);
+T.tic.casting(<extrautils2:decorativeglass:4>,<extrautils2:decorativeglass:5>,<liquid:glowstone>*1000,3000,true,true);/*
 T.ava.shaped(<mysticalagriculture:prudentium_apple>*12, Mp.read("
     _________;
     _________;
@@ -32,7 +32,7 @@ T.ava.shaped(<mysticalagriculture:prudentium_apple>*12, Mp.read("
     "*":<mysticalagriculture:nether_essence>,
     "~":<mysticalagriculture:crafting:1>
 }));
-T.tic.casting(<mysticalagriculture:crafting:2>,<mysticalagriculture:prudentium_apple>,<liquid:molten_essence>*8192);
+T.tic.casting(<mysticalagriculture:crafting:2>,<mysticalagriculture:prudentium_apple>,<liquid:molten_essence>*8192);*/
 T.bot.rune(<mysticalagriculture:tier3_inferium_seeds>*4,Mp.read("@#@$@%@&", {
     "@":<mysticalagriculture:crafting:2>,
     "#":<mysticalagriculture:tier2_inferium_seeds>,
@@ -435,7 +435,7 @@ T.ava.shaped(<draconicevolution:fusion_crafting_core>,Mp.read("
     "*":<mysticalagriculture:redstone_essence>,
     "~":<astralsorcery:itemcraftingcomponent:1>
 }));
-T.de.fusion(<mysticalagriculture:crafting:3>,<bloodmagic:blood_orb>.withTag({orb: "bloodmagic:weak"}),
+T.de.fusion(<mysticalagriculture:crafting:3>*20,<bloodmagic:blood_orb>.withTag({orb: "bloodmagic:weak"}),
 Mp.read("@#$%&@*~123@4567@890`!^", {
     "@":<mysticalagriculture:crafting:2>,
     "`":<botania:manaresource:8>,

@@ -5,6 +5,19 @@ import scripts.recipes.libs.Mapping as Mp;
 import scripts.recipes.libs.Misc as M;
 import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
+T.de.fusion(<mysticalagriculture:crafting:2>*4,<mysticalagriculture:crafting:1>*8,Mp.read("@#$%&*~1#2%3*4", {
+    "@":<contenttweaker:chlorophyte_ingot>,
+    "1":<botania:quartz:5>,
+    "2":<thaumcraft:salis_mundus>,
+    "#":<mysticalagriculture:dye_essence>,
+    "3":<minecraft:ghast_tear>,
+    "$":<contenttweaker:shard_balanced>,
+    "4":<calculator:firediamond>,
+    "%":<mysticalagriculture:fire_essence>,
+    "&":<minecraft:blaze_rod>,
+    "*":<mysticalagriculture:nether_essence>,
+    "~":<thaumcraft:alumentum>
+})[0],3000000);
 T.ava.shaped(<extrautils2:decorativesolid:3>*8,Mp.read(
     "	_________;
 		_________;
@@ -29,7 +42,7 @@ T.ava.shaped(<extrautils2:decorativesolid:3>*8,Mp.read(
 		"@":<chisel:diamond:11>
 	}
 ));
-T.tic.casting(<mysticalagriculture:crafting:1>,<mysticalagriculture:inferium_apple>,<liquid:molten_essence>*3072,300);
+//T.tic.casting(<mysticalagriculture:crafting:1>,<mysticalagriculture:inferium_apple>,<liquid:molten_essence>*3072,300);
 T.bot.altar(<mysticalagriculture:tier2_inferium_seeds>*6,
 	Mp.read(
 		//"@~#~$~%~&~*~;",

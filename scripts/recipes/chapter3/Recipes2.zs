@@ -240,7 +240,7 @@ T.bot.altar(<mysticalagriculture:inferium_apple>,Mp.read("A@B#A$B%A&B*A~B;",{
 	"%":<mysticalagriculture:wood_essence:0>,
 	"A":<forge:bucketfilled>.withTag({FluidName: "molten_essence", Amount: 1000}),
 	"B":<mysticalagriculture:crafting>
-})[0],1000000);*/
+})[0],1000000);*
 T.bot.altar(<mysticalagriculture:inferium_apple>*4,Mp.read("A~B!C~D!E~F!;",{
 	"~":<extrautils2:magicapple:0>,
 	"A":<mysticalagriculture:ice_essence:0>,
@@ -250,6 +250,23 @@ T.bot.altar(<mysticalagriculture:inferium_apple>*4,Mp.read("A~B!C~D!E~F!;",{
 	"E":<mysticalagriculture:water_essence:0>,
 	"F":<mysticalagriculture:wood_essence:0>,
 	"!":<forge:bucketfilled>.withTag({FluidName: "molten_essence", Amount: 1000})
+})[0],1000000);*/
+
+T.de.fusion(<mysticalagriculture:crafting:1>*4,<mysticalagriculture:crafting>*8,Mp.read("@#$%&*~1234567", {
+    "@":<bloodmagic:slate>,
+    "#":<mysticalagriculture:ice_essence>,
+    "$":<thermalfoundation:material:227>,
+    "%":<mysticalagriculture:wood_essence>,
+    "&":<botania:manaresource:13>,
+    "*":<mysticalagriculture:stone_essence>,
+    "1":<mysticalagriculture:crafting:33>,
+    "2":<mysticalagriculture:water_essence>,
+    "3":<tconstruct:shard>.withTag({Material: "xu_enchanted_metal"}),
+    "4":<mysticalagriculture:nature_essence>,
+    "5":<thermalfoundation:material:228>,
+    "6":<mysticalagriculture:dirt_essence>,
+    "7":<enderio:item_material:41>,
+    "~":<enderio:item_alloy_nugget>
 })[0],1000000);
 T.bot.altar(<mysticalagriculture:crafting:6>,[
     <minecraft:melon:0>,<minecraft:sapling:0>,<minecraft:tallgrass:1>,

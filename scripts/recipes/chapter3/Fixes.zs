@@ -47,3 +47,6 @@ recipes.addShaped(<botania:slimebottle>,Mp.read("ABA;ACA;_A_;",{
 T.tic.casting(<tconstruct:slime_sapling:1>,<tconstruct:slime_sapling>,<liquid:purpleslime>*1296,1000);
 
 mods.thermalexpansion.InductionSmelter.removeRecipe(<minecraft:sand>,<astralsorcery:itemcraftingcomponent:2>);
+for i in 0 to 5{
+    recipes.remove(<mysticalagriculture:crafting>.definition.makeStack(i));
+}
