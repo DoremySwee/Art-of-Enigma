@@ -11,12 +11,5 @@
 			item: "draconicevolution:crafting_injector"
 		}],
 		count: 26L
-	},
-	{
-		uid: "b5808e29",
-		type: "item",
-		items: [{
-			item: "draconicevolution:fusion_crafting_core"
-		}]
 	}]
 }
