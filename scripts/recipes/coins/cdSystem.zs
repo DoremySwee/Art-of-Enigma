@@ -76,3 +76,12 @@ for i in 1 to coinNum+1{
         }
     });
 }
+//Easter Egg
+for i in 1 to coinNum+1{
+    var c = coin(i);
+    c.only(function(item){
+        return 
+            (!(c.withTag({ench: [{lvl: 1 as short, id: 29 as short}],canCraft:true})).matches(item))
+            && (c.withTag({ench: [{lvl: 1 as short, id: 29 as short}]})).matches(item);
+    }).addTooltip(game.localize("description.crt.tooltip.coin2"));
+}
