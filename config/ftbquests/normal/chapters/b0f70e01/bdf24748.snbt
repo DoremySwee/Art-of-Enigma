@@ -1,0 +1,19 @@
+{
+	x: 4.5d,
+	y: -0.5d,
+	dependencies: [
+		"0c1d18e0"
+	],
+	tasks: [{
+		uid: "f42e3be6",
+		type: "item",
+		items: [{
+			id: "minecraft:spawn_egg",
+			tag: {
+				EntityTag: {
+					id: "tconstruct:blueslime"
+				}
+			}
+		}]
+	}]
+}
