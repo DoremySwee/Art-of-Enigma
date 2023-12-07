@@ -40,7 +40,7 @@ T.bot.rune(<mysticalagriculture:tier3_inferium_seeds>*4,Mp.read("@#@$@%@&", {
     "%":<mysticalagriculture:dye_seeds>,
     "&":<mysticalagriculture:slime_seeds>
 })[0],500000);
-T.bm.altar(seed3, <mysticalagriculture:tier3_inferium_seeds>, 8192, 2);
+T.bm.altar(seed3, <mysticalagriculture:tier3_inferium_seeds>, 8192, 3);
 T.cc.scientific(<mysticalagriculture:crafting:32>,[<mysticalagriculture:crafting:33>,<mysticalagriculture:crafting>]);
 recipes.addShapeless(<mysticalagriculture:crafting:39>*9,[<mysticalagriculture:crafting:32>]);
 recipes.addShaped(<mysticalagriculture:crafting:32>,Mp.read("AAA;AAA;AAA;",{

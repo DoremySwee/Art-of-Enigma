@@ -55,7 +55,7 @@ T.bot.altar(<mysticalagriculture:tier2_inferium_seeds>*6,
 		"*":<mysticalagriculture:ice_seeds:0>,
 		"~":<mysticalagriculture:crafting:1>
 	})[0],300000);
-T.bm.altar(<mysticalagriculture:crafting:18>,<mysticalagriculture:tier2_inferium_seeds>,2048);
+T.bm.altar(<mysticalagriculture:crafting:18>,<mysticalagriculture:tier2_inferium_seeds>,2048,2);
 <extrautils2:decorativesolid:3>.displayName = game.localize("name.crt.stone.rune");
 recipes.addShaped(<contenttweaker:wand_cap_iron>,Mp.read("xxx;x_x;___;",{"x":<minecraft:iron_nugget>}));
 T.tc.shaped(<bloodmagic:blood_rune>,Mp.read("&#&;@&%;&$&;",{
