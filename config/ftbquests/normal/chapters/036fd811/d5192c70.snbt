@@ -1,0 +1,18 @@
+{
+	x: -23.5d,
+	y: -10.0d,
+	tasks: [{
+		uid: "d50a56de",
+		type: "item",
+		items: [{
+			item: "minecraft:nether_brick"
+		}]
+	},
+	{
+		uid: "f035206f",
+		type: "item",
+		items: [{
+			item: "extrautils2:ingredients 1 11"
+		}]
+	}]
+}

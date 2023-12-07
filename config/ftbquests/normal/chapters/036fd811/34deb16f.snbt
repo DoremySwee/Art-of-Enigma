@@ -1,0 +1,11 @@
+{
+	x: -21.5d,
+	y: -8.0d,
+	tasks: [{
+		uid: "c48b2232",
+		type: "item",
+		items: [{
+			item: "embers:alchemy_tablet"
+		}]
+	}]
+}

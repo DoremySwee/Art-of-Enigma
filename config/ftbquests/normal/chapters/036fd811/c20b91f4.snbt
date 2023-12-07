@@ -1,0 +1,20 @@
+{
+	x: -18.0d,
+	y: -14.0d,
+	dependencies: [
+		"d248ebc1"
+	],
+	tasks: [{
+		uid: "a3b506a8",
+		type: "item",
+		items: [{
+			id: "thaumcraft:crystal_essence",
+			tag: {
+				Aspects: [{
+					key: "aer",
+					amount: 1
+				}]
+			}
+		}]
+	}]
+}

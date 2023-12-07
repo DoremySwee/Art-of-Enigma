@@ -1,0 +1,11 @@
+{
+	x: -20.0d,
+	y: -5.5d,
+	tasks: [{
+		uid: "63a4c3a6",
+		type: "item",
+		items: [{
+			item: "botania:laputashard"
+		}]
+	}]
+}

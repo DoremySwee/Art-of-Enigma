@@ -1,0 +1,11 @@
+{
+	x: -20.0d,
+	y: -11.0d,
+	tasks: [{
+		uid: "a7a435a5",
+		type: "item",
+		items: [{
+			item: "contenttweaker:wand_rod_dreamwood"
+		}]
+	}]
+}
