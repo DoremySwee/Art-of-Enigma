@@ -111,10 +111,13 @@ zenClass TiC{
 static tic as TiC = TiC();
 zenClass TE{
     zenConstructor(){}
-    function alloy(output as It, input1 as It, input2 as It, energy as int = 2000){
+    function alloy(output as It, input1 as It, input2 as It){
+        mods.thermalexpansion.InductionSmelter.addRecipe(output,input1,input2,2000);
+    }
+    function alloy(output as It, input1 as It, input2 as It, energy as int){
         mods.thermalexpansion.InductionSmelter.addRecipe(output,input1,input2,energy);
     }
-    function alloy(output as It, output2 as WI, input1 as It, input2 as It, energy as int = 2000){
+    function alloy(output as It, output2 as WI, input1 as It, input2 as It, energy as int){
         mods.thermalexpansion.InductionSmelter.addRecipe(output,input1,input2,energy,output2.stack,output2.chance*100 as int);
     }
     function compact(output as It, input as It, energy as int = 2000, mode as string = "Plate"){
@@ -134,13 +137,19 @@ zenClass TE{
     function compress(output as It, input as It, energy as int = 2000, mode as string = "Plate"){
         compact(output, input, energy, mode);
     }
-    function grind(output as It, input as It, energy as int = 2000){
+    function grind(output as It, input as It){
+        mods.thermalexpansion.Pulverizer.addRecipe(output, input, 2000);
+    }
+    function grind(output as It, input as It, energy as int){
         mods.thermalexpansion.Pulverizer.addRecipe(output, input, energy);
     }
     function grind(output as It, output2 as WI, input as It, energy as int = 2000){
         mods.thermalexpansion.Pulverizer.addRecipe(output, input, energy, output2.stack, output2.chance*100 as int);
     }
-    function sawmill(output as It, input as It, energy as int = 2000){
+    function sawmill(output as It, input as It){
+        mods.thermalexpansion.Sawmill.addRecipe(output, input, 2000);
+    }
+    function sawmill(output as It, input as It, energy as int){
         mods.thermalexpansion.Sawmill.addRecipe(output, input, energy);
     }
     function sawmill(output as It, output2 as WI, input as It, energy as int = 2000){
