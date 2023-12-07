@@ -129,7 +129,7 @@ T.bot.rune(<mysticalagriculture:manasteel_seeds>, Mp.read("@#$%&*~1", {
     "&":<botania:manabottle>,
     "*":<botania:manatablet>.withTag({mana: 126000}),
     "~":<forge:bucketfilled>.withTag({FluidName: "bot_mana", Amount: 1000})
-})[0],20000000);
+})[0],20000000);/*
 T.bot.rune(<mysticalagriculture:slime_seeds>, Mp.read("@#$%&*~12222", {
     "@":<mysticalagriculture:crafting:18>,
     "1":<tconstruct:materials:9>,
@@ -140,7 +140,12 @@ T.bot.rune(<mysticalagriculture:slime_seeds>, Mp.read("@#$%&*~12222", {
     "&":<tconstruct:large_plate>.withTag({Material: "blueslime"}),
     "*":<tconstruct:sign_head>.withTag({Material: "blueslime"}),
     "~":<tconstruct:materials:10>
-})[0],2000000);
+})[0],2000000);*/
+T.tc.shaped(<mysticalagriculture:slime_seeds>,[
+    [<mysticalagriculture:chunk:11>,<contenttweaker:shard_balanced>,<tconstruct:edible:31>],
+    [<contenttweaker:shard_aqua>,<mysticalagriculture:crafting:18>,<contenttweaker:shard_terra>],
+    [<tconstruct:edible:34>,<tconstruct:materials:10>,<tconstruct:edible:30>]
+],10);
 T.ava.shaped(<mysticalagriculture:nether_quartz_seeds>,Mp.read("
     __@__#$__;
     _%%@_#$_&;
@@ -273,8 +278,16 @@ T.tic.casting(<botania:manaresource:7>,<botania:manaresource>,<liquid:bot_elf>*1
 T.tic.casting(<botania:manaresource:8>,<botania:manaresource:23>,<liquid:bot_elf>*1440,900);
 T.tic.casting(<botania:manaresource:9>,<botania:manaresource:2>,<liquid:bot_elf>*1440,900);
 
-T.bot.rune(<contenttweaker:wand_cap_manasteel_inert>,Mp.read1d("BAAAAAA",{"B":<contenttweaker:wand_cap_iron>,"A":<mysticalagriculture:manasteel_essence>}), 6000);
-T.tic.casting(<contenttweaker:wand_cap_manasteel>, <contenttweaker:wand_cap_manasteel_inert>, <liquid:bot_mana>*1440,900);
+//T.bot.rune(<contenttweaker:wand_cap_manasteel_inert>,Mp.read1d("BAAAAAA",{"B":<contenttweaker:wand_cap_iron>,"A":<mysticalagriculture:manasteel_essence>}), 6000);
+T.tc.shaped(<contenttweaker:wand_cap_manasteel_inert>,Mp.read("ABA;BCB;ABA;",{
+    "A":<thaumcraft:fabric>,"B":<contenttweaker:shard_balanced>,"C":<contenttweaker:wand_cap_iron>
+}),4);
+recipes.addShaped(<contenttweaker:wand_cap_manasteel>,Mp.read("A1A;2B3;A4A;",{
+    "A":<contenttweaker:wand_cap_manasteel_inert>.giveBack(<contenttweaker:wand_cap_iron>), "B":<contenttweaker:wand_cap_manasteel_inert>,
+    "1":<mysticalagriculture:manasteel_essence>,"4":<forge:bucketfilled>.withTag({FluidName: "bot_mana", Amount: 1000}),
+    "2":<contenttweaker:shard_balanced>,"3":<thaumcraft:salis_mundus>
+}));
+//T.tic.casting(<contenttweaker:wand_cap_manasteel>, <contenttweaker:wand_cap_manasteel_inert>, <liquid:bot_mana>*1440,900);
 mods.thaumcraft.ArcaneWorkbench.removeRecipe(<thaumcraft:fabric>);
 T.tc.shaped(<thaumcraft:fabric>,Mp.read("ACA;CBC;ACA;",{
     "A":<mysticalagriculture:crafting:23>,"B":<thermalfoundation:rockwool:12>,

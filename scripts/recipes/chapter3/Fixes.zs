@@ -39,11 +39,11 @@ recipes.addShaped(<thermalexpansion:tank>.withTag({RSControl: 0 as byte, Level: 
         "C":<appliedenergistics2:material:54>
     }
 ));
-recipes.addShaped(<botania:slimebottle>,Mp.read("ABA;ACA;_A_;",{
+T.tc.shaped(<botania:slimebottle>,Mp.read("ABA;ACA;_A_;",{
     "A":<tconstruct:nuggets:3>,
     "B":<mysticalagriculture:chunk:11>,
     "C":<botania:managlass>
-}));
+}),4);
 T.tic.casting(<tconstruct:slime_sapling:1>,<tconstruct:slime_sapling>,<liquid:purpleslime>*1296,1000);
 
 mods.thermalexpansion.InductionSmelter.removeRecipe(<minecraft:sand>,<astralsorcery:itemcraftingcomponent:2>);
