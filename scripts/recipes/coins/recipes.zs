@@ -31,7 +31,7 @@ function map(x as int)as IItemStack[string]{
     recipes.addShaped(<extrautils2:compressedsand:1>,Mp.read("A_B;___;___;",map(2)));
     recipes.addShaped(<extrautils2:compressedcobblestone:1>*3,Mp.read("A__;B__;___;",map(2)));
     recipes.addShaped(<mysticalagriculture:xp_droplet>*20,Mp.read("A__;_B_;___",map(2)));
-    recipes.addShaped(<botania:spark>,Mp.read("___;_B_;___",map(2)));
+    recipes.addShaped(<botania:spark>,Mp.read("___;_BB;___",map(2)));
     recipes.addShaped(<minecraft:lava_bucket>,Mp.read("A__;__B;___",map(2)));
     recipes.addShaped(<minecraft:obsidian>,Mp.read("A__;___;B__",map(2)));
 //coin3
@@ -39,7 +39,7 @@ function map(x as int)as IItemStack[string]{
     recipes.addShaped(<extrautils2:compressedsand:1>*2,Mp.read("A_B;___;___;",map(3)));
     recipes.addShaped(<extrautils2:compressedcobblestone:1>*5,Mp.read("A__;B__;___;",map(3)));
     recipes.addShaped(<mysticalagriculture:xp_droplet>*60,Mp.read("A__;_B_;___",map(3)));
-    recipes.addShaped(<botania:spark>,Mp.read("___;_B_;___",map(3)));
+    recipes.addShaped(<botania:spark>,Mp.read("___;_BB;___",map(3)));
     recipes.addShaped(<tconstruct:seared_tank>.withTag({FluidName: "lava", Amount: 4000})*4,Mp.read("A__;__B;___",map(3)));
     recipes.addShaped(<minecraft:obsidian>*16,Mp.read("A__;___;B__",map(3)));
     recipes.addShaped(<minecraft:clay>*40,Mp.read("A__;___;_B_;",map(3)));
@@ -47,7 +47,7 @@ function map(x as int)as IItemStack[string]{
     recipes.addShaped(<extrautils2:compressedgravel:1>*2,Mp.read("AB_;___;___;",map(4)));
     recipes.addShaped(<extrautils2:compressedsand:1>*2,Mp.read("A_B;___;___;",map(4)));
     recipes.addShaped(<extrautils2:compressedcobblestone:1>*5,Mp.read("A__;B__;___;",map(4)));
-    recipes.addShaped(<botania:spark>,Mp.read("___;_B_;___",map(4)));
+    recipes.addShaped(<botania:spark>,Mp.read("___;_BB;___",map(4)));
     recipes.addShaped(<tconstruct:seared_tank>.withTag({FluidName: "lava", Amount: 4000})*4,Mp.read("A__;__B;___",map(4)));
     recipes.addShaped(<minecraft:obsidian>*16,Mp.read("A__;___;B__",map(4)));
     recipes.addShaped(<minecraft:clay>*40,Mp.read("A__;___;_B_;",map(4)));

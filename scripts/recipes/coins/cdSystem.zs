@@ -58,7 +58,8 @@ static CD as int=30;
 static tag as IData = {ench: [{lvl: 1 as short, id: 29 as short}],canCraft:true};
 for i in 1 to coinNum+1{
     var c = coin(i);
-    recipes.addShapeless("coinEnchant"~i,c.withTag(tag),[c.withEmptyTag()],function(o,i,info){
+    //M.shout(c.commandString);
+    recipes.addShapeless("coinEnchant"~i,c.withTag(tag),[c],function(o,i,info){
         if(isNull(info.player))return c;
         var data = info.player.nbt.deepGet("ForgeData.PlayerPersisted.coinCD."~c.definition.id);
         if(isNull(data)){
@@ -77,6 +78,7 @@ for i in 1 to coinNum+1{
     });
 }
 //Easter Egg
+
 for i in 1 to coinNum+1{
     var c = coin(i);
     c.only(function(item){
