@@ -283,7 +283,7 @@ T.tc.shaped(<contenttweaker:wand_cap_manasteel_inert>,Mp.read("ABA;BCB;ABA;",{
     "A":<thaumcraft:fabric>,"B":<contenttweaker:shard_balanced>,"C":<contenttweaker:wand_cap_iron>
 }),4);
 recipes.addShaped(<contenttweaker:wand_cap_manasteel>,Mp.read("A1A;2B3;A4A;",{
-    "A":<contenttweaker:wand_cap_manasteel_inert>.giveBack(<contenttweaker:wand_cap_iron>), "B":<contenttweaker:wand_cap_manasteel_inert>,
+    "A":<contenttweaker:wand_cap_manasteel_inert>.transformReplace(<contenttweaker:wand_cap_iron>), "B":<contenttweaker:wand_cap_manasteel_inert>,
     "1":<mysticalagriculture:manasteel_essence>,"4":<forge:bucketfilled>.withTag({FluidName: "bot_mana", Amount: 1000}),
     "2":<contenttweaker:shard_balanced>,"3":<thaumcraft:salis_mundus>
 }));
