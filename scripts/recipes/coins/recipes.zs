@@ -53,3 +53,18 @@ function map(x as int)as IItemStack[string]{
     recipes.addShaped(<minecraft:clay>*40,Mp.read("A__;___;_B_;",map(4)));
     recipes.addShaped(<extrautils2:ingredients:12>*7,Mp.read("A__;___;__B",map(4)));
     recipes.addShaped(<immersiveengineering:metal:8>*27,Mp.read("BA_;___;___",map(4)));
+//coin5
+    recipes.addShaped(<botania:spark>,Mp.read("___;_BB;___",map(5)));
+    recipes.addShaped(<appliedenergistics2:material:7>,Mp.read("___;BBB;___",map(5)));
+
+    recipes.addShaped(<extrautils2:compressedgravel:1>*9,Mp.read("AB_;___;___;",map(5)));
+    recipes.addShaped(<extrautils2:compressedsand:1>*9,Mp.read("A_B;___;___;",map(5)));
+    
+    recipes.addShaped(<forge:bucketfilled>.withTag({FluidName: "pyrotheum", Amount: 1000}),Mp.read("ABB;BBB;BBB;",map(5)));
+    T.ava.shaped(<forge:bucketfilled>.withTag({FluidName: "cryotheum", Amount: 1000}),Mp.read("A_B______;",map(5)));
+    T.ava.shaped(<forge:bucketfilled>.withTag({FluidName: "aerotheum", Amount: 1000}),Mp.read("A__B_____;",map(5)));
+    T.ava.shaped(<forge:bucketfilled>.withTag({FluidName: "petrotheum", Amount: 1000}),Mp.read("A___B____;",map(5)));
+    T.ava.shaped(<forge:bucketfilled>.withTag({FluidName: "mana", Amount: 1000}),Mp.read("A____B___;",map(5)));
+    
+    recipes.addShaped(<embers:brick_caminite>*40,Mp.read("BAB;BBB;BBB;",map(5)));
+    recipes.addShaped(<tconstruct:seared_tank>.withTag({FluidName: "xpjuice", Amount: 4000})*6,Mp.read("A__;B__;___",map(3)));
