@@ -1,6 +1,7 @@
 #reloadable
 import scripts.recipes.libs.Transcript as T;
 import scripts.recipes.libs.Mapping as Mp;
+import scripts.recipes.libs.Misc as M;
 import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
 import crafttweaker.data.IData;
@@ -68,3 +69,22 @@ function map(x as int)as IItemStack[string]{
     
     recipes.addShaped(<embers:brick_caminite>*40,Mp.read("BAB;BBB;BBB;",map(5)));
     recipes.addShaped(<tconstruct:seared_tank>.withTag({FluidName: "xpjuice", Amount: 4000})*6,Mp.read("A__;B__;___",map(3)));
+//TODO: coin6~8
+//craft coins
+    recipes.addShapeless(<contenttweaker:coin1>*2,[<botania:livingrock0slab>,M.reuse(<tconstruct:pattern>.withTag({PartType: "tconstruct:pan_head"}))]);
+    T.ae2.inscribe(<contenttweaker:coin1>*8,[<botania:livingrock>,<tconstruct:cast>.withTag({PartType: "tconstruct:pan_head"}),<tconstruct:cast>],false);
+    recipes.addShaped(<contenttweaker:coin2>*8,Mp.read("A_A;_A_;A_A;",{"A":<mysticalagriculture:manasteel_essence>}));
+    T.ae2.inscribe(<contenttweaker:coin2>,[<contenttweaker:coin1>,<botania:manaresource>,<botania:manaresource:2>]);
+    T.tic.casting(<contenttweaker:coin3>,<contenttweaker:coin2>,<liquid:xu_enchanted_metal>*144);
+    T.tic.casting(<contenttweaker:coin4>*8,<ore:record>,<liquid:dark_steel>*144);
+    T.de.fuse(<contenttweaker:coin5>*8,<appliedenergistics2:material:37>,[
+        <appliedenergistics2:material:12>,
+        <appliedenergistics2:paint_ball:30>,
+        <embers:shard_ember>,
+        <avaritia:resource:7>,
+        <contenttweaker:shard_ordo>,
+        <tconstruct:shard>.withTag({Material: "xu_enchanted_metal"}),
+        <appliedenergistics2:material:16>,
+        <thermalfoundation:material:264>,
+        <botania:specialflower>.withTag({type: "spectrolus"})
+    ],400000);
