@@ -113,4 +113,5 @@
     <recipe name="Infinity Dust Block 2, Sagmilling" disabled="true" />
     <recipe name="Infinity Dust Block 3, Sagmilling" disabled="true" />
     <recipe name="Soul Binder: Broken Spawner" required="true"><disabled/></recipe>
+    <recipe name="Sagmill: Soulstone" required="true"><disabled/></recipe>
 </enderio:recipes>
