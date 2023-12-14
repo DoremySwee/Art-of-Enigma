@@ -1,0 +1,11 @@
+{
+	x: -18.5d,
+	y: -8.5d,
+	tasks: [{
+		uid: "0b663847",
+		type: "item",
+		items: [{
+			item: "tconstruct:ingots"
+		}]
+	}]
+}

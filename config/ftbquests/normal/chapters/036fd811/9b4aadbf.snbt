@@ -1,0 +1,13 @@
+{
+	x: -25.5d,
+	y: -11.0d,
+	tasks: [{
+		uid: "94a048f9",
+		type: "item",
+		items: [{
+			item: "botania:pinkinator"
+		}],
+		ignore_damage: true,
+		ignore_nbt: 1b
+	}]
+}

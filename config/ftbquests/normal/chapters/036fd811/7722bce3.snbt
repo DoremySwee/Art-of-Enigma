@@ -1,0 +1,14 @@
+{
+	x: -11.0d,
+	y: -6.5d,
+	dependencies: [
+		"ab8da997"
+	],
+	tasks: [{
+		uid: "be6cf092",
+		type: "item",
+		items: [{
+			item: "draconicevolution:crafting_injector 1 1"
+		}]
+	}]
+}
