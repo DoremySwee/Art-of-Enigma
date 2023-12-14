@@ -13,11 +13,9 @@
 			id: "bloodmagic:blood_orb",
 			tag: {
 				orb: "bloodmagic:weak"
-			},
-			ForgeCaps: {
-				"astralsorcery:cap_item_amulet_holder": {}
 			}
 		}],
+		consume_items: false,
 		ignore_nbt: 1b
 	}]
 }
