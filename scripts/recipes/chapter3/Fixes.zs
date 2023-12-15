@@ -1,3 +1,5 @@
+#reloadable
+#priority -1
 #loader crafttweaker reloadableevents
 import mods.botaniatweaks.Agglomeration as Agg;
 import scripts.recipes.libs.Transcript as T;
@@ -5,7 +7,6 @@ import scripts.recipes.libs.Mapping as Mp;
 import scripts.recipes.libs.Misc as M;
 import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
-#priority -1
 recipes.removeByRecipeName("embers:ember_emmiter");
 recipes.removeByRecipeName("tconstruct:common/flint");
 for i in 0 to 16{
