@@ -1,6 +1,7 @@
 #loader crafttweaker reloadableevents
 import crafttweaker.entity.IEntityDefinition;
 import crafttweaker.entity.IEntityLiving;
+import scripts.advanced.libs.Misc as M;
 import crafttweaker.entity.IEntityMob;
 import crafttweaker.item.IItemStack;
 import crafttweaker.world.IBlockPos;
@@ -21,9 +22,14 @@ events.onWorldTick(function(event as crafttweaker.event.WorldTickEvent){
         if(isNull(i.nbt.lensStack))continue;
         if(isNull(i.nbt.lensStack.id))continue;
         if(i.nbt.lensStack.id=="botania:laputashard"){
-            i.updateNBT({mana:MANA_AMOUNT,startingMana:MANA_AMOUNT});
+            i.updateNBT({mana:MANA_AMOUNT,startingMana:MANA_AMOUNT/3});
         }
-        else{
+        else if (!isNull(i.nbt.lensStack.Damage)){
+            if(i.nbt.lensStack.Damage==5000){
+                var MANA_AMOUNT2=120*15*180;
+                i.updateNBT({mana:MANA_AMOUNT2,startingMana:MANA_AMOUNT2/5});
+                //M.shout("success!");
+            }
         }
     }
 });
