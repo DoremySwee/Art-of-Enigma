@@ -1,5 +1,6 @@
-#loader crafttweaker reloadableevents
+#reloadable
 #priority 114514
+import scripts.recipes.libs.Misc as M;
 import crafttweaker.item.IItemStack;
 import crafttweaker.player.IPlayer;
 import crafttweaker.world.IWorld;
@@ -46,9 +47,9 @@ function getUnstableIngot(p as IPlayer,w as IWorld)as IItemStack{
 }
 
 recipes.addShaped("unstable_ingot_unstable",<extrautils2:unstableingots>,[
-    [null,<minecraft:diamond>,null],
-    [null,<contenttweaker:division_sigil_activated>.anyDamage().transformDamage(),null],
-    [null,<minecraft:iron_ingot>,null]],
+    [<minecraft:diamond>],
+    [<contenttweaker:division_sigil_activated>.anyDamage().transformDamage()],
+    [<minecraft:iron_ingot>]],
     function(out,ins,info){
         if(isNull(info.player))return null;
         return out;
@@ -59,3 +60,6 @@ recipes.addShaped("unstable_ingot_unstable",<extrautils2:unstableingots>,[
     });
 
 recipes.remove(<extrautils2:unstableingots>);
+recipes.remove(<extrautils2:unstableingots:1>);
+recipes.remove(<extrautils2:unstableingots:2>);
+recipes.addShaped(<extrautils2:unstableingots:2>,[[<minecraft:diamond>],[M.reuse(<contenttweaker:psu_inver_sigil>)],[<minecraft:iron_ingot>]]);
