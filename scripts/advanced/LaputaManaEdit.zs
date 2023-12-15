@@ -11,7 +11,7 @@ import mods.zenutils.PlayerStat;
 import mods.ctutils.utils.Math;
 import crafttweaker.data.IData;
 events.onWorldTick(function(event as crafttweaker.event.WorldTickEvent){
-    var MANA_AMOUNT as int=100;
+    var MANA_AMOUNT as int=20000;
     var world as IWorld=event.world;
     if(world.remote)return;
     for i in world.getEntities(){
