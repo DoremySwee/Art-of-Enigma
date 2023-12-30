@@ -40,6 +40,7 @@ events.onPlayerTick(function(event as crafttweaker.event.PlayerTickEvent) {
     val player = event.player;
     var data = player.nbt.deepGet("ForgeData");
     if(isNull(data))return;
+    if(event.phase=="START")return;
     if (!player.world.remote) {
         var datatemp=data.deepGet("PlayerPersisted.coinCD");
         if(isNull(datatemp))return;
