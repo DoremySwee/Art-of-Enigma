@@ -142,6 +142,7 @@ description.crt.tooltip.tcwands.botrod=Try combining it with botania wand cap
 item.contenttweaker.division_sigil.name=Division Sigil
 item.contenttweaker.division_sigil_activated.name=Division Sigil (Activated)
 item.contenttweaker.psu_inver_sigil.name=Pseudo-Inversion Sigil
+jei.description.exu_sigils=Sigils from the last era of Extra Utils. You know how to use them, right?
 
 chat.crt.exu1sigil.prepared=§dEverything is prepared.§r
 chat.crt.exu1sigil.sacrifice=§dSacrifice an animal on the Enchantment Table.§r

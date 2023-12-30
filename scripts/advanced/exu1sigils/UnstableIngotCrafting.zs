@@ -63,3 +63,5 @@ recipes.remove(<extrautils2:unstableingots>);
 recipes.remove(<extrautils2:unstableingots:1>);
 recipes.remove(<extrautils2:unstableingots:2>);
 recipes.addShaped(<extrautils2:unstableingots:2>,[[<minecraft:diamond>],[M.reuse(<contenttweaker:psu_inver_sigil>)],[<minecraft:iron_ingot>]]);
+
+mods.jei.JEI.addDescription([<contenttweaker:division_sigil>,<contenttweaker:division_sigil_activated>, <contenttweaker:psu_inver_sigil>],game.localize("jei.description.exu_sigils"));
