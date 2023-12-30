@@ -1,0 +1,12 @@
+{
+	icon: "mysticalagriculture:crafting 1 3",
+	x: -30.0d,
+	y: -10.5d,
+	shape: "gear",
+	dependencies: [
+		"4a15dd19",
+		"d2d60bdf",
+		"fa814493"
+	],
+	size: 3.0d
+}
