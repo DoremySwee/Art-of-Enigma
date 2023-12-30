@@ -101,3 +101,27 @@ T.ava.shaped(<botania:livingwood>*48,Mp.read(dupPattern1,{
 T.ava.shaped(<botania:livingrock>*48,Mp.read(dupPattern1,{
     "W":<minecraft:stone>, "A": <mysticalagriculture:nature_essence>
 }));
+
+//Simplified Water / Ice seed
+T.bot.trade([<mysticalagriculture:water_seeds>],[<appliedenergistics2:storage_cell_1k>.withTag({
+    it: 8 as short, "#0": {Craft: 0 as byte, Cnt: 14 as long, id: "minecraft:water_bucket", Count: 1 as byte, Damage: 0 as short, Req: 0 as long}, 
+    "#1": {Craft: 0 as byte, Cnt: 6 as long, id: "minecraft:potion", Count: 1 as byte, tag: {Potion: "minecraft:water"}, Damage: 0 as short, Req: 0 as long}, 
+    "#2": {Craft: 0 as byte, Cnt: 2 as long, id: "minecraft:enchanted_book", Count: 1 as byte, tag: {
+        StoredEnchantments: [{lvl: 1 as short, id: 5 as short}]}, Damage: 0 as short, Req: 0 as long}, 
+    "@0": 14, "#3": {Craft: 0 as byte, Cnt: 4 as long, id: "minecraft:enchanted_book", Count: 1 as byte, tag: {
+        StoredEnchantments: [{lvl: 1 as short, id: 6 as short}]}, Damage: 0 as short, Req: 0 as long}, 
+    "@1": 6, "#4": {Craft: 0 as byte, Cnt: 33 as long, id: "chisel:waterstone", Count: 1 as byte, Damage: 0 as short, Req: 0 as long}, 
+    "@2": 2, "#5": {Craft: 0 as byte, Cnt: 2 as long, id: "botania:waterbowl", Count: 1 as byte, tag: {Fluid: {FluidName: "water", Amount: 1000}}, Damage: 0 as short, Req: 0 as long}, 
+    "@3": 4, "#6": {Craft: 0 as byte, Cnt: 8 as long, id: "botania:specialflower", Count: 1 as byte, tag: {type: "hydroangeas"}, Damage: 0 as short, Req: 0 as long}, 
+    "@4": 33, "#7": {Craft: 0 as byte, Cnt: 4 as long, id: "mysticalagriculture:crafting", Count: 1 as byte, Damage: 17 as short, Req: 0 as long}, "@5": 2, "@6": 8, "@7": 4, ic: 73
+})]);
+T.bot.trade([<mysticalagriculture:ice_seeds>],[<appliedenergistics2:storage_cell_1k>.withTag({
+    it: 8 as short, "#0": {Craft: 0 as byte, Cnt: 39 as long, id: "minecraft:ice", Count: 1 as byte, Damage: 0 as short, Req: 0 as long}, 
+    "#1": {Craft: 0 as byte, Cnt: 8 as long, id: "minecraft:snow", Count: 1 as byte, Damage: 0 as short, Req: 0 as long}, 
+    "#2": {Craft: 0 as byte, Cnt: 1 as long, id: "minecraft:packed_ice", Count: 1 as byte, Damage: 0 as short, Req: 0 as long}, 
+    "@0": 39, "#3": {Craft: 0 as byte, Cnt: 4 as long, id: "minecraft:enchanted_book", Count: 1 as byte, tag: {StoredEnchantments: [{lvl: 1 as short, id: 9 as short}]}, Damage: 0 as short, Req: 0 as long}, "
+    @1": 8, "#4": {Craft: 0 as byte, Cnt: 8 as long, id: "thermalfoundation:material", Count: 1 as byte, Damage: 2048 as short, Req: 0 as long}, 
+    "@2": 1, "#5": {Craft: 0 as byte, Cnt: 8 as long, id: "forge:bucketfilled", Count: 1 as byte, tag: {FluidName: "cryotheum", Amount: 1000}, Damage: 0 as short, Req: 0 as long}, 
+    "@3": 4, "#6": {Craft: 0 as byte, Cnt: 8 as long, id: "tconstruct:bolt_core", Count: 1 as byte, tag: {TinkerData: {Materials: ["ice", "electrical_steel"]}}, Damage: 0 as short, Req: 0 as long}, 
+    "@4": 8, "#7": {Craft: 0 as byte, Cnt: 4 as long, id: "mysticalagriculture:crafting", Count: 1 as byte, Damage: 17 as short, Req: 0 as long}, "@5": 8, "@6": 8, "@7": 4, ic: 80
+})]);
