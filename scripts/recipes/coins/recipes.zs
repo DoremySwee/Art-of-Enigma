@@ -68,7 +68,7 @@ function map(x as int)as IItemStack[string]{
     T.ava.shaped(<forge:bucketfilled>.withTag({FluidName: "mana", Amount: 1000}),Mp.read("A____B___;",map(5)));
     
     recipes.addShaped(<embers:brick_caminite>*40,Mp.read("BAB;BBB;BBB;",map(5)));
-    recipes.addShaped(<tconstruct:seared_tank>.withTag({FluidName: "xpjuice", Amount: 4000})*6,Mp.read("A__;B__;___",map(3)));
+    recipes.addShaped(<tconstruct:seared_tank>.withTag({FluidName: "xpjuice", Amount: 4000})*6,Mp.read("A__;B__;___",map(5)));
 //TODO: coin6~8
 //craft coins
     recipes.addShapeless(<contenttweaker:coin1>*2,[<botania:livingrock0slab>,M.reuse(<tconstruct:pattern>.withTag({PartType: "tconstruct:pan_head"}))]);
