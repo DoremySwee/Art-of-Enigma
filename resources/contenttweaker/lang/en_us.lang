@@ -234,11 +234,8 @@ item.contenttweaker.calc_sigil_division.name=Sigil of Division
 jei.description.bolt_core=Due to unknown reason, some of the bolt core cannot be made.
 jei.description.slime_vine=What if blue slimes climb onto the vine?
 
-description.crt.tooltip.coin=Can be used to exchange items. Has Cool Down! Check the cd by rightclicking with the coin.
-description.crt.tooltip.coin2=You are so smart. But this coin cannot be used to exchange, it's unauthorized.
-crt.chat.coin.cd1=You must wait
-crt.chat.coin.cd2=minutes before next enchantment!
-crt.chat.coin.cd3=The coin has cooled down. You can make your next enchantment!
+description.crt.tooltip.coin=Can be used to exchange items.
+description.crt.tooltip.coin.cd=Next exchange time: after %.2f minutes
 item.contenttweaker.coin1.name=Living Rock Coin
 item.contenttweaker.coin2.name=Mana Coin
 item.contenttweaker.coin3.name=Enchanted Coin
