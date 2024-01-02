@@ -1,6 +1,10 @@
 {
 	x: 16.5d,
 	y: 9.0d,
+	text: [
+		"{quests.ch1.pureDaisy.LiquidAgg}",
+		"{quests.ch1.pureDaisy.craft2}"
+	],
 	dependencies: [
 		"4847a45b"
 	],

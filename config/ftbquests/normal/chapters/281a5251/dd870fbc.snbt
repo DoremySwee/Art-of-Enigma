@@ -8,5 +8,10 @@
 		uid: "7bf5c179",
 		type: "checkmark",
 		icon: "immersiveengineering:metal_multiblock 1 9"
+	}],
+	rewards: [{
+		uid: "8b05395a",
+		type: "item",
+		item: "immersiveengineering:tool 1 3"
 	}]
 }

@@ -1,6 +1,9 @@
 {
 	x: 20.5d,
 	y: 9.0d,
+	text: [
+		"{quests.ch1.sparkCheck.des}"
+	],
 	dependencies: [
 		"6f795a51"
 	],

@@ -1,6 +1,9 @@
 {
 	x: -8.0d,
 	y: 2.5d,
+	text: [
+		"{quests.ch2.cacoon.des}"
+	],
 	dependencies: [
 		"4b28eb3e"
 	],

@@ -1,6 +1,9 @@
 {
 	x: 14.5d,
 	y: 9.0d,
+	text: [
+		"{quests.ch1.crateHelp.des}"
+	],
 	dependencies: [
 		"ada17b0c"
 	],

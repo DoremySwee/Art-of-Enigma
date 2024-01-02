@@ -2,7 +2,8 @@
 	x: -3.0d,
 	y: 10.5d,
 	text: [
-		"{quests.ch1.dup0.des}"
+		"{quests.ch1.dup0.des}",
+		"{quests.ch1.importantItems.des}"
 	],
 	dependencies: [
 		"0b4c79c1"

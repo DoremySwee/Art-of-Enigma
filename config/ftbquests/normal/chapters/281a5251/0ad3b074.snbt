@@ -1,6 +1,9 @@
 {
 	x: -9.0d,
 	y: -0.5d,
+	text: [
+		"{quests.ch2.coal.des}"
+	],
 	dependencies: [
 		"edec13f8"
 	],

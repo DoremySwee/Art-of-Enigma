@@ -1,6 +1,9 @@
 {
 	x: 22.0d,
 	y: 9.0d,
+	text: [
+		""
+	],
 	dependencies: [
 		"9dbe4d2a"
 	],
