@@ -8,7 +8,7 @@ import crafttweaker.world.IWorld;
 import crafttweaker.data.IData;
 import crafttweaker.text.ITextComponent;
 static whiteList as string[] = [
-    "say","tellraw","forge","ftbquests","crafttweaker","backup","trashcan","shutdown","help","playsound"
+    "say","tellraw","forge","ftbquests","crafttweaker","backup","trashcan","shutdown","help","playsound","trash_can"
 ] as string[];
 static messages as string[] = [
     "You feel an evil presence watching you",
