@@ -14,5 +14,11 @@
 		items: [{
 			item: "immersiveengineering:material 1 4"
 		}]
+	}],
+	rewards: [{
+		uid: "27df7ae4",
+		type: "item",
+		item: "minecraft:log",
+		count: 64
 	}]
 }

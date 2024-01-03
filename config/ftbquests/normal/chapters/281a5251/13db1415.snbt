@@ -12,5 +12,10 @@
 		items: [{
 			item: "minecraft:clay_ball"
 		}]
+	}],
+	rewards: [{
+		uid: "f2853553",
+		type: "item",
+		item: "minecraft:observer"
 	}]
 }
