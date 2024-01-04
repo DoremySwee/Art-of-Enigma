@@ -1,3 +1,4 @@
+#reloadable
 import mods.botaniatweaks.Agglomeration as Agg;
 import scripts.recipes.libs.Transcript as T;
 import scripts.recipes.libs.Mapping as Mp;
@@ -129,11 +130,20 @@ recipes.remove(<botania:twigwand>);
 recipes.addShaped(<botania:twigwand>.withTag({color1: 5, color2: 13}),[
     [null,<minecraft:stick>],
     [<minecraft:stick>,<minecraft:sapling>]]);
-recipes.addShaped(<botania:twigwand>,Mp.read("_PS;_SP;S__;",{
-    "P":<botania:petal:*>,"S":<botania:manaresource:3>
-},function(out,ins,info){
-    return <botania:twigwand>.withTag({color1: ins[0][1].metadata, color2: ins[1][2].metadata, boundTileZ: 0, boundTileX: 0, boundTileY: -1});
-}));
+var twp=<botania:petal:*>;
+var tws=<botania:manaresource:3>;
+recipes.addShaped("re_add_twigwand_recipe",<botania:twigwand>,[
+    [null,twp.marked("a"),tws],
+    [null,tws,twp.marked("b")],
+    [tws,null,null]
+],function(out,ins,info){
+    print(isNull(ins));
+    var a = isNull(ins.a)?0:ins.a.metadata;
+    var b = isNull(ins.b)?0:ins.b.metadata;
+    print(a);
+    print(b);
+    return <botania:twigwand>.withTag({color1: a, color2: b, boundTileZ: 0, boundTileX: 0, boundTileY: -1});
+},null);
 for i in 0 to 16{
     M.dupMana(<botania:petal>.definition.makeStack(i));
 }
