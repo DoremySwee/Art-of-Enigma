@@ -125,9 +125,15 @@ recipes.remove(<minecraft:lapis_block>);
 //fixes
 furnace.remove(<minecraft:iron_nugget>);
 T.bot.rune(<botania:manaresource:11>*32,[<minecraft:planks>,<minecraft:stone>],1);
+recipes.remove(<botania:twigwand>);
 recipes.addShaped(<botania:twigwand>.withTag({color1: 5, color2: 13}),[
     [null,<minecraft:stick>],
     [<minecraft:stick>,<minecraft:sapling>]]);
+recipes.addShaped(<botania:twigwand>,Mp.read("_PS;_SP;S__;",{
+    "P":<botania:petal:*>,"S":<botania:manaresource:3>
+},function(out,ins,info){
+    return <botania:twigwand>.withTag({color1: ins[0][1].metadata, color2: ins[1][2].metadata, boundTileZ: 0, boundTileX: 0, boundTileY: -1});
+}));
 for i in 0 to 16{
     M.dupMana(<botania:petal>.definition.makeStack(i));
 }

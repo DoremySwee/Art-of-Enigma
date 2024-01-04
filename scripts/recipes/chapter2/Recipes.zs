@@ -42,6 +42,7 @@ if(true){
         17000,0xCC2222,0xFFAA44,lvav,mm,nr,nr,lvav,mm);
 
     T.ae2.inscribe(nr,[cs,nr,nr],false);
+    nr.addTooltip(game.localize("description.crt.tooltip.netherrock.dup"));
 
     var FeOre=<minecraft:iron_ore>;
     Agg.addRecipe(gr,[<botania:livingrock>],10000,0xFF8800,0xCC6666,

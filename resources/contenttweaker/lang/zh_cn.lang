@@ -62,12 +62,14 @@ description.crt.tooltip.flower.waterCraft=由于botTweak的缺陷，凝聚板合
 description.crt.tooltip.flower.endoRestrict=一个区块最多放置8个火红莲
 description.crt.tooltip.flower.autoPlace=请勿使用自动化装置放置花朵，花朵会消失。
 
+description.crt.tooltip.netherrock.dup=§4可以用压印器复制§r
+
 description.crt.tooltip.dup0=可以通过合成复制。
 description.crt.tooltip.dupSpark=与火花合成以复制。
 
 description.crt.tooltip.SmeltryF= 可以用作冶炼炉燃料。
 description.crt.tooltip.dupMana= 可以在魔力池复制。
-description.crt.tooltip.twigwand= 可以用树苗和木棍合成。
+description.crt.tooltip.twigwand=§a可以用树苗和木棍合成。§r
 
 info.crt.endoFlameRes.exceed=火红莲数量超过区块上限(8)。
 crt.smeltry_head.name=冶炼之脑

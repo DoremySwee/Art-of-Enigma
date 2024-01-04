@@ -62,12 +62,14 @@ description.crt.tooltip.flower.waterCraft=Agglomerate with water in the place of
 description.crt.tooltip.flower.endoRestrict=Only 8 enfoflames per chunk is allowed.
 description.crt.tooltip.flower.autoPlace=Automatic placement of flowers is not permitted, probably end up in disappearance of the flower.
 
+description.crt.tooltip.netherrock.dup=§4Can be duplicated by inscriber§r
+
 description.crt.tooltip.flower.dup0=Can be duplicated simply through crafting.
 description.crt.tooltip.flower.dupSpark=Can be duplicated by crafting with sparks.
 
 description.crt.tooltip.SmeltryF= Can be used as Fuel for Smeltry.
 description.crt.tooltip.dupMana= Can be duplicated through ManaInfusion.
-description.crt.tooltip.twigwand= Check its last recipe.
+description.crt.tooltip.twigwand=§aCan be crafted by stick and saplings§r
 
 info.crt.endoFlameRes.exceed=number of endoflame has exceeded maximum(8) in this chunk.
 crt.smeltry_head.name=The Brain Of Smeltry
