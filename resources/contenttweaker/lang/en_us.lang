@@ -80,6 +80,7 @@ quests.ch2.cacoon.des=There are recipes for pumkins, you don't need to plant the
 quests.ch2.netherrock.des=Use the AE2 Inscriber.
 quests.ch2.glowstoneDust.title= Glow stone Production
 quests.ch2.glowstoneDust.des= You can turn this item back into glow stone.
+quests.ch2.rsOreState.des= Blocks with non-default states cannot get involved in terra plate recipe, including the activated redstone ore.
 
 description.crt.tooltip.haste=Eat for Haste II
 

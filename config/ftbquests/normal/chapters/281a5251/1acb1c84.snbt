@@ -1,6 +1,9 @@
 {
 	x: -9.0d,
 	y: 0.5d,
+	text: [
+		"{quests.ch2.rsOreState.des}"
+	],
 	dependencies: [
 		"9a6eb4a3",
 		"10901bdf"
