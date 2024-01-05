@@ -235,7 +235,7 @@ jei.description.bolt_core=由于未知原因，有的弩箭核心无法制作。
 jei.description.slime_vine=如果蓝色史莱姆在藤蔓上蹭两下……应该会被刮下来一点东西吧。
 
 description.crt.tooltip.coin=用于交换物品。
-description.crt.tooltip.coin.cd=下次交换时间：%.2f 分钟后
+description.crt.tooltip.coin.cd=下次交换时间：%s 分钟后
 item.contenttweaker.coin1.name=活石硬币
 item.contenttweaker.coin2.name=魔力代币
 item.contenttweaker.coin3.name=附魔硬币

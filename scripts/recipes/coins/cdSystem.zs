@@ -8,6 +8,7 @@ import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
 import crafttweaker.data.IData;
 import mods.zenutils.I18n;
+import mods.zenutils.StaticString;
 
 static coinId as string="contenttweaker:coin";
 static coinNum as int = 8;
@@ -18,14 +19,12 @@ function coin(x as int)as IItemStack{
     return itemUtils.getItem(coinId~x); 
 }
 
-print(mods.zenutils.StaticString.format("a %.2f b", [0.0555555f]));
-
 for i in 1 to coinNum+1{
     coin(i).addTooltip(game.localize("description.crt.tooltip.coin"));
     coin(i).addAdvancedTooltip(function(item) {
         val cd = client.player.getCooldown(item);
         if (cd > 0.0f) {
-            return I18n.format("description.crt.tooltip.coin.cd", [cd * cdMinutes]);
+            return I18n.format("description.crt.tooltip.coin.cd", [StaticString.format("%.2f", [cd * cdMinutes])]);
         } else {
             return null;
         }

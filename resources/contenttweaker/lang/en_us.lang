@@ -235,7 +235,7 @@ jei.description.bolt_core=Due to unknown reason, some of the bolt core cannot be
 jei.description.slime_vine=What if blue slimes climb onto the vine?
 
 description.crt.tooltip.coin=Can be used to exchange items.
-description.crt.tooltip.coin.cd=Next exchange time: after %.2f minutes
+description.crt.tooltip.coin.cd=Next exchange time: after %s minutes
 item.contenttweaker.coin1.name=Living Rock Coin
 item.contenttweaker.coin2.name=Mana Coin
 item.contenttweaker.coin3.name=Enchanted Coin
