@@ -18,5 +18,19 @@
 			}
 		}],
 		ignore_nbt: 1b
+	},
+	{
+		uid: "7e4c75f5",
+		type: "item",
+		items: [{
+			item: "tconstruct:wooden_hopper"
+		}]
+	},
+	{
+		uid: "d21d1c01",
+		type: "item",
+		items: [{
+			item: "botania:hourglass"
+		}]
 	}]
 }

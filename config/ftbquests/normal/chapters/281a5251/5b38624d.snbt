@@ -1,0 +1,14 @@
+{
+	x: -8.0d,
+	y: 4.5d,
+	dependencies: [
+		"afdbb911"
+	],
+	tasks: [{
+		uid: "cc04af7e",
+		type: "item",
+		items: [{
+			item: "botania:hourglass"
+		}]
+	}]
+}

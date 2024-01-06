@@ -1,0 +1,14 @@
+{
+	x: -6.0d,
+	y: 1.5d,
+	dependencies: [
+		"f18d8e26"
+	],
+	tasks: [{
+		uid: "f02745a7",
+		type: "item",
+		items: [{
+			item: "tconstruct:wooden_hopper"
+		}]
+	}]
+}

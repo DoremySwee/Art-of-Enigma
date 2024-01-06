@@ -5,7 +5,14 @@
 		"672b3833"
 	],
 	tasks: [{
-		uid: "d01ea756",
+		uid: "3ed58f6c",
+		type: "item",
+		items: [{
+			item: "botania:rfgenerator"
+		}]
+	},
+	{
+		uid: "d8fdd47a",
 		type: "item",
 		items: [{
 			item: "tconstruct:smeltery_controller"
