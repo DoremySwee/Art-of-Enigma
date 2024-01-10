@@ -1,0 +1,30 @@
+{
+	x: -33.5d,
+	y: -10.5d,
+	dependencies: [
+		"670810be"
+	],
+	tasks: [{
+		uid: "5bc56f45",
+		type: "item",
+		items: [{
+			item: "compactmachines3:machine 1 5"
+		}]
+	},
+	{
+		uid: "0405132f",
+		type: "item",
+		items: [{
+			item: "compactmachines3:tunneltool"
+		}]
+	},
+	{
+		uid: "73fc6caf",
+		type: "item",
+		items: [{
+			item: "compactmachines3:psd"
+		}],
+		ignore_damage: true,
+		ignore_nbt: 1b
+	}]
+}
