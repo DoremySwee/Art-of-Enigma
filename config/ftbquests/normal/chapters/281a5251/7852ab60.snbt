@@ -16,5 +16,18 @@
 			}
 		}],
 		ignore_nbt: 1b
+	}],
+	rewards: [{
+		uid: "7d4034a3",
+		type: "item",
+		item: {
+			id: "botania:lens",
+			Damage: 14s,
+			tag: {},
+			ForgeCaps: {
+				"astralsorcery:cap_item_amulet_holder": {}
+			}
+		},
+		count: 12
 	}]
 }

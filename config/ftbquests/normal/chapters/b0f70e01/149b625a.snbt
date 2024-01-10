@@ -10,6 +10,7 @@
 	],
 	dependencies: [
 		"410786df",
+		"cd6115ad",
 		"cdec4ce3"
 	],
 	hide: true,

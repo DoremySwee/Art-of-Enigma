@@ -6,12 +6,5 @@
 	],
 	dependencies: [
 		"7f47b7d9"
-	],
-	tasks: [{
-		uid: "7dc5ed17",
-		type: "item",
-		items: [{
-			item: "minecraft:sapling"
-		}]
-	}]
+	]
 }

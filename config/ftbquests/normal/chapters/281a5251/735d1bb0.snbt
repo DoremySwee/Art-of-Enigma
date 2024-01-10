@@ -11,5 +11,10 @@
 		items: [{
 			item: "enderio:block_vat"
 		}]
+	}],
+	rewards: [{
+		uid: "49ffdf1b",
+		type: "item",
+		item: "enderio:item_basic_capacitor 1 4"
 	}]
 }
