@@ -7,6 +7,7 @@ chapters.ch2.subtitle=“怕你做少了悟不出来怎么做自动化”
 chapters.ch3.title=精密仪器
 chapters.ch3.subtitle=“”
 
+item.item_basic_capacitor.special2.name=天堂陨落电容
 
 quests.DifficultySelection.title= 難易度選択
 quests.DifficultySelection.desDifference= 任务的难度决定了线索的数量。高难度有更多谜题，但需要更高的游戏理解，而低难度会直接给你更多的线索。

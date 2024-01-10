@@ -7,6 +7,7 @@ chapters.ch2.subtitle=Reasonable recipes
 chapters.ch3.title=Precision
 chapters.ch3.subtitle=""
 
+item.item_basic_capacitor.special2.name=Capacitor of the Heavens
 
 quests.DifficultySelection.title= Select a Difficulty For This Chapter
 quests.DifficultySelection.desDifference= The difficulty ONLY influeces the clues given to you. Higher difficulty brings more puzzles, but requires deeper game mechanism understanding, while lower difficulty solve the puzzle for you.
