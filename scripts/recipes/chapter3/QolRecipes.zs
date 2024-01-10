@@ -125,3 +125,17 @@ T.bot.trade([<mysticalagriculture:ice_seeds>],[<appliedenergistics2:storage_cell
     "@3": 4, "#6": {Craft: 0 as byte, Cnt: 8 as long, id: "tconstruct:bolt_core", Count: 1 as byte, tag: {TinkerData: {Materials: ["ice", "electrical_steel"]}}, Damage: 0 as short, Req: 0 as long}, 
     "@4": 8, "#7": {Craft: 0 as byte, Cnt: 4 as long, id: "mysticalagriculture:crafting", Count: 1 as byte, Damage: 17 as short, Req: 0 as long}, "@5": 8, "@6": 8, "@7": 4, ic: 80
 })]);
+
+//Add Compressed Machine Stuff
+recipes.addShaped(<compactmachines3:machine:5>,Mp.read("ABA;CDC;ABA;",{
+    "A":<appliedenergistics2:spatial_pylon>,
+    "B":<thermalfoundation:material:264>,
+    "C":<thermalfoundation:glass:8>,
+    "D":<appliedenergistics2:material:47>
+}));
+recipes.addShaped(<compactmachines3:tunneltool>,Mp.read("ABA;BCB;ABA;",{
+    "A":<minecraft:gold_ingot>,
+    "B":<embers:brick_caminite>,
+    "C":<appliedenergistics2:material:47>
+}));
+T.ae.inscribe(<compactmachines3:psd>,[<appliedenergistics2:wireless_terminal>,<appliedenergistics2:material:47>,<appliedenergistics2:material:47>]);
