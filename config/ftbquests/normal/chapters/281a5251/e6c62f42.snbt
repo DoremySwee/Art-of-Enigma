@@ -1,14 +1,20 @@
 {
-	x: -6.0d,
-	y: 2.5d,
+	x: -4.0d,
+	y: 3.0d,
 	dependencies: [
 		"afdbb911"
 	],
+	size: 2.0d,
 	tasks: [{
 		uid: "71bb70f0",
 		type: "item",
 		items: [{
 			item: "extrautils2:ingredients 1 12"
 		}]
+	}],
+	rewards: [{
+		uid: "4744bbbd",
+		type: "xp",
+		xp: 1000
 	}]
 }

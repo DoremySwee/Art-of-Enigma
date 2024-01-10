@@ -1,7 +1,7 @@
 {
 	title: "{quests.ch2.glowstoneDust.title}",
-	x: -3.0d,
-	y: 1.0d,
+	x: 1.0d,
+	y: 0.5d,
 	text: [
 		"{quests.ch2.glowstoneDust.des}"
 	],

@@ -12,12 +12,5 @@
 		items: [{
 			item: "tconstruct:casting"
 		}]
-	}],
-	rewards: [{
-		uid: "b2bdd123",
-		type: "item",
-		team_reward: true,
-		item: "minecraft:redstone_block",
-		count: 4
 	}]
 }

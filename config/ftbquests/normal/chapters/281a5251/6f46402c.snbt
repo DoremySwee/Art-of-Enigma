@@ -1,6 +1,6 @@
 {
-	x: -4.0d,
-	y: 3.5d,
+	x: -1.0d,
+	y: 2.5d,
 	dependencies: [
 		"99736f0e"
 	],
@@ -11,5 +11,10 @@
 			item: "immersiveengineering:metal_device1 1 6"
 		}],
 		count: 11L
+	}],
+	rewards: [{
+		uid: "086c1c1c",
+		type: "item",
+		item: "immersiveengineering:tool 1 3"
 	}]
 }

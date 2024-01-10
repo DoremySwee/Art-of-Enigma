@@ -20,5 +20,10 @@
 		type: "item",
 		item: "immersiveengineering:metal 1 8",
 		count: 8
+	},
+	{
+		uid: "9a4b9245",
+		type: "xp_levels",
+		xp_levels: 10
 	}]
 }

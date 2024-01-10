@@ -25,7 +25,7 @@
 			id: "minecraft:enchanted_book",
 			tag: {
 				StoredEnchantments: [{
-					lvl: 3s,
+					lvl: 2s,
 					id: 62s
 				}]
 			}
@@ -39,7 +39,7 @@
 			id: "minecraft:enchanted_book",
 			tag: {
 				StoredEnchantments: [{
-					lvl: 3s,
+					lvl: 1s,
 					id: 61s
 				}]
 			}

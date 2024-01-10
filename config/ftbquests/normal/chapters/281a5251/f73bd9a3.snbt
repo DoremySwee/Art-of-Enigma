@@ -11,5 +11,10 @@
 		items: [{
 			item: "extrautils2:ingredients 1 12"
 		}]
+	}],
+	rewards: [{
+		uid: "91a13ca4",
+		type: "xp",
+		xp: 1000
 	}]
 }

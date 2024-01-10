@@ -23,5 +23,11 @@
 		items: [{
 			item: "minecraft:redstone"
 		}]
+	}],
+	rewards: [{
+		uid: "84977209",
+		type: "item",
+		item: "minecraft:redstone_block",
+		count: 3
 	}]
 }

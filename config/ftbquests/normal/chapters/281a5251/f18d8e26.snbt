@@ -1,14 +1,33 @@
 {
-	x: -7.0d,
-	y: 1.5d,
+	x: -6.0d,
+	y: 2.0d,
+	shape: "circle",
 	dependencies: [
 		"cde6c2df"
 	],
+	size: 2.0d,
 	tasks: [{
 		uid: "61e7bc5c",
 		type: "item",
 		items: [{
 			item: "minecraft:iron_ore"
 		}]
+	}],
+	rewards: [{
+		uid: "d5ac5241",
+		type: "item",
+		item: "extrautils2:compressedcobblestone 1 2",
+		count: 3
+	},
+	{
+		uid: "9215c1cd",
+		type: "item",
+		item: "extrautils2:compresseddirt",
+		count: 5
+	},
+	{
+		uid: "02f651c0",
+		type: "xp",
+		xp: 1000
 	}]
 }

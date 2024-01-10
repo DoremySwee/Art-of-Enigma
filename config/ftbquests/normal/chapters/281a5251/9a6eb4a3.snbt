@@ -1,6 +1,6 @@
 {
-	x: -8.0d,
-	y: -0.5d,
+	x: -9.0d,
+	y: -1.5d,
 	dependencies: [
 		"0ad3b074"
 	],
@@ -14,6 +14,7 @@
 	rewards: [{
 		uid: "bd854f4b",
 		type: "item",
-		item: "minecraft:redstone_block"
+		item: "minecraft:redstone_block",
+		count: 2
 	}]
 }

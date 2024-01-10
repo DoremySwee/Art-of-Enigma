@@ -1,9 +1,10 @@
 {
-	x: 3.0d,
-	y: 2.0d,
+	x: 8.0d,
+	y: 2.5d,
 	shape: "hexagon",
 	dependencies: [
 		"922e78f6",
+		"177fc76e",
 		"274fa182",
 		"8d87560a",
 		"995c2873"

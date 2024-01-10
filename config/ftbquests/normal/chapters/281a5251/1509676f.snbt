@@ -1,6 +1,6 @@
 {
 	x: -8.0d,
-	y: 2.5d,
+	y: 1.5d,
 	text: [
 		"{quests.ch2.cacoon.des}"
 	],
@@ -12,6 +12,26 @@
 		type: "item",
 		items: [{
 			item: "botania:cocoon"
-		}]
+		}],
+		count: 4L
+	}],
+	rewards: [{
+		uid: "9c2b05a7",
+		type: "item",
+		item: "botania:cocoon",
+		count: 6
+	},
+	{
+		uid: "2b3c6587",
+		type: "item",
+		item: {
+			id: "minecraft:enchanted_book",
+			tag: {
+				StoredEnchantments: [{
+					id: 62s,
+					lvl: 1s
+				}]
+			}
+		}
 	}]
 }
