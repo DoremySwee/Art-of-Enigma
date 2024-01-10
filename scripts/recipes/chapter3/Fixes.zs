@@ -51,3 +51,4 @@ mods.thermalexpansion.InductionSmelter.removeRecipe(<minecraft:sand>,<astralsorc
 for i in 0 to 5{
     recipes.remove(<mysticalagriculture:crafting>.definition.makeStack(i));
 }
+recipes.remove(<thermalfoundation:material:101>);
