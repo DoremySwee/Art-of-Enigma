@@ -20,10 +20,12 @@ furnace.remove(brick);
 recipes.remove(<embers:dawnstone_anvil>);
 recipes.remove(<embers:ember_bore>);
 recipes.remove(<embers:archaic_light>);
+recipes.remove(<embers:ember_emitter>);
 
 T.tic.casting(<embers:blend_caminite>, <thermalfoundation:material:72>, <liquid:clay>*144, 144);
 T.tic.casting(brick, <embers:blend_caminite>, <liquid:glass>*144, 600);
 T.tic.casting(<embers:crystal_ember>, <tconstruct:cast_custom:1>, <liquid:pyrotheum>*4, 288, false);
+T.tic.casting(<compactmachines3:redstonetunneltool>,<extrautils2:ingredients>,<liquid:redstone_alloy>*4098)
 
 Agg.addRecipe(<minecraft:snowball>,[<appliedenergistics2:paint_ball:23>],300000,0x0000FF,0x8888FF,
     <thermalfoundation:glass:2>,<thermalfoundation:storage:8>,<minecraft:lapis_block>,
@@ -50,6 +52,7 @@ var map1 = {
             textureBlock: {id: "thermalfoundation:storage_alloy",
             Count: 1 as byte, Damage: 0 as short}}
         ),  //Steel
+    "C":<compactmachines3:redstonetunneltool>
     "-": <immersiveengineering:storage_slab:8>,
     "~": <embers:block_caminite_brick_slab>,
     "&": <immersiveengineering:storage:8>,  //Steel Block
@@ -76,15 +79,15 @@ var map1 = {
     "*": <embers:crystal_ember>
 } as IIngredient[string];
 recipes.addShaped(<embers:tinker_hammer>,Mp.read("dbd;d1d;_1_;",map1));
-recipes.addShaped(<embers:stamper>,Mp.read("S2S;G3G;SFS;",map1));
+recipes.addShaped(<embers:stamper>,Mp.read("SCS;G3G;SFS;",map1));
 recipes.addShaped(table, Mp.read("444;5F5;5_5",map1));
 recipes.addShaped(<embers:block_furnace>,Mp.read("S6S;s7s;&8&;",map1));
-recipes.addShaped(<embers:stamper_base>,Mp.read("-_-;s-s;BTB;",map1));
+recipes.addShaped(<embers:stamper_base>,Mp.read("-C-;s-s;BTB;",map1));
 recipes.addShaped(<embers:mixer>,Mp.read("&9&;0G0;~R~;",map1));
 recipes.remove(<embers:geo_separator>);
-recipes.addShaped(<embers:geo_separator>,Mp.read("-_-;~~~;",map1));
+recipes.addShaped(<embers:geo_separator>,Mp.read("-C-;~~~;",map1));
 recipes.remove(<embers:ember_activator>);
-recipes.addShaped(<embers:ember_activator>,Mp.read("&@&;&#&;~!~;",map1));
+recipes.addShaped(<embers:ember_activator>,Mp.read("&@&;&#&;~C~;",map1));
 
 
 Stamper.remove(<embers:aspectus_iron>);
@@ -101,8 +104,9 @@ mods.thermalexpansion.InductionSmelter.removeRecipe(<thermalfoundation:material:
 
 recipes.remove(<embers:shard_ember>);
 recipes.remove(<embers:ember_receiver>);
+recipes.remove(<embers:ember_emitter>);
 recipes.addShaped(<embers:ember_receiver>,Mp.read("b$b;%#%;b$b",map1));
-recipes.addShaped(<embers:ember_emitter>,Mp.read("b*b;*^*;b#b",map1));
+recipes.addShaped(<embers:ember_emitter>,Mp.read("bCb;*^*;b#b",map1));
 
 //Mystical Agriculture
 for i in 1 to 5{
