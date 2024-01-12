@@ -1,0 +1,17 @@
+{
+	x: -25.5d,
+	y: -13.5d,
+	dependencies: [
+		"fb9caaed"
+	],
+	tasks: [{
+		uid: "f11eaa5e",
+		type: "item",
+		items: [{
+			id: "thermalexpansion:florb",
+			tag: {
+				Fluid: "flux_goo"
+			}
+		}]
+	}]
+}

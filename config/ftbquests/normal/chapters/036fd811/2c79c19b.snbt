@@ -1,0 +1,14 @@
+{
+	x: -17.0d,
+	y: -15.5d,
+	dependencies: [
+		"fb9caaed"
+	],
+	tasks: [{
+		uid: "211366e8",
+		type: "item",
+		items: [{
+			item: "thaumcraft:crystal_vitium"
+		}]
+	}]
+}
