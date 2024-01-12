@@ -95,9 +95,9 @@ T.ava.shaped(<mysticalagriculture:stone_seeds>*4,Mp.read("
     _________;
     _@##$##%_;
     _#&*~1&#_;
-    _#2$3$4#_;
-    _$53637$_;
-    _#8$3$9#_;
+    _#26364#_;
+    _$53T37$_;
+    _#86369#_;
     _#&0~`&#_;
     _!##$##^_;
     _________;
@@ -121,7 +121,8 @@ T.ava.shaped(<mysticalagriculture:stone_seeds>*4,Mp.read("
     "8":<minecraft:gold_ore>,
     "9":<minecraft:lapis_ore>,
     "~":<botania:specialflower>.withTag({type: "orechid"}),
-    "^":<thermalfoundation:ore>
+    "^":<thermalfoundation:ore>,
+	"T":<thermalexpansion:tank>.withTag({Creative: 0 as byte, Fluid: {FluidName: "petrotheum", Amount: 16000}, Level: 1 as byte})
 }));
 
 
@@ -163,7 +164,7 @@ T.ava.shaped(<mysticalagriculture:wood_seeds>*4,Mp.read(
 		_________;
 		__@#$%#__;
 		__%&*&~__;
-		__#*1*#__;
+		__#*T*#__;
 		__~&*&%__;
 		__#%$#@__;
 		_________;
@@ -173,7 +174,8 @@ T.ava.shaped(<mysticalagriculture:wood_seeds>*4,Mp.read(
 		"#":<chisel:bookshelf_oak:0>,"*":<botania:dreamwood:4>,"%":<botania:dreamwood:5>,
 		"~":<forge:bucketfilled:0> .withTag({FluidName: "resin", Amount: 1000}),
 		"$":<forge:bucketfilled:0> .withTag({FluidName: "sap", Amount: 1000}),
-		"@":<forge:bucketfilled:0> .withTag({FluidName: "tree_oil", Amount: 1000})
+		"@":<forge:bucketfilled:0> .withTag({FluidName: "tree_oil", Amount: 1000}),
+		"T":<thermalexpansion:tank>.withTag({Creative: 0 as byte, Fluid: {FluidName: "aerotheum", Amount: 16000}, Level: 1 as byte})
 	}
 ));
 T.ava.shaped(<mysticalagriculture:water_seeds>*8,Mp.read(
