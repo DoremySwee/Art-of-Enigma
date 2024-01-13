@@ -52,7 +52,7 @@ var map1 = {
             textureBlock: {id: "thermalfoundation:storage_alloy",
             Count: 1 as byte, Damage: 0 as short}}
         ),  //Steel
-    "C":<compactmachines3:redstonetunneltool>
+    "C":<compactmachines3:redstonetunneltool>,
     "-": <immersiveengineering:storage_slab:8>,
     "~": <embers:block_caminite_brick_slab>,
     "&": <immersiveengineering:storage:8>,  //Steel Block
