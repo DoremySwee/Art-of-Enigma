@@ -3,7 +3,8 @@
 	y: 2.5d,
 	dependencies: [
 		"20044076",
-		"1509676f"
+		"1509676f",
+		"3d12f1a4"
 	],
 	hide: true,
 	tasks: [{
