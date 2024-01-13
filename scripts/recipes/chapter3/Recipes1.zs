@@ -25,7 +25,7 @@ recipes.remove(<embers:ember_emitter>);
 T.tic.casting(<embers:blend_caminite>, <thermalfoundation:material:72>, <liquid:clay>*144, 144);
 T.tic.casting(brick, <embers:blend_caminite>, <liquid:glass>*144, 600);
 T.tic.casting(<embers:crystal_ember>, <tconstruct:cast_custom:1>, <liquid:pyrotheum>*4, 288, false);
-T.tic.casting(<compactmachines3:redstonetunneltool>,<extrautils2:ingredients>,<liquid:redstone_alloy>*4098)
+T.tic.casting(<compactmachines3:redstonetunneltool>,<extrautils2:ingredients>,<liquid:redstone_alloy>*4098);
 
 Agg.addRecipe(<minecraft:snowball>,[<appliedenergistics2:paint_ball:23>],300000,0x0000FF,0x8888FF,
     <thermalfoundation:glass:2>,<thermalfoundation:storage:8>,<minecraft:lapis_block>,
