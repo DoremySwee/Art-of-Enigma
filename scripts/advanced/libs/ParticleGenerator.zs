@@ -1,4 +1,4 @@
-#loader crafttweaker reloadableevents
+#reloadable
 #priority 1000000004
 
 import scripts.advanced.libs.Vector3D as V;

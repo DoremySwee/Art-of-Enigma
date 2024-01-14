@@ -1,4 +1,4 @@
-#loader crafttweaker reloadableevents
+#reloadable
 //#norun
 import scripts.advanced.libs.ParticleGenerator as P;
 import scripts.advanced.libs.Vector3D as V;
@@ -11,7 +11,7 @@ import crafttweaker.entity.IEntity;
 import crafttweaker.player.IPlayer;
 import crafttweaker.world.IWorld;
 import crafttweaker.data.IData;
-import mods.ctutils.utils.Math;
+import crafttweaker.util.Math;
 import mods.zenutils.UUID;
 
 //Config

@@ -1,4 +1,4 @@
-#loader crafttweaker reloadableevents
+#reloadable
 import crafttweaker.event.BlockNeighborNotifyEvent;
 import mods.randomtweaker.botania.IBotaniaFXHelper;
 import crafttweaker.command.ICommandManager;
@@ -11,7 +11,8 @@ import crafttweaker.player.IPlayer;
 import crafttweaker.world.IWorld;
 import crafttweaker.block.IBlock;
 import crafttweaker.data.IData;
-import mods.ctutils.utils.Math;
+import crafttweaker.util.Math;
+import crafttweaker.util.IRandom;
 import mods.zenutils.IByteBuf;
 
 import scripts.advanced.libs.Vector3D as V;
@@ -33,7 +34,7 @@ static flowers as int[string] = {
     "rafflowsia":11,
     "shulk_me_not":12
 };
-function getColor(name as string)as int{
+function getColor(name as string, random as IRandom)as int{
     if(name=="hydroangeas")return 0x8888FF;
     if(name=="endoflame")return 0xFF8800;
     if(name=="thermalily")return 0xFF2222;
@@ -41,13 +42,13 @@ function getColor(name as string)as int{
     if(name=="munchdew")return 0x77FF77;
     if(name=="entropinnyum")return 0xAA0000;
     if(name=="kekimurus"){
-        if(Math.random()<0.7)return 0xFFFFFF;
+        if(random.nextDouble()<0.7)return 0xFFFFFF;
         return 0xFF0000;
     }
     if(name=="gourmaryllis")return 0xFFFF00;
     if(name=="narslimmus")return 0x77CC77;
     if(name=="spectrolus"){
-        var t=Math.random()*3.1416*2;
+        var t=random.nextDouble() *3.1416*2;
         var r=128+127*Math.sin(t);
         var g=128+127*Math.sin(t+120);
         var b=128+127*Math.sin(t+240);
@@ -56,7 +57,7 @@ function getColor(name as string)as int{
     if(name=="rafflowsia")return 0xFF44FF;
     if(name=="shulk_me_not")return 0xCC00CC;
     if(name=="dandelifeon"){
-        if(Math.random()<0.5)return 0xFF7777;
+        if(random.nextDouble()<0.5)return 0xFF7777;
         return 0x55FF55;
     }
 }
@@ -203,6 +204,7 @@ function irisotosWork(world as IWorld,pos as IBlockPos){
 };
 NetworkHandler.registerServer2ClientMessage("IrisotosBotFXDat",function(p,b){
     var world as IWorld=p.world;
+    var random = world.random;
     var pos as IBlockPos=b.readBlockPos();
     var flags as int=b.readInt();
     var r as int=IRISOTOS_RADIUS;   //radius
@@ -216,9 +218,9 @@ NetworkHandler.registerServer2ClientMessage("IrisotosBotFXDat",function(p,b){
                 if((flags/pow(2,ci))%2==1){
                     var v=0.03;
                     var rgbr=1.0/255;
-                    if(Math.random()>0)IBotaniaFXHelper.wispFX(
+                    IBotaniaFXHelper.wispFX(
                         0.5+pos1.x,0.5+pos1.y,0.5+pos1.z,
-                        rgbr*(getColor(name)/256/256),rgbr*(getColor(name)/256%256),rgbr*(getColor(name)%256),0.2,
+                        rgbr*(getColor(name, random)/256/256),rgbr*(getColor(name, random)/256%256),rgbr*(getColor(name, random)%256),0.2,
                         v*(r-i),v*(-0.3+r-j),v*(r-k),1
                     );
                 }

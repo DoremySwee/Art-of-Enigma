@@ -17,7 +17,7 @@ events.onPlayerTick(function(event as PlayerTickEvent) {
         val flyingData = player.data.deepGet("PlayerPersisted.Flying");
         if (!isNull(flyingData) && flyingData.asBool() && !player.canFly) {
             player.canFly = true;
-            NetworkHandler.sendTo("enableFlying", player);
+            NetworkHandler.sendTo("enableFlying", player, function(b) {});
         }
     }
 });

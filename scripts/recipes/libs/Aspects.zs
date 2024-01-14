@@ -1,4 +1,4 @@
-#loader crafttweaker reloadableevents
+#reloadable
 #priority 100000020
 import thaumcraft.aspect.CTAspectStack;
 import scripts.advanced.libs.Data as D;

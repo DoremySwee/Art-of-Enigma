@@ -1,6 +1,6 @@
-#loader crafttweaker reloadableevents
+#reloadable
 #priority 1000000009
-import mods.ctutils.utils.Math;
+import crafttweaker.util.Math;
 import crafttweaker.data.IData;
 import scripts.advanced.libs.Data;
 
@@ -85,7 +85,9 @@ function sqrt(x as double)as double{
 //Random Number
 function randDoubleRaw(world as IWorld=null)as double{
     if(isNull(world)){
-        return Math.random();
+        // FIXME: find all usages pass null world
+        logger.logError("Not given world to get random number generator!");
+        return 0.114514;
     }
     else{
         return world.random.nextDouble();

@@ -1,4 +1,4 @@
-#loader crafttweaker reloadableevents
+#reloadable
 import scripts.advanced.libs.Vector3D as V;
 import crafttweaker.event.BlockPlaceEvent;
 import mods.zenutils.ICatenationBuilder;

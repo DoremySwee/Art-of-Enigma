@@ -1,4 +1,4 @@
-#loader crafttweaker reloadableevents
+#reloadable
 import crafttweaker.data.IData;
 import crafttweaker.item.IItemStack;
 import crafttweaker.world.IBlockPos;

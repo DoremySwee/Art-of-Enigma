@@ -1,4 +1,4 @@
-#loader crafttweaker reloadableevents
+#reloadable
 import scripts.recipes.libs.Transcript as T;
 //T.tic.alloy(<liquid:water>,[<liquid:lava>]);
 //var t as IItemStack[]=[<minecraft:apple>];

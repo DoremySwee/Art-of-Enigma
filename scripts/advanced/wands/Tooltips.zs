@@ -1,4 +1,4 @@
-#loader crafttweaker reloadableevents
+#reloadable
 #priority 10000
 import scripts.advanced.wands.WandRegistering as WR;
 import scripts.recipes.libs.Aspects as A;

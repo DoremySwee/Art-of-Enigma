@@ -1,4 +1,4 @@
-#loader crafttweaker reloadableevents
+#reloadable
 #priority 1000
 import scripts.recipes.libs.Transcript as T;
 import scripts.recipes.libs.Mapping as Mp;

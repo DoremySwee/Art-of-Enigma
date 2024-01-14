@@ -1,10 +1,10 @@
-#loader crafttweaker reloadableevents
+#reloadable
 #priority 10000
 
 import crafttweaker.item.IItemStack;
 import crafttweaker.world.IWorld;
 import crafttweaker.data.IData;
-import mods.ctutils.utils.Math;
+import crafttweaker.util.Math;
 
 import scripts.advanced.libs.Data as D;
 import scripts.advanced.wands.WandRegistering as WR;

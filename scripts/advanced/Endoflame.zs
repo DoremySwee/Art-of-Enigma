@@ -1,4 +1,4 @@
-#loader crafttweaker reloadableevents
+#reloadable
 import crafttweaker.event.BlockNeighborNotifyEvent;
 import scripts.advanced.libs.Vector3D as V;
 import mods.zenutils.ICatenationBuilder;

@@ -1,4 +1,4 @@
-#loader crafttweaker reloadableevents
+#reloadable
 #priority 50000
 #norun
 import scripts.advanced.libs.Misc as M;

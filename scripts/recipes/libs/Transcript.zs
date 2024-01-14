@@ -1,4 +1,4 @@
-#loader crafttweaker reloadableevents
+#reloadable
 #priority 100000010
 import crafttweaker.item.IWeightedIngredient as WIn;
 import crafttweaker.item.WeightedItemStack as WI;

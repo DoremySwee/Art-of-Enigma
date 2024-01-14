@@ -1,4 +1,4 @@
-#loader crafttweaker reloadableevents
+#reloadable
 #priority 10000
 import scripts.advanced.libs.Data as D;
 import scripts.recipes.libs.Aspects as A;
@@ -13,7 +13,7 @@ import crafttweaker.item.IIngredient;
 import thaumcraft.aspect.CTAspectStack;
 
 import mods.jei.JEI;
-import mods.ctutils.utils.Math;
+import crafttweaker.util.Math;
 import mods.thaumcraft.ArcaneWorkbench as AWB;
 
 import scripts.recipes.libs.Transcript as T;

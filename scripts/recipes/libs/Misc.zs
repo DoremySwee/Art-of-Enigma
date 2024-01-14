@@ -1,4 +1,4 @@
-#loader crafttweaker reloadableevents
+#reloadable
 #priority 100000000
 import crafttweaker.entity.IEntityDefinition;
 import scripts.recipes.libs.Transcript as T;

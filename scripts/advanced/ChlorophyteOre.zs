@@ -1,4 +1,4 @@
-#loader crafttweaker reloadableevents
+#reloadable
 import scripts.advanced.libs.ParticleGenerator as P;
 import scripts.advanced.libs.Vector3D as V;
 import scripts.advanced.libs.Misc as M;
@@ -7,7 +7,7 @@ import crafttweaker.world.IBlockPos;
 import crafttweaker.player.IPlayer;
 import crafttweaker.block.IBlock;
 import crafttweaker.world.IWorld;
-import mods.ctutils.utils.Math;
+import crafttweaker.util.Math;
 import crafttweaker.data.IData;
 
 static chlorophyteOreConvertion as P.FXGenerator = P.FXGenerator("chlorophyteOreConvertion")
@@ -67,7 +67,7 @@ static chlorophyteOreConvertion as P.FXGenerator = P.FXGenerator("chlorophyteOre
         if(world.isAirBlock(pos2))continue;
         var state = world.getBlockState(pos2);
         if(isNull(state))continue;
-        if(state.translucent)continue;
+        if(!state.opaqueCube)continue;
         return;
     }
     //Count connecting ores

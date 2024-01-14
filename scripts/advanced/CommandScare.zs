@@ -1,4 +1,4 @@
-#loader crafttweaker reloadableevents
+#reloadable
 import scripts.advanced.libs.ParticleGenerator as D;
 import scripts.advanced.libs.Vector3D as V;
 import scripts.advanced.libs.Misc as M;
