@@ -1,9 +1,9 @@
-#loader crafttweaker reloadableevents
+#reloadable
 import mods.randomtweaker.botania.IBotaniaFXHelper;
 import mods.contenttweaker.VanillaFactory;
 import mods.zenutils.NetworkHandler;
 
-import mods.ctutils.utils.Math;
+import crafttweaker.util.Math;
 import crafttweaker.data.IData;
 
 import crafttweaker.item.IItemStack;

@@ -1,6 +1,6 @@
 #reloadable
 #priority -1
-#loader crafttweaker reloadableevents
+#reloadable
 import mods.botaniatweaks.Agglomeration as Agg;
 import scripts.recipes.libs.Transcript as T;
 import scripts.recipes.libs.Mapping as Mp;

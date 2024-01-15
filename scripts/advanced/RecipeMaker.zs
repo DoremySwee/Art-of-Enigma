@@ -1,4 +1,4 @@
-#loader crafttweaker reloadableevents
+#reloadable
 import scripts.recipes.libs.Mapping as Mp;
 import scripts.advanced.libs.Data as D;
 import scripts.advanced.libs.Misc as M;

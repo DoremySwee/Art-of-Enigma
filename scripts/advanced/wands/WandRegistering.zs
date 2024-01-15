@@ -1,4 +1,4 @@
-#loader crafttweaker reloadableevents
+#reloadable
 #priority 50000
 import crafttweaker.data.IData;
 import scripts.advanced.libs.Data as D;

@@ -1,4 +1,4 @@
-#loader crafttweaker reloadableevents
+#reloadable
 import crafttweaker.entity.IEntityDefinition;
 import crafttweaker.entity.IEntityLiving;
 import crafttweaker.entity.IEntityMob;
@@ -8,7 +8,7 @@ import crafttweaker.entity.IEntity;
 import crafttweaker.block.IBlock;
 import crafttweaker.world.IWorld;
 import mods.zenutils.PlayerStat;
-import mods.ctutils.utils.Math;
+import crafttweaker.util.Math;
 import crafttweaker.data.IData;
 events.onEntityLivingUpdate(function(event as crafttweaker.event.EntityLivingUpdateEvent){
     var entity as crafttweaker.entity.IEntity=event.entity;

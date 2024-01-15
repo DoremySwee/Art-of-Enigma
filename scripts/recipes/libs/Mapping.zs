@@ -1,4 +1,4 @@
-#loader crafttweaker reloadableevents
+#reloadable
 #priority 100000000
 import crafttweaker.item.IIngredient as I;
 static dev as bool= scripts.Config.dev;

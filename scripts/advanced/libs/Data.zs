@@ -1,4 +1,4 @@
-#loader crafttweaker reloadableevents
+#reloadable
 #priority 1000000030
 import crafttweaker.liquid.ILiquidStack;
 import crafttweaker.item.IItemStack;

@@ -1,6 +1,6 @@
-#loader crafttweaker reloadableevents
+#reloadable
 import scripts.advanced.libs.Misc as M;
-import mods.ctutils.utils.Math;
+import crafttweaker.util.Math;
 import crafttweaker.data.IData;
 
 import crafttweaker.item.IItemStack;
@@ -339,6 +339,7 @@ static MAX_ENEMY_SPAWN as int=300;
 events.onPlayerTick(function(event as crafttweaker.event.PlayerTickEvent){
     var player as IPlayer=event.player;
     var world as IWorld=player.world;
+    var random = world.random;
     if(world.remote)return;
     var pos as IBlockPos=IBlockPos.create(player.x as int,player.y as int,player.z as int);
     if(getKill(player)>-1 && world.getDimension()==1){
@@ -350,11 +351,11 @@ events.onPlayerTick(function(event as crafttweaker.event.PlayerTickEvent){
         }
         for iii in 0 to 3{
             var entityDef as IEntityDefinition=MobsSpawning[
-                (0.9999*MobsSpawning.length*Math.random())as int
+                (0.9999*MobsSpawning.length*random.nextDouble())as int
             ];
             for jjj in 0 to 5{
-                var r as double=24.0+90.0*Math.random();
-                var theta as double=3.1416*2*Math.random();
+                var r as double=24.0+90.0*random.nextDouble();
+                var theta as double=3.1416*2*random.nextDouble();
                 var y as int=30+player.y;
                 var pos as IBlockPos=getTopBlock(
                     world,IBlockPos.create(

@@ -1,4 +1,4 @@
-#loader crafttweaker reloadableevents
+#reloadable
 import crafttweaker.entity.IEntityDefinition;
 import crafttweaker.entity.IEntityLiving;
 import scripts.advanced.libs.Misc as M;
@@ -9,7 +9,7 @@ import crafttweaker.entity.IEntity;
 import crafttweaker.block.IBlock;
 import crafttweaker.world.IWorld;
 import mods.zenutils.PlayerStat;
-import mods.ctutils.utils.Math;
+import crafttweaker.util.Math;
 import crafttweaker.data.IData;
 events.onWorldTick(function(event as crafttweaker.event.WorldTickEvent){
     var MANA_AMOUNT as int=20000;

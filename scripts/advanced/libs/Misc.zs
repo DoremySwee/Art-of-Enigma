@@ -1,4 +1,4 @@
-#loader crafttweaker reloadableevents
+#reloadable
 #priority 1000000005
 
 import mods.randomtweaker.botania.IBotaniaFXHelper;
