@@ -99,3 +99,7 @@ function removeGrind(dust as IItemStack, ingot as IItemStack, ore as IItemStack)
     mods.thermalexpansion.Pulverizer.removeRecipe(ingot);
     mods.enderio.SagMill.removeRecipe(ore);
 }
+function clearNBT(item as IItemStack){
+    recipes.addShapeless(item,[item]);
+    item.addTooltip(format.aqua(format.italic(game.localize("description.crt.tooltip.clearnbt"))));
+}
