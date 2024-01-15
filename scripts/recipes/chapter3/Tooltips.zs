@@ -98,3 +98,5 @@ events.onPlayerItemPickup(function(event as crafttweaker.event.PlayerItemPickupE
 
 <minecraft:mob_spawner>.addTooltip(game.localize("description.crt.tooltip.VanillaSpawner1"));
 <minecraft:mob_spawner>.addTooltip(game.localize("description.crt.tooltip.VanillaSpawner2"));
+
+<minecraft:spawn_egg>.withTag({EntityTag: {id: "minecraft:blaze"}}).addTooltip(game.localize("description.crt.tooltip.blazerEgg"));
