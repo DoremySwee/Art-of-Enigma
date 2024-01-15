@@ -61,7 +61,11 @@ T.ava.shaped(<extrautils2:suncrystal:250>*8,Mp.read(
 		"%":<thermalfoundation:glass_alloy:1>
 	}
 ));
-T.bm.altar(<bloodmagic:slate>,<botania:manatablet>.withTag({mana: 375000}), 576);
+//T.bm.altar(<bloodmagic:slate>,<botania:manatablet>.withTag({mana: 375000}), 576);
+recipes.addShaped(<contenttweaker:inferior_slate>,Mp.read("_B_;BAB;_B_;",{
+	"A":<botania:manatablet>.withTag({mana: 375000}),"B":<appliedenergistics2:sky_stone_slab>
+}));
+T.bm.altar(<bloodmagic:slate>,<contenttweaker:inferior_slate>,576);
 /*T.ava.shaped(<mysticalagriculture:stone_seeds>*4,Mp.read(
 	"	@##___##$;
 		##%&*~1##;
