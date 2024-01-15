@@ -229,6 +229,8 @@ jei.description.auto_pattern.structure2= 右键，即可完成配方的制作。
 jei.description.auto_pattern.output=你将获得重命名后的”中间成品“，以及通过它们连接起来的几个样板。
 
 description.crt.tooltip.clearnbt=经过无序合成简化nbt后，参与其它合成。
+description.crt.tooltip.blazerEgg=§r§o§6我预见当烈焰人坠入冶炼炉，§m§k********§r
+item.contenttweaker.inferior_slate.name=下级石板
 
 item.contenttweaker.calc_sigil_addition.name=加法徽章
 item.contenttweaker.calc_sigil_subtraction.name=减法徽章

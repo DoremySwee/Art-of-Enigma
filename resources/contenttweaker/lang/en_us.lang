@@ -229,11 +229,13 @@ jei.description.auto_pattern.structure2=, the encoding is done.
 jei.description.auto_pattern.output=You will get the renamed "mid products", and the encoded patterns connected by these "mid products"
 
 description.crt.tooltip.clearnbt=Clear its NBT through shapeless crafting before being processed into other items.
+description.crt.tooltip.blazerEgg=§r§o§6The creator says, when the blazers fall into the smelter, §m§k********§r
 
 item.contenttweaker.calc_sigil_addition.name=Sigil of Addition
 item.contenttweaker.calc_sigil_subtraction.name=Sigil of Subtraction
 item.contenttweaker.calc_sigil_multiplication.name=Sigil of Multiplication
 item.contenttweaker.calc_sigil_division.name=Sigil of Division
+item.contenttweaker.inferior_slate.name=Inferior Slate
 
 jei.description.bolt_core=Due to unknown reason, some of the bolt core cannot be made.
 jei.description.slime_vine=What if blue slimes climb onto the vine?
