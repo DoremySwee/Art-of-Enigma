@@ -6,7 +6,19 @@
 		"be472f50"
 	],
 	tasks: [{
-		uid: "03a0b37d",
+		uid: "660b3ed2",
+		type: "item",
+		items: [{
+			id: "thermalfoundation:tome_lexicon",
+			tag: {
+				Mode: 1
+			}
+		}],
+		ignore_damage: true,
+		ignore_nbt: 1b
+	},
+	{
+		uid: "313cc0b7",
 		type: "item",
 		items: [{
 			item: "mysticalagriculture:stone_seeds"

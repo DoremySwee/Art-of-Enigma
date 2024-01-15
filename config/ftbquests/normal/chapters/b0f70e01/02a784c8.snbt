@@ -5,7 +5,19 @@
 		"854e069d"
 	],
 	tasks: [{
-		uid: "f516707f",
+		uid: "927c1d4f",
+		type: "item",
+		items: [{
+			id: "thermalfoundation:tome_lexicon",
+			tag: {
+				Mode: 1
+			}
+		}],
+		ignore_damage: true,
+		ignore_nbt: 1b
+	},
+	{
+		uid: "4775da11",
 		type: "item",
 		items: [{
 			item: "mysticalagriculture:stone_seeds"
