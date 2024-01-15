@@ -230,12 +230,12 @@ jei.description.auto_pattern.output=你将获得重命名后的”中间成品�
 
 description.crt.tooltip.clearnbt=经过无序合成简化nbt后，参与其它合成。
 description.crt.tooltip.blazerEgg=§r§o§6我预见当烈焰人坠入冶炼炉，§m§k********§r
-item.contenttweaker.inferior_slate.name=下级石板
 
 item.contenttweaker.calc_sigil_addition.name=加法徽章
 item.contenttweaker.calc_sigil_subtraction.name=减法徽章
 item.contenttweaker.calc_sigil_multiplication.name=乘法徽章
 item.contenttweaker.calc_sigil_division.name=除法徽章
+item.contenttweaker.inferior_slate.name=下级石板
 
 jei.description.bolt_core=由于未知原因，有的弩箭核心无法制作。
 jei.description.slime_vine=如果蓝色史莱姆在藤蔓上蹭两下……应该会被刮下来一点东西吧。
