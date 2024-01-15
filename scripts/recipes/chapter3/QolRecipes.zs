@@ -139,3 +139,6 @@ recipes.addShaped(<compactmachines3:tunneltool>,Mp.read("ABA;BCB;ABA;",{
     "C":<appliedenergistics2:material:47>
 }));
 T.ae.inscribe(<compactmachines3:psd>,[<appliedenergistics2:wireless_terminal>,<appliedenergistics2:material:47>,<appliedenergistics2:material:47>]);
+
+//reservoir
+T.ae.inscribe(<thermalexpansion:reservoir:2>,[<thermalexpansion:tank>,<appliedenergistics2:portable_cell>,<thermalfoundation:glass_alloy:1>]);
