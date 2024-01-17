@@ -138,7 +138,10 @@ recipes.addShaped(<compactmachines3:tunneltool>,Mp.read("ABA;BCB;ABA;",{
     "B":<embers:brick_caminite>,
     "C":<appliedenergistics2:material:47>
 }));
+recipes.remove(<compactmachines3:psd>);
 T.ae.inscribe(<compactmachines3:psd>,[<appliedenergistics2:wireless_terminal>,<appliedenergistics2:material:47>,<appliedenergistics2:material:47>]);
+T.tic.casting(<compactmachines3:redstonetunneltool>,<extrautils2:ingredients>,<liquid:redstone_alloy>*4096);
+
 
 //reservoir
 T.ae.inscribe(<thermalexpansion:reservoir:2>,[<thermalexpansion:tank>,<appliedenergistics2:portable_cell>,<thermalfoundation:glass_alloy:1>]);
