@@ -26,5 +26,12 @@
 		}],
 		ignore_damage: true,
 		ignore_nbt: 1b
+	},
+	{
+		uid: "4f9bde3e",
+		type: "item",
+		items: [{
+			item: "rf-capability-adapter:aecapabilityadapter"
+		}]
 	}]
 }
