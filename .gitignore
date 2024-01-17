@@ -7,7 +7,7 @@ journeymap/
 libraries/
 local/
 logs/
-native/
+native/`
 resourcepacks/
 saves/
 screenshots/
@@ -15,11 +15,15 @@ shaderpacks/
 tmp/
 versions/
 generated/
+caches/
 *.log
 launcher_profiles.json
 options.txt
 BotaniaVars.dat
 config/AppliedEnergistics2/VersionChecker.cfg
+config/time.history
+config/tconstruct_oredictcache.dat
+config/JustEnoughCalculation
 config/splash.properties
 config/brandon3055/contributors.json
 config/worldedit/worldwdit.properties
