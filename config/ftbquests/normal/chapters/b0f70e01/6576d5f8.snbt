@@ -24,13 +24,6 @@
 		}]
 	},
 	{
-		uid: "a2e081db",
-		type: "item",
-		items: [{
-			item: "botania:spawnerclaw"
-		}]
-	},
-	{
 		uid: "f4c72f02",
 		type: "item",
 		items: [{

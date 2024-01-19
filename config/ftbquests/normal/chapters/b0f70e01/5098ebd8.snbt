@@ -52,5 +52,12 @@
 			}
 		}],
 		ignore_nbt: 1b
+	},
+	{
+		uid: "09866394",
+		type: "item",
+		items: [{
+			item: "botania:spreader 1 2"
+		}]
 	}]
 }
