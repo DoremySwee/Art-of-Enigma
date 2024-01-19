@@ -1,0 +1,17 @@
+{
+	title: "{quests.ch2.bug.title}",
+	icon: "botania:cosmetic 1 31",
+	x: -17.0d,
+	y: -4.0d,
+	text: [
+		"{quests.ch2.bug.des}"
+	],
+	dependencies: [
+		"f71006bb"
+	],
+	size: 2.0d,
+	tasks: [{
+		uid: "3da70ef8",
+		type: "checkmark"
+	}]
+}

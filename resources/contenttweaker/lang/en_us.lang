@@ -84,6 +84,8 @@ quests.ch2.netherrock.des=Use the AE2 Inscriber.
 quests.ch2.glowstoneDust.title= Glow stone Production
 quests.ch2.glowstoneDust.des= You can turn this item back into glow stone.
 quests.ch2.rsOreState.des= Blocks with non-default states cannot get involved in terra plate recipe, including the activated redstone ore.
+quests.ch2.bug.title=The Smeltry
+quests.ch2.bug.des=If you break the smelter controller, and place it back to its original position, it may leads to disappearance of input liquid. You can shut down the game or put it to another position to solve this problem.
 
 description.crt.tooltip.haste=Eat for Haste II
 
