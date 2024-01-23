@@ -16,7 +16,8 @@
 			tag: {
 				entityId: "minecraft:blaze"
 			}
-		}]
+		}],
+		ignore_nbt: 2b
 	},
 	{
 		uid: "3ccda6df",
@@ -26,6 +27,7 @@
 			tag: {
 				entityId: "minecraft:blaze"
 			}
-		}]
+		}],
+		ignore_nbt: 2b
 	}]
 }

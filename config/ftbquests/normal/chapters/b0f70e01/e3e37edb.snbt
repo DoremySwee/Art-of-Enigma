@@ -14,12 +14,9 @@
 		type: "item",
 		items: [{
 			id: "botania:manatablet",
-			tag: {},
-			ForgeCaps: {
-				"astralsorcery:cap_item_amulet_holder": {}
-			}
+			tag: {}
 		}],
-		count: 4L,
+		count: 8L,
 		ignore_damage: true
 	},
 	{
@@ -29,12 +26,9 @@
 			id: "botania:manatablet",
 			tag: {
 				mana: 125000
-			},
-			ForgeCaps: {
-				"astralsorcery:cap_item_amulet_holder": {}
 			}
 		}],
 		ignore_damage: true,
-		ignore_nbt: 1b
+		ignore_nbt: 2b
 	}]
 }

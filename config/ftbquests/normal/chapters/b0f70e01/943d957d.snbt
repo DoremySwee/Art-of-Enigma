@@ -27,9 +27,6 @@
 				slot1: "Dynamic",
 				4: {},
 				slot0: "Flawless"
-			},
-			ForgeCaps: {
-				"astralsorcery:cap_item_amulet_holder": {}
 			}
 		}],
 		ignore_damage: true,

@@ -12,12 +12,9 @@
 			tag: {
 				FluidName: "petrotheum",
 				Amount: 1000
-			},
-			ForgeCaps: {
-				"astralsorcery:cap_item_amulet_holder": {}
 			}
 		}],
 		ignore_damage: true,
-		ignore_nbt: 1b
+		ignore_nbt: 2b
 	}]
 }

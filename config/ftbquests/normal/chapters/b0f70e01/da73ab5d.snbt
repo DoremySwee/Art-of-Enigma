@@ -15,6 +15,7 @@
 			tag: {
 				entityId: "minecraft:blaze"
 			}
-		}]
+		}],
+		ignore_nbt: 2b
 	}]
 }
