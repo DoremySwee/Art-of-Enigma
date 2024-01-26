@@ -17,11 +17,12 @@ static chlorophyteOreConvertion as P.FXGenerator = P.FXGenerator("chlorophyteOre
         "effectiveRadius":50.0
     })
     .setRender(function(player as IPlayer, data as IData)as void{
-        for i in 0 to V.randInt(8,18)*V.randInt(8,18){
-            var color = V.randInt(0,50)*65536 + V.randInt(200,255)*256 + V.randInt(0,100);
-            var pos = V.add(V.readFromData(data),V.scale(V.randomUnitVector(),V.randDouble(0.0,0.5)));
-            var v = V.scale(V.randomUnitVector(),V.randDouble(0.5,1.5)/30);
-            var d as IData = V.asData(pos) + V.asData(v,"v") + {"c":color, "r":V.randDouble(0.2,0.35),"a":5, "type":"custom"}as IData;
+        var w=player.world;
+        for i in 0 to V.randInt(8,18,w)*V.randInt(8,18,w){
+            var color = V.randInt(0,50,w)*65536 + V.randInt(200,255,w)*256 + V.randInt(0,100,w);
+            var pos = V.add(V.readFromData(data),V.scale(V.randomUnitVector(player.world),V.randDouble(0.0,0.5,w)));
+            var v = V.scale(V.randomUnitVector(player.world),V.randDouble(0.5,1.5,w)/30);
+            var d as IData = V.asData(pos) + V.asData(v,"v") + {"c":color, "r":V.randDouble(0.2,0.35,w),"a":5, "type":"custom"}as IData;
             M.createBotFX(d);
         }
     })
@@ -91,7 +92,7 @@ static chlorophyteOreConvertion as P.FXGenerator = P.FXGenerator("chlorophyteOre
     var pos2 = M.shiftBlockPos(pos,rp[0],rp[1],rp[2]);
     if(!M.checkBlock(world.getBlock(pos2),"minecraft:mossy_cobblestone"))return;
     var light = world.getBrightnessSubtracted(pos);
-    if(V.randDouble(3.0,13.0)<light)return;
+    if(V.randDouble(3.0,13.0,world)<light)return;
     chlorophyteOreConvertion.create(world,V.asData(V.fromBlockPos(pos2)));
     world.catenation().sleep(13).run(function(w,c){
         if(!M.checkBlock(world.getBlock(pos2),"minecraft:mossy_cobblestone"))return;

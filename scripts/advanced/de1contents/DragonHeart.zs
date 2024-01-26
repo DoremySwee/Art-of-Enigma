@@ -252,7 +252,7 @@ NetworkHandler.registerServer2ClientMessage("DragonHeartAttractionFX",function(p
     var g = b.readDouble();
     var B = b.readDouble();
     var t = b.readInt();
-    var axis=V.randomUnitVector();
+    var axis=V.randomUnitVector(p.world);
     var angle=p.world.random.nextDouble(0.0,30.0);
     var N= 80;
     var rd1=p.world.random.nextDouble(0.1,1.0);
@@ -271,7 +271,7 @@ NetworkHandler.registerServer2ClientMessage("DragonHeartAttractionFX",function(p
         var v2=V.rot(V.rot(V.VX,V.VY,90),axis,angle);
         var v3=V.unify(V.cross(v1,v2));
         for i in 0 to 30{
-            var v0 = V.rot(V.scale(v3,p.world.random.nextDouble(2.0,3.5)*0.02),V.randomUnitVector(),p.world.random.nextDouble(0.0,5.4));
+            var v0 = V.rot(V.scale(v3,p.world.random.nextDouble(2.0,3.5)*0.02),V.randomUnitVector(p.world),p.world.random.nextDouble(0.0,5.4));
             for j in 0 to 10{
                 var v=V.scale(v0,0.0+j);
                 IBotaniaFXHelper.wispFX(
@@ -296,7 +296,7 @@ NetworkHandler.registerServer2ClientMessage("DragonHeartEjectionFX",function(p,b
     var N= 7;
     var dv=V.subtract([x1,y1,z1],[x0,y0,z0]);
     for i in 0 to N{
-        var axis=V.randomUnitVector();
+        var axis=V.randomUnitVector(p.world);
         var angle=p.world.random.nextDouble(0.0,3.0);
         var v=V.rot(V.scale(dv,0.05/N*i),axis,angle);
         IBotaniaFXHelper.wispFX(x0,y0,z0,1.0f,0.2f,0.0f,0.24,v[0],v[1],v[2],1);

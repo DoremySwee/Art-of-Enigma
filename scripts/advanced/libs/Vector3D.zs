@@ -83,23 +83,16 @@ function sqrt(x as double)as double{
 
 
 //Random Number
-function randDoubleRaw(world as IWorld=null)as double{
-    if(isNull(world)){
-        // FIXME: find all usages pass null world
-        logger.logError("Not given world to get random number generator!");
-        return 0.114514;
-    }
-    else{
-        return world.random.nextDouble();
-    }
+function randDoubleRaw(world as IWorld)as double{
+    return world.random.nextDouble();
 }
-function randDouble(max as double=1.0, min as double=0.0, world as IWorld=null)as double{
+function randDouble(max as double, min as double, world as IWorld)as double{
     return randDoubleRaw(world)*(max-min)+min;
 }
-function randInt(max as int, min as int=0, world as IWorld=null)as int{
+function randInt(max as int, min as int, world as IWorld)as int{
     return Math.floor(randDouble(0.99999+max, 0.0+min, world))as int;
 }
-function randBool(world as IWorld=null)as bool{
+function randBool(world as IWorld)as bool{
     return randInt(1,0,world)>0;
 }
 
@@ -295,7 +288,7 @@ function eulaAng(x as double[], ang as double[])as double[]{
 //print(para([PIE,PIE,PIE],[1.14,1.14,1.14]));
 
 //Random
-function randomUnitVector(world as IWorld=null)as double[]{
+function randomUnitVector(world as IWorld)as double[]{
     var p as double[]= [
         randDouble(1.0,-1.0,world),
         randDouble(1.0,-1.0,world),

@@ -98,8 +98,8 @@ static pipi as D.FXGenerator = D.FXGenerator("pipi")
     .regi();
 function pipiFX(player as IPlayer){
     for i in 0 to 23{
-        var A = V.randomUnitVector();
-        var B = V.unify(V.cross(A,V.randomUnitVector()));
+        var A = V.randomUnitVector(player.world);
+        var B = V.unify(V.cross(A,V.randomUnitVector(player.world)));
         var C = V.cross(A,B);
         pipi.create(player.world, 
             V.asData(V.add(V.getPos(player),V.scale(C,10.0+i*2)))+

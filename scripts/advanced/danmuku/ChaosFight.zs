@@ -1,5 +1,5 @@
 #reloadable
-//#norun
+#norun
 import scripts.advanced.libs.ParticleGenerator as P;
 import scripts.advanced.libs.Vector3D as V;
 import scripts.advanced.libs.Misc as M;
@@ -280,9 +280,9 @@ import mods.zenutils.UUID;
                             var N=({"Ultra":10, "Lunatic":8, "Hard":7, "Normal":5, "Easy":4}as int[string])[diff]as int;
                             var p=({"Ultra":0.12, "Lunatic":0.15, "Hard":0.23, "Normal":0.7, "Easy":0.9}as double[string])[diff]as double;
                             var r=(300.0+r0)/8.0*(300.0+r0)/500.0*1.2*({"Ultra":2.0, "Lunatic":1.8, "Hard":1.8, "Normal":1.6, "Easy":1.4}as double[string])[diff]as double;
-                            var p1 = V.scale(V.randomUnitVector(),r0);
+                            var p1 = V.scale(V.randomUnitVector(world),r0);
                             for i in 0 to N{
-                                var A=V.scale(V.randomUnitVector(),world.random.nextDouble()*r);
+                                var A=V.scale(V.randomUnitVector(world),world.random.nextDouble()*r);
                                 vertexes+=A;
                                 if(i>0){
                                     for j in 0 to i{
