@@ -302,18 +302,18 @@ T.ava.shaped(<extrautils2:passivegenerator>*5,Mp.read(
 ));
 recipes.remove(<extrautils2:resonator>);
 T.ava.shaped(<extrautils2:resonator>,Mp.read(
-	"	@#@@#@@#@;
-		#$%@&@%*#;
+	"	A#@@#@@#A;
+		#$%A&A%*#;
 		@$~1&1~*@;
-		@@1@~@1@@;
+		@A1@~@1A@;
 		#%$~2~*%#;
-		@@1@~@1@@;
+		@A1@~@1A@;
 		@$~1&1~*@;
-		#$%@&@%*#;
-		@#@@#@@#@;",
+		#$%A&A%*#;
+		A#@@#@@#A;",
 	{
 		"%":<enderio:block_alloy:0>,//"2":M.consume(<bloodmagic:blood_orb:0>.withTag({orb: "bloodmagic:weak"})),
-		"2":M.consume(M.orb1(1)),
+		"2":M.consume(M.orb1(1)),"A":<enderio:block_alloy:3>,
 		"&":<thermalfoundation:storage_alloy:2>,"$":<thermalfoundation:storage_alloy:3>,"*":<thermalfoundation:storage_alloy:4>,
 		"1":<thermalfoundation:storage_alloy:1>,"@":<minecraft:redstone_block:0>,"#":<minecraft:obsidian:0>,"~":<extrautils2:suncrystal:0>
 	}
