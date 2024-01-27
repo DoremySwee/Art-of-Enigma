@@ -37,7 +37,7 @@ static AE2Items as IItemStack[] = [
     <appliedenergistics2:molecular_assembler>,
     <appliedenergistics2:vibration_chamber>,
     <appliedenergistics2:drive>,
-    <appliedenergistics2:creative_storage_cell>,
+    //<appliedenergistics2:creative_storage_cell>,
     <appliedenergistics2:storage_cell_4k>,
     <appliedenergistics2:fluid_storage_cell_64k>,
     <appliedenergistics2:quantum_link>,
