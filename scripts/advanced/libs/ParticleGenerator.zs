@@ -24,6 +24,7 @@ zenClass FXGenerator{
     var renderClient as function(IPlayer, IData)void = null;
     var renderRegistered as bool= false;
     var objects as [IData][int] = {};
+    var newObjects as [IData][int] = {};
     zenConstructor(nameIn as string){
         ticking = [];
         name = nameIn;
@@ -59,6 +60,16 @@ zenClass FXGenerator{
         }
         return d;
     }
+    function createInner(world as IWorld, data as IData)as void{
+        var dim = world.getDimension();
+        if(isNull(data))return;
+        var d as IData=defaultData+data;
+        if(objects has dim && !isNull(objects[dim])){
+            objects[dim] = objects[dim] + d;
+        } else {
+            objects[dim] = [d] as [IData];
+        }
+    }
     function regi()as FXGenerator{
         if(renderRegistered){
             NetworkHandler.registerServer2ClientMessage("FXGenerator_by_DoremySwee_id_"~name,
@@ -80,16 +91,25 @@ zenClass FXGenerator{
             if(event.phase!="START"||event.side!="SERVER")return;
             if(objects has dim){
                 var t as [IData] = [] as [IData];
-                if(isNull(objects[dim])/* || (objects[dim].asMap().key.length==0)*/)return;
-                for i,o in objects[dim]{
-                    if(!o.memberGet("removed").asBool()){
-                        t+=this.tick(world,o);
+                if(!(isNull(objects[dim]) || (objects[dim].length==0))){
+                    for i,o in objects[dim]{
+                        if(!o.memberGet("removed").asBool()){
+                            t+=this.tick(world,o);
+                        }
+                        else{
+                            //M.shout("removed!");
+                        }
                     }
-                    else{
-                        //M.shout("removed!");
+                    objects[dim]=t;
+                }
+            }
+            if(newObjects has dim){
+                if(!(isNull(newObjects[dim]) || (newObjects[dim].length==0))){
+                    for o in newObjects[dim]{
+                        this.createInner(world,o);
                     }
                 }
-                objects[dim]=t;
+                newObjects[dim]=[];
             }
         });
         events.onWorldSave(function(event as mods.zenutils.event.WorldSaveEvent) {
@@ -137,10 +157,10 @@ zenClass FXGenerator{
     function create(world as IWorld, data as IData){
         var dim = world.getDimension();
         var d as IData=defaultData+data;
-        if(objects has dim && !isNull(objects[dim])){
-            objects[dim] = objects[dim] + d;
+        if(newObjects has dim && !isNull(newObjects[dim])){
+            newObjects[dim] = newObjects[dim] + d;
         } else {
-            objects[dim] = [d] as [IData];
+            newObjects[dim] = [d] as [IData];
         }
     }
     function copy(name as string)as FXGenerator{
@@ -388,7 +408,7 @@ static arc as FXGenerator = FXGenerator("arc")
     .setRender(function(player as IPlayer, data as IData)as void{
     })
     .regi();
-*
+*/
 events.onItemToss(function(event as crafttweaker.event.ItemTossEvent){
      var H = V.STAR_A;
     var player = event.player;
@@ -402,9 +422,10 @@ events.onItemToss(function(event as crafttweaker.event.ItemTossEvent){
             "renderNum":3,
             "renderInterval":9,
             "lifeLimit":200,
-            "textureIndex":0
+            "textureIndex":0,
+            "type":"custom"
         }+V.asData(V.scale(H.vertexes[side[0]],0.02),"vA")
         +V.asData(V.scale(H.vertexes[side[1]],0.02),"vB")
         +V.asData(V.getPos(player),"A")+V.asData(V.getPos(player),"B"));
     }
-});*/
+});//*/
