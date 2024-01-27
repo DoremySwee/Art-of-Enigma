@@ -9,6 +9,7 @@
 		"8d87560a",
 		"995c2873"
 	],
+	hide: true,
 	tasks: [{
 		uid: "2e156213",
 		type: "item",

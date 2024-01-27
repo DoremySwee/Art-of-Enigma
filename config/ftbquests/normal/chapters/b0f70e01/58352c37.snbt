@@ -6,6 +6,7 @@
 		"edb504b4",
 		"12d83beb"
 	],
+	hide: true,
 	tasks: [{
 		uid: "1ed48a0f",
 		type: "item",

@@ -5,6 +5,7 @@
 		"6ca80cdd",
 		"32e08257"
 	],
+	hide: true,
 	tasks: [{
 		uid: "fcab2c86",
 		type: "item",

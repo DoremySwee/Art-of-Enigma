@@ -4,6 +4,7 @@
 	dependencies: [
 		"1feea721"
 	],
+	hide: true,
 	tasks: [{
 		uid: "0d7cad5f",
 		type: "item",
