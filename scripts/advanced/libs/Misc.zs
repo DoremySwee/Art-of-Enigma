@@ -250,6 +250,8 @@ function createFX(data as IData)as void{
                 args=[c[0],c[1],c[2],(alpha*255)as int,
                     0+r*10000,a as int,0,0,i,colli?1:0];
             }
+            //print("A");
+            //for tt in args{print(tt);}
             var vt = V.asIVector3d(V.scale(v,1.0));
             if(!isNull(viewRD))DEFX.spawnFX(t,V.asIVector3d(p),vt,viewRD.asDouble(),args);
             else DEFX.spawnFX(t,V.asIVector3d(p),vt,args);
