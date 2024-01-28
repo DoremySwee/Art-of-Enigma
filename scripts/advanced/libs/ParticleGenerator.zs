@@ -42,7 +42,9 @@ zenClass FXGenerator{
         var d = data;
         if(world.remote)return d;
         if(ticking.length>0){
-            for t in ticking{
+            //if(name=="FightAf4d")M.shout(ticking.length);
+            for i,t in ticking{
+                //if(name=="FightAf4d")M.shout("ticking"~i);
                 d = t(world,d);
                 if(D.get(d,"removed").asBool())return d;
             }
@@ -91,6 +93,7 @@ zenClass FXGenerator{
             if(event.phase!="START"||event.side!="SERVER")return;
             if(objects has dim){
                 var t as [IData] = [] as [IData];
+                //if(name=="FightAf4d")M.shout(""~dim~","~(objects[dim].length));
                 if(!(isNull(objects[dim]) || (objects[dim].length==0))){
                     for i,o in objects[dim]{
                         if(!o.memberGet("removed").asBool()){
@@ -138,6 +141,7 @@ zenClass FXGenerator{
                 objects[world.dimension] = [] as [IData];
             }
         });
+        //M.shout(name);
         return this;
     }
     var defaultData as IData= {
@@ -215,6 +219,8 @@ static SingleOrb as FXGenerator = FXGenerator("singleOrb")
         if(!data.colli.asBool())return data;
         var diff = V.subtract(p, V.getPos(pl));
         if(V.dot(diff,diff)>r*r)return data;
+        //var dis = V.pointSegmentDist(V.getPos(pl),V.readFromData(data),V.readFromData(data,"last"));
+        //if(dis>r)return data;
         //attack(pl,data.damage.asDouble());
         //attack(pl,1.0/*data.damage.asDouble()*/);
         pl.attackEntityFrom(<damageSource:MAGIC>,data.damage.asDouble());

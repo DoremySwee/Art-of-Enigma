@@ -49,13 +49,26 @@ function cosfR(x as double)as double{
 function tanfR(x as double)as double{
     return tanf(x*PIE/180);
 }
+static asinfans as double[]=[] as double[];
+for i in 0 to 1010{
+    asinfans+=Math.asin(0.001*i)/PIE*180;
+}
+function asinf(x1 as double)as double{
+    if(x1==0)return 0.0;
+    if(x1==1)return PIE/2;
+    if(x1<0)return -asinf(-x1);
+    var I = x1*1000;
+    var L = 0+I;
+    //print(L);
+    return asinfans[L]*(L+1-I)+asinfans[L+1]*(I-L);
+}
 function sin(x as double)as double{return sinf(x);}
 function cos(x as double)as double{return cosf(x);}
 function tan(x as double)as double{return tanf(x);}
 function cot(x as double)as double{return (cosf(x)==0)?0.0:(1.0/tanf(x));}
 function sec(x as double)as double{return 1.0/cosf(x);}
 function cosec(x as double)as double{return 1.0/sinf(x);}
-function asin(x as double)as double{return Math.asin(x)/PIE*180.0;}
+function asin(x as double)as double{return asinf(x);}
 function acos(x as double)as double{return 90.0-asin(x);}
 function atan(x as double)as double{return Math.atan(x)/PIE*180.0;}
 function atan2(y as double, x as double)as double{
@@ -69,7 +82,7 @@ function tanR(x as double)as double{return tanfR(x);}
 function cotR(x as double)as double{return (cosfR(x)==0)?0.0:(1.0/tanfR(x));}
 function secR(x as double)as double{return 1.0/cosfR(x);}
 function cosecR(x as double)as double{return 1.0/sinfR(x);}
-function asinR(x as double)as double{return Math.asin(x);}
+function asinR(x as double)as double{return asinf(x)/180*PIE;}
 function acosR(x as double)as double{return PIE-asinR(x);}
 function atanR(x as double)as double{return Math.atan(x);}
 function atan2R(y as double, x as double)as double{
@@ -232,7 +245,7 @@ function divide(x as double[], y as double[])as double{
 
 function angleRadian(x as double[], y as double[])as double{
     if(isZero(x)||isZero(y))return 0.0;
-    return PIE/2-Math.asin(dot(x,y)/length(x)/length(y));
+    return PIE/2-asin(dot(x,y)/length(x)/length(y));
 }
 function rotate(a as double[], axisIn as double[], angle as double) as double[]{
     if(!isVector3D(a) || !isVector3D(axisIn))return copy(V000);
@@ -284,6 +297,12 @@ function rotRadian(a as double[], axisIn as double[], angle as double) as double
 function eulaAng(x as double[], ang as double[])as double[]{
     var a = copy(ang);
     return rot(rot(rot(x,VX,a[0]),VY,a[1]),VZ,a[2]);
+}
+function disc(x as double[],y as double[],theta as double)as double[]{
+    return add(scale(x,cos(theta)),scale(y,sin(theta)));
+}
+function discR(x as double[],y as double[],theta as double)as double[]{
+    return add(scale(x,cosR(theta)),scale(y,sinR(theta)));
 }
 //print(para([PIE,PIE,PIE],[1.14,1.14,1.14]));
 
