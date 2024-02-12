@@ -141,6 +141,7 @@ item.contenttweaker.wand_cap_elementium_inert.name=Inert Elementium Cap
 item.contenttweaker.wand_rod_livingwood.name=Livingwood Rod
 item.contenttweaker.wand_rod_dreamwood.name=Dreamwood Rod
 item.contenttweaker.wand_rod_dreamwood_inert.name=Silent Dreamwood Rod
+item.contenttweaker.water_singularity.name=Water Singularity
 
 description.crt.tooltip.tcwands.botcap=Charges the wand in mana pool
 description.crt.tooltip.tcwands.botrod=Try combining it with botania wand cap

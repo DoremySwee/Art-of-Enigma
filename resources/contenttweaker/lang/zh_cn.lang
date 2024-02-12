@@ -142,6 +142,7 @@ item.contenttweaker.wand_cap_elementium_inert.name=休眠源质杖端
 item.contenttweaker.wand_rod_livingwood.name=活木杖芯
 item.contenttweaker.wand_rod_dreamwood.name=梦芯
 item.contenttweaker.wand_rod_dreamwood_inert.name=梦芯「眠」
+item.contenttweaker.water_singularity.name=水奇点
 
 description.crt.tooltip.tcwands.botcap=可在魔力池充能
 description.crt.tooltip.tcwands.botrod=试试植魔杖端结合？
