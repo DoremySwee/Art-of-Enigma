@@ -231,7 +231,7 @@ static SingleOrb as FXGenerator = FXGenerator("singleOrb")
         if(data.life.asInt() % data.renderInterval.asInt() != 0 && data.life.asInt()>3 )return;
         for i in 0 to data.renderTime.asInt(){
             M.createFX(data+{
-                "r":data.size,
+                "r":(data has "renderSize")?data.renderSize:data.size,
                 "a":data.particleLifeCoef.asDouble()*((data.renderInterval.asInt()<3)?data.renderInterval:3)
             });
         }
